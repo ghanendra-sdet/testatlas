@@ -66,6 +66,16 @@ const config: Config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'learning-paths',
+        path: 'learning-paths',
+        routeBasePath: 'learning-paths',
+        sidebarPath: './sidebarsLearningPaths.ts',
+        editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/`,
+      },
+    ],
+    [
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
@@ -73,7 +83,7 @@ const config: Config = {
         indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: ['project'],
+        docsRouteBasePath: ['project', 'learning-paths'],
         searchResultLimits: 8,
       },
     ],
@@ -90,6 +100,13 @@ const config: Config = {
         src: 'img/testatlas-mark.svg',
       },
       items: [
+        {
+          type: 'docSidebar',
+          docsPluginId: 'learning-paths',
+          sidebarId: 'learningPathsSidebar',
+          position: 'left',
+          label: 'Learning Paths',
+        },
         {
           type: 'docSidebar',
           sidebarId: 'projectSidebar',
