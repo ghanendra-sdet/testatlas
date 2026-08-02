@@ -22,6 +22,8 @@ The rule: if it's not on [ROADMAP.md](ROADMAP.md), it doesn't get built, no matt
 - **Plugin system** — No evidence yet that extensibility is a real need versus a speculative one.
 - **Advanced search improvements** (semantic search, filters, facets) — Current local search is adequate for the current content volume. Revisit if search becomes a genuine pain point at higher page counts.
 - **Community voting** (on proposals, roadmap items) — Belongs with the RFC process, same timing logic: needs a community to vote first.
+- **Visual progress bars for learning-path completion** (e.g. `Foundations ██████░░░░`) — Genuinely nice for learner motivation and could live on the homepage or roadmap. Deferred because it's a UI feature, not content, and the current milestone is "produce Foundations modules," not "add more platform surface area." Revisit once a couple of paths are far enough along that a progress bar shows real movement.
+- **Contributor template library** (`/templates`: Learning Module, Lab, Case Study, Bug Museum, Interview Question, Project Simulation templates) — Good idea for keeping outside-contributor submissions consistent, but there's a single maintainer today and `CONTENT_MODEL.md` already has the required structure per content type. Revisit once outside contributors are actually submitting content and the template's value is proven by real onboarding friction, not anticipated friction.
 
 ## Why this file exists
 

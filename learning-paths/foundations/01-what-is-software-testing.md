@@ -186,6 +186,15 @@ A test that is brittle (breaks when the UI changes slightly) is worse than no te
 
 ---
 
+## What You Just Learned
+
+- Why testing exists — the cost of skipping it
+- What testing is — and how it differs from checking
+- Where testing happens — across every stage of delivery
+- How testing works on a real project — from requirements to production
+
+**Next:** [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery)
+
 ## Related Topics
 
 - [Test Design Techniques](#) — How to design tests that catch real problems

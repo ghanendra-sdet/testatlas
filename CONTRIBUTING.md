@@ -34,6 +34,8 @@ Do not combine unrelated changes in one pull request. A focused pull request is 
 
 For learning content, explain why the topic matters, what it is, when to use it, and how it works in real projects. Add realistic examples and common mistakes when they improve the lesson.
 
+**Don't split a page just because it's long, and don't extract a shared concept into its own page just because it seems reusable.** TestAtlas follows Progressive Extraction: a concept stays embedded in its page until something else actually needs to reference it — a second reference is still fine to link into the host page; a third, or a link that would have to point awkwardly into the middle of an unrelated page, is the signal to extract it into a standalone knowledge node. The same logic applies to splitting a page in two: the trigger is a genuinely distinct learning objective, not a word count. See `docs/architecture/CONTENT_MODEL.md` and `docs/architecture/KNOWLEDGE_GRAPH.md` for the full reasoning.
+
 For labs, include prerequisites, setup, the exercise, expected result, verification steps, and cleanup where relevant. For templates, include instructions and a completed example. For project simulations, preserve traceability between requirements, coverage, and outcomes.
 
 Use fictional data. Never submit secrets, customer data, private endpoints, internal documentation, or material you do not have permission to share.

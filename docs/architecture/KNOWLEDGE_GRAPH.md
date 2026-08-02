@@ -6,6 +6,36 @@ This document maps the relationships between concepts in TestAtlas, identifies w
 
 TestAtlas teaches concepts atomically. Boundary Value Analysis is explained once—as a knowledge node—and then referenced across Manual Testing, API Testing, Security Testing, and Automation. This prevents learners from seeing three different explanations of the same concept and keeps maintenance simple (update once, everywhere changes).
 
+## Progressive Extraction
+
+Concepts become standalone knowledge nodes when reuse actually demands it — not in advance of that need. This is how Wikipedia's article structure grows, and it prevents two opposite failure modes: over-engineering (extracting a node nobody links to yet, adding a file and a maintenance burden for a benefit that hasn't materialized) and under-engineering (leaving a concept buried inside one page after two or three other pages have started needing to reference it, forcing them to link into the middle of an unrelated page or, worse, re-explain it themselves).
+
+**The flow**:
+
+```
+Concept lives inside a page
+        ↓
+A second page needs to reference it
+        ↓
+Still fine — link into the first page's relevant section
+        ↓
+A third reference need appears, or the links start feeling
+awkward (pointing mid-page, or the concept doesn't fit the
+mother page's own learning objective anymore)
+        ↓
+Extract it into its own knowledge node page
+        ↓
+Every existing reference is updated to link to the new node
+```
+
+**Not**: write the node first, speculatively, because the concept seems important or reusable in theory. Importance is not the trigger — actual reference count is.
+
+**Rule of thumb**: one reference, leave it embedded. Two references, it's still fine to link into the host page. A third real reference need, or a reference that would have to point awkwardly into the middle of an unrelated page, is the signal to extract. When extracting, update every existing link to point at the new node — a knowledge node with stale pages still linking past it defeats the purpose.
+
+This is the same logic `CONTENT_MODEL.md`'s **When to Split a Page** applies to splitting a page in two: the trigger is a distinct learning objective (here, a distinct *reuse* need) actually appearing, not a speculative "this could be useful elsewhere" judgment made in advance.
+
+**Example**: "Testing vs. Checking" and "Testing Levels" currently live inside the Foundations module ([What Is Software Testing?](/learning-paths/foundations/what-is-software-testing)) and are not yet extracted, because nothing else in TestAtlas links to them independently. If a future Automation or Manual Testing page needs to reference "Testing vs. Checking" on its own, that's the moment to extract it — not before.
+
 ## Core Knowledge Nodes
 
 These are the atomic concepts that live in only one place and are referenced throughout TestAtlas.

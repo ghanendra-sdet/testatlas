@@ -24,7 +24,7 @@ Learning paths are role-based progressions: a junior QA takes a different path t
 
 **Modules** (planned for v0.1–v1.0):
 1. What Is Software Testing? (✓ done)
-2. The Role of QA in Product Delivery
+2. The Role of QA in Product Delivery (✓ done)
 3. Testing Across the SDLC
 4. Risk-Based Testing Fundamentals
 5. Quality Attributes (Functionality, Performance, Security, Usability, Reliability)

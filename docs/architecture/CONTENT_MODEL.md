@@ -137,22 +137,39 @@ Only include if they directly solve a problem mentioned on the page.
 
 ---
 
+## When to Split a Page
+
+**Pages are split based on learning objectives, not word count.** A page splits when it is teaching more than one thing a learner could master independently of the other — not when it crosses a line count. "What testing is" and "when testing happens in delivery" are two different learning objectives; a learner could know one without the other. That is a real reason to split. Length alone is not.
+
+Word count is a *symptom* worth checking, not the rule itself: a page that's genuinely trying to do two jobs will usually also be long, so an oversized page is a prompt to ask "is this actually two learning objectives?" — but a page can legitimately run long while still teaching one objective (a rich worked example, several failure scenarios), and a page can be short while still deserving its own file, if its objective is distinct enough to be linked to independently by other paths.
+
+Before splitting a page, be able to state each resulting page's learning objective in one sentence. If you can't, it isn't ready to split — it's just been cut in half.
+
 ## Page Length Targets
+
+Word count is a secondary check once a split is warranted on learning-objective grounds — use it to size the resulting pages, not to trigger the split.
 
 - **Concept page**: 1,500–2,500 words (one atomic concept)
 - **Topic page**: 2,500–4,000 words (collection of related concepts)
 - **Tutorial/How-to**: 1,000–3,000 words (step-by-step walkthrough)
 - **Overview/Intro**: 800–1,500 words (gateway to a learning path)
 
-**If a page exceeds 4,000 words**, split it:
-1. Keep foundational content in the main page
-2. Move specialized topics to separate pages
-3. Link between them clearly
+A target is guidance, not a law. Apply it with tolerance:
 
-**Example**: "Test Design Fundamentals" (2,000 words) with child pages:
+| Range | Meaning |
+|---|---|
+| 1,500–2,500 words | Target — no action needed |
+| ~2,500–3,000 words | Acceptable — a page can legitimately run a bit long while still teaching one objective (a rich worked example, more than one failure scenario) |
+| Beyond ~3,000 words | Review whether the page actually contains multiple learning objectives, using the one-sentence-per-objective test above — this is a prompt to check, not an automatic instruction to split |
+
+Don't trim a page just to land under a number. If the one-sentence test says it's one objective, a page in the "acceptable" band is done, not overdue for editing.
+
+**Example**: "Test Design Fundamentals" splits into child pages not because it's long, but because Boundary Value Analysis, Equivalence Partitioning, and Decision Table Testing are three separate techniques a learner can apply independently — and because other paths (API Testing, Security Testing) need to link to each one individually:
 - Boundary Value Analysis (2,000 words)
 - Equivalence Partitioning (2,000 words)
 - Decision Table Testing (2,000 words)
+
+See also: `KNOWLEDGE_GRAPH.md`'s **Progressive Extraction** principle, which applies this same objective-first logic to when a shared concept becomes its own standalone knowledge node.
 
 ---
 
@@ -398,19 +415,28 @@ Pages with subsections use their own `_category_.json`:
 
 ---
 
-## Quality Checklist Before Publishing
+## Definition of Done
 
-- [ ] Frontmatter includes title, description, keywords, difficulty, time_to_read
-- [ ] Page follows Why-What-When-How framework (or justified deviation)
-- [ ] All code examples are safe to copy and include setup, output, explanation
-- [ ] All links are validated and external links use `target="_blank"`
-- [ ] Terminology is consistent with STYLE_GUIDE.md
-- [ ] No duplication with existing content (check KNOWLEDGE_GRAPH.md)
-- [ ] Page length is within target (1,500–2,500 words for concepts)
-- [ ] Diagrams render correctly in light and dark themes
-- [ ] Mobile rendering is readable (no tables wider than viewport)
-- [ ] At least one peer review completed
-- [ ] All interview questions have "what to look for" guidance
+A learning module is complete only when every item below is true. This is the single checklist for every future page — use it instead of inventing per-page criteria.
+
+- [ ] Learning objective is clearly stated in one sentence (see **When to Split a Page**)
+- [ ] Frontmatter includes title, description, keywords, difficulty, time_to_read, last_reviewed
+- [ ] Why-What-When-How structure followed (or a stated, justified deviation)
+- [ ] A realistic, production-inspired example is included — not a toy scenario
+- [ ] Common mistakes section included
+- [ ] Best practices section included
+- [ ] Interview questions included, each with "what to look for" guidance
+- [ ] Glossary included for any term introduced that a reader wouldn't already know
+- [ ] Related Topics links to sibling and cross-path content
+- [ ] Navigation updated: "What You Just Learned" summary + a real "Next" link if the next module exists
+- [ ] No duplication with existing content (checked against `KNOWLEDGE_GRAPH.md`)
+- [ ] Terminology is consistent with `STYLE_GUIDE.md`
+- [ ] Page length: within target, or in the acceptable band with a stated reason (see **Page Length Targets**)
+- [ ] All links validated; external links use `target="_blank"`
+- [ ] Diagrams and tables render correctly in light and dark themes, and on mobile
+- [ ] Site builds successfully with the new page (`npm run build`, zero broken links)
+- [ ] Page appears correctly in the sidebar and the local search index
+- [ ] Reviewed before merge
 
 ---
 
@@ -429,6 +455,6 @@ Keep the core structure stable. Extend it, don't replace it.
 
 ## Examples of Compliant Pages
 
-See [What Is Software Testing?](/learning-paths/foundations/01-what-is-software-testing) for a complete example following this model.
+See [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) and [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery) for complete examples following this model — including its own "What You Just Learned" navigation block.
 
 The Foundations learning path demonstrates all patterns: Why-What-When-How progression, realistic scenarios, code-ready examples, related topics, interview questions, and proper cross-linking.
