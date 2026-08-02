@@ -1,40 +1,116 @@
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import type {ReactNode} from 'react';
 import styles from './index.module.css';
 
-const pillars = [
+type LearningPath = {
+  title: string;
+  description: string;
+  href?: string;
+  status: string;
+};
+
+const learningPaths: LearningPath[] = [
   {
-    icon: '01',
-    title: 'Learn with purpose',
-    description:
-      'Structured paths that explain why a testing practice matters, when to use it, and how it works on a real product.',
+    title: 'Foundations of Software Testing',
+    description: 'What testing actually is, and why it matters before you write a single test case.',
+    href: '/learning-paths/foundations/what-is-software-testing',
+    status: 'Live',
   },
   {
-    icon: '02',
-    title: 'Practise the work',
-    description:
-      'Runnable labs, reusable templates, and project simulations that turn concepts into decisions you can make on a team.',
+    title: 'Manual Testing & Test Design',
+    description: 'Boundary values, equivalence classes, decision tables — designing tests that catch real problems.',
+    status: 'v0.5.0',
   },
   {
-    icon: '03',
-    title: 'Build in the open',
-    description:
-      'A reviewed, community-maintained knowledge base that values accurate guidance over a large collection of shallow pages.',
+    title: 'API Testing',
+    description: 'Apply test design to REST APIs: contracts, authentication, error handling, edge cases.',
+    status: 'v0.6.0',
+  },
+  {
+    title: 'Database Testing',
+    description: 'Enough SQL to verify what actually happened to the data, not just what the UI shows.',
+    status: 'v0.7.0',
+  },
+  {
+    title: 'Test Automation',
+    description: 'Turn designed test cases into automation that survives real change, not just the demo.',
+    status: 'v0.8.0',
+  },
+  {
+    title: 'Performance Testing',
+    description: 'Load, stress, and spike testing designed around realistic traffic, not arbitrary numbers.',
+    status: 'Planned',
+  },
+  {
+    title: 'Security Testing',
+    description: 'The OWASP Top 10 and threat modeling from a tester’s point of view.',
+    status: 'Planned',
+  },
+  {
+    title: 'AI and Testing',
+    description: 'Testing LLM-driven features, prompt evaluation, and where traditional QA falls short.',
+    status: 'v0.11.0',
+  },
+  {
+    title: 'Interview Preparation',
+    description: 'Scenario-based practice for the interviews QA candidates actually get asked.',
+    status: 'v0.10.0',
+  },
+  {
+    title: 'Career & Leadership',
+    description: 'Building a test strategy, leading a QA team, and growing beyond individual execution.',
+    status: 'Planned',
   },
 ];
 
-const futureAreas = [
-  'Learning paths',
-  'QA labs',
-  'Project simulations',
-  'Templates',
-  'Interview Academy',
-  'Resources',
+const differentiators = [
+  {
+    title: 'One concept, one page',
+    description:
+      'Boundary Value Analysis is explained once, not five times with five different levels of care. Every path that needs a concept links back to the same page, so it stays accurate as the project grows.',
+  },
+  {
+    title: 'Built from real defects',
+    description:
+      'Every domain path is planned around a companion Bug Museum: real, anonymized production defects — the race condition, the off-by-one, the authorization bypass — with the root cause and the test that would have caught it.',
+  },
+  {
+    title: 'Architecture before content',
+    description:
+      'Before writing a chapter, we designed how 500+ pages would fit together without duplicating or contradicting each other. That design was reviewed and is documented, not assumed.',
+  },
+];
+
+const comingNext = [
+  {
+    label: 'Project Simulations',
+    description: 'End-to-end QA workflows inside realistic products — starting with banking and e-commerce.',
+    status: 'v0.9.0',
+  },
+  {
+    label: 'QA Labs',
+    description: 'Runnable exercises with setup, acceptance criteria, and a working solution: automation, API, SQL.',
+    status: 'v0.9.0',
+  },
+  {
+    label: 'Interview Academy',
+    description: 'A question bank and mock-interview structures built from real QA hiring loops.',
+    status: 'v0.10.0',
+  },
+  {
+    label: 'Resources',
+    description: 'Templates and checklists — test plans, bug reports, requirement traceability matrices.',
+    status: 'Planned',
+  },
 ];
 
 export default function Home(): ReactNode {
+  const {siteConfig} = useDocusaurusContext();
+  const githubUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
+
   return (
     <Layout
       title="The Open Software Testing Knowledge Base"
@@ -43,18 +119,71 @@ export default function Home(): ReactNode {
         <section className={styles.hero}>
           <div className="container">
             <p className={styles.eyebrow}>The Open Software Testing Knowledge Base</p>
-            <h1>Learn testing the way it is practised.</h1>
+            <h1 className={styles.heroTitle}>Learn testing the way it&rsquo;s actually practiced.</h1>
             <p className={styles.heroCopy}>
               TestAtlas connects testing principles to the work that matters: understanding risk,
               investigating failures, building useful coverage, and helping teams ship with confidence.
             </p>
             <div className={styles.actions}>
-              <Link className="button button--primary button--lg" to="/project/overview">
-                Explore TestAtlas
+              <Link
+                className="button button--primary button--lg"
+                to="/learning-paths/foundations/what-is-software-testing">
+                Start Learning
               </Link>
-              <Link className="button button--secondary button--lg" to="/project/contributing">
-                Contribute
+              <Link className="button button--secondary button--lg" to="/project/roadmap">
+                See the Roadmap
               </Link>
+            </div>
+            <p className={styles.heroStatus}>
+              Foundations is live today. Nine more learning paths are being built in the open — see
+              what&rsquo;s next below.
+            </p>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className="container">
+            <div className={styles.missionBlock}>
+              <p className={styles.eyebrow}>Mission</p>
+              <p className={styles.missionStatement}>
+                Help anyone master software testing through practical learning, real production
+                experience, and open-source resources &mdash; free, always.
+              </p>
+              <p className={styles.missionSupport}>
+                Most testing education explains definitions. TestAtlas is built on the belief that testing
+                is a practiced judgment, not a checklist &mdash; so it teaches through realistic scenarios,
+                real defects, and complete workflows instead of isolated terms.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className={clsx(styles.section, styles.surface)}>
+          <div className="container">
+            <div className={styles.sectionHeading}>
+              <p className={styles.eyebrow}>Where to go next</p>
+              <h2 className={styles.sectionTitle}>Learning paths</h2>
+              <p>
+                Ten role-based paths share one foundation. Start with the one that&rsquo;s live &mdash;
+                everything else is being built against the same architecture, in order.
+              </p>
+            </div>
+            <div className={styles.pathGrid}>
+              {learningPaths.map((path) =>
+                path.href ? (
+                  <Link className={clsx(styles.pathCard, styles.pathCardLive)} to={path.href} key={path.title}>
+                    <span className={clsx(styles.pathStatus, styles.pathStatusLive)}>{path.status}</span>
+                    <h3>{path.title}</h3>
+                    <p>{path.description}</p>
+                  </Link>
+                ) : (
+                  <div className={styles.pathCard} key={path.title}>
+                    <span className={styles.pathStatus}>{path.status}</span>
+                    <h3>{path.title}</h3>
+                    <p>{path.description}</p>
+                  </div>
+                ),
+              )}
             </div>
           </div>
         </section>
@@ -62,19 +191,14 @@ export default function Home(): ReactNode {
         <section className={styles.section}>
           <div className="container">
             <div className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>A practical ecosystem</p>
-              <h2>More than a documentation site</h2>
-              <p>
-                Good testing knowledge should help you make a better decision at work, not just
-                recognise a term in an interview.
-              </p>
+              <p className={styles.eyebrow}>Why TestAtlas</p>
+              <h2 className={styles.sectionTitle}>Not another list of definitions</h2>
             </div>
-            <div className={styles.pillarGrid}>
-              {pillars.map((pillar) => (
-                <article className={styles.pillar} key={pillar.title}>
-                  <span className={styles.pillarNumber}>{pillar.icon}</span>
-                  <h3>{pillar.title}</h3>
-                  <p>{pillar.description}</p>
+            <div className={styles.differentiatorGrid}>
+              {differentiators.map((item) => (
+                <article className={styles.differentiator} key={item.title}>
+                  <h3>{item.title}</h3>
+                  <p>{item.description}</p>
                 </article>
               ))}
             </div>
@@ -84,35 +208,65 @@ export default function Home(): ReactNode {
         <section className={clsx(styles.section, styles.surface)}>
           <div className="container">
             <div className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>Built deliberately</p>
-              <h2>What TestAtlas is becoming</h2>
+              <p className={styles.eyebrow}>Coming next</p>
+              <h2 className={styles.sectionTitle}>Beyond the learning paths</h2>
               <p>
-                The foundation is in place. Content will be added through reviewed learning paths,
-                hands-on practice, and realistic project work—not rushed into isolated articles.
+                Projects, labs, interview practice, and templates are architected and scheduled &mdash; not
+                yet written. Here&rsquo;s what&rsquo;s planned and when.
               </p>
             </div>
-            <ul className={styles.areaList}>
-              {futureAreas.map((area) => (
-                <li key={area}>{area}</li>
+            <div className={styles.comingGrid}>
+              {comingNext.map((item) => (
+                <div className={styles.comingCard} key={item.label}>
+                  <span className={styles.pathStatus}>{item.status}</span>
+                  <h3>{item.label}</h3>
+                  <p>{item.description}</p>
+                </div>
               ))}
-            </ul>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <div className="container">
+            <div className={styles.sectionHeading}>
+              <p className={styles.eyebrow}>Community</p>
+              <h2 className={styles.sectionTitle}>Built in the open, on purpose</h2>
+              <p>
+                TestAtlas is reviewed and community-maintained. The standards are public, and so is the
+                reasoning behind them.
+              </p>
+            </div>
+            <div className={styles.communityGrid}>
+              <Link className={styles.communityCard} to="/project/contributing">
+                <h3>Contribute</h3>
+                <p>How to propose a page, follow the content standards, and get a review.</p>
+              </Link>
+              <Link className={styles.communityCard} to="/project/governance">
+                <h3>Governance</h3>
+                <p>How decisions get made, and who&rsquo;s accountable for them.</p>
+              </Link>
+              <Link className={styles.communityCard} href={githubUrl}>
+                <h3>GitHub</h3>
+                <p>Read the source, open an issue, or watch the project evolve commit by commit.</p>
+              </Link>
+            </div>
           </div>
         </section>
 
         <section className={styles.callout}>
           <div className="container">
-            <p className={styles.eyebrow}>Open source, high standards</p>
-            <h2>Every merge should make TestAtlas better than it was yesterday.</h2>
-            <p>
-              Read the standards that guide the project, or help shape the knowledge base from the
-              beginning.
-            </p>
+            <p className={styles.eyebrow}>Ready when you are</p>
+            <h2 className={styles.sectionTitle}>Start with Foundations.</h2>
+            <p>It&rsquo;s free, it&rsquo;s live, and it doesn&rsquo;t ask for a sign-up.</p>
             <div className={styles.actions}>
-              <Link className="button button--outline button--lg" to="/project/constitution">
-                Read the constitution
+              <Link
+                className="button button--primary button--lg"
+                to="/learning-paths/foundations/what-is-software-testing">
+                Start Learning
               </Link>
-              <Link className="button button--secondary button--lg" to="/project/roadmap">
-                View the roadmap
+              <Link className="button button--outline button--lg" to="/project/contributing">
+                Or help build what&rsquo;s next
               </Link>
             </div>
           </div>

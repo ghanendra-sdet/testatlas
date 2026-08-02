@@ -6,17 +6,18 @@
   color: #f7fbfc;
 }
 
-.hero h1,
-.sectionHeading h2,
-.callout h2 {
-  letter-spacing: -0.035em;
+.heroTitle,
+.sectionTitle {
+  letter-spacing: -0.03em;
+  font-family: var(--font-display);
+  font-weight: 600;
 }
 
-.hero h1 {
-  max-width: 50rem;
+.heroTitle {
+  max-width: 42rem;
   margin: 0;
-  font-size: clamp(2.8rem, 7vw, 5.4rem);
-  line-height: 1;
+  font-size: clamp(2.6rem, 6vw, 4.6rem);
+  line-height: 1.06;
 }
 
 .eyebrow {
@@ -29,7 +30,7 @@
 }
 
 .heroCopy {
-  max-width: 45rem;
+  max-width: 42rem;
   margin: 1.75rem 0 0;
   color: #c9dce2;
   font-size: 1.2rem;
@@ -47,6 +48,14 @@
   border-radius: 0.45rem;
 }
 
+.heroStatus {
+  max-width: 34rem;
+  margin: 1.75rem 0 0;
+  color: #93b3bd;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
 .section {
   padding: 6rem 0;
 }
@@ -56,7 +65,7 @@
 }
 
 .sectionHeading {
-  max-width: 45rem;
+  max-width: 46rem;
 }
 
 .sectionHeading .eyebrow,
@@ -64,11 +73,10 @@
   color: var(--ifm-color-primary-dark);
 }
 
-.sectionHeading h2,
-.callout h2 {
+.sectionTitle {
   margin: 0;
-  font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.1;
+  font-size: clamp(1.9rem, 3.6vw, 2.75rem);
+  line-height: 1.15;
 }
 
 .sectionHeading > p:last-child,
@@ -79,53 +87,187 @@
   line-height: 1.7;
 }
 
-.pillarGrid {
+[data-theme='dark'] .sectionHeading .eyebrow,
+[data-theme='dark'] .callout .eyebrow {
+  color: var(--ifm-color-primary-light);
+}
+
+/* Mission */
+
+.missionBlock {
+  max-width: 42rem;
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--ifm-color-primary);
+}
+
+.missionStatement {
+  margin: 0;
+  color: var(--ifm-font-color-base);
+  font-family: var(--font-display);
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  font-style: italic;
+  line-height: 1.4;
+}
+
+.missionSupport {
+  margin: 1.5rem 0 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* Learning path grid */
+
+.pathGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.pathCard {
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.6rem;
+  background: var(--ifm-background-color);
+  color: inherit;
+  opacity: 0.72;
+  text-decoration: none;
+  transition: border-color 0.15s ease, opacity 0.15s ease, transform 0.15s ease;
+}
+
+.pathCard h3 {
+  margin: 0.9rem 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.pathCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.pathCardLive {
+  opacity: 1;
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary);
+}
+
+.pathCardLive:hover {
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-primary-dark);
+  box-shadow: 0 0 0 1px var(--ifm-color-primary-dark);
+  color: inherit;
+  text-decoration: none;
+}
+
+.pathStatus {
+  display: inline-block;
+  color: var(--ifm-color-emphasis-600);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.pathStatusLive {
+  color: var(--ifm-color-primary);
+}
+
+/* Differentiators */
+
+.differentiatorGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.25rem;
   margin-top: 3rem;
 }
 
-.pillar {
-  min-height: 15rem;
+.differentiator {
   padding: 1.75rem;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 0.75rem;
   background: var(--ifm-background-color);
 }
 
-.pillarNumber {
-  color: var(--ifm-color-primary);
-  font-family: var(--ifm-font-family-monospace);
-  font-size: 0.9rem;
-  font-weight: 700;
+.differentiator h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.2rem;
 }
 
-.pillar h3 {
-  margin: 1.4rem 0 0.8rem;
-  font-size: 1.3rem;
-}
-
-.pillar p {
+.differentiator p {
   margin: 0;
   color: var(--ifm-color-emphasis-700);
   line-height: 1.65;
 }
 
-.areaList {
+/* Coming next */
+
+.comingGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 0.75rem;
-  margin: 3rem 0 0;
-  padding: 0;
-  list-style: none;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 3rem;
 }
 
-.areaList li {
-  padding: 1rem 1.1rem;
+.comingCard {
+  padding: 1.4rem;
   border-left: 3px solid var(--ifm-color-primary);
   background: var(--ifm-background-color);
-  font-weight: 600;
+}
+
+.comingCard h3 {
+  margin: 0.6rem 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.comingCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+/* Community */
+
+.communityGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.communityCard {
+  display: block;
+  padding: 1.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-color);
+  color: inherit;
+  text-decoration: none;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.communityCard:hover {
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-primary);
+  color: inherit;
+  text-decoration: none;
+}
+
+.communityCard h3 {
+  margin: 0 0 0.6rem;
+  font-size: 1.15rem;
+}
+
+.communityCard p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
 .callout {
@@ -137,23 +279,32 @@
   background: #0b3038;
 }
 
-[data-theme='dark'] .sectionHeading .eyebrow,
-[data-theme='dark'] .callout .eyebrow {
-  color: var(--ifm-color-primary-light);
-}
-
 @media screen and (max-width: 996px) {
   .hero {
     padding: 5.5rem 0;
   }
 
-  .pillarGrid,
-  .areaList {
-    grid-template-columns: 1fr;
+  .pathGrid,
+  .differentiatorGrid,
+  .communityGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .comingGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .section,
   .callout {
     padding: 4.25rem 0;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .pathGrid,
+  .differentiatorGrid,
+  .communityGrid,
+  .comingGrid {
+    grid-template-columns: 1fr;
   }
 }

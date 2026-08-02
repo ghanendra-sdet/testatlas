@@ -23,6 +23,18 @@ const config: Config = {
     locales: ['en'],
   },
 
+  headTags: [
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.googleapis.com'}},
+    {tagName: 'link', attributes: {rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: 'anonymous'}},
+    {
+      tagName: 'link',
+      attributes: {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,500&display=swap',
+      },
+    },
+  ],
+
   markdown: {
     mermaid: true,
     preprocessor: rewriteProjectLinks({
