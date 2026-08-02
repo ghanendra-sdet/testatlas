@@ -1,0 +1,159 @@
+.hero {
+  padding: 7.5rem 0 6.5rem;
+  background:
+    radial-gradient(circle at 82% 12%, rgb(32 155 184 / 22%), transparent 30rem),
+    linear-gradient(145deg, #071b2a 0%, #0b2c3e 55%, #0e4252 100%);
+  color: #f7fbfc;
+}
+
+.hero h1,
+.sectionHeading h2,
+.callout h2 {
+  letter-spacing: -0.035em;
+}
+
+.hero h1 {
+  max-width: 50rem;
+  margin: 0;
+  font-size: clamp(2.8rem, 7vw, 5.4rem);
+  line-height: 1;
+}
+
+.eyebrow {
+  margin: 0 0 1rem;
+  color: var(--ifm-color-primary-lightest);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.heroCopy {
+  max-width: 45rem;
+  margin: 1.75rem 0 0;
+  color: #c9dce2;
+  font-size: 1.2rem;
+  line-height: 1.7;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.9rem;
+  margin-top: 2rem;
+}
+
+.actions :global(.button) {
+  border-radius: 0.45rem;
+}
+
+.section {
+  padding: 6rem 0;
+}
+
+.surface {
+  background: var(--ifm-background-surface-color);
+}
+
+.sectionHeading {
+  max-width: 45rem;
+}
+
+.sectionHeading .eyebrow,
+.callout .eyebrow {
+  color: var(--ifm-color-primary-dark);
+}
+
+.sectionHeading h2,
+.callout h2 {
+  margin: 0;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.1;
+}
+
+.sectionHeading > p:last-child,
+.callout > :global(.container) > p:not(.eyebrow) {
+  margin: 1.25rem 0 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.pillarGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 3rem;
+}
+
+.pillar {
+  min-height: 15rem;
+  padding: 1.75rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-color);
+}
+
+.pillarNumber {
+  color: var(--ifm-color-primary);
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.pillar h3 {
+  margin: 1.4rem 0 0.8rem;
+  font-size: 1.3rem;
+}
+
+.pillar p {
+  margin: 0;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.65;
+}
+
+.areaList {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  margin: 3rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.areaList li {
+  padding: 1rem 1.1rem;
+  border-left: 3px solid var(--ifm-color-primary);
+  background: var(--ifm-background-color);
+  font-weight: 600;
+}
+
+.callout {
+  padding: 6rem 0;
+  background: #e6f6f5;
+}
+
+[data-theme='dark'] .callout {
+  background: #0b3038;
+}
+
+[data-theme='dark'] .sectionHeading .eyebrow,
+[data-theme='dark'] .callout .eyebrow {
+  color: var(--ifm-color-primary-light);
+}
+
+@media screen and (max-width: 996px) {
+  .hero {
+    padding: 5.5rem 0;
+  }
+
+  .pillarGrid,
+  .areaList {
+    grid-template-columns: 1fr;
+  }
+
+  .section,
+  .callout {
+    padding: 4.25rem 0;
+  }
+}

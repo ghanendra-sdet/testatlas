@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#071b2a"/>
+  <circle cx="1050" cy="80" r="300" fill="#087f8c" opacity=".28"/>
+  <rect x="100" y="135" width="116" height="116" rx="26" fill="#087f8c"/>
+  <path d="M130 165h56v13h-21v44h-14v-44h-21z" fill="#fff"/>
+  <text x="100" y="355" fill="#f7fbfc" font-family="Arial, sans-serif" font-size="88" font-weight="700">TestAtlas</text>
+  <text x="100" y="430" fill="#a8e6e2" font-family="Arial, sans-serif" font-size="38">The Open Software Testing Knowledge Base</text>
+</svg>

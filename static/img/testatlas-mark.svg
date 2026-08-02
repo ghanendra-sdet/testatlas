@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="TestAtlas mark">
+  <rect width="64" height="64" rx="14" fill="#087f8c"/>
+  <path d="M16 17h32v7H35.5v24h-7V24H16z" fill="#f8fffe"/>
+  <circle cx="47" cy="46" r="6" fill="#a8e6e2"/>
+</svg>

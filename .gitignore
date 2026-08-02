@@ -1,0 +1,25 @@
+# Dependencies and build output
+node_modules/
+build/
+.docusaurus/
+.cache/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Logs and reports
+*.log
+coverage/
+reports/
+
+# Operating-system and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Generated files
+*.tsbuildinfo
