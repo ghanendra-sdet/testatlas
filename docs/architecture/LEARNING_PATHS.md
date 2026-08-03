@@ -96,37 +96,143 @@ Once a path's module list stabilizes (as Foundations' has now, after this review
 
 ## Path 2: Manual Testing and Test Design
 
-**Directory**: `/learning-paths/manual-testing/`  
-**Position**: 2  
-**Prerequisites**: Foundations of Software Testing  
-**Target Audience**: QA engineers, testers, automation engineers (designing tests first)  
-**Estimated Duration**: 4–8 weeks  
+**Status**: Curriculum frozen. 23 modules across seven sections, approved with two amendments (Thinking Like a Tester added to Section 1; Reviewing Test Cases scope confirmed in Section 5). No further curriculum review before content development — module writing begins now, following the same batch-then-QA-review lifecycle established for Foundations.
 
-**Learning Objectives**:
-- Master test design techniques (BVA, equivalence partitioning, decision tables, state transitions)
-- Understand test case organization and naming
-- Learn to think systematically about edge cases and failure modes
-- Apply test design to realistic domains and products
-- Distinguish thoughtful testing from random testing
-- Communicate test cases clearly
+### 1. Learning Path Overview
 
-**Modules** (planned for v0.1–v1.0):
-1. Test Design Fundamentals (why structure matters)
-2. Boundary Value Analysis (testing at limits)
-3. Equivalence Partitioning (grouping test cases efficiently)
-4. Decision Table Testing (testing logical combinations)
-5. State Transition Testing (testing state changes)
-6. Combinatorial Testing (reducing explosions of variables)
-7. Error Guessing (using intuition and experience)
-8. Test Case Organization and Naming (making tests maintainable)
-9. Applying Test Design to Real Projects (fintech, e-commerce, healthcare scenarios)
-10. Common Mistakes in Test Design
-11. Interview Preparation for Test Design Questions
+**Directory**: `/learning-paths/manual-testing/`
+**Position**: 2
+**Purpose**: Foundations taught *why* testing matters and the mindset behind it. Manual Testing teaches the actual craft: how to look at a feature and systematically generate the specific, minimal set of test cases that finds real defects — the skill that underlies every other path in TestAtlas, since API Testing, Database Testing, Security Testing, and Automation all design tests using the same core techniques applied to a different surface.
+**Prerequisites**: Foundations of Software Testing (all 17 modules) — specifically leans on Software Testing Principles, Risk-Based Testing, Quality Attributes, Defect Life Cycle, and Severity vs. Priority
+**Target Audience**: New QA engineers building their first real test-design skill set, developers wanting to test their own features more rigorously, automation engineers who need to design a test before they can automate it
+**Estimated Duration**: 5–7 weeks
+**Curriculum version**: Manual Testing v1.0 (planned)
 
-**Success Criteria**:
-- Learner designs a complete test plan for a non-trivial feature
-- Learner explains why certain test cases are unnecessary (equivalence classes)
-- Learner identifies edge cases a junior tester would miss
+**Learning Outcomes** — when finished, a learner should be able to:
+- Generate a systematic, minimal set of test cases for a feature using the right technique for the situation, not trial and error
+- Apply Boundary Value Analysis, Equivalence Partitioning, Decision Table Testing, State Transition Testing, and Combinatorial/Pairwise Testing correctly, and know which one fits a given problem
+- Write test cases and test data that are clear enough for someone else to execute without asking clarifying questions
+- Build a Requirement Traceability Matrix connecting requirements to the tests that verify them
+- Run a structured exploratory testing session with a charter, and know when exploratory testing is the right choice over scripted cases
+- Write a bug report precise enough that a developer can reproduce the defect from the report alone
+- Review someone else's test cases and identify real gaps, not just style preferences
+- Apply every technique above to a real domain (banking, e-commerce, healthcare, insurance) in one integrated exercise
+
+### 2. Curriculum Structure
+
+**23 modules across seven sections** (finalized after review — added Thinking Like a Tester to Section 1). Sections mirror how test design actually happens on a real project: understand the feature, adopt the right mindset, generate test ideas systematically, write them down well, decide when structure isn't the right tool, report what you find, then apply all of it together.
+
+#### Section 1 — Test Design Foundations
+1. **Test Design Fundamentals** — *Objective*: explain why structured test design finds more real defects than ad hoc testing, for the same time spent. *Prerequisites*: Foundations complete, especially Software Testing Principles and Risk-Based Testing. *Why it exists*: sets the mindset shift from "try things" to "systematically generate the smallest set of tests that covers the most risk" — everything else in this path is a specific technique for doing that. *Key concepts*: test idea vs. test case, coverage without redundancy, the cost of untested vs. over-tested. *Est. word count*: 2,000–2,200.
+2. **From Requirements to Test Ideas** — *Objective*: turn an ambiguous or incomplete requirement into a concrete list of things that need testing. *Prerequisites*: Module 1. *Why it exists*: every technique in Section 2 needs raw material to operate on — this module is where that material comes from, and where requirement ambiguity (a defect class Foundations' Verification vs. Validation named but didn't drill into) gets practiced hands-on. *Key concepts*: requirement analysis for testability, spotting ambiguity, turning "the feature should validate input" into an actual test idea list. *Est. word count*: 2,000–2,200.
+3. **Thinking Like a Tester** — *Objective*: answer the question every beginner actually asks first — "how do I even come up with test cases?" — before any named technique is introduced. *Prerequisites*: Module 2. *Why it exists*: this is the difference between a beginner and an experienced tester, and it's deliberately placed *before* BVA rather than after Section 2, because every technique that follows is easier to learn once a learner already has the underlying mindset — asking better questions, spotting unstated assumptions, thinking like both the user and the business, and deliberately probing negative/unhappy paths, not just the happy path. *Key concepts*: tester mindset, assumption-spotting, user vs. business thinking, positive vs. negative testing, happy path vs. unhappy path. *Est. word count*: 2,000–2,200.
+
+#### Section 2 — Core Test Design Techniques
+4. **Boundary Value Analysis** — *Objective*: identify and test the edges of an input range, where defects concentrate most. *Prerequisites*: Module 3. *Why it exists*: the single most commonly asked test-design interview technique, and the most direct application of Foundations' defect-clustering principle — and the first place the tester mindset from Module 3 gets applied to a named technique. *Key concepts*: valid/invalid boundaries, off-by-one defects, boundary value tables. *Est. word count*: 2,200–2,500. **Knowledge node** (see Dependency Map).
+5. **Equivalence Partitioning** — *Objective*: group inputs into classes that can be tested with one representative case each, without losing coverage. *Prerequisites*: Module 4. *Why it exists*: BVA finds edge defects; EP is what makes testing the *middle* of a range efficient instead of exhaustive — the two are taught back to back because they're usually applied together in practice. *Key concepts*: valid/invalid equivalence classes, representative test case selection, avoiding redundant coverage. *Est. word count*: 2,200–2,500. **Knowledge node**.
+6. **Decision Table Testing** — *Objective*: design test cases for a feature whose behavior depends on multiple conditions combined. *Prerequisites*: Module 5. *Why it exists*: EP handles one input at a time; Decision Tables are the next step once a feature's logic depends on combinations of inputs, not single values. *Key concepts*: condition/action tables, rule coverage, collapsing redundant rules. *Est. word count*: 2,300–2,600. **Knowledge node**.
+7. **State Transition Testing** — *Objective*: design test cases for a feature that behaves differently depending on its current state. *Prerequisites*: Module 6. *Why it exists*: many real features (an order, a claim, a defect itself, per Foundations' Defect Life Cycle) aren't just condition-driven, they're state-driven — this module teaches the technique for that specific shape of problem. *Key concepts*: state diagrams, valid/invalid transitions, N-switch coverage. *Est. word count*: 2,200–2,500. **Knowledge node**.
+8. **Combinatorial and Pairwise Testing** — *Objective*: test systems with many interacting variables without exhaustively testing every combination. *Prerequisites*: Modules 5–6 (builds directly on equivalence classes and decision logic). *Why it exists*: real features often have too many input combinations to test exhaustively (a form validated by browser, device, and account type, for example) — this module teaches the mathematically-grounded way to reduce that space responsibly, not by guessing. *Key concepts*: combinatorial explosion, pairwise reduction, all-pairs tools and tables. *Est. word count*: 2,300–2,600. **Knowledge node** — kept as one module; see Dependency Map for the confirmed Progressive Extraction decision.
+9. **Error Guessing and Experience-Based Testing** — *Objective*: use structured intuition to find defects the formal techniques above don't systematically target. *Prerequisites*: Modules 4–8 (deliberately last in this section — the point is contrasting disciplined intuition against structured technique, which only lands once the structured techniques are already understood). *Why it exists*: closes Section 2 by being explicit that technique isn't the whole story — experience matters too, but it works best as a supplement to structure, not a replacement for it, and it echoes Module 3's mindset now that there's a full technique toolkit to contrast it against. *Key concepts*: heuristics, common defect patterns, when intuition beats formal technique and when it doesn't. *Est. word count*: 2,000–2,200.
+
+#### Section 3 — Writing and Organizing Tests
+10. **Writing Clear Test Cases** — *Objective*: write a test case precise enough that someone unfamiliar with the feature can execute it correctly. *Prerequisites*: Section 2 complete (there need to be test ideas worth writing down well). *Why it exists*: a great test idea poorly written is barely better than no test idea — this is the module that turns Section 2's output into something a team can actually use. *Key concepts*: test case structure (steps, expected results, preconditions), precision without verbosity, avoiding ambiguous expected results. *Est. word count*: 2,200–2,400.
+11. **Test Case Organization and Naming** — *Objective*: structure a growing set of test cases so they stay findable and maintainable, not just individually well-written. *Prerequisites*: Module 10. *Why it exists*: a hundred well-written test cases with no organizing structure become unmaintainable exactly as fast as badly-written ones — this is a distinct skill from writing one good test case. *Key concepts*: naming conventions, grouping by feature vs. by technique, avoiding duplicate coverage across a growing suite. *Est. word count*: 1,800–2,000.
+12. **Requirement Traceability Matrix (RTM)** — *Objective*: build and maintain a matrix connecting requirements to the test cases that verify them. *Prerequisites*: Modules 2 and 10. *Why it exists*: directly answers a question Foundations' Test Strategy vs. Test Plan raised but didn't operationalize — how a team actually proves every requirement got tested. Especially load-bearing for the Insurance and Healthcare domain mapping below, where regulatory traceability is a real requirement, not a nice-to-have. *Key concepts*: coverage gaps, many-to-many requirement/test mapping, RTM as an audit artifact. *Est. word count*: 1,800–2,000.
+13. **Test Data Design** — *Objective*: design test data deliberately, rather than reusing whatever data happens to be lying around. *Prerequisites*: Modules 4–5 (test data design is BVA/EP applied to the data itself, not just the test case). *Why it exists*: a technically correct test case run against sloppy or unrealistic data produces false confidence — this module makes data design a first-class decision, not an afterthought. *Key concepts*: realistic vs. synthetic data, data that actually exercises boundaries and edge classes, data privacy in test environments. *Est. word count*: 1,900–2,100.
+
+#### Section 4 — Exploratory and Ad Hoc Testing
+14. **Exploratory Testing Fundamentals** — *Objective*: explain what exploratory testing actually is (structured, simultaneous learning and testing) versus the common misconception that it's just "clicking around." *Prerequisites*: Section 3 complete. *Why it exists*: contrasts deliberately against everything taught so far — scripted technique is precise but can only find what it was designed to look for; exploratory testing is how a real tester finds what nobody thought to script. *Key concepts*: exploratory vs. scripted testing, simultaneous test design and execution, why exploratory isn't "unstructured." *Est. word count*: 2,000–2,200.
+15. **Session-Based Test Management** — *Objective*: run a time-boxed exploratory session using a charter, and document findings in a way that's reviewable afterward. *Prerequisites*: Module 14. *Why it exists*: turns exploratory testing from an individual skill into a practice a team can actually manage, schedule, and review — the difference between "exploratory testing" as a concept and as a repeatable team activity. *Key concepts*: session charters, time-boxing, session notes and debrief. *Est. word count*: 1,900–2,100.
+16. **When to Use Structured vs. Exploratory Testing** — *Objective*: decide, for a given feature and situation, whether scripted technique or exploratory testing is the better tool. *Prerequisites*: Modules 9 and 15 (directly synthesizes Error Guessing and Session-Based Testing against the whole structured toolkit). *Why it exists*: without this module, a learner has two toolkits and no explicit guidance on which to reach for — this is the connective module that makes the choice deliberate rather than habitual. *Key concepts*: risk and novelty as decision factors, blending both approaches on one feature, common wrong-tool mistakes. *Est. word count*: 1,800–2,000.
+
+#### Section 5 — Reporting and Communication
+17. **Writing Effective Bug Reports** — *Objective*: write a bug report a developer can reproduce and act on without asking follow-up questions. *Prerequisites*: Foundations' Defect Life Cycle and Severity vs. Priority (cross-path), plus this path's Sections 2–4 (there need to be real defects found to report on). *Why it exists*: Foundations taught the defect life *cycle*; this module teaches the actual writing skill that feeds it — a distinct, practical craft Foundations deliberately didn't cover in depth. *Key concepts*: reproduction steps, expected vs. actual, environment and evidence, writing for a reader who wasn't there. *Est. word count*: 2,100–2,300.
+18. **Test Execution and Reporting Results** — *Objective*: run a planned test cycle and report results in a way that's useful to people who weren't in the room. *Prerequisites*: Module 17. *Why it exists*: connects back to Foundations' Test Strategy vs. Test Plan and QA Metrics modules — this is where a test plan's exit criteria actually get evaluated against real execution results. *Key concepts*: pass/fail/blocked reporting, summarizing execution for stakeholders, tying results back to exit criteria. *Est. word count*: 1,900–2,100.
+19. **Reviewing Test Cases** — *Objective*: review someone else's test cases and identify real coverage gaps, not just phrasing preferences. *Prerequisites*: Modules 10–13. *Why it exists*: peer review is how a team's test-design quality stays consistent over time, and it's a distinct, underemphasized skill — in a real QA job, a tester reviews far more test cases than they personally write, and most courses skip this entirely. *Key concepts*: peer review practice, structured review checklists, ambiguity detection, duplicate-coverage detection, spotting missing scenarios (not just critiquing what's present), giving actionable review feedback. *Est. word count*: 2,000–2,200.
+
+#### Section 6 — Applying Test Design to Real Domains
+20. **Applying Test Design Across Domains: Banking and E-Commerce** — *Objective*: apply the full technique toolkit to two contrasting real domains in one integrated exercise each. *Prerequisites*: Sections 1–5 complete. *Why it exists*: the first of two domain-application modules — see Real Project Mapping below for why banking and e-commerce are paired first. *Key concepts*: financial-accuracy-driven test design (banking), state- and inventory-driven test design (e-commerce). *Est. word count*: 2,400–2,700.
+21. **Applying Test Design Across Domains: Healthcare and Insurance** — *Objective*: apply the full technique toolkit to two more contrasting domains, both with a regulatory/compliance dimension the first pair didn't emphasize. *Prerequisites*: Module 20. *Why it exists*: healthcare and insurance both foreground the RTM and traceability module (12) in a way banking and e-commerce don't as directly — pairing them together makes that connection explicit. *Key concepts*: compliance-driven traceability, decision-table-heavy premium/eligibility logic, state-transition-heavy claims/appointment flows. *Est. word count*: 2,400–2,700.
+
+#### Section 7 — Capstone
+22. **Common Mistakes in Test Design** — *Objective*: recognize the recurring ways test design goes wrong across everything taught in this path. *Prerequisites*: Sections 1–6. *Why it exists*: a deliberate lead-in to the capstone, in the same spirit as Foundations' Testing Myths module — reinforcement, not new teaching. *Key concepts*: over-testing vs. under-testing, technique misapplication (e.g., decision tables used where EP would do), test cases that don't survive a requirement change. *Est. word count*: 2,000–2,200.
+23. **Capstone: Designing a Complete Test Suite** — *Objective*: given one real, moderately complex feature, apply every technique from this path together — tester mindset, BVA, EP, decision tables, state transitions, combinatorial reduction, error guessing, clear test case writing, and an RTM — and produce a complete, reviewable test design package. *Prerequisites*: the entire path. *Why it exists*: **the confirmed capstone** (see Deliverable 7 below) — it reinforces the whole path in one integrated exercise rather than introducing anything new, mirroring exactly how Foundations' Testing Myths module closed that path. *Key concepts*: none new — pure synthesis. *Est. word count*: 2,800–3,200 (acceptable band, justified by scope — this is the one module in the path allowed to run long, since it's deliberately comprehensive).
+
+**Total**: 23 modules, ~48,700–54,100 words estimated (comparable in scale to Foundations' 35,852 actual, reflecting more technique depth per module).
+
+### 3. Dependency Map and Knowledge Nodes
+
+```
+1 → 2 → 3 → 4 → 5 → 6 → 7 → 8 → 9   (Sections 1–2, strictly sequential:
+                                      Module 3 establishes mindset before
+                                      any named technique; each technique
+                                      after it builds on the reduction
+                                      logic of the one before it)
+                    ↓
+        10 → 11 → 12 → 13            (Section 3, sequential)
+                    ↓
+        14 → 15 → 16                 (Section 4, sequential)
+                    ↓
+        17 → 18 → 19                 (Section 5, sequential — 17 also
+                                      cross-depends on Foundations 11 & 12)
+                    ↓
+        20 → 21                      (Section 6, sequential)
+                    ↓
+        22 → 23                      (Capstone)
+```
+
+**Knowledge nodes**: `KNOWLEDGE_GRAPH.md` already pre-designates Boundary Value Analysis, Equivalence Partitioning, Decision Table Testing, State Transition Testing, and Combinatorial/Pairwise Testing as future knowledge nodes referenced by API Testing, Security Testing, Database Testing, and Automation. That means Modules 4–8 should be written knowing from day one that other paths will link to them — unlike every Foundations module, which was written without that pressure. Two decisions, now confirmed:
+- **Slug alignment — confirmed**: full descriptive slugs, matching the Foundations convention exactly — `/learning-paths/manual-testing/boundary-value-analysis`, `/equivalence-partitioning`, `/decision-table-testing`, `/state-transition-testing`, `/combinatorial-and-pairwise-testing`, `/error-guessing`. No abbreviations (`bva`, `ep`). `KNOWLEDGE_GRAPH.md`'s table will be updated to match once Module 4 is actually written.
+- **Combinatorial vs. Pairwise — confirmed as one module**: kept together under Progressive Extraction, since no second or third path currently links to either independently. Extract Pairwise Testing into its own node only once Automation, API Testing, or Performance Testing actually needs to reference it on its own — not before.
+
+No other new knowledge nodes are proposed at this stage. RTM (Module 12) and Test Data Design (Module 13) are candidates to watch — if Automation or Database Testing later need to reference either independently, that's the Progressive Extraction trigger, not before.
+
+### 4. Real Project Mapping
+
+| Section | Banking | E-Commerce | Healthcare | Insurance |
+|---|---|---|---|---|
+| 1 — Foundations | Entry skill for all four; no domain-specific emphasis | Same | Same | Same |
+| 2 — Core Techniques | BVA on interest rate/loan amount limits; Decision Tables on interest calculation rules | EP on discount code categories; State Transitions on order status (placed → shipped → delivered) | State Transitions on appointment/claim status; Combinatorial Testing on patient eligibility rule combinations | Decision Tables on premium calculation (the most decision-table-heavy domain of the four) |
+| 3 — Writing/Organizing | Standard | Standard | RTM carries real compliance weight (patient safety traceability) | RTM carries real compliance weight (regulatory audit trail) |
+| 4 — Exploratory | Lower priority — high-stakes flows favor scripted rigor | High priority — UX and conversion flows reward exploratory discovery | High priority — patient-facing flows need empathy-driven exploration | Lower priority — favors scripted rigor, similar to banking |
+| 5 — Reporting | Bug Museum: balance calculation, race conditions | Bug Museum: overselling, payment failures | Bug Museum: double-booking, data leaks, access violations | Bug Museum: premium miscalculation, claim denial errors |
+| 6 — Domain Application | Module 20 | Module 20 | Module 21 | Module 21 |
+
+This mapping is designed to plug directly into the existing Project Simulations (`PROJECT_ARCHITECTURE.md`) once those are built — Modules 20–21's worked examples are written to later become the seed material for the Banking, E-Commerce, Healthcare, and Insurance project simulations' early test-design phases, not disposable one-off examples.
+
+### 5. Interview Mapping
+
+- **Junior QA interviews**: Modules 1, 3, 4, 5, 10, 17 — "how do you come up with test cases" (Module 3, increasingly asked at junior level precisely because it's mindset, not memorization), "explain BVA," "explain EP," "write a test case for X," and "write a bug report for X."
+- **Mid-level QA interviews**: Modules 6, 7, 8, 12, 13, 19 — decision tables and state transitions for more complex features, RTM and test data design for process maturity questions, test case review for collaboration/mentorship signals.
+- **Scenario-based interviews** ("design test cases for a feature like X"): Modules 20, 21, 23 directly train for this format — the domain-application modules and capstone are, deliberately, rehearsal for exactly this interview style.
+
+### 6. Practical Exercises
+
+Per `LAB_ARCHITECTURE.md`, hands-on exercises belong to the Labs content type, not embedded inline in learning-path modules — this section identifies *where* Labs should attach, not new embedded content:
+
+- After Module 3: a "spot the assumptions" Lab — given a deliberately underspecified requirement, list every assumption and question a tester should raise before writing a single test case
+- After each of Modules 4–8: a short "design test cases for [a small, specific feature]" Lab per technique
+- After Module 10: a Lab converting a raw test-idea list into fully written test cases
+- After Module 12: a Lab building an RTM for a small multi-requirement feature
+- After Module 15: a timed, charter-driven exploratory session Lab
+- After Module 17: a Lab writing a bug report from a described (not self-found) defect — a natural connection point to Bug Museum entries
+- After Module 19: a peer-review Lab — given a deliberately flawed test suite (missing scenarios, ambiguous wording, duplicate coverage planted in it), find and document every issue
+- Modules 20–21: full case-study Labs per domain — these are the ones most directly reusable as seed material for the future Project Simulations
+- Module 23: a comprehensive, graded-style capstone Lab — design a complete test suite for one real feature end to end
+
+### 7. Capstone Recommendation
+
+**Module 23: Capstone — Designing a Complete Test Suite.** Given one real, moderately complex feature (recommend a loan-eligibility form — it naturally exercises BVA on numeric limits, EP on applicant categories, Decision Tables on eligibility rules, and State Transitions on application status, without needing an artificially contrived example), the learner applies every technique from the path together and produces one complete, reviewable test design package: test ideas, organized test cases, an RTM, and a sample bug report against a planted defect.
+
+This mirrors exactly how Foundations closed with Testing Myths & Misconceptions: no new concept is introduced, the module exists purely to prove the rest of the path became instinct, and it's the module most directly reusable later as interview-preparation rehearsal material.
+
+**Success Criteria** (path-level):
+- Learner designs a complete, minimal, high-coverage test suite for a non-trivial feature using the correct technique for each part of that feature, not one technique applied everywhere
+- Learner explains why specific test cases were excluded (equivalence reasoning), not just which were included
+- Learner writes a bug report a developer can act on without follow-up questions
+- Learner builds an RTM that would satisfy a real compliance review
+- Learner identifies edge cases and missing coverage in someone else's test suite, not just their own
 
 ---
 

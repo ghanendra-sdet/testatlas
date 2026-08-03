@@ -44,13 +44,12 @@ These are the atomic concepts that live in only one place and are referenced thr
 
 | Node | Location | Used In | Why |
 |------|----------|---------|-----|
-| Boundary Value Analysis | `/learning-paths/manual-testing/bva` | Manual Testing, API Testing, Security Testing, Database Testing, Interview Prep | Every path that designs test cases needs to know edge values matter |
+| Boundary Value Analysis | `/learning-paths/manual-testing/boundary-value-analysis` | Manual Testing, API Testing, Security Testing, Database Testing, Interview Prep | Every path that designs test cases needs to know edge values matter |
 | Equivalence Partitioning | `/learning-paths/manual-testing/equivalence-partitioning` | Manual Testing, API Testing, Database Testing, Interview Prep | How to reduce test cases without losing coverage |
-| Decision Table Testing | `/learning-paths/manual-testing/decision-tables` | Manual Testing, API Testing, Security Testing, Interview Prep | How to test complex logical combinations |
-| State Transition Testing | `/learning-paths/manual-testing/state-transitions` | Manual Testing, API Testing, Interview Prep | How to test systems that have multiple states |
-| Combinatorial Testing | `/learning-paths/manual-testing/combinatorial-testing` | Manual Testing, Automation Testing, Performance Testing | How to test when variables multiply |
+| Decision Table Testing | `/learning-paths/manual-testing/decision-table-testing` | Manual Testing, API Testing, Security Testing, Interview Prep | How to test complex logical combinations |
+| State Transition Testing | `/learning-paths/manual-testing/state-transition-testing` | Manual Testing, API Testing, Interview Prep | How to test systems that have multiple states |
+| Combinatorial and Pairwise Testing | `/learning-paths/manual-testing/combinatorial-and-pairwise-testing` | Manual Testing, Automation Testing, Performance Testing | How to test when variables multiply, and how to reduce that space with mathematical rigor. Kept as one node per Progressive Extraction — split only once Pairwise is referenced independently of Combinatorial by a third path. |
 | Error Guessing | `/learning-paths/manual-testing/error-guessing` | Manual Testing, Security Testing, Interview Prep | Experienced intuition about what breaks |
-| Pairwise Testing | `/learning-paths/manual-testing/pairwise-testing` | Automation Testing, Performance Testing | Reduced test combinations with mathematical rigor |
 
 **How They Connect**:
 - A Security Testing page titled "Injection Testing" references Boundary Value Analysis: "Test boundaries of input validation using BVA principles"
