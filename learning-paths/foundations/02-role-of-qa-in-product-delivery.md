@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # The Role of QA in Product Delivery
 
+**Prerequisites**: You should already understand [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing).
+**Leads to**: After this, you'll be ready for [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
+
 Ask five engineers what a QA engineer does, and you'll get five different answers. "They test the app before release." "They write automation." "They find bugs." "They make sure requirements are clear." All four are sometimes true, none is the full picture, and the disagreement itself is a symptom: most teams have never actually defined what QA owns.
 
 This chapter is about that definition — not a job title, but a function. What does "QA" actually mean on a real team, how does it differ from what developers and DevOps own, and when should it show up in the delivery process to do the most good?
@@ -141,8 +144,8 @@ Agree, in advance, who owns what when something breaks in production. Doing this
 ## Related Topics
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — The foundational concept this chapter builds on
-- [Test Design Techniques](#) — How QA turns risk-thinking into concrete test cases
-- [Career Paths in QA](#) — How these archetypes map to actual job titles and career growth
+- Test Design Techniques (coming soon, Manual Testing path) — How QA turns risk-thinking into concrete test cases
+- [QA Career Roadmap](/learning-paths/foundations/qa-career-roadmap) — How these archetypes map to actual job titles and career growth
 
 ## Interview Questions
 

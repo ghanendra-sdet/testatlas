@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # QA Metrics & Measurement
 
 **Prerequisites**: You should already understand [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle), [Severity vs. Priority](/learning-paths/foundations/severity-vs-priority), and [Test Strategy vs. Test Plan](/learning-paths/foundations/test-strategy-vs-test-plan).
-**Leads to**: After this, you'll be ready for Common QA Terminology (coming soon) and QA Career Roadmap (coming soon).
+**Leads to**: After this, you'll be ready for [Common QA Terminology](/learning-paths/foundations/common-qa-terminology) and [QA Career Roadmap](/learning-paths/foundations/qa-career-roadmap).
 
 A test plan defines exit criteria; metrics are how a team knows whether it's actually meeting them, this release and over time. But not every number that looks like progress actually measures it — some popular QA metrics reward exactly the wrong behavior if a team optimizes for the number instead of what it's supposed to represent.
 

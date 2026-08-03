@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Test Strategy vs. Test Plan
 
 **Prerequisites**: You should already understand [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals), [Quality Attributes](/learning-paths/foundations/quality-attributes), and [Severity vs. Priority](/learning-paths/foundations/severity-vs-priority).
-**Leads to**: After this, you'll be ready for Metrics and Measurement (coming soon).
+**Leads to**: After this, you'll be ready for [QA Metrics & Measurement](/learning-paths/foundations/qa-metrics-and-measurement).
 
 "Test strategy" and "test plan" get used interchangeably in casual conversation, but they answer different questions at different altitudes. A test strategy says how a team approaches testing in general, across projects. A test plan says how testing will actually happen for one specific release. A team missing either one ends up either reinventing its testing approach from scratch every release, or having a stated philosophy that never actually gets executed on anything real.
 

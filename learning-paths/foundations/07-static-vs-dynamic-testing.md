@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # Static vs. Dynamic Testing
 
+**Prerequisites**: You should already understand [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation).
+**Leads to**: After this, you'll be ready for [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals).
+
 [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation) drew the line at *purpose* — are we building it right, versus are we building the right thing. This chapter draws the same line at the level of *technique*: static testing examines an artifact without running it, dynamic testing examines behavior by running it. Understanding which techniques belong to which category is what turns "we should test more" into a concrete plan for what to actually do, and when.
 
 ## Why This Matters

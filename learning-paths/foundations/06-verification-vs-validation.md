@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # Verification vs. Validation
 
+**Prerequisites**: You should already understand [Agile & Scrum Basics for QA](/learning-paths/foundations/agile-and-scrum-basics-for-qa).
+**Leads to**: After this, you'll be ready for [Static vs. Dynamic Testing](/learning-paths/foundations/static-vs-dynamic-testing).
+
 A feature can be built exactly to spec and still be the wrong feature. Verification and validation are the two separate checks that catch each half of that problem — and teams that only run one of them ship products that are either full of defects or confidently wrong.
 
 ## Why This Matters

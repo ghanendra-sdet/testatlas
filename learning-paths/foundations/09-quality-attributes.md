@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # Quality Attributes
 
+**Prerequisites**: You should already understand [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals).
+**Leads to**: After this, you'll be ready for [Shift-Left & Shift-Right Testing](/learning-paths/foundations/shift-left-and-shift-right-testing).
+
 A feature can pass every functional test — every button works, every calculation is correct, every workflow completes — and still be a bad product. An app that's functionally flawless but takes twelve seconds to load loses users before they ever discover how correct it is. This chapter is about the dimensions of quality beyond "does it work," and why testing has to consider all of them, not just the one that's easiest to verify with a pass/fail test case.
 
 ## Why This Matters
@@ -111,8 +114,8 @@ Anyone who built or reviewed a feature already knows how to use it. Real usabili
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — Where the idea that testing serves the user, not just the spec, was first introduced
 - [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals) — Weighing effort by impact, applied here to *which attribute* deserves depth
-- [Performance Testing](#) — The dedicated learning path for testing the Performance attribute in depth
-- [Security Testing](#) — The dedicated learning path for testing the Security attribute in depth
+- Performance Testing (coming soon) — The dedicated learning path for testing the Performance attribute in depth
+- Security Testing (coming soon) — The dedicated learning path for testing the Security attribute in depth
 
 ## Interview Questions
 

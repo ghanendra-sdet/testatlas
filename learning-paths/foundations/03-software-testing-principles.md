@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Software Testing Principles
 
 **Prerequisites**: You should already understand [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) and [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery).
-**Leads to**: After this, you'll be ready for [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) and Agile & Scrum Basics for QA (coming soon).
+**Leads to**: After this, you'll be ready for [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) and [Agile & Scrum Basics for QA](/learning-paths/foundations/agile-and-scrum-basics-for-qa).
 
 Every module after this one describes a technique, a process, or a distinction. This one is different — it describes the mental model a tester should already be running underneath all of that. A tester who knows these seven principles asks better questions in every situation this path covers next; a tester who doesn't will keep re-learning the same lessons the hard way, one release at a time.
 

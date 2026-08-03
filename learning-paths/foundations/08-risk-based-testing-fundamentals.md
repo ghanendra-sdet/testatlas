@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # Risk-Based Testing Fundamentals
 
+**Prerequisites**: You should already understand [Static vs. Dynamic Testing](/learning-paths/foundations/static-vs-dynamic-testing).
+**Leads to**: After this, you'll be ready for [Quality Attributes](/learning-paths/foundations/quality-attributes).
+
 Testing time is always finite. No team has enough hours to test every feature, every input, and every combination with equal thoroughness — and even if they did, most of that effort would be wasted on parts of the product that were never likely to break or never likely to matter if they did. Risk-based testing is how experienced testers spend limited time where it actually counts.
 
 ## Why This Matters
@@ -114,8 +117,8 @@ State plainly, in release notes or a test summary, what wasn't tested this cycle
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — The risk-based thinking this chapter builds on
 - [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) — How risk assessment fits into test planning within the STLC
-- [Test Design Techniques](#) — Turning a risk ranking into specific, deep test cases for high-risk areas
-- [Performance Testing](#) — Often the deepest layer of testing a high-impact, high-probability area needs
+- Test Design Techniques (coming soon, Manual Testing path) — Turning a risk ranking into specific, deep test cases for high-risk areas
+- Performance Testing (coming soon) — Often the deepest layer of testing a high-impact, high-probability area needs
 
 ## Interview Questions
 

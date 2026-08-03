@@ -71,6 +71,12 @@ Use “bug” naturally when discussing a reported problem. Use “defect” whe
 
 Define acronyms on first use: “requirements traceability matrix (RTM).” Do not use an acronym repeatedly if the full term remains clearer.
 
+### Forward Reference Rule
+
+A page may reference content that doesn't exist yet — a future module, a future learning path — only as plain text, clearly marked "(coming soon)."
+
+Never link a forward reference with `](#)` or any other placeholder anchor. A `#` link is not a broken link a build checker will catch, but it is a dead one: it does nothing for a reader, and it silently stays wrong even after the real content ships, because nothing forces it to be revisited. Plain text has no such failure mode — and once the target exists, converting "(coming soon)" into a real link is an explicit, visible edit, not a silent gap.
+
 ## 6. Examples, code, and test data
 
 Examples must be safe to copy and easy to understand.

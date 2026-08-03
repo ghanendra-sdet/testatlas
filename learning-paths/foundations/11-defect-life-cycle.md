@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Defect Life Cycle
 
 **Prerequisites**: You should already understand [Shift-Left & Shift-Right Testing](/learning-paths/foundations/shift-left-and-shift-right-testing) and [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc).
-**Leads to**: After this, you'll be ready for Severity vs. Priority (coming soon).
+**Leads to**: After this, you'll be ready for [Severity vs. Priority](/learning-paths/foundations/severity-vs-priority).
 
 A defect that's found and never tracked to closure might as well not have been found. The defect life cycle is the structure that turns "someone noticed a bug" into a reliable, auditable process — one where nothing found gets silently lost, and everyone agrees on what "fixed" actually means before it's called that.
 

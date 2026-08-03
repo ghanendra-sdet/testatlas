@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # QA Career Roadmap
 
 **Prerequisites**: You should already understand [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery) and [QA Metrics & Measurement](/learning-paths/foundations/qa-metrics-and-measurement).
-**Leads to**: After this, you'll be ready for Testing Myths & Misconceptions (coming soon), the final module in this path.
+**Leads to**: After this, you'll be ready for [Testing Myths & Misconceptions](/learning-paths/foundations/testing-myths-and-misconceptions), the final module in this path.
 
 [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery) introduced QA's different archetypes early in this path — before there was context for what separates them or how someone moves between them. Now, having seen the actual depth of the discipline across thirteen modules, that question has a real answer: growth in QA isn't just "get better at testing." It branches into genuinely different specializations, each with its own skills and trajectory.
 
@@ -32,7 +32,7 @@ QA careers aren't a single ladder — they're a set of tracks that share a commo
 | **Mid-Level QA** | Designing test cases independently, owning a feature area's quality, mentoring juniors informally | Test design techniques, risk-based prioritization, some tooling familiarity |
 | **Senior QA** | Owning testing strategy for a whole product area, identifying systemic quality gaps, driving process improvement | Deep domain expertise, cross-team collaboration, strategic thinking |
 | **QA Lead / Manager** | Team coordination, hiring, reporting quality metrics upward, aligning testing strategy with business goals | Leadership, communication with non-technical stakeholders, organizational awareness |
-| **SDET (Software Development Engineer in Test)** | Building and maintaining test automation, frameworks, and testing infrastructure — writes code as much as, or more than, developers do | Programming, automation frameworks, CI/CD integration |
+| **SDET (Software Development Engineer in Test)** | Building and maintaining test automation, frameworks, and testing infrastructure — writes code as much as, or more than, developers do | Programming, automation frameworks, CI/CD integration (running tests automatically as part of the build and deployment pipeline — covered in depth in the future Automation path) |
 | **Automation Engineer** | A closely related track to SDET, sometimes distinct, focused specifically on building and scaling automated test suites | Scripting, framework design, maintaining large test suites without them becoming brittle |
 | **Quality Engineer** | A broader title some organizations use for QA that spans manual, automation, and quality-process work without a hard specialization | Breadth across manual and automated approaches, process design |
 
@@ -135,7 +135,7 @@ The SDET-to-QA-Lead move in the example above happened because someone noticed a
 
 ## Glossary
 
-**SDET (Software Development Engineer in Test)**: A QA specialization focused on building and maintaining test automation, frameworks, and testing infrastructure through code.
+**SDET (Software Development Engineer in Test)**: A QA specialization focused on building and maintaining test automation, frameworks, and testing infrastructure through code. See [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery) for the role-level definition.
 
 **Quality Engineer**: A broader title some organizations use for QA spanning manual, automation, and quality-process work without a hard specialization.
 

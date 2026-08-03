@@ -1,4 +1,16 @@
+---
+title: "What Is Software Testing?"
+description: "Testing is not about executing test cases — it's how a team answers whether a product will actually work for its users. The foundational definitions everything else in this path builds on."
+keywords: ["what is software testing", "testing vs checking", "testing fundamentals", "risk-based thinking"]
+difficulty: "beginner"
+time_to_read: "9 min"
+last_reviewed: "2026-08-03"
+---
+
 # What Is Software Testing?
+
+**Prerequisites**: None — this is the first module in Foundations.
+**Leads to**: After this, you'll be ready for [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery).
 
 Testing is not about executing test cases. Testing is how a team answers a specific question: **Will this product work for its users?** Everything else follows from that one purpose.
 
@@ -197,10 +209,10 @@ A test that is brittle (breaks when the UI changes slightly) is worse than no te
 
 ## Related Topics
 
-- [Test Design Techniques](#) — How to design tests that catch real problems
-- [Test Automation](#) — When and how to automate tests
-- [Defect Management](#) — How to report, prioritize, and track defects
-- [Performance Testing](#) — How to ensure the product scales under load
+- Test Design Techniques (coming soon, Manual Testing path) — How to design tests that catch real problems
+- Test Automation (coming soon) — When and how to automate tests
+- [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) — How to report, prioritize, and track defects
+- Performance Testing (coming soon) — How to ensure the product scales under load
 
 ## Interview Questions
 

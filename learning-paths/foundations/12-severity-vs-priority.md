@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Severity vs. Priority
 
 **Prerequisites**: You should already understand [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle).
-**Leads to**: After this, you'll be ready for Test Strategy vs. Test Plan (coming soon).
+**Leads to**: After this, you'll be ready for [Test Strategy vs. Test Plan](/learning-paths/foundations/test-strategy-vs-test-plan).
 
 Every defect gets triaged with two separate questions: how technically bad is this, and how soon does it need attention. Those questions have different answers more often than beginners expect — and a team that treats them as the same question consistently fixes the wrong things first.
 
@@ -136,6 +136,6 @@ A defect correctly deprioritized last week can become urgent this week if a rele
 
 **Priority**: A measure of how urgently a defect needs to be fixed relative to other work, factoring in business impact, visibility, and timing.
 
-**Triage**: The process of assessing a newly logged defect's severity and priority and assigning it to an owner.
+**Triage**: The activity of reviewing newly logged defects to assign severity, priority, and ownership. See [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle).
 
 **Workaround**: A way for users to avoid or work around a defect's impact without it being fixed, often a factor that lowers priority even for a high-severity issue.

@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Common QA Terminology
 
 **Prerequisites**: This module consolidates terms from every prior module in this path — it's most useful after completing Modules 1–14, though it also works as a standalone reference.
-**Leads to**: After this, you'll be ready for QA Career Roadmap (coming soon).
+**Leads to**: After this, you'll be ready for [QA Career Roadmap](/learning-paths/foundations/qa-career-roadmap).
 
 **A note on structure**: every other module in this path follows the Why-What-When-How framework, because it's teaching a new concept. This one is different, deliberately — by this point in the path, a learner has already encountered nearly every term below in real context. Re-explaining them from scratch would just repeat the earlier modules. Instead, this page exists to be *found* — bookmarked, searched, and referenced back to whenever a term needs a quick reminder, with a link back to the module where it was actually taught in depth.
 
@@ -151,7 +151,7 @@ Confirming shared vocabulary early (does "priority" mean what this path says it 
 ## Related Topics
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — Where this path, and this vocabulary, begins
-- Testing Myths & Misconceptions (coming soon) — The capstone module that revisits many of these same terms through common misunderstandings
+- [Testing Myths & Misconceptions](/learning-paths/foundations/testing-myths-and-misconceptions) — The capstone module that revisits many of these same terms through common misunderstandings
 
 ## Interview Questions
 

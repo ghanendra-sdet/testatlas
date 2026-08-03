@@ -448,6 +448,13 @@ A learning module is complete only when every item below is true. This is the si
 - [ ] Site builds successfully with the new page (`npm run build`, zero broken links)
 - [ ] Page appears correctly in the sidebar and the local search index
 - [ ] Reviewed before merge
+- [ ] **Cross-Link Resolution Check** (run before *every* module is marked complete, not just at the end of a path):
+  - [ ] Search this module for `(coming soon)` — resolve any that now have a real target
+  - [ ] Search this module for `](#)` — resolve or convert to plain "(coming soon)" text
+  - [ ] Search every *prior* module for `(coming soon)` references to *this* module's title — resolve them now that this module exists
+  - [ ] Update this module's own Prerequisites "Leads to" line once its target modules exist
+  - [ ] Verify Related Topics links point to real, correct destinations
+  - [ ] Run `npm run build` after all of the above
 
 ---
 

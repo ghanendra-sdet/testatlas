@@ -10,7 +10,7 @@ last_reviewed: "2026-08-03"
 # Shift-Left & Shift-Right Testing
 
 **Prerequisites**: You should already understand [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) and [Quality Attributes](/learning-paths/foundations/quality-attributes).
-**Leads to**: After this, you'll be ready for Defect Life Cycle (coming soon) and Severity vs. Priority (coming soon).
+**Leads to**: After this, you'll be ready for [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) and [Severity vs. Priority](/learning-paths/foundations/severity-vs-priority).
 
 Picture a release timeline as a straight line: requirements on the left, production on the right. Traditional testing clusters entirely in the middle-right — after code exists, before release. Shift-left and shift-right are two deliberate moves away from that middle: pulling quality work earlier, toward requirements and design, and extending it later, into what actually happens after release. Both moves come from the same realization — waiting for a finished build to start caring about quality, and stopping the moment one ships, both leave real risk uncovered.
 

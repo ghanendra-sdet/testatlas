@@ -9,6 +9,9 @@ last_reviewed: "2026-08-03"
 
 # Testing Across the SDLC
 
+**Prerequisites**: You should already understand [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
+**Leads to**: After this, you'll be ready for [Agile & Scrum Basics for QA](/learning-paths/foundations/agile-and-scrum-basics-for-qa).
+
 The previous chapter established that testing happens throughout delivery, not as a single phase at the end. That's true — but *how* it happens throughout delivery looks completely different depending on which software development lifecycle (SDLC) model a team actually uses. Knowing that testing should be continuous doesn't tell you what to do differently on a Waterfall project versus a two-week Agile sprint. This chapter does.
 
 ## Why This Matters
@@ -108,8 +111,8 @@ Continuous delivery without automated regression coverage just means continuous 
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — Why testing throughout delivery matters in the first place
 - [The Role of QA in Product Delivery](/learning-paths/foundations/role-of-qa-in-product-delivery) — Who's involved at each SDLC stage
-- [Defect Life Cycle](#) — What happens to a defect once the STLC's Test Execution phase finds one
-- [Test Automation](#) — How continuous delivery pipelines automate STLC execution
+- [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) — What happens to a defect once the STLC's Test Execution phase finds one
+- Test Automation (coming soon) — How continuous delivery pipelines automate STLC execution
 
 ## Interview Questions
 
