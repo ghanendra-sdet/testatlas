@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Requirement Traceability Matrix (RTM)
 
 **Prerequisites**: You should already understand [From Requirements to Test Ideas](/learning-paths/manual-testing/from-requirements-to-test-ideas) and [Test Case Organization and Naming](/learning-paths/manual-testing/test-case-organization-and-naming).
-**Leads to**: After this, you'll be ready for Test Data Design (coming soon).
+**Leads to**: After this, you'll be ready for [Test Data Design](/learning-paths/manual-testing/test-data-design).
 
 Every earlier module in this path assumed a requirement eventually gets tested. None of them answered a real, practical question a team actually has to answer: how do you *prove* every requirement got tested, and how do you find the ones that didn't? A Requirement Traceability Matrix (RTM) is the answer — a structured mapping from requirements to the test cases that verify them, and the tool that turns "we're pretty sure we tested that" into a checkable claim.
 
@@ -110,6 +110,8 @@ On an insurance platform, an RTM maintained diligently for functional requiremen
 
 **Your task**: Sketch an RTM table for these three requirements. Based on the requirement descriptions alone, what test case IDs would you expect to need for each (you can invent plausible IDs), and identify which requirement, if any, seems most likely to be under-covered by a team that only tested the "happy path" for each.
 
+**Downloadable Resources (Coming Soon)**: A ready-to-use RTM Template, structured around this module's worked example, is planned — tracked in `NOT_NOW.md`.
+
 ## Key Takeaways
 
 - An RTM maps requirement IDs to the test case IDs that verify them, turning "we tested that" from an impression into a checkable claim.
@@ -126,7 +128,7 @@ On an insurance platform, an RTM maintained diligently for functional requiremen
 - How a banking audit and a healthcare requirement change both depended on a live, maintained RTM
 - The distinction between "every requirement has a test case" and "every requirement was tested sufficiently"
 
-**Next:** Test Data Design (coming soon)
+**Next:** [Test Data Design](/learning-paths/manual-testing/test-data-design)
 
 ## Related Topics
 

@@ -117,6 +117,8 @@ On a healthcare project, a test case titled "verify appointment booking works" h
 
 **Your task**: Write this as a complete, atomic test case using every field from this module's table (Test Case ID, Title, Preconditions, Test Steps, Test Data, Expected Result). If you find the test idea actually contains more than one atomic check, split it into multiple test cases instead of forcing it into one.
 
+**Downloadable Resources (Coming Soon)**: A ready-to-use Test Case Template, structured around this module's fields, is planned — tracked in `NOT_NOW.md`.
+
 ## Key Takeaways
 
 - A test case is only as useful as its precision — vague steps, data, or expected results make it effectively unusable by anyone besides the original author.

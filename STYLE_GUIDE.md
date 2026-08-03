@@ -90,6 +90,14 @@ Examples must be safe to copy and easy to understand.
 
 For automation examples, explain why the chosen locator, assertion, test boundary, or design pattern is appropriate. A passing snippet without reasoning is not a complete lesson.
 
+### Recurring Fictional Product: AtlasBank
+
+Starting with Manual Testing Section 3, **AtlasBank** (a fictional internet banking platform — Internet Banking, Mobile App, Admin Portal, Loan Portal) is the default banking-domain example across the Manual Testing path, used wherever a banking example illustrates a concept. This gives learners continuity — the same product recurring across test cases, RTM entries, test data, and defect examples — instead of a new, unrelated bank invented per module.
+
+This is a default, not a rule without exceptions: healthcare, e-commerce, insurance, and other domains remain in active use wherever they illustrate a concept better than a banking example would (as they have throughout Foundations and Manual Testing so far). Don't force AtlasBank into an example where a different domain is genuinely the better fit — continuity is valuable, but not at the cost of picking a worse example just to reuse the name.
+
+Not retrofitted into Modules 1–12's existing banking examples — applies going forward from Section 3.
+
 ## 7. Diagrams and visuals
 
 Use visuals when they make a relationship, flow, or comparison easier to understand than prose.
