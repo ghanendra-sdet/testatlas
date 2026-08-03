@@ -136,7 +136,7 @@ Agree, in advance, who owns what when something breaks in production. Doing this
 - When QA should get involved across the delivery cycle
 - What good QA involvement looks like on a real team
 
-**Next:** Software Testing Principles (coming soon)
+**Next:** [Software Testing Principles](/learning-paths/foundations/software-testing-principles)
 
 ## Related Topics
 

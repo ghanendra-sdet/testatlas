@@ -105,7 +105,7 @@ Anyone who built or reviewed a feature already knows how to use it. Real usabili
 - How a real team surfaced reliability and security gaps that functional testing alone would have missed
 - Why non-functional testing needs to be planned, not assumed
 
-**Next:** Shift-Left & Shift-Right Testing (coming soon)
+**Next:** [Shift-Left & Shift-Right Testing](/learning-paths/foundations/shift-left-and-shift-right-testing)
 
 ## Related Topics
 
