@@ -38,7 +38,7 @@ If a named module doesn't exist yet, write its title as plain text with "(coming
 
 ### Recurring Callouts (Mandatory from Manual Testing Onward)
 
-Three callout patterns, proven out informally across Foundations and Manual Testing's first batch, are now a required part of every module's structure **starting with the Manual Testing path**. Foundations is not retrofitted — this is a forward-applying standard, the same way the Prerequisites block only applies going forward from when it was introduced.
+Five patterns, proven out informally across Manual Testing's first two batches, are now a required part of every module's structure **starting with the Manual Testing path**. Foundations is not retrofitted — this is a forward-applying standard, the same way the Prerequisites block only applies going forward from when it was introduced. Do not retrofit already-shipped Manual Testing modules either unless a real consistency need arises; apply this standard going forward from when each element was formalized.
 
 **From the Field** — one real, anonymized production lesson per module. No company names, no confidential detail. Placed wherever it naturally fits the module's flow, not forced into a fixed position.
 
@@ -64,6 +64,28 @@ Three callout patterns, proven out informally across Foundations and Manual Test
 **Scenario**: [A short, realistic scenario.]
 
 **Your task**: [A specific, practical task tied to this module's technique — no single correct answer required, the goal is active practice, not a quiz.]
+```
+
+**Common Interview Mistake** — one callout per module (typically placed within the Interview Questions section, next to the question it's most relevant to), naming a specific, real wrong answer candidates commonly give, and what a strong answer includes instead. Distinct from the Interview Questions' own "what to look for" guidance — this is about a *specific wrong answer*, named directly, not just a description of what a good answer looks like.
+
+```markdown
+:::note Common Interview Mistake
+Many candidates answer [specific wrong or incomplete answer]. That's incomplete because [what it misses]. A strong answer [what it should include instead].
+:::
+```
+
+**Quick Revision** — five concise bullet points per module, placed at the very end (after Glossary), summarizing the module's core takeaways in a form fast to scan before an interview or when revisiting the module later. Distinct from Key Takeaways (which comes earlier and can be prose-adjacent) — Quick Revision is deliberately terse, five bullets, no more, no elaboration.
+
+```markdown
+## Quick Revision
+
+Remember these five points:
+
+✓ [Point 1]
+✓ [Point 2]
+✓ [Point 3]
+✓ [Point 4]
+✓ [Point 5]
 ```
 
 These three join the existing required elements (Common Mistakes, Best Practices, Interview Questions, Glossary, "What You Just Learned") as part of every Manual Testing module's Definition of Done. A Section Complete summary (see **Navigation and Discoverability**) is required once per section, not once per module.
@@ -473,7 +495,7 @@ A learning module is complete only when every item below is true. This is the si
 - [ ] A realistic, production-inspired example is included — not a toy scenario
 - [ ] Common mistakes section included
 - [ ] Best practices section included
-- [ ] **From the Field, Senior QA Insight, and Mini Challenge included** (Manual Testing modules and beyond — not required for Foundations, which predates this standard)
+- [ ] **From the Field, Senior QA Insight, Mini Challenge, Common Interview Mistake, and Quick Revision included** (Manual Testing modules and beyond — not required for Foundations, which predates this standard)
 - [ ] Interview questions included, each with "what to look for" guidance
 - [ ] Glossary included for any term introduced that a reader wouldn't already know
 - [ ] Related Topics links to sibling and cross-path content

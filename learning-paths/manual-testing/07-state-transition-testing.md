@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # State Transition Testing
 
 **Prerequisites**: You should already understand [Decision Table Testing](/learning-paths/manual-testing/decision-table-testing).
-**Leads to**: After this, you'll be ready for Combinatorial and Pairwise Testing (coming soon).
+**Leads to**: After this, you'll be ready for [Combinatorial and Pairwise Testing](/learning-paths/manual-testing/combinatorial-and-pairwise-testing).
 
 Decision Table Testing handles features whose outcome depends on multiple conditions combined, evaluated fresh each time. Many real features don't work that way at all — their behavior depends on *history*: what state the system is currently in, based on everything that happened before this exact moment. A login attempt behaves differently depending on whether the account is currently active, temporarily locked, or already logged in elsewhere. State Transition Testing is the technique for exactly this shape of problem.
 
@@ -132,7 +132,7 @@ On a subscription-billing project, a state model for a customer's account (trial
 - How a login system's cross-device lock scenario and a session-timeout feature's broken reset event both hid at transitions, not within any single state
 - Why security-relevant states are a common, high-value place to apply this technique deliberately
 
-**Next:** Combinatorial and Pairwise Testing (coming soon)
+**Next:** [Combinatorial and Pairwise Testing](/learning-paths/manual-testing/combinatorial-and-pairwise-testing)
 
 ## Related Topics
 
