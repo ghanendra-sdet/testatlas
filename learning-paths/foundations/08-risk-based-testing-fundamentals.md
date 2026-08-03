@@ -131,7 +131,7 @@ State plainly, in release notes or a test summary, what wasn't tested this cycle
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — The risk-based thinking this chapter builds on
 - [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) — How risk assessment fits into test planning within the STLC
-- Test Design Techniques (coming soon, Manual Testing path) — Turning a risk ranking into specific, deep test cases for high-risk areas
+- [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis) — Turning a risk ranking into specific, deep test cases for high-risk areas
 - Performance Testing (coming soon) — Often the deepest layer of testing a high-impact, high-probability area needs
 
 ## Interview Questions

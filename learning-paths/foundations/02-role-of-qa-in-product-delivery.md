@@ -157,7 +157,7 @@ Agree, in advance, who owns what when something breaks in production. Doing this
 ## Related Topics
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — The foundational concept this chapter builds on
-- Test Design Techniques (coming soon, Manual Testing path) — How QA turns risk-thinking into concrete test cases
+- [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals) — How QA turns risk-thinking into concrete test cases
 - [QA Career Roadmap](/learning-paths/foundations/qa-career-roadmap) — How these archetypes map to actual job titles and career growth
 
 ## Interview Questions

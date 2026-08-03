@@ -244,7 +244,7 @@ A test that is brittle (breaks when the UI changes slightly) is worse than no te
 
 ## Related Topics
 
-- Test Design Techniques (coming soon, Manual Testing path) — How to design tests that catch real problems
+- [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals) — How to design tests that catch real problems
 - Test Automation (coming soon) — When and how to automate tests
 - [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) — How to report, prioritize, and track defects
 - Performance Testing (coming soon) — How to ensure the product scales under load
