@@ -59,14 +59,16 @@ These are the atomic concepts that live in only one place and are referenced thr
 
 ### Quality Attributes (Referenced Across All Paths)
 
+Per **Progressive Extraction**, these six attributes live together on one consolidated page — [Quality Attributes](/learning-paths/foundations/quality-attributes) — rather than as six separate node pages. This table originally listed a separate location per attribute, written before Progressive Extraction existed; that was exactly the speculative-extraction pattern the principle now argues against, since nothing yet links to any single attribute independently. Split an individual attribute (e.g., Performance) into its own node only once a specific path — most likely Performance Testing or Security Testing — actually needs to link to it on its own.
+
 | Node | Location | Used In | Why |
 |------|----------|---------|-----|
-| Functionality | `/learning-paths/foundations/quality-attributes/functionality` | Every path (does the feature work?) | All testing must verify basic functionality first |
-| Performance | `/learning-paths/foundations/quality-attributes/performance` | Performance Testing, API Testing, Security Testing, Automation Testing | Every test should consider speed and resource use |
-| Security | `/learning-paths/foundations/quality-attributes/security` | Security Testing, API Testing, Interview Prep | Every feature has security implications |
-| Usability | `/learning-paths/foundations/quality-attributes/usability` | Manual Testing, Interview Prep | Does the feature work for actual users? |
-| Reliability | `/learning-paths/foundations/quality-attributes/reliability` | Performance Testing, Database Testing, Automation Testing | Does it work consistently, even when failures occur? |
-| Maintainability | `/learning-paths/foundations/quality-attributes/maintainability` | Automation Testing, Career (building testing processes) | Tests must survive code changes |
+| Functionality | `/learning-paths/foundations/quality-attributes` | Every path (does the feature work?) | All testing must verify basic functionality first |
+| Performance | `/learning-paths/foundations/quality-attributes` | Performance Testing, API Testing, Security Testing, Automation Testing | Every test should consider speed and resource use |
+| Security | `/learning-paths/foundations/quality-attributes` | Security Testing, API Testing, Interview Prep | Every feature has security implications |
+| Usability | `/learning-paths/foundations/quality-attributes` | Manual Testing, Interview Prep | Does the feature work for actual users? |
+| Reliability | `/learning-paths/foundations/quality-attributes` | Performance Testing, Database Testing, Automation Testing | Does it work consistently, even when failures occur? |
+| Maintainability | `/learning-paths/foundations/quality-attributes` | Automation Testing, Career (building testing processes) | Tests must survive code changes |
 
 ### Metrics and Measurement (Referenced When Measuring)
 

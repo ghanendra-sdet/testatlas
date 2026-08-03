@@ -23,10 +23,20 @@ Learners follow different paths based on their role and experience level, but al
 **Modules**:
 1. What Is Software Testing? (foundational concept)
 2. The Role of QA in Product Delivery
-3. Testing Across the SDLC
+3. Testing Across the SDLC (includes the STLC and SDLC models)
 4. Risk-Based Testing Fundamentals
-5. Quality Metrics and Defect Severity
-6. Career Paths in QA
+5. Quality Attributes
+6. Verification vs. Validation
+7. Static vs. Dynamic Testing
+8. Defect Life Cycle
+9. Severity vs. Priority
+10. Shift-Left & Shift-Right Testing
+11. Test Strategy vs. Test Plan
+12. Metrics and Measurement
+13. QA Career Roadmap
+14. Common QA Terminology (glossary capstone)
+
+See `LEARNING_PATHS.md` for full module-by-module scope, learning outcomes, and the dependency reasoning behind this sequence.
 
 **Modules Feed Into**: All other learning paths
 

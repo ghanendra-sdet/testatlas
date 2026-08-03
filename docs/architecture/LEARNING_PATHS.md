@@ -14,28 +14,51 @@ Learning paths are role-based progressions: a junior QA takes a different path t
 **Target Audience**: Anyone starting QA, developers wanting to understand testing, students  
 **Estimated Duration**: 2–4 weeks  
 
-**Learning Objectives**:
-- Understand what testing is (not just executing test cases)
-- Know why testing matters (risk-based thinking)
-- See testing across the SDLC (requirements through production)
-- Distinguish between testing and checking
-- Understand testing at different levels (unit, integration, system, UAT, production)
-- Connect testing to product quality and business value
+**Learning Outcomes** — when finished, a learner should be able to:
+- Explain the purpose of software testing and why it's risk-based thinking, not test-case execution
+- Describe how the SDLC and STLC relate, and how testing maps onto Waterfall, V-Model, Agile, and continuous delivery
+- Distinguish testing from checking, and verification from validation
+- Distinguish static testing from dynamic testing, and know when each applies
+- Design basic test scenarios using risk-based prioritization
+- Report a defect correctly and track it through its lifecycle, including severity vs. priority
+- Explain shift-left and shift-right testing, and why catching a defect earlier is cheaper
+- Describe the six quality attributes and weigh which matter most for a given product
+- Distinguish a test strategy from a test plan
+- Read basic QA metrics and know what they do and don't prove
+- Describe the QA role, its boundaries with other functions, and the career paths within it
+- Use core QA terminology correctly and consistently
 
 **Modules** (planned for v0.1–v1.0):
 1. What Is Software Testing? (✓ done)
 2. The Role of QA in Product Delivery (✓ done)
-3. Testing Across the SDLC
-4. Risk-Based Testing Fundamentals
-5. Quality Attributes (Functionality, Performance, Security, Usability, Reliability)
-6. Metrics and Measurement (Coverage, Defect Density, MTTR)
-7. Career Paths in QA (types of roles, growth opportunities)
-8. Glossary of Common Terms
+3. Testing Across the SDLC — includes the STLC and SDLC models (✓ done)
+4. Risk-Based Testing Fundamentals (✓ done)
+5. Quality Attributes (Functionality, Performance, Security, Usability, Reliability, Maintainability) (✓ done)
+6. Verification vs. Validation
+7. Static vs. Dynamic Testing
+8. Defect Life Cycle
+9. Severity vs. Priority
+10. Shift-Left & Shift-Right Testing
+11. Test Strategy vs. Test Plan
+12. Metrics and Measurement (Coverage, Defect Density, MTTR)
+13. QA Career Roadmap (types of roles, growth opportunities)
+14. Common QA Terminology (glossary capstone)
+
+**Sequencing note**: Modules 1–5 are published and stay in place — reordering shipped modules breaks existing links and sidebar position for anyone already partway through, which `VERSIONING_STRATEGY.md` explicitly commits against. Modules 6–14 are sequenced for pedagogical dependency, not just topic grouping:
+- **6–7 (Verification vs. Validation → Static vs. Dynamic Testing)**: taught back-to-back because they're the same underlying distinction from two angles — verification tends to be static, validation tends to be dynamic. Teaching them together reinforces both.
+- **8–9 (Defect Life Cycle → Severity vs. Priority)**: hard dependency — severity and priority are properties of a logged defect, so the lifecycle has to come first.
+- **10 (Shift-Left & Shift-Right)**: depends on Module 3 (SDLC/STLC) and Module 8 (Defect Life Cycle) — the point of shifting left is catching a defect *before* it needs a full lifecycle, so that contrast only lands once both are already understood.
+- **11 (Test Strategy vs. Test Plan)**: a synthesis module — depends on Module 4 (risk-based thinking) and Module 5 (quality attributes), since both are inputs to what a real strategy or plan contains.
+- **12 (Metrics and Measurement)**: depends on Module 8–9 (defect density and MTTR are metrics *about* defects) and Module 11 (metrics are how you evaluate whether a strategy worked).
+- **13 (QA Career Roadmap)**: placed late deliberately — a learner can only meaningfully evaluate specialization paths (manual, SDET, performance, security, leadership) after seeing the breadth of the discipline in modules 3–12. It also follows directly from Module 2's role definitions.
+- **14 (Common QA Terminology)**: capstone by design — a glossary of everything introduced in modules 1–13, meant to be read last and bookmarked as a reference, not read first.
 
 **Success Criteria**:
 - Learner explains why testing matters beyond "finding bugs"
 - Learner maps where testing happens in a product release
 - Learner articulates risk-based thinking in simple terms
+- Learner can correctly use verification/validation, static/dynamic, and severity/priority in a sentence without mixing them up
+- Learner can describe their own eventual QA specialization path and why it fits them
 
 ---
 
