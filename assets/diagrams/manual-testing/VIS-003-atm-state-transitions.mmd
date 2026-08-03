@@ -1,0 +1,11 @@
+%% VIS-003 — ATM PIN Entry: States and Transitions
+%% Used in: 07-state-transition-testing.md
+stateDiagram-v2
+    accTitle: ATM PIN Entry States and Transitions
+    accDescr: An ATM account starts unlocked. A correct PIN moves it to an active session. An incorrect PIN keeps it unlocked but increments a failed-attempt count. After three consecutive incorrect PINs, the account moves to locked. From locked, any PIN entry should be immediately rejected, not partially processed.
+    [*] --> Unlocked
+    Unlocked --> ActiveSession: Correct PIN
+    Unlocked --> Unlocked: Incorrect PIN (attempt < 3)
+    Unlocked --> Locked: Incorrect PIN (3rd attempt)
+    Locked --> Locked: Any PIN entry (should be rejected immediately)
+    ActiveSession --> [*]: Session ends

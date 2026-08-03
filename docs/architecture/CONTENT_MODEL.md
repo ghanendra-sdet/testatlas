@@ -36,6 +36,38 @@ Immediately after frontmatter, before the opening paragraph, a learning module s
 
 If a named module doesn't exist yet, write its title as plain text with "(coming soon)" instead of a link — never link to a page that doesn't exist. This makes the dependency graph visible on the page itself, not just in `LEARNING_PATHS.md`.
 
+### Recurring Callouts (Mandatory from Manual Testing Onward)
+
+Three callout patterns, proven out informally across Foundations and Manual Testing's first batch, are now a required part of every module's structure **starting with the Manual Testing path**. Foundations is not retrofitted — this is a forward-applying standard, the same way the Prerequisites block only applies going forward from when it was introduced.
+
+**From the Field** — one real, anonymized production lesson per module. No company names, no confidential detail. Placed wherever it naturally fits the module's flow, not forced into a fixed position.
+
+```markdown
+:::note From the Field
+[A real, anonymized lesson from production experience.]
+:::
+```
+
+**Senior QA Insight** — one short callout per module contrasting how a beginner approaches the module's topic versus how an experienced tester does. Placed near the concept it illuminates, not necessarily at the top.
+
+```markdown
+:::tip Senior QA Insight
+[A beginner does X. A senior tester does Y instead, and here's why that matters.]
+:::
+```
+
+**Mini Challenge** — one short, practical exercise near the end of every module (after Best Practices, before Key Takeaways), posed as a scenario the learner works through *before* reading ahead. Where a later module's content directly answers the challenge, the module should say so explicitly ("The next module builds directly on this exact example").
+
+```markdown
+## Mini Challenge
+
+**Scenario**: [A short, realistic scenario.]
+
+**Your task**: [A specific, practical task tied to this module's technique — no single correct answer required, the goal is active practice, not a quiz.]
+```
+
+These three join the existing required elements (Common Mistakes, Best Practices, Interview Questions, Glossary, "What You Just Learned") as part of every Manual Testing module's Definition of Done. A Section Complete summary (see **Navigation and Discoverability**) is required once per section, not once per module.
+
 ### Opening Paragraph (Hook)
 Start with one paragraph that answers: **What is this page about, and why should you care?**
 
@@ -395,6 +427,9 @@ Use one term consistently throughout the page.
 
 ## Navigation and Discoverability
 
+### Section Complete Summaries (Manual Testing Onward)
+The final module in each curriculum section (per `LEARNING_PATHS.md`'s section breakdown) closes with a short "Section N Complete" summary, before the module's own Glossary: a checklist recap of what the section covered, and a one-line pointer to the next section. This is a per-*section* element, not per-module — most modules don't get one.
+
 ### Sidebar Organization
 Every learning path gets a `_category_.json` file that defines:
 1. The path name and position
@@ -438,6 +473,7 @@ A learning module is complete only when every item below is true. This is the si
 - [ ] A realistic, production-inspired example is included — not a toy scenario
 - [ ] Common mistakes section included
 - [ ] Best practices section included
+- [ ] **From the Field, Senior QA Insight, and Mini Challenge included** (Manual Testing modules and beyond — not required for Foundations, which predates this standard)
 - [ ] Interview questions included, each with "what to look for" guidance
 - [ ] Glossary included for any term introduced that a reader wouldn't already know
 - [ ] Related Topics links to sibling and cross-path content

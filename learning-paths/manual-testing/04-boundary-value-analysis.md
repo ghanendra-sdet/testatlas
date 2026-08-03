@@ -11,7 +11,7 @@ last_reviewed: "2026-08-03"
 # Boundary Value Analysis
 
 **Prerequisites**: You should already understand [Thinking Like a Tester](/learning-paths/manual-testing/thinking-like-a-tester).
-**Leads to**: After this, you'll be ready for Equivalence Partitioning (coming soon).
+**Leads to**: After this, you'll be ready for [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning).
 
 Section 1 built the mindset: ask better questions, surface hidden assumptions, think about the feature the way a real user and a real adversary both would. Boundary Value Analysis is the first named technique that turns that mindset into something concrete and repeatable — a specific, well-defined method for finding exactly the inputs most likely to reveal a defect, instead of guessing.
 
@@ -134,7 +134,7 @@ The next module builds directly on this exact example, so the practice carries f
 - How the same off-by-one defect pattern showed up in both a banking eligibility rule and an e-commerce shipping threshold, caught only by testing the exact boundary value
 - Why BVA and Equivalence Partitioning are taught together, not as competing techniques
 
-**Next:** Equivalence Partitioning (coming soon)
+**Next:** [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning)
 
 ## Related Topics
 
