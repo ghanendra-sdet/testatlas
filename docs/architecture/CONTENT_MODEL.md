@@ -452,6 +452,13 @@ Use one term consistently throughout the page.
 ### Section Complete Summaries (Manual Testing Onward)
 The final module in each curriculum section (per `LEARNING_PATHS.md`'s section breakdown) closes with a short "Section N Complete" summary, before the module's own Glossary: a checklist recap of what the section covered, and a one-line pointer to the next section. This is a per-*section* element, not per-module — most modules don't get one.
 
+### Section Knowledge Checks and Solutions Pages (Manual Testing Onward)
+The same closing module also includes a "Section N Knowledge Check": several realistic scenarios requiring the learner to decide which technique(s) from the section apply, with no answers given inline — the point is active judgment, not a quiz with an answer key one scroll away.
+
+The answers live on a **separate Solutions page**, not folded into the next section's opening module — interrupting Section 3 with Section 2's answers breaks the learner's flow into the new section. A Solutions page is its own file (`learning-paths/manual-testing/0Na-section-N-solutions.md`, sorting immediately after that section's closing module by filename, before the next section's Module 1), with `sidebar_label` set to `"Section N — Solutions"` (no module number — it's not one of the path's 23 numbered modules, and shouldn't be counted as one or imply otherwise in the sidebar). For every scenario: the correct technique, why it's correct, why the other techniques from the section are less appropriate for this specific scenario, and the real-world reasoning behind the choice.
+
+**Slug**: Docusaurus only strips a *purely numeric* filename prefix (`09-`) when deriving a route — an alphanumeric prefix like `09a-` is not stripped, and the route would otherwise be `/09a-section-N-solutions`, leaking the internal numbering scheme into the URL. Set an explicit `slug: section-N-solutions` in the frontmatter to keep the filename's ordering benefit while producing a clean URL. Verified directly against a real build failure the first time this page was created — `npm run build`'s broken-link check catches a wrong assumption about this, but only after the fact, so get the slug right the first time for any future Solutions page.
+
 ### Sidebar Organization
 Every learning path gets a `_category_.json` file that defines:
 1. The path name and position

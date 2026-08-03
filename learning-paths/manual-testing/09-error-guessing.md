@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Error Guessing
 
 **Prerequisites**: You should already understand [Combinatorial and Pairwise Testing](/learning-paths/manual-testing/combinatorial-and-pairwise-testing) — and ideally every technique in this section, since Error Guessing is best understood in contrast to all of them.
-**Leads to**: After this, you'll be ready for Writing Clear Test Cases (coming soon).
+**Leads to**: After this, you'll be ready for [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases).
 
 Every technique in this section so far — Boundary Value Analysis, Equivalence Partitioning, Decision Tables, State Transitions, Pairwise Testing — is systematic: given a feature, the technique tells you exactly what to test. Error Guessing is different on purpose. It's the deliberate use of experience, domain knowledge, and pattern recognition to find defects that no formal technique was specifically designed to target — and it closes this section precisely because it only makes sense in contrast to the structured techniques that came before it.
 
@@ -119,7 +119,7 @@ On an e-commerce project, a tester with prior experience in a different industry
 - How domain-specific experience (currency rounding in fintech, name-matching in healthcare) produces the most valuable Error Guessing
 - Why Error Guessing only works well as a supplement to systematic technique, not a replacement for it
 
-**Next:** Writing Clear Test Cases (coming soon)
+**Next:** [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases)
 
 ## Related Topics
 
@@ -160,11 +160,22 @@ You've finished **Core Test Design Techniques**, the second section of Manual Te
 
 **How they complement each other**: BVA and Equivalence Partitioning both operate on a single input; Decision Tables extend that to multiple conditions evaluated fresh; State Transitions extend it further into behavior shaped by history; Pairwise Testing handles the case where the combination space from Decision Tables grows too large to test exhaustively; Error Guessing sits on top of all five, catching what none of them were specifically designed to target. None of these techniques is a complete answer alone — a real test design for a non-trivial feature usually draws on several of them together.
 
+**Technique Selection Matrix** — a quick reference for which technique fits a given situation:
+
+| Situation | Best Technique | Why |
+|---|---|---|
+| Numeric ranges | Boundary Value Analysis | Finds edge defects, where they concentrate most |
+| Large valid/invalid groups | Equivalence Partitioning | Reduces redundant tests within a group the system treats identically |
+| Business rules with multiple conditions | Decision Table Testing | Guarantees every real rule combination is covered |
+| Stateful workflows | State Transition Testing | Validates behavior that depends on history, not just current input |
+| Multiple independent parameters | Pairwise Testing | Maximizes interaction coverage without exhaustive combination testing |
+| Unknown or hard-to-formalize risks | Error Guessing | Leverages experience and pattern recognition where formal technique doesn't reach |
+
 **Next section: Writing and Organizing Tests**, starting with Writing Clear Test Cases — where everything this section taught you to generate gets turned into something a team can actually execute and maintain.
 
 ## Section 2 Knowledge Check
 
-Five realistic scenarios. For each, decide which technique (or combination of techniques) from this section you'd apply, and why. No answers are provided here — this is a chance to apply the section's full toolkit yourself before moving on; solutions are introduced later in the curriculum.
+Five realistic scenarios. For each, decide which technique (or combination of techniques) from this section you'd apply, and why. No answers are provided here — this is a chance to apply the section's full toolkit yourself before moving on. **Solutions**: [Section 2 Solutions](/learning-paths/manual-testing/section-2-solutions).
 
 **Scenario 1**: A hotel booking form has a "number of guests" field, valid from 1 to 8 people per room.
 
