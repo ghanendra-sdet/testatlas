@@ -112,7 +112,7 @@ A feature isn't done because it matches its requirements (verification only), an
 - How an insurance company caught two requirements-level defects through verification, and two real-world gaps through validation, on the same feature
 - Why catching a defect through verification is typically far cheaper than catching the same defect through validation
 
-**Next:** Static vs. Dynamic Testing (coming soon)
+**Next:** [Static vs. Dynamic Testing](/learning-paths/foundations/static-vs-dynamic-testing)
 
 ## Related Topics
 

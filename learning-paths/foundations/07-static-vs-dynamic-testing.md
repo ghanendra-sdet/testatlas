@@ -113,7 +113,7 @@ Running whatever exists so far, even incomplete, surfaces behavioral issues incr
 - How a healthcare records team caught two defects statically, before any test run, and two more only by running the software under realistic and load conditions
 - Why matching technique to defect class keeps both fast and effective
 
-**Next:** Defect Life Cycle (coming soon)
+**Next:** [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle)
 
 ## Related Topics
 

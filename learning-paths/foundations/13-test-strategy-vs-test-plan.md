@@ -108,7 +108,7 @@ Naming what's *not* covered by this plan is as important as naming what is — i
 - How a healthcare company built both deliberately, and traced a specific plan's requirements back to its strategy
 - Why an unexplained contradiction between a plan and its strategy is a real gap worth surfacing, not two independently valid documents
 
-**Next:** Metrics and Measurement (coming soon)
+**Next:** [QA Metrics & Measurement](/learning-paths/foundations/qa-metrics-and-measurement)
 
 ## Related Topics
 
