@@ -16,8 +16,8 @@ Each release is a meaningful checkpoint, not just a version bump. This is the or
 |---|---|---|
 | v0.1.0 | Repository Foundation | ✅ Complete |
 | v0.2.0 | Architecture Freeze | ✅ Complete |
-| v0.3.0 | Website Foundation | Planned |
-| v0.4.0 | Foundations Learning Path | Planned |
+| v0.3.0 | Website Foundation | ✅ Complete |
+| v0.4.0 | Foundations Learning Path | 🚧 Content Complete (17/17) — editorial review pending |
 | v0.5.0 | Manual Testing (Part 1) | Planned |
 | v0.6.0 | API Testing (Part 1) | Planned |
 | v0.7.0 | Database Testing (SQL Fundamentals) | Planned |
@@ -59,7 +59,8 @@ Ideas that aren't on this list — mascot/branding, gamification, accounts, and 
 
 **Goal:** ship a complete, reliable Path 1 that every other path builds on.
 
-- Remaining Foundations modules (role of QA, SDLC, risk-based testing, quality attributes, metrics)
+- All 17 modules written across six sections (Introduction, Software Development Context, Testing Fundamentals, Quality Mindset, Defect Management, Professional QA) — see `docs/architecture/LEARNING_PATHS.md`
+- Remaining before this milestone tags: a full editorial/consistency review across all 17 modules, and a Prerequisites-block retrofit on the seven earliest modules
 
 ### v0.5.0 — Manual Testing (Part 1)
 

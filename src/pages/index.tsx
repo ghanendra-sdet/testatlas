@@ -134,6 +134,13 @@ export default function Home(): ReactNode {
                 See the Roadmap
               </Link>
             </div>
+            <ul className={styles.heroBadgeRow}>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>Foundations ✅ Complete</li>
+              <li className={styles.heroBadge}>17 Modules</li>
+              <li className={styles.heroBadge}>35,000+ Words</li>
+              <li className={styles.heroBadge}>Free</li>
+              <li className={styles.heroBadge}>Open Source</li>
+            </ul>
             <p className={styles.heroStatus}>
               Foundations is live today. Nine more learning paths are being built in the open — see
               what&rsquo;s next below.

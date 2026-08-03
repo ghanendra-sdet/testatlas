@@ -48,6 +48,33 @@
   border-radius: 0.45rem;
 }
 
+.heroBadgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin: 1.75rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.heroBadge {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid rgb(247 251 252 / 16%);
+  border-radius: 999px;
+  background: rgb(247 251 252 / 6%);
+  color: #c9dce2;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+
+.heroBadgeComplete {
+  border-color: rgb(56 210 165 / 45%);
+  background: rgb(56 210 165 / 14%);
+  color: #a9f0da;
+}
+
 .heroStatus {
   max-width: 34rem;
   margin: 1.75rem 0 0;

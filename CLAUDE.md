@@ -4,7 +4,7 @@ This document establishes architectural decisions, content patterns, and working
 
 ## Project Context
 
-**TestAtlas** is an open-source Software Testing knowledge base designed to become one of the most comprehensive, practical, and free learning resources for QA Engineers worldwide.
+**TestAtlas** is an open-source Software Testing curriculum — not a documentation site — designed to become one of the most comprehensive, practical, and free structured learning resources for QA Engineers worldwide. Every module, lab, project, or guide exists because it helps someone progress through that curriculum, not simply because it's another topic worth documenting.
 
 **Mission**: Help anyone master Software Testing through practical learning, real-world projects, and open-source resources.
 
