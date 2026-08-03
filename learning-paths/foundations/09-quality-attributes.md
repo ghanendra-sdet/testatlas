@@ -26,6 +26,20 @@ Both teams tested functionality carefully. Neither treated the *other* dimension
 
 Quality attributes are the dimensions a product needs to succeed on beyond raw functional correctness. Six matter most for the majority of products:
 
+```mermaid
+%% VIS-012 — The Six Quality Attributes
+mindmap
+  root((Quality<br/>Attributes))
+    Functionality
+    Performance
+    Security
+    Usability
+    Reliability
+    Maintainability
+```
+
+*A dedicated SVG infographic for these six attributes is a good future candidate — see `VISUAL_STANDARDS.md` category 8 — for the same reason as Software Testing Principles' seven principles.*
+
 | Attribute | The Question It Answers |
 |---|---|
 | **Functionality** | Does it do what it's supposed to do? |

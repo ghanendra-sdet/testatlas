@@ -56,6 +56,12 @@ Version-controlled as plain text inside the module's own Markdown file — not a
 ### 8. Infographics (occasional — for genuinely multi-part concepts)
 Hand-authored inline SVG, per `CONTENT_MODEL.md`'s existing "Mermaid or inline SVG only" rule. Reserved for concepts that are a fixed small set of parallel items — the Seven Testing Principles, the Six Quality Attributes — where a diagram of *relationships* (Mermaid's strength) doesn't fit, but a plain bullet list underuses the visual opportunity. Not for anything Mermaid can already express; reaching for hand-authored SVG when a flowchart would do is unnecessary maintenance burden for no reader benefit.
 
+## Validating Diagrams
+
+`npm run build` does **not** validate Mermaid syntax. `@docusaurus/theme-mermaid` renders every diagram entirely client-side, in the browser, after page load — a build can succeed with a broken diagram on the page, and static HTML inspection won't catch it either, since nothing Mermaid-related is present until JavaScript runs. This is not a hypothetical risk: it happened during the Foundations Visual Sprint (see `assets/diagrams/foundations/VIS-015-severity-priority-quadrant.mmd`'s history — an unquoted, space-containing point label in a `quadrantChart` built clean and would have failed silently at render time).
+
+Run `npm run validate:diagrams` — it parses every `.mmd` file under `assets/diagrams/` with Mermaid's real parser (via `scripts/validate-diagrams.mjs`) and fails loudly with the exact file and line on a syntax error. Run this whenever a diagram is added or changed, in addition to `npm run build`. This is now part of `QUALITY_GATES.md`.
+
 ## Mermaid Styling
 
 Docusaurus's Mermaid theme is now configured in `docusaurus.config.ts` to use TestAtlas's own brand teal instead of Mermaid's generic default palette, in both light and dark mode — see the `mermaid` key under `themeConfig`. Every diagram automatically inherits this; no per-diagram styling is needed or wanted. Do not override diagram colors inline (`style` directives, custom `classDef` colors) except in the rare case where semantic color genuinely matters (e.g., a red "Reopened" state) — and even then, prefer Mermaid's built-in `classDef` mechanism over ad hoc styling so it stays consistent across modules.
@@ -75,7 +81,11 @@ This is a target for new content, not a checklist every module must satisfy — 
 assets/
 └── diagrams/
     ├── README.md              (this convention, in short form, for contributors)
+    ├── templates/              (generic, unfilled snippets per category)
     ├── foundations/
+    │   ├── VIS-001-testing-activities.mmd
+    │   ├── VIS-002-cost-of-defect.mmd
+    │   └── ...
     ├── manual-testing/
     ├── api-testing/
     ├── database-testing/
@@ -84,14 +94,24 @@ assets/
     ├── security-testing/
     ├── ai-testing/
     ├── interview-preparation/
-    └── career/
+    ├── career/
+    └── exports/
+        ├── svg/                (rendered exports, for use outside Docusaurus — e.g. social cards, PDFs)
+        └── png/
 ```
 
-**What goes here, and what doesn't**: Mermaid diagrams that appear inline in a module (categories 1, 2, 4, 5) live as code fences directly inside that module's `.md` file — they are *not* duplicated into `assets/diagrams/` as separate files. A duplicate copy would immediately risk drifting from the real, rendered version and defeats Mermaid's own version-control advantage.
+### Visual IDs
 
-`assets/diagrams/<path>/` holds two things instead:
-- **Reusable template snippets** — generic, unfilled versions of each diagram category (see `assets/diagrams/README.md` and `templates/` below), for a writer to copy from when starting a new module, so every hero diagram and decision tree starts from the same visual vocabulary instead of being reinvented per module.
-- **Hand-authored SVG infographics** (category 8) — these are genuinely standalone assets, referenced by path from the module that uses them, so they belong in the file system as real files, unlike inline Mermaid.
+Every diagram gets a sequential ID within its learning path, assigned in the order it first appears across that path's modules: `VIS-001`, `VIS-002`, and so on. The ID is:
+- Recorded as a comment on the first line of the diagram, in both the module's inline code fence and its mirrored `.mmd` file (`%% VIS-004 — QA's Position Relative to Product, Dev, and DevOps`)
+- Reflected in the `.mmd` filename: `VIS-004-qa-position.mmd`
+- Never reused, even if a diagram is later removed — IDs are stable references, not a dense count
+
+This turns every diagram into a citable, reusable asset — a future page (a case study, a lab, a different learning path) can reference "Foundations VIS-014, the Defect Life Cycle state diagram" unambiguously, and a contributor scanning `assets/diagrams/foundations/` gets a complete visual index of the path at a glance.
+
+**What goes here, and how it stays in sync**: unlike the original guidance in this document (superseded by the Visual ID system above), every diagram that appears inline in a module — not just SVG infographics — now also gets a matching `.mmd` file in `assets/diagrams/<path>/`. The module's own code fence is what actually renders and is therefore authoritative; the `.mmd` file is a byte-identical mirror kept for indexing, reuse, and future export. When a diagram changes, update both in the same commit — treat a drifted mirror file as a defect, the same way a stale cross-link is treated elsewhere in this project.
+
+`assets/diagrams/templates/` is unaffected by this change — those stay generic, unfilled, and un-numbered, since they're starting points, not shipped diagrams.
 
 ## What This Does Not Do (yet)
 

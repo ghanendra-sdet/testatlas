@@ -8,6 +8,7 @@ A learning path cannot be tagged as a release until every gate below is satisfie
 - [ ] **Editorial review passed** — no unresolved repetition, weak examples, or overly long sections flagged during the QA review's Editorial suite
 - [ ] **Build passes** — `npm run build` succeeds with zero errors
 - [ ] **Links verified** — zero broken links, and zero dead `](#)` placeholder links (see the Forward Reference Rule in `STYLE_GUIDE.md`)
+- [ ] **Diagrams validated** — `npm run validate:diagrams` passes for every `.mmd` file touched. `npm run build` alone does not catch invalid Mermaid syntax (see `VISUAL_STANDARDS.md`), so this is a separate, required check
 - [ ] **Navigation verified** — sidebar order matches the intended curriculum sequence; every module's Prerequisites "Leads to" line and bottom "Next" link agree with each other and point to real content
 - [ ] **Metadata complete** — every module has full frontmatter (title, description, keywords, difficulty, time_to_read, last_reviewed) and a Prerequisites block
 - [ ] **Learning outcomes verified** — the path's stated Learning Outcomes in `LEARNING_PATHS.md` are each achievable by completing the published modules, with no gap between what's promised and what's taught

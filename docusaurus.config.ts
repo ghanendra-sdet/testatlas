@@ -109,6 +109,7 @@ const config: Config = {
       theme: {light: 'base', dark: 'base'},
       options: {
         themeVariables: {
+          background: 'transparent',
           primaryColor: '#0992a1',
           primaryTextColor: '#05262b',
           primaryBorderColor: '#076f7b',

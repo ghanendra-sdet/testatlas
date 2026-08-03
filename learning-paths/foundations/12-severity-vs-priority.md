@@ -28,6 +28,22 @@ Severity measures how bad something is on its own terms. Priority measures how s
 
 **Priority** measures how urgently a defect needs to be fixed, relative to other work. It's usually assessed jointly by QA and product/business stakeholders, and it factors in things severity alone doesn't: how many users are affected, how often, whether there's a workaround, and what's at stake if it isn't fixed soon.
 
+```mermaid
+%% VIS-015 — Severity vs. Priority Quadrant, using this module's own defects
+quadrantChart
+    title Severity vs. Priority
+    x-axis Low Priority --> High Priority
+    y-axis Low Severity --> High Severity
+    quadrant-1 Urgent and severe
+    quadrant-2 Severe, not urgent
+    quadrant-3 Neither
+    quadrant-4 Urgent, not severe
+    "Payment confirmation failure": [0.85, 0.85]
+    "Admin tool crash, has workaround": [0.2, 0.85]
+    "High-traffic landing page typo": [0.85, 0.2]
+    "Internal tool typo": [0.15, 0.15]
+```
+
 | | Severity | Priority |
 |---|---|---|
 | **Question it answers** | How badly is the system broken? | How soon should this be fixed? |

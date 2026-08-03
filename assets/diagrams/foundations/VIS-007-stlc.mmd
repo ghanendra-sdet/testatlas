@@ -1,0 +1,5 @@
+%% VIS-007 — The STLC (repeats once per SDLC cycle, sprint, or commit)
+%% Used in: 04-testing-across-the-sdlc.md
+flowchart LR
+    A[Requirement<br/>Analysis] --> B[Test<br/>Planning] --> C[Test Case<br/>Design] --> D[Environment<br/>Setup] --> E[Test<br/>Execution] --> F[Test<br/>Closure]
+    F -.->|repeats| A

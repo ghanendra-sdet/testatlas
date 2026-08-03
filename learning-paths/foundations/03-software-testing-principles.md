@@ -22,6 +22,21 @@ Every module after this one describes a technique, a process, or a distinction. 
 
 Neither tester lacked effort. The difference was a set of principles that turn testing from "try a lot of things" into "try the things most likely to reveal a defect."
 
+```mermaid
+%% VIS-005 — The Seven Testing Principles
+mindmap
+  root((Testing<br/>Principles))
+    Shows presence of defects
+    Exhaustive testing impossible
+    Early testing saves money
+    Defects cluster
+    Pesticide paradox
+    Context-dependent
+    Absence-of-errors fallacy
+```
+
+*A dedicated SVG infographic for these seven principles is a good future candidate — see `VISUAL_STANDARDS.md` category 8 — once the visual identity for infographics is established. The mindmap above covers the same relationships in the interim.*
+
 ## What the Seven Principles Are
 
 These principles, refined over decades of testing practice, describe patterns that hold across nearly every kind of software:

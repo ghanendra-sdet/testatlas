@@ -39,6 +39,17 @@ Plotting features against both factors produces a simple risk matrix:
 
 A footer redesign is low-probability (simple, well-understood change) and low-impact (nobody's money or safety depends on it) — light testing is the correct, deliberate choice, not a shortcut. An interest-calculation rewrite is high-probability (complex, unfamiliar logic) and high-impact (it's money) — it earns the deepest testing the team can afford.
 
+```mermaid
+%% VIS-011 — Deciding Testing Depth
+flowchart TD
+    A{High probability<br/>of a defect?} -->|Yes| B{High impact<br/>if it fails?}
+    A -->|No| C{High impact<br/>if it fails?}
+    B -->|Yes| D[Deep, dedicated testing]
+    B -->|No| E[Solid regression coverage]
+    C -->|Yes| F[Thorough, serious coverage]
+    C -->|No| G[Smoke test or skip]
+```
+
 ## When to Apply Risk-Based Thinking
 
 Risk-based testing applies whenever test time is constrained — which, in practice, is always. It matters most in a few recognizable situations:

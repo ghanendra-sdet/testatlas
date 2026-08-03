@@ -28,6 +28,13 @@ Neither move alone would have caught everything. Shifting left reduces how much 
 
 **Shift-right testing** means extending quality practices past release, into production — monitoring real behavior, testing with real (or realistic) traffic, and treating what happens after "done" as still within QA's concern.
 
+```mermaid
+%% VIS-013 — Shift-Left and Shift-Right, Relative to Release
+flowchart LR
+    SL["⬅ Shift-Left<br/>requirements & design review,<br/>static analysis"] --> Rel[Release]
+    Rel --> SR["Shift-Right ➡<br/>monitoring, canary releases,<br/>real-traffic validation"]
+```
+
 | | Shift-Left | Shift-Right |
 |---|---|---|
 | **Direction** | Earlier — toward requirements, design, code | Later — toward and past release, into production |

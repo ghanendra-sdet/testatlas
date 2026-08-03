@@ -26,6 +26,21 @@ The difference isn't effort or diligence — both teams have testers who found t
 
 The defect life cycle is the sequence of states a logged defect moves through from discovery to closure. The exact state names vary by tool and team, but the underlying stages are consistent:
 
+```mermaid
+%% VIS-014 — The Defect Life Cycle
+stateDiagram-v2
+    [*] --> New
+    New --> Triaged
+    Triaged --> InProgress: work starts
+    InProgress --> Fixed: fix implemented
+    Fixed --> Retest: independent verification
+    Retest --> Closed: symptom confirmed gone
+    Retest --> Reopened: symptom still occurs
+    Reopened --> InProgress
+    Triaged --> Deferred: deliberate, documented decision
+    Closed --> [*]
+```
+
 | State | What It Means |
 |---|---|
 | **New** | A defect has just been logged; nobody has reviewed it yet |

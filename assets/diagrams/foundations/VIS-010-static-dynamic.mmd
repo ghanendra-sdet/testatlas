@@ -1,0 +1,6 @@
+%% VIS-010 — Static vs. Dynamic Testing
+%% Used in: 07-static-vs-dynamic-testing.md
+flowchart TD
+    A[An Artifact:<br/>requirements, design, or code] --> B{Running it?}
+    B -->|No| C["Static Testing<br/>review, walkthrough,<br/>static analysis"]
+    B -->|Yes| D["Dynamic Testing<br/>functional, integration,<br/>exploratory testing"]

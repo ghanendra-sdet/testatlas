@@ -1,0 +1,7 @@
+%% VIS-017 — A Metric Is Evidence, Not Proof
+%% Used in: 14-qa-metrics-and-measurement.md
+flowchart LR
+    A[Real Outcome<br/>e.g. fewer production incidents] -.->|what we actually care about| B[Metric<br/>e.g. defect escape rate]
+    B --> C{Trending in the<br/>right direction?}
+    C -->|Yes| D[Investigate why —<br/>confirm it's real]
+    C -->|No| E[Investigate why —<br/>find the gap]

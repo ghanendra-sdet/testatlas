@@ -28,6 +28,13 @@ Both teams "do Scrum." Only one of them uses it the way it's meant to work — w
 
 **Scrum** is the most common concrete framework for practicing Agile: work is organized into fixed-length iterations called **sprints** (commonly one or two weeks), with a defined set of roles, ceremonies, and artifacts.
 
+```mermaid
+%% VIS-008 — The Scrum Sprint Cycle (QA involved throughout, not just at the end)
+flowchart LR
+    A[Backlog<br/>Refinement] --> B[Sprint<br/>Planning] --> C[Sprint<br/>Execution] --> D[Sprint<br/>Review] --> E[Retrospective]
+    E -.->|next sprint| A
+```
+
 | Element | What It Is | Why QA Cares |
 |---|---|---|
 | **Sprint** | A fixed-length iteration (usually 1–2 weeks) producing a potentially shippable increment | Testing has to fit inside the sprint, not happen after it |

@@ -1,0 +1,8 @@
+%% VIS-004 — QA's Position Relative to Product, Dev, and DevOps
+%% Used in: 02-role-of-qa-in-product-delivery.md
+flowchart LR
+    P[Product<br/>defines what to build] --> Q[QA<br/>asks what could go wrong]
+    Q --> D[Developers<br/>build it]
+    D --> O[DevOps/SRE<br/>run it in production]
+    Q -.->|involved throughout, not just at the end| D
+    Q -.-> O

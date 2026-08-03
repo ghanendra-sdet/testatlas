@@ -28,6 +28,14 @@ Both teams skipped half the check. Verification catches "we built it wrong." Val
 
 **Validation** asks: *Are we building the right product?* It confirms that the finished software actually satisfies the user's real need, by running it and checking its behavior against reality — not just against a document. Validation happens by executing the software.
 
+```mermaid
+%% VIS-009 — Verification vs. Validation
+flowchart TD
+    A[Requirements] --> B["Verification<br/>(Are we building it right?)"]
+    B --> C[Software]
+    C --> D["Validation<br/>(Are we building the right thing?)"]
+```
+
 | | Verification | Validation |
 |---|---|---|
 | **Question** | Are we building it right? | Are we building the right thing? |

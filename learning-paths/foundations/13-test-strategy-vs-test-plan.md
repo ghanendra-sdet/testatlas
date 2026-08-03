@@ -28,6 +28,14 @@ Strategy without a plan is philosophy with no execution. A plan without a strate
 
 **A test plan** is a specific, release-scoped document describing how testing will actually be executed for a particular piece of work — what's in scope, what's out of scope, the schedule, specific test cases or areas of focus, entry and exit criteria, and who owns what. It's written fresh (or adapted) for each release or major feature.
 
+```mermaid
+%% VIS-016 — Strategy Informs Plan, Not the Other Way Around
+flowchart LR
+    A["Test Strategy<br/>stable, org-wide"] -->|informs| B["Test Plan A<br/>Release 1"]
+    A -->|informs| C["Test Plan B<br/>Release 2"]
+    A -->|informs| D["Test Plan C<br/>Release 3"]
+```
+
 | | Test Strategy | Test Plan |
 |---|---|---|
 | **Scope** | Organization- or team-wide | One release, project, or feature |

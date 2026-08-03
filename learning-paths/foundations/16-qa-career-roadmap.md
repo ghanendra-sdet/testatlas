@@ -26,6 +26,16 @@ Both testers were competent. Only one of them had a roadmap — and a roadmap is
 
 QA careers aren't a single ladder — they're a set of tracks that share a common early stage and then diverge based on what someone gravitates toward:
 
+```mermaid
+%% VIS-018 — QA Career Tracks Branch, They Don't Ladder
+flowchart LR
+    A[Junior QA] --> B[Mid-Level QA]
+    B --> C[SDET / Automation]
+    B --> D[Senior QA<br/>Individual Contributor]
+    B --> E[QA Lead / Manager]
+    B --> F[Quality Engineer]
+```
+
 | Level / Track | Primary Focus | Typical Skills |
 |---|---|---|
 | **Junior QA** | Executing test cases, learning to think in edge cases, reporting defects clearly | Test case execution, defect reporting, basic domain knowledge |

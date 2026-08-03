@@ -1,0 +1,13 @@
+%% VIS-014 — The Defect Life Cycle
+%% Used in: 11-defect-life-cycle.md
+stateDiagram-v2
+    [*] --> New
+    New --> Triaged
+    Triaged --> InProgress: work starts
+    InProgress --> Fixed: fix implemented
+    Fixed --> Retest: independent verification
+    Retest --> Closed: symptom confirmed gone
+    Retest --> Reopened: symptom still occurs
+    Reopened --> InProgress
+    Triaged --> Deferred: deliberate, documented decision
+    Closed --> [*]

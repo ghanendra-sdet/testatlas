@@ -26,7 +26,20 @@ Both teams believe they understand when testing happens. Neither has actually ma
 
 The **SDLC** (Software Development Lifecycle) is the sequence a product moves through: typically Requirements → Design → Development → Testing → Deployment → Maintenance, though the exact phase names vary by team and methodology.
 
+```mermaid
+%% VIS-006 — The SDLC
+flowchart LR
+    A[Requirements] --> B[Design] --> C[Development] --> D[Testing] --> E[Deployment] --> F[Maintenance]
+```
+
 The **STLC** (Software Testing Life Cycle) is a sub-cycle that runs *inside* the SDLC — a repeatable sequence testing itself follows, regardless of how the overall SDLC is structured:
+
+```mermaid
+%% VIS-007 — The STLC (repeats once per SDLC cycle, sprint, or commit)
+flowchart LR
+    A[Requirement<br/>Analysis] --> B[Test<br/>Planning] --> C[Test Case<br/>Design] --> D[Environment<br/>Setup] --> E[Test<br/>Execution] --> F[Test<br/>Closure]
+    F -.->|repeats| A
+```
 
 | STLC Phase | What Happens |
 |---|---|

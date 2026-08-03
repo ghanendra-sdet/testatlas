@@ -16,6 +16,16 @@ Testing is not about executing test cases. Testing is how a team answers a speci
 
 This chapter establishes what testing means, why it matters differently at each stage of delivery, and how experienced testers work. The remaining chapters in this learning path build on this foundation.
 
+```mermaid
+%% VIS-001 — What Testing Actually Involves
+flowchart LR
+    A[Risk Questions<br/>What could go wrong?] --> B[Test Design]
+    B --> C[Execution]
+    C --> D[Investigation<br/>Why did that happen?]
+    D --> E[Communication]
+    E -.->|shapes the next round| A
+```
+
 ## Why Testing Matters
 
 Software ships every day. Most of it works most of the time. But "most of the time" is not acceptable for critical systems.
@@ -67,6 +77,15 @@ Testing happens at different levels:
 
 All of these are testing. All of them serve the same purpose: **Does this work for its users?**
 
+```mermaid
+%% VIS-003 — Testing Levels Hierarchy
+flowchart TD
+    A[Unit Testing<br/>Developers] --> B[Integration Testing<br/>QA / Developers]
+    B --> C[System Testing<br/>QA Engineers]
+    C --> D[User Acceptance Testing<br/>Business / QA]
+    D --> E[Production Testing<br/>QA / DevOps]
+```
+
 ## When Testing Happens
 
 Many teams treat testing like a phase: development finishes, then testing begins. This delays feedback and makes defects expensive to fix.
@@ -109,6 +128,15 @@ Experienced teams test throughout delivery:
 *Example*: After launch, monitoring shows that 2% of payment-processing requests are timing out. QA works with engineering to understand whether this is a load issue, a downstream service issue, or an intermittent network problem. This shapes the fix.
 
 **Why this matters**: Defects found early cost almost nothing to fix. Defects found after release cost everything—customer trust, reputation, money, and engineering time.
+
+```mermaid
+%% VIS-002 — Cost of a Defect by Delivery Stage
+flowchart LR
+    A["Requirements<br/>~cost of a conversation"] --> B["Design<br/>~cost of a redraft"]
+    B --> C["Development<br/>~cost of a code change"]
+    C --> D["Pre-Release<br/>~cost of a retest cycle"]
+    D --> E["Production<br/>~cost of a hotfix + trust"]
+```
 
 ## How Testing Works in Real Projects
 

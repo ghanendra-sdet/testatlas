@@ -26,6 +26,15 @@ Both teams tracked "a QA metric." Only one of them tracked something connected t
 
 QA metrics are measurements used to evaluate testing effectiveness and product quality — not to keep testers busy, but to answer real questions: is quality improving, where are the risks, is the team's testing effort actually working.
 
+```mermaid
+%% VIS-017 — A Metric Is Evidence, Not Proof
+flowchart LR
+    A[Real Outcome<br/>e.g. fewer production incidents] -.->|what we actually care about| B[Metric<br/>e.g. defect escape rate]
+    B --> C{Trending in the<br/>right direction?}
+    C -->|Yes| D[Investigate why —<br/>confirm it's real]
+    C -->|No| E[Investigate why —<br/>find the gap]
+```
+
 | Metric | What It Measures | What It Doesn't Prove |
 |---|---|---|
 | **Defect Density** | Number of defects per unit of code (e.g., per 1,000 lines, or per feature) | High density isn't automatically bad — it can mean thorough testing found more, not that the code is worse |

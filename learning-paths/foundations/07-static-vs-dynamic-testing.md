@@ -28,6 +28,14 @@ Static and dynamic testing catch different categories of defect because they ope
 
 **Dynamic testing** examines actual behavior by executing the software with real or simulated inputs and observing what happens.
 
+```mermaid
+%% VIS-010 — Static vs. Dynamic Testing
+flowchart TD
+    A[An Artifact:<br/>requirements, design, or code] --> B{Running it?}
+    B -->|No| C["Static Testing<br/>review, walkthrough,<br/>static analysis"]
+    B -->|Yes| D["Dynamic Testing<br/>functional, integration,<br/>exploratory testing"]
+```
+
 | | Static Testing | Dynamic Testing |
 |---|---|---|
 | **Software running?** | No | Yes |

@@ -1,0 +1,5 @@
+%% VIS-013 — Shift-Left and Shift-Right, Relative to Release
+%% Used in: 10-shift-left-and-shift-right-testing.md
+flowchart LR
+    SL["⬅ Shift-Left<br/>requirements & design review,<br/>static analysis"] --> Rel[Release]
+    Rel --> SR["Shift-Right ➡<br/>monitoring, canary releases,<br/>real-traffic validation"]

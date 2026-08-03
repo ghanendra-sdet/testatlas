@@ -1,0 +1,9 @@
+%% VIS-011 — Deciding Testing Depth
+%% Used in: 08-risk-based-testing-fundamentals.md
+flowchart TD
+    A{High probability<br/>of a defect?} -->|Yes| B{High impact<br/>if it fails?}
+    A -->|No| C{High impact<br/>if it fails?}
+    B -->|Yes| D[Deep, dedicated testing]
+    B -->|No| E[Solid regression coverage]
+    C -->|Yes| F[Thorough, serious coverage]
+    C -->|No| G[Smoke test or skip]

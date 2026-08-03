@@ -28,6 +28,16 @@ Consider three teams building the same kind of product.
 
 Same skill, same underlying discipline — completely different value, depending on when and how it's applied. That's what this chapter is about: not "what is a QA engineer," but "what does the QA function need to own, and when."
 
+```mermaid
+%% VIS-004 — QA's Position Relative to Product, Dev, and DevOps
+flowchart LR
+    P[Product<br/>defines what to build] --> Q[QA<br/>asks what could go wrong]
+    Q --> D[Developers<br/>build it]
+    D --> O[DevOps/SRE<br/>run it in production]
+    Q -.->|involved throughout, not just at the end| D
+    Q -.-> O
+```
+
 ## What the QA Role Actually Is
 
 The QA role is not defined by finding bugs. Finding bugs is a byproduct. **The QA role is defined by owning risk-thinking on behalf of the team** — systematically asking "what could go wrong here, and have we checked?" in situations where everyone else is focused on making something work, not on how it might fail.
