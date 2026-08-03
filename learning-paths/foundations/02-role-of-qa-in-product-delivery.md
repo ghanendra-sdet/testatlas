@@ -136,7 +136,7 @@ Agree, in advance, who owns what when something breaks in production. Doing this
 - When QA should get involved across the delivery cycle
 - What good QA involvement looks like on a real team
 
-**Next:** [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc)
+**Next:** Software Testing Principles (coming soon)
 
 ## Related Topics
 

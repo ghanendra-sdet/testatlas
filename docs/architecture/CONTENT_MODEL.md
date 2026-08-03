@@ -26,6 +26,16 @@ time_to_read: "8 min"
 
 **Purpose**: Search indexing, social media sharing, sidebar navigation, and freshness tracking.
 
+### Prerequisites Block (Learning Path Modules Only)
+Immediately after frontmatter, before the opening paragraph, a learning module states its place in the dependency graph:
+
+```markdown
+**Prerequisites**: You should already understand [Module X](link), [Module Y](link).
+**Leads to**: After this, you'll be ready for [Module Z](link), [Module W](link).
+```
+
+If a named module doesn't exist yet, write its title as plain text with "(coming soon)" instead of a link — never link to a page that doesn't exist. This makes the dependency graph visible on the page itself, not just in `LEARNING_PATHS.md`.
+
 ### Opening Paragraph (Hook)
 Start with one paragraph that answers: **What is this page about, and why should you care?**
 
@@ -421,6 +431,7 @@ A learning module is complete only when every item below is true. This is the si
 
 - [ ] Learning objective is clearly stated in one sentence (see **When to Split a Page**)
 - [ ] Frontmatter includes title, description, keywords, difficulty, time_to_read, last_reviewed
+- [ ] Prerequisites block states what prior modules this assumes and what it leads to (learning path modules only)
 - [ ] Why-What-When-How structure followed (or a stated, justified deviation)
 - [ ] A realistic, production-inspired example is included — not a toy scenario
 - [ ] Common mistakes section included

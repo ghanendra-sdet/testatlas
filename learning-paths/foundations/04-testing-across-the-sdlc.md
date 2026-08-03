@@ -102,7 +102,7 @@ Continuous delivery without automated regression coverage just means continuous 
 - What water-scrum-fall is, and why it's a common trap during Agile transitions
 - How a real team compressed its STLC to fit a two-week sprint
 
-**Next:** [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals)
+**Next:** Agile & Scrum Basics for QA (coming soon)
 
 ## Related Topics
 

@@ -14,51 +14,83 @@ Learning paths are role-based progressions: a junior QA takes a different path t
 **Target Audience**: Anyone starting QA, developers wanting to understand testing, students  
 **Estimated Duration**: 2–4 weeks  
 
+**Curriculum version**: Foundations v1.0 (17 modules). Later additions to this path (new topics, not fixes) increment this — e.g. "Foundations v1.1 added AI-Assisted Exploratory Testing" — so structural growth is a visible, named event rather than a silent module-count change. See **Curriculum Versioning** below.
+
 **Learning Outcomes** — when finished, a learner should be able to:
 - Explain the purpose of software testing and why it's risk-based thinking, not test-case execution
-- Describe how the SDLC and STLC relate, and how testing maps onto Waterfall, V-Model, Agile, and continuous delivery
+- Describe how the SDLC and STLC relate, how testing maps onto Waterfall, V-Model, Agile, and continuous delivery, and participate meaningfully in Agile/Scrum ceremonies as a QA voice
+- State the core principles of testing (e.g. exhaustive testing is impossible, defects cluster, pesticide paradox) and use them to justify testing decisions
 - Distinguish testing from checking, and verification from validation
 - Distinguish static testing from dynamic testing, and know when each applies
 - Design basic test scenarios using risk-based prioritization
-- Report a defect correctly and track it through its lifecycle, including severity vs. priority
-- Explain shift-left and shift-right testing, and why catching a defect earlier is cheaper
 - Describe the six quality attributes and weigh which matter most for a given product
+- Explain shift-left and shift-right testing, and why catching a defect earlier is cheaper
+- Report a defect correctly and track it through its lifecycle, including severity vs. priority
 - Distinguish a test strategy from a test plan
 - Read basic QA metrics and know what they do and don't prove
 - Describe the QA role, its boundaries with other functions, and the career paths within it
 - Use core QA terminology correctly and consistently
+- Recognize and correct common misconceptions about what QA does and doesn't guarantee
 
-**Modules** (planned for v0.1–v1.0):
+**Modules** (planned for v0.1–v1.0), grouped into six sections that tell a single story — understand testing, understand development, understand testing concepts, understand quality, understand defects, become a professional QA:
+
+**Section 1 — Introduction**
 1. What Is Software Testing? (✓ done)
 2. The Role of QA in Product Delivery (✓ done)
-3. Testing Across the SDLC — includes the STLC and SDLC models (✓ done)
-4. Risk-Based Testing Fundamentals (✓ done)
-5. Quality Attributes (Functionality, Performance, Security, Usability, Reliability, Maintainability) (✓ done)
-6. Verification vs. Validation
-7. Static vs. Dynamic Testing
-8. Defect Life Cycle
-9. Severity vs. Priority
-10. Shift-Left & Shift-Right Testing
-11. Test Strategy vs. Test Plan
-12. Metrics and Measurement (Coverage, Defect Density, MTTR)
-13. QA Career Roadmap (types of roles, growth opportunities)
-14. Common QA Terminology (glossary capstone)
 
-**Sequencing note**: Modules 1–5 are published and stay in place — reordering shipped modules breaks existing links and sidebar position for anyone already partway through, which `VERSIONING_STRATEGY.md` explicitly commits against. Modules 6–14 are sequenced for pedagogical dependency, not just topic grouping:
-- **6–7 (Verification vs. Validation → Static vs. Dynamic Testing)**: taught back-to-back because they're the same underlying distinction from two angles — verification tends to be static, validation tends to be dynamic. Teaching them together reinforces both.
-- **8–9 (Defect Life Cycle → Severity vs. Priority)**: hard dependency — severity and priority are properties of a logged defect, so the lifecycle has to come first.
-- **10 (Shift-Left & Shift-Right)**: depends on Module 3 (SDLC/STLC) and Module 8 (Defect Life Cycle) — the point of shifting left is catching a defect *before* it needs a full lifecycle, so that contrast only lands once both are already understood.
-- **11 (Test Strategy vs. Test Plan)**: a synthesis module — depends on Module 4 (risk-based thinking) and Module 5 (quality attributes), since both are inputs to what a real strategy or plan contains.
-- **12 (Metrics and Measurement)**: depends on Module 8–9 (defect density and MTTR are metrics *about* defects) and Module 11 (metrics are how you evaluate whether a strategy worked).
-- **13 (QA Career Roadmap)**: placed late deliberately — a learner can only meaningfully evaluate specialization paths (manual, SDET, performance, security, leadership) after seeing the breadth of the discipline in modules 3–12. It also follows directly from Module 2's role definitions.
-- **14 (Common QA Terminology)**: capstone by design — a glossary of everything introduced in modules 1–13, meant to be read last and bookmarked as a reference, not read first.
+**Section 2 — Software Development Context**
+3. Software Testing Principles
+4. Testing Across the SDLC — includes the STLC and SDLC models (✓ done)
+5. Agile & Scrum Basics for QA
+
+**Section 3 — Testing Fundamentals**
+6. Verification vs. Validation (✓ done)
+7. Static vs. Dynamic Testing (✓ done)
+
+**Section 4 — Quality Mindset**
+8. Risk-Based Testing Fundamentals (✓ done)
+9. Quality Attributes (Functionality, Performance, Security, Usability, Reliability, Maintainability) (✓ done)
+10. Shift-Left & Shift-Right Testing
+
+**Section 5 — Defect Management**
+11. Defect Life Cycle
+12. Severity vs. Priority
+
+**Section 6 — Professional QA**
+13. Test Strategy vs. Test Plan
+14. Metrics and Measurement (Coverage, Defect Density, MTTR)
+15. QA Career Roadmap (types of roles, growth opportunities)
+16. Common QA Terminology (glossary capstone)
+17. Testing Myths & Misconceptions (myth / reality / real story / lesson / interview angle format — the closing module)
+
+**Sequencing note**: Docusaurus derives each page's route from its slug, not its numeric filename prefix — the prefix only controls sidebar order. That means reordering modules, even already-published ones, does not break any existing link, so this section replaces the file numbering used during initial drafting with the sequence below.
+
+Modules 3 and 5 (Software Testing Principles, Agile & Scrum Basics) are newly identified gaps, not yet written. Everything else already published keeps its content; only its position in the sequence changed. Section-by-section reasoning:
+
+- **Section 1 (1–2)**: unchanged — what testing is, then who does it, before anything else can make sense.
+- **Section 2 (3–5)**: Software Testing Principles moves ahead of the SDLC material deliberately — the principles (exhaustive testing is impossible, defects cluster, pesticide paradox, etc.) shape *how a learner should think* about everything that follows, so teaching them before process detail means the process modules land as applications of a mindset, not a disconnected list of process trivia. Testing Across the SDLC follows, and Agile & Scrum Basics is placed directly after it because Agile is one of the SDLC models already introduced there — going straight from the general SDLC landscape to the one model most learners will actually work under day-to-day.
+- **Section 3 (6–7)**: Verification vs. Validation and Static vs. Dynamic Testing stay paired, as already established — same underlying distinction (purpose vs. mechanism) taught from two angles.
+- **Section 4 (8–10)**: Risk-Based Testing and Quality Attributes now follow Section 3 rather than precede it, because "what to prioritize" (risk) and "what to weigh" (quality attributes) are easier to reason about once a learner already has verification/validation and static/dynamic as tools for thinking about testing depth. Shift-Left & Shift-Right closes the section because it depends on Module 4 (SDLC/STLC, to know what "left" and "right" mean in a timeline) and previews Section 5's defect lifecycle — the point of shifting left is catching a defect before it needs a full lifecycle.
+- **Section 5 (11–12)**: hard dependency, unchanged — severity and priority are properties of a logged defect, so the lifecycle comes first.
+- **Section 6 (13–17)**: Test Strategy vs. Test Plan is a synthesis module depending on Section 4 (risk-based thinking, quality attributes) as inputs to what a real strategy or plan contains. Metrics and Measurement follows because defect density and MTTR are metrics *about* Section 5's defects, and because metrics are how a strategy's success gets evaluated. QA Career Roadmap comes next — a learner can only meaningfully evaluate specialization paths after seeing the discipline's full breadth, and it follows directly from Module 2's role definitions. Common QA Terminology is a reference capstone, meant to be bookmarked rather than read start-to-front. Testing Myths & Misconceptions closes the entire path deliberately: a myth like "verification and validation are the same thing" is only meaningful — and only debunkable by the learner themselves — once every concept it references has already been taught.
+
+**Per-module Prerequisites block**: every module should open with a short block naming the specific prior modules it assumes and the modules it unlocks next (e.g. "You should already understand: Module 6, Module 7 → After this you'll be ready for: Module 11, Module 12"), making the dependency graph visible on the page itself, not just in this document. This is now part of the Definition of Done in `CONTENT_MODEL.md`. Modules 1–2 and 6–9 predate this requirement and should get it retrofitted as a small housekeeping pass, separate from new-module writing.
 
 **Success Criteria**:
 - Learner explains why testing matters beyond "finding bugs"
 - Learner maps where testing happens in a product release
 - Learner articulates risk-based thinking in simple terms
 - Learner can correctly use verification/validation, static/dynamic, and severity/priority in a sentence without mixing them up
+- Learner can name at least one testing myth they used to believe and explain why it's wrong
 - Learner can describe their own eventual QA specialization path and why it fits them
+
+### Curriculum Versioning
+
+Once a path's module list stabilizes (as Foundations' has now, after this review), track it as a versioned curriculum, separate from the site's own `VERSIONING_STRATEGY.md` release versioning:
+
+- **Foundations v1.0** — the 17-module structure defined above.
+- A version bumps (v1.1, v1.2, ...) only when modules are added, removed, or reordered at the topic level — not for prose edits, typo fixes, or example updates within an existing module, which are ordinary content maintenance.
+- Each path tracks its own curriculum version independently (e.g. "Manual Testing v1.0" once that path's structure is finalized), so future changes can be announced precisely: "Curriculum v1.1 added AI-Assisted Exploratory Testing" instead of a silent structural change.
 
 ---
 
