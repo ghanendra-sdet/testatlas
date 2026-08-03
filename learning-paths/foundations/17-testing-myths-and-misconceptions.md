@@ -11,7 +11,7 @@ last_reviewed: "2026-08-03"
 # Testing Myths & Misconceptions
 
 **Prerequisites**: This module assumes all sixteen prior modules in Foundations — it's the deliberate capstone, and several myths below are only debunkable using concepts taught earlier in this path.
-**Leads to**: This completes Foundations v1.0. From here, continue to the Manual Testing and Test Design learning path (coming soon).
+**Leads to**: This completes Foundations v1.0. From here, continue to the [Manual Testing and Test Design](/learning-paths/manual-testing/test-design-fundamentals) learning path.
 
 **A note on structure**: this module breaks from the Why-What-When-How framework used everywhere else in this path, deliberately. Every other module teaches something new. This one teaches nothing new — it revisits what you've already learned, through the lens of misconceptions that even experienced people fall for. If a myth below feels obvious to debunk, that's the point: it means the sixteen modules before this one did their job.
 
@@ -55,7 +55,7 @@ Some of the most damaging beliefs in QA aren't outright wrong — they're half-t
 
 **Real Project Story**: A team invests heavily in automated regression coverage, confident it's steadily replacing the need for manual testing. The automated suite is thorough and reliably green release after release — and yet a confusing checkout flow ships anyway, one where every automated assertion passes (the correct total is calculated, the correct confirmation page loads) while a real user testing it manually immediately notices the flow visually implies a discount was applied when it wasn't. No automated check was ever written to catch "this looks misleading," because nobody scripted for a defect they hadn't anticipated — exactly the kind of judgment-driven gap manual, exploratory testing is suited to catch and automation structurally isn't.
 
-**Lesson**: Automation scales what's already known to check for. Manual testing is what discovers what wasn't anticipated in the first place. Neither makes the other obsolete — this path's later Manual Testing and Automation learning paths (coming soon) both exist because the discipline needs both skill sets, not because one is a stepping stone to the other.
+**Lesson**: Automation scales what's already known to check for. Manual testing is what discovers what wasn't anticipated in the first place. Neither makes the other obsolete — the [Manual Testing](/learning-paths/manual-testing/test-design-fundamentals) path and the later Automation learning path (coming soon) both exist because the discipline needs both skill sets, not because one is a stepping stone to the other.
 
 **Interview Angle**: "Do you think automation will replace manual testers?" tests whether a candidate sees the two as competing or complementary — a strong answer explains what each is actually good at, rather than predicting a future where one simply wins.
 
@@ -128,7 +128,7 @@ Most of the myths above are exactly the gap between "looked fine by one measure"
 
 ## Foundations Complete
 
-This is the final module in Foundations v1.0. Across seventeen modules, this path covered what testing is, how QA fits into product delivery, the mindset behind testing decisions, how testing maps onto real development processes, the purpose- and mechanism-level distinctions behind rigorous testing, how to prioritize and manage defects, how to plan and measure testing work, and how a QA career actually grows. From here, continue to the Manual Testing and Test Design learning path (coming soon), where these foundations become concrete, practiced test design techniques.
+This is the final module in Foundations v1.0. Across seventeen modules, this path covered what testing is, how QA fits into product delivery, the mindset behind testing decisions, how testing maps onto real development processes, the purpose- and mechanism-level distinctions behind rigorous testing, how to prioritize and manage defects, how to plan and measure testing work, and how a QA career actually grows. From here, continue to the [Manual Testing and Test Design](/learning-paths/manual-testing/test-design-fundamentals) learning path, where these foundations become concrete, practiced test design techniques.
 
 ## Related Topics
 

@@ -11,7 +11,7 @@ last_reviewed: "2026-08-03"
 # Test Design Fundamentals
 
 **Prerequisites**: You should already have completed [Foundations](/learning-paths/foundations/what-is-software-testing), especially [Software Testing Principles](/learning-paths/foundations/software-testing-principles) and [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals).
-**Leads to**: After this, you'll be ready for From Requirements to Test Ideas (coming soon).
+**Leads to**: After this, you'll be ready for [From Requirements to Test Ideas](/learning-paths/manual-testing/from-requirements-to-test-ideas).
 
 Two testers can look at the same feature, spend the same two hours, and produce completely different results — one ends up with forty test cases that overlap heavily and still miss the defect that ships, the other ends up with twelve test cases that cover the feature's real risk and catch it. The difference isn't effort or experience alone. It's whether the tester is generating test cases systematically or just trying things that come to mind. This module is about that difference, since every technique in the rest of this path is a specific way of doing the former.
 
@@ -116,13 +116,13 @@ A feature identified as high-risk earns the full systematic treatment; a low-ris
 - How a systematic dimension-first approach caught a real boundary defect an ad hoc approach would likely have missed
 - When structured test design is worth its cost, and when it isn't
 
-**Next:** From Requirements to Test Ideas (coming soon)
+**Next:** [From Requirements to Test Ideas](/learning-paths/manual-testing/from-requirements-to-test-ideas)
 
 ## Related Topics
 
 - [Software Testing Principles](/learning-paths/foundations/software-testing-principles) — Defect clustering and context-dependence, both directly applied here
 - [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals) — How risk should guide how much test-design rigor a feature earns
-- Boundary Value Analysis (coming soon) — The first named technique for turning test ideas into a minimal, boundary-targeted set of test cases
+- [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis) — The first named technique for turning test ideas into a minimal, boundary-targeted set of test cases
 
 ## Interview Questions
 
