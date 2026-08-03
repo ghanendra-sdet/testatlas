@@ -1,0 +1,8 @@
+%% Process Flow template — Visual Standards category 2
+%% Use for any module teaching a sequence, lifecycle, or set of states.
+%% LR (left-right) reads better than TD for linear sequences in a narrow content column.
+
+flowchart LR
+    Start --> Step2["Step 2"] --> Step3["Step 3"] --> End
+    %% Optional: a branch back to an earlier state, e.g. a "Reopened" or "Retry" path
+    Step3 -.->|exception path| Step2

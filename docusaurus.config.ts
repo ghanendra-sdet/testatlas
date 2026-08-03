@@ -105,6 +105,19 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/testatlas-social-card.svg',
+    mermaid: {
+      theme: {light: 'base', dark: 'base'},
+      options: {
+        themeVariables: {
+          primaryColor: '#0992a1',
+          primaryTextColor: '#05262b',
+          primaryBorderColor: '#076f7b',
+          lineColor: '#076f7b',
+          secondaryColor: '#e6f4f5',
+          tertiaryColor: '#f3f8f8',
+        },
+      },
+    },
     navbar: {
       title: 'TestAtlas',
       logo: {

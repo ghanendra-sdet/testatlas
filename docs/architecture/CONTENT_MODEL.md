@@ -341,6 +341,8 @@ Use Mermaid for:
 
 Do not embed external images; use Mermaid or inline SVG only.
 
+See `VISUAL_STANDARDS.md` for the full visual design system: the eight visual categories (hero illustrations, process flows, comparison tables, decision trees, timelines, annotated screenshots, Mermaid diagrams, infographics), the brand-matched Mermaid theme, per-module visual targets, and reusable diagram templates in `assets/diagrams/templates/`.
+
 **Example**:
 ````
 ```mermaid

@@ -1,0 +1,10 @@
+%% Decision Tree template — Visual Standards category 4
+%% Use for Decision Table Testing, Boundary Value Analysis, State Transition Testing,
+%% and any "which approach should I use" module.
+%% Never render a decision tree as ASCII art in published content — Mermaid only.
+
+flowchart TD
+    A{Decision question?} -->|Condition A| B[Outcome A]
+    A -->|Condition B| C{Second decision?}
+    C -->|Yes| D[Outcome B]
+    C -->|No| E[Outcome C]

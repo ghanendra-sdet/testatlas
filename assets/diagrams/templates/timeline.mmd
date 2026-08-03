@@ -1,0 +1,16 @@
+%% Timeline template — Visual Standards category 5
+%% Two variants below. Pick based on whether relative DURATION is part of the point.
+
+%% Variant A — ordered sequence, no duration weighting (most SDLC/STLC/sprint content wants this):
+flowchart LR
+    Phase1["Phase 1"] --> Phase2["Phase 2"] --> Phase3["Phase 3"] --> Phase4["Phase 4"]
+
+%% Variant B — actual duration matters (a sprint calendar, a release timeline):
+%% gantt
+%%     title Example Sprint Timeline
+%%     dateFormat  YYYY-MM-DD
+%%     section Sprint
+%%     Planning       :a1, 2026-01-01, 1d
+%%     Development    :a2, after a1, 8d
+%%     Testing        :a3, after a2, 3d
+%%     Review         :a4, after a3, 1d
