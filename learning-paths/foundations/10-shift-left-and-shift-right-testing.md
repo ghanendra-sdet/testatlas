@@ -112,7 +112,7 @@ They catch different categories of risk — budgeting for only one, on the assum
 - How a ride-sharing team caught one defect by shifting left (a requirements gap) and one only by shifting right (a real-traffic timing issue a canary release limited the blast radius of)
 - Why shift-right supplements rigorous pre-release testing rather than replacing it
 
-**Next:** Defect Life Cycle (coming soon)
+**Next:** [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle)
 
 ## Related Topics
 
