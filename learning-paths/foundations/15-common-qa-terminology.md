@@ -1,5 +1,6 @@
 ---
 title: "Common QA Terminology"
+sidebar_label: "15 Common QA Terminology"
 description: "A consolidated glossary of every term introduced across the Foundations path — organized by category, meant to be bookmarked and searched, not read start to finish."
 keywords: ["QA glossary", "testing terminology", "QA vocabulary", "software testing terms"]
 difficulty: "beginner"

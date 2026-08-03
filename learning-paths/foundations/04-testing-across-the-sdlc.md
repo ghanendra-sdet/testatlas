@@ -1,5 +1,6 @@
 ---
 title: "Testing Across the SDLC"
+sidebar_label: "04 Testing Across the SDLC"
 description: "How testing maps onto different software development lifecycle models, and the Software Testing Life Cycle (STLC) that runs inside every one of them."
 keywords: ["SDLC", "STLC", "V-Model", "Agile testing", "water-scrum-fall"]
 difficulty: "beginner"
@@ -29,6 +30,8 @@ The **SDLC** (Software Development Lifecycle) is the sequence a product moves th
 ```mermaid
 %% VIS-006 — The SDLC
 flowchart LR
+    accTitle: The Software Development Lifecycle
+    accDescr: Requirements, then design, development, testing, deployment, and maintenance, in sequence.
     A[Requirements] --> B[Design] --> C[Development] --> D[Testing] --> E[Deployment] --> F[Maintenance]
 ```
 
@@ -37,6 +40,8 @@ The **STLC** (Software Testing Life Cycle) is a sub-cycle that runs *inside* the
 ```mermaid
 %% VIS-007 — The STLC (repeats once per SDLC cycle, sprint, or commit)
 flowchart LR
+    accTitle: The Software Testing Life Cycle
+    accDescr: A six-phase repeating cycle: requirement analysis, test planning, test case design, environment setup, test execution, and test closure, which then repeats.
     A[Requirement<br/>Analysis] --> B[Test<br/>Planning] --> C[Test Case<br/>Design] --> D[Environment<br/>Setup] --> E[Test<br/>Execution] --> F[Test<br/>Closure]
     F -.->|repeats| A
 ```

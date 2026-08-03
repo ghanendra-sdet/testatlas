@@ -1,5 +1,6 @@
 ---
 title: "Static vs. Dynamic Testing"
+sidebar_label: "07 Static vs. Dynamic Testing"
 description: "The technique-level distinction behind verification and validation: catching defects by reviewing artifacts without running code, versus catching them by executing the software."
 keywords: ["static testing", "dynamic testing", "code review", "static analysis", "walkthrough"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Static and dynamic testing catch different categories of defect because they ope
 ```mermaid
 %% VIS-010 — Static vs. Dynamic Testing
 flowchart TD
+    accTitle: Static vs. Dynamic Testing
+    accDescr: An artifact such as requirements, design, or code — if not being run, it's static testing through review or analysis; if being run, it's dynamic testing through functional, integration, or exploratory testing.
     A[An Artifact:<br/>requirements, design, or code] --> B{Running it?}
     B -->|No| C["Static Testing<br/>review, walkthrough,<br/>static analysis"]
     B -->|Yes| D["Dynamic Testing<br/>functional, integration,<br/>exploratory testing"]

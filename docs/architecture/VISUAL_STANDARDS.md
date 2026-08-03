@@ -6,7 +6,25 @@ This document defines TestAtlas's visual design system: a consistent, reusable s
 
 Every visual must answer a learning question, not decorate a page. A diagram earns its place by making a relationship, sequence, or decision easier to grasp than the same content in prose would be — never as a break from "walls of text" for its own sake. No stock photography, no decorative or unexplained imagery, ever (this was already implicit in `CONTENT_MODEL.md`'s "no external images" rule; this document makes it explicit and gives the alternative a real system to work from).
 
-This standard is established **before** any retrofitting happens. Foundations' 17 modules are not touched by this document — they get a dedicated Visual Enhancement Sprint later, applying this system consistently in one pass, rather than accumulating an inconsistent visual style module by module. New learning paths (starting with Manual Testing) apply this standard from their first module.
+This standard was established before any retrofitting happened, then applied to Foundations in one dedicated Visual Sprint (15 of 17 modules; Common QA Terminology and Testing Myths deliberately skipped as list/recap modules with no real diagram to draw) rather than accumulating an inconsistent visual style module by module. New learning paths (starting with Manual Testing) apply this standard from their first module.
+
+## Visual Decision Matrix
+
+The fast answer to "which visual type do I reach for." Use this before defaulting to Mermaid — Mermaid is the right tool often, but not automatically.
+
+| Content shape | Visual | Why |
+|---|---|---|
+| A process (ordered steps, no repeating states) | Mermaid `flowchart` | Sequence with a clear start and end |
+| A lifecycle (states with transitions, possible loops) | Mermaid `stateDiagram-v2` | Purpose-built for states and transitions, including loops back |
+| Decision logic (branching conditions) | Mermaid `flowchart` (decision tree shape) | Branches read naturally as a flowchart with diamond decision nodes |
+| A two-axis comparison (e.g. severity × priority) | Mermaid `quadrantChart` | Only when both axes are genuinely continuous and the *relationship* between plotted items is the point — not for a simple two-column contrast |
+| An ordered timeline | Mermaid `flowchart LR`, or `gantt` if duration matters | See category 5 below |
+| A simple "X vs. Y" contrast | Markdown comparison table | Faster to scan than a diagram for two columns of attributes |
+| A fixed set of independent, parallel concepts (not a process, not a hierarchy) | Structured cards (bulleted, bolded list) now; SVG infographic later | A mindmap of unrelated items doesn't teach a relationship that isn't there — see Software Testing Principles and Quality Attributes, both converted from Mermaid `mindmap` to cards after review found the mindmap added no comprehension benefit over a clean list |
+| A framework or multi-part named concept | SVG infographic (planned; cards in the interim) | Genuinely benefits from custom layout Mermaid can't express, but not urgent enough to block on |
+| A reference or recap page (glossary, myths, terminology) | No diagram | Nothing to diagram — the content itself isn't a relationship, sequence, or decision |
+
+**The test before adding any diagram**: would a beginner understand this concept faster with the diagram than with the plain text next to it? If the honest answer is no, don't add it — this rule overrides every row above.
 
 ## The Eight Visual Categories
 
@@ -54,7 +72,43 @@ Annotated screenshots from the Banking, Healthcare, E-Commerce, and Insurance pr
 Version-controlled as plain text inside the module's own Markdown file — not a separate rendered image. This is the single biggest advantage over hand-drawn diagrams: a diagram is edited the same way as the prose around it, in the same PR, with the same review. See **Mermaid Styling** below for the brand-matched theme.
 
 ### 8. Infographics (occasional — for genuinely multi-part concepts)
-Hand-authored inline SVG, per `CONTENT_MODEL.md`'s existing "Mermaid or inline SVG only" rule. Reserved for concepts that are a fixed small set of parallel items — the Seven Testing Principles, the Six Quality Attributes — where a diagram of *relationships* (Mermaid's strength) doesn't fit, but a plain bullet list underuses the visual opportunity. Not for anything Mermaid can already express; reaching for hand-authored SVG when a flowchart would do is unnecessary maintenance burden for no reader benefit.
+Hand-authored inline SVG, per `CONTENT_MODEL.md`'s existing "Mermaid or inline SVG only" rule. Reserved for concepts that are a fixed small set of parallel items — the Seven Testing Principles, the Six Quality Attributes, QA Career Tracks — where a diagram of *relationships* (Mermaid's strength) doesn't fit, but a plain bullet list underuses the visual opportunity. Not for anything Mermaid can already express; reaching for hand-authored SVG when a flowchart would do is unnecessary maintenance burden for no reader benefit. Until an SVG is actually produced, these ship as structured cards (see the Visual Decision Matrix) — never as a forced Mermaid diagram with no real relationship to express.
+
+## Accessibility
+
+Every Mermaid diagram must include `accTitle` and `accDescr` as the first lines inside the diagram, immediately after the diagram-type declaration:
+
+```mermaid
+flowchart TD
+    accTitle: Verification vs. Validation
+    accDescr: Requirements lead to verification, asking are we building it right, which leads to software, which leads to validation, asking are we building the right thing.
+    A[Requirements] --> B[Verification]
+```
+
+`accTitle` and `accDescr` are Mermaid's built-in accessibility hooks — they populate the rendered SVG's `<title>` and `<desc>` elements, which is what a screen reader actually announces. Without them, a screen reader either announces nothing meaningful or reads raw node IDs. `accDescr` should describe the *relationship or sequence*, not just list the node labels — write it as if describing the diagram to someone who can't see it, the same discipline as real alt text.
+
+This applies retroactively to every diagram in `assets/diagrams/foundations/` (added during the Visual & SEO Enhancement Sprint) and is required for every new diagram going forward.
+
+## Image and Diagram Metadata Standard
+
+Applies to every visual asset — SVG infographics now, and any future rendered export.
+
+**Filenames**: descriptive, lowercase, hyphenated, matching the concept — `software-testing-principles.svg`, not `image1.svg`, `diagram-final.svg`, or `test.svg`. For diagrams already tracked with a Visual ID, the ID stays in the `.mmd`/source filename (`VIS-005-testing-principles.mmd`); a rendered SVG export drops the ID prefix and uses the plain descriptive name, since the exported file is what a search engine or a reader encounters directly.
+
+**Every image requires**:
+- **Title** — the concept name, as it would appear in a figure caption
+- **Alt text** — a full sentence describing what the image teaches, not just what it depicts (`"Illustration explaining the seven software testing principles, including defect clustering, exhaustive testing limitations, and context-dependent testing"` — not `"principles diagram"`)
+- **Caption** — one sentence, placed under the image in the rendered page, stating the relationship the image shows
+- **Figure number** — sequential within the module (`Figure 3`), for reference in surrounding prose ("as Figure 3 shows...")
+- **Source** — `TestAtlas` for original diagrams; full attribution for anything adapted from elsewhere (should not normally happen, given the no-external-imagery rule)
+
+**Example**:
+> **Figure 3 — Seven Software Testing Principles**
+> Alt: Illustration explaining the seven software testing principles, including defect clustering, exhaustive testing limitations, and context-dependent testing.
+> Caption: The seven principles and how they relate to each other.
+> Source: TestAtlas
+
+This standard exists for two reasons at once: it's genuinely more accessible (a screen reader user gets the same understanding a sighted user gets from the caption), and it's how a diagram becomes discoverable through Google Image Search — a search for "Boundary Value Analysis diagram" only has a chance of surfacing TestAtlas if the image has a real, descriptive filename, alt text, and caption to be indexed against.
 
 ## Validating Diagrams
 
@@ -115,6 +169,6 @@ This turns every diagram into a citable, reusable asset — a future page (a cas
 
 ## What This Does Not Do (yet)
 
-- Does not retrofit any of Foundations' 17 published modules. That's a dedicated future Visual Enhancement Sprint, run once, applying this system consistently — not incremental edits scattered across unrelated commits.
 - Does not begin Manual Testing Module 1 content. This document is infrastructure the first Manual Testing module will be written against, not content itself.
 - Does not add screenshot tooling or a design tool integration — category 6 stays deferred until a real sample application exists to screenshot.
+- Does not yet produce any actual SVG infographic — Software Testing Principles, Quality Attributes, and QA Career Tracks all ship as structured cards with a stated future-SVG note, not a finished infographic. Producing the actual SVGs (with real filenames, alt text, captions, and figure numbers per the standard above) is remaining work, not done work.

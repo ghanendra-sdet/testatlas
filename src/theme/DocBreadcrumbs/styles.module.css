@@ -1,0 +1,9 @@
+/**
+ * Copied unchanged from @docusaurus/theme-classic's DocBreadcrumbs, required
+ * alongside the swizzled index.tsx in this directory.
+ */
+
+.breadcrumbsContainer {
+  --ifm-breadcrumb-size-multiplier: 0.8;
+  margin-bottom: 0.8rem;
+}

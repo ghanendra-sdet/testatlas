@@ -1,5 +1,6 @@
 ---
 title: "Severity vs. Priority"
+sidebar_label: "12 Severity vs. Priority"
 description: "Two questions that get asked about every defect — how bad is it, and how soon should it be fixed — and why confusing them leads teams to fix the wrong things first."
 keywords: ["severity vs priority", "defect severity", "defect priority", "triage", "bug ranking"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Severity measures how bad something is on its own terms. Priority measures how s
 ```mermaid
 %% VIS-015 — Severity vs. Priority Quadrant, using this module's own defects
 quadrantChart
+    accTitle: Severity vs. Priority Quadrant
+    accDescr: Four example defects plotted by severity and priority. A payment confirmation failure is both high severity and high priority. An admin tool crash with a workaround is high severity but low priority. A high-traffic landing page typo is low severity but high priority. An internal tool typo is low on both.
     title Severity vs. Priority
     x-axis Low Priority --> High Priority
     y-axis Low Severity --> High Severity

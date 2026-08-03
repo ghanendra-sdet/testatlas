@@ -1,5 +1,6 @@
 ---
 title: "Risk-Based Testing Fundamentals"
+sidebar_label: "08 Risk-Based Testing Fundamentals"
 description: "How to decide what to test when there isn't time to test everything, using probability and impact to prioritize effort deliberately."
 keywords: ["risk-based testing", "risk matrix", "test prioritization", "smoke testing"]
 difficulty: "beginner"
@@ -42,6 +43,8 @@ A footer redesign is low-probability (simple, well-understood change) and low-im
 ```mermaid
 %% VIS-011 — Deciding Testing Depth
 flowchart TD
+    accTitle: Deciding Testing Depth
+    accDescr: A decision tree combining probability and impact: high probability and high impact gets deep testing, high probability and low impact gets solid regression coverage, low probability and high impact gets thorough coverage, and low probability and low impact gets a smoke test or is skipped.
     A{High probability<br/>of a defect?} -->|Yes| B{High impact<br/>if it fails?}
     A -->|No| C{High impact<br/>if it fails?}
     B -->|Yes| D[Deep, dedicated testing]

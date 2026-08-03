@@ -1,5 +1,6 @@
 ---
 title: "The Role of QA in Product Delivery"
+sidebar_label: "02 The Role of QA in Product Delivery"
 description: "What a QA engineer actually owns on a team, how the role differs from developers and DevOps, and when QA should get involved in delivery."
 keywords: ["QA role", "quality assurance", "SDET", "embedded QA", "shift-left"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Same skill, same underlying discipline — completely different value, depending
 ```mermaid
 %% VIS-004 — QA's Position Relative to Product, Dev, and DevOps
 flowchart LR
+    accTitle: QA's Position Relative to Product, Dev, and DevOps
+    accDescr: Product defines what to build, QA asks what could go wrong, developers build it, and DevOps runs it in production, with QA involved throughout, not just at the end.
     P[Product<br/>defines what to build] --> Q[QA<br/>asks what could go wrong]
     Q --> D[Developers<br/>build it]
     D --> O[DevOps/SRE<br/>run it in production]

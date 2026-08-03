@@ -1,5 +1,6 @@
 ---
 title: "QA Metrics & Measurement"
+sidebar_label: "14 QA Metrics & Measurement"
 description: "How QA work actually gets evaluated — the metrics that prove testing effectiveness, and the vanity numbers that only look like progress."
 keywords: ["QA metrics", "defect density", "test coverage", "MTTR", "escape rate"]
 difficulty: "beginner"
@@ -29,6 +30,8 @@ QA metrics are measurements used to evaluate testing effectiveness and product q
 ```mermaid
 %% VIS-017 — A Metric Is Evidence, Not Proof
 flowchart LR
+    accTitle: A Metric Is Evidence, Not Proof
+    accDescr: A metric like defect escape rate correlates with a real outcome like fewer production incidents, but isn't identical to it. Whichever direction the metric trends, the right response is to investigate why, not to accept it at face value.
     A[Real Outcome<br/>e.g. fewer production incidents] -.->|what we actually care about| B[Metric<br/>e.g. defect escape rate]
     B --> C{Trending in the<br/>right direction?}
     C -->|Yes| D[Investigate why —<br/>confirm it's real]

@@ -1,5 +1,6 @@
 ---
 title: "Defect Life Cycle"
+sidebar_label: "11 Defect Life Cycle"
 description: "The stages a defect moves through from discovery to closure, and why a team without a real defect workflow loses track of what's actually fixed."
 keywords: ["defect life cycle", "bug life cycle", "defect states", "defect triage", "defect tracking"]
 difficulty: "beginner"
@@ -29,6 +30,8 @@ The defect life cycle is the sequence of states a logged defect moves through fr
 ```mermaid
 %% VIS-014 — The Defect Life Cycle
 stateDiagram-v2
+    accTitle: The Defect Life Cycle
+    accDescr: A defect moves from New to Triaged to In Progress to Fixed to Retest, then to Closed if verified or Reopened if not. From Triaged, a defect can also move to Deferred as a deliberate, documented decision.
     [*] --> New
     New --> Triaged
     Triaged --> InProgress: work starts

@@ -1,5 +1,6 @@
 ---
 title: "Shift-Left & Shift-Right Testing"
+sidebar_label: "10 Shift-Left & Shift-Right Testing"
 description: "Why modern QA doesn't wait for a finished build to start testing, and doesn't stop caring once one ships — moving quality work earlier and extending it into production."
 keywords: ["shift left testing", "shift right testing", "testing in production", "early testing", "observability"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Neither move alone would have caught everything. Shifting left reduces how much 
 ```mermaid
 %% VIS-013 — Shift-Left and Shift-Right, Relative to Release
 flowchart LR
+    accTitle: Shift-Left and Shift-Right, Relative to Release
+    accDescr: Shift-left activities, like requirements and design review and static analysis, happen before release. Shift-right activities, like monitoring, canary releases, and real-traffic validation, happen after release.
     SL["⬅ Shift-Left<br/>requirements & design review,<br/>static analysis"] --> Rel[Release]
     Rel --> SR["Shift-Right ➡<br/>monitoring, canary releases,<br/>real-traffic validation"]
 ```

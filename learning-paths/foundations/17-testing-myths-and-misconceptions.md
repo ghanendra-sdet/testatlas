@@ -1,5 +1,6 @@
 ---
 title: "Testing Myths & Misconceptions"
+sidebar_label: "17 Testing Myths & Misconceptions"
 description: "The capstone of Foundations — seven widely-believed myths about QA, debunked using the concepts taught throughout this path, each with a real-world story and an interview angle."
 keywords: ["testing myths", "QA misconceptions", "software testing myths", "QA interview questions"]
 difficulty: "beginner"

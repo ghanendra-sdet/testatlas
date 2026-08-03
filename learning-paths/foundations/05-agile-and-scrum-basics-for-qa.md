@@ -1,5 +1,6 @@
 ---
 title: "Agile & Scrum Basics for QA"
+sidebar_label: "05 Agile & Scrum Basics for QA"
 description: "How QA actually participates in Scrum — not just testing at the end of a sprint, but shaping stories, estimates, and Definition of Done from day one."
 keywords: ["agile testing", "scrum", "sprint", "definition of done", "backlog refinement", "QA in agile"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Both teams "do Scrum." Only one of them uses it the way it's meant to work — w
 ```mermaid
 %% VIS-008 — The Scrum Sprint Cycle (QA involved throughout, not just at the end)
 flowchart LR
+    accTitle: The Scrum Sprint Cycle
+    accDescr: Backlog refinement, sprint planning, sprint execution, sprint review, and retrospective, then the cycle repeats for the next sprint.
     A[Backlog<br/>Refinement] --> B[Sprint<br/>Planning] --> C[Sprint<br/>Execution] --> D[Sprint<br/>Review] --> E[Retrospective]
     E -.->|next sprint| A
 ```

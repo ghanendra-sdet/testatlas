@@ -116,6 +116,34 @@ const config: Config = {
           lineColor: '#076f7b',
           secondaryColor: '#e6f4f5',
           tertiaryColor: '#f3f8f8',
+          fontSize: '16px',
+          // Quadrant chart: constrained to the same brand palette instead of
+          // Mermaid's default four-color quadrant fill, so a quadrantChart
+          // doesn't visually clash with every flowchart around it.
+          quadrant1Fill: '#e6f4f5',
+          quadrant2Fill: '#f3f8f8',
+          quadrant3Fill: '#f3f8f8',
+          quadrant4Fill: '#e6f4f5',
+          quadrant1TextFill: '#05262b',
+          quadrant2TextFill: '#05262b',
+          quadrant3TextFill: '#05262b',
+          quadrant4TextFill: '#05262b',
+          quadrantPointFill: '#076f7b',
+          quadrantPointTextFill: '#05262b',
+          quadrantXAxisTextFill: '#05262b',
+          quadrantYAxisTextFill: '#05262b',
+          quadrantTitleFill: '#05262b',
+        },
+        flowchart: {
+          // More breathing room between nodes/ranks — the default spacing
+          // reads cramped at the module content width.
+          nodeSpacing: 45,
+          rankSpacing: 55,
+          curve: 'basis',
+        },
+        state: {
+          nodeSpacing: 45,
+          rankSpacing: 55,
         },
       },
     },

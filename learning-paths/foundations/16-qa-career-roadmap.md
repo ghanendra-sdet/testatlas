@@ -1,5 +1,6 @@
 ---
 title: "QA Career Roadmap"
+sidebar_label: "16 QA Career Roadmap"
 description: "What actually changes between Junior QA and QA Lead, the specialization paths (SDET, automation, quality engineering), and how to plan the move to each."
 keywords: ["QA career path", "QA roadmap", "SDET career", "QA lead", "quality engineering"]
 difficulty: "beginner"
@@ -26,15 +27,13 @@ Both testers were competent. Only one of them had a roadmap — and a roadmap is
 
 QA careers aren't a single ladder — they're a set of tracks that share a common early stage and then diverge based on what someone gravitates toward:
 
-```mermaid
-%% VIS-018 — QA Career Tracks Branch, They Don't Ladder
-flowchart LR
-    A[Junior QA] --> B[Mid-Level QA]
-    B --> C[SDET / Automation]
-    B --> D[Senior QA<br/>Individual Contributor]
-    B --> E[QA Lead / Manager]
-    B --> F[Quality Engineer]
-```
+**VIS-018 — QA Career Tracks Branch, They Don't Ladder** *(SVG infographic planned — see `VISUAL_STANDARDS.md` category 8; shown as cards until then)*:
+
+**Junior QA** → **Mid-Level QA** → then branches into four tracks a person chooses between, not climbs through in order:
+- **SDET / Automation** — building and maintaining test automation and infrastructure
+- **Senior QA (Individual Contributor)** — deep expertise and strategic influence without people management
+- **QA Lead / Manager** — team coordination, hiring, and reporting quality upward
+- **Quality Engineer** — breadth across manual, automation, and process work
 
 | Level / Track | Primary Focus | Typical Skills |
 |---|---|---|

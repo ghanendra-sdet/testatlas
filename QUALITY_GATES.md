@@ -15,6 +15,21 @@ A learning path cannot be tagged as a release until every gate below is satisfie
 - [ ] **Release notes written** — a `releases/` entry covering what was added, why it matters, who benefits, curriculum changes, and future work
 - [ ] **Version tagged** — a completed learning path is tagged using curriculum-product versioning (e.g. `v1.0-foundations`), independent of the site's own `v0.x` release-train numbering in `ROADMAP.md`. The two schemes track different things: `ROADMAP.md` versions the site's build-out sequence; a path's own tag versions that path as a standalone product, the way `LEARNING_PATHS.md`'s Curriculum Versioning section already tracks it (Foundations v1.0, Manual Testing v1.0, and so on)
 
+## Post-Deployment Gates (once a path has a public URL)
+
+Not yet active — Foundations has no public URL yet (no GitHub remote configured). Add these once one exists:
+
+- [ ] **Lighthouse Accessibility** — automated baseline, repeatable across releases
+- [ ] **Lighthouse SEO**
+- [ ] **Lighthouse Performance**
+- [ ] **Axe accessibility scan** (optional, supplementary to Lighthouse's accessibility audit)
+
+Lighthouse isn't perfect, but it replaces reasoned-from-first-principles claims (like `SEO_GUIDELINES.md`'s current Core Web Vitals section) with a real, repeatable number.
+
+## Backlog (not active gates — tracked here so they aren't lost)
+
+- **CI Check: Mermaid Mirror Synchronization** — `scripts/validate-diagrams.mjs` currently validates each `.mmd` file's syntax but does not check that it stays byte-identical to its inline module counterpart (see `VISUAL_STANDARDS.md`'s "What goes here, and how it stays in sync"). Manual sync is adequate at the current scale (19 diagrams across 17 modules). Automate this — extend the script to diff inline fence against mirror file and fail on mismatch — once TestAtlas approaches roughly 100 diagrams across all learning paths, where manual drift becomes a real risk rather than a theoretical one.
+
 ## Why This Exists
 
 Foundations' QA Review Sprint found that nearly every real defect traced back to one root cause: forward references written correctly at the time, never revisited once their target shipped in a later batch. That's a process gap, not a one-off mistake — the Cross-Link Resolution Check added to `CONTENT_MODEL.md`'s Definition of Done exists to catch it at the module level, as each module is written. These Quality Gates exist to catch it — and everything else that Cross-Link check doesn't cover — at the path level, once, before a release is called done.

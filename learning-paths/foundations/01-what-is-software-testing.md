@@ -1,5 +1,6 @@
 ---
 title: "What Is Software Testing?"
+sidebar_label: "01 What Is Software Testing?"
 description: "Testing is not about executing test cases — it's how a team answers whether a product will actually work for its users. The foundational definitions everything else in this path builds on."
 keywords: ["what is software testing", "testing vs checking", "testing fundamentals", "risk-based thinking"]
 difficulty: "beginner"
@@ -19,6 +20,8 @@ This chapter establishes what testing means, why it matters differently at each 
 ```mermaid
 %% VIS-001 — What Testing Actually Involves
 flowchart LR
+    accTitle: What Testing Actually Involves
+    accDescr: A cycle of five activities: risk questions, test design, execution, investigation, and communication, which then feeds back into the next round of risk questions.
     A[Risk Questions<br/>What could go wrong?] --> B[Test Design]
     B --> C[Execution]
     C --> D[Investigation<br/>Why did that happen?]
@@ -80,6 +83,8 @@ All of these are testing. All of them serve the same purpose: **Does this work f
 ```mermaid
 %% VIS-003 — Testing Levels Hierarchy
 flowchart TD
+    accTitle: Testing Levels Hierarchy
+    accDescr: Testing happens at five levels, from unit testing by developers, through integration and system testing by QA, to user acceptance testing and production testing.
     A[Unit Testing<br/>Developers] --> B[Integration Testing<br/>QA / Developers]
     B --> C[System Testing<br/>QA Engineers]
     C --> D[User Acceptance Testing<br/>Business / QA]
@@ -132,6 +137,8 @@ Experienced teams test throughout delivery:
 ```mermaid
 %% VIS-002 — Cost of a Defect by Delivery Stage
 flowchart LR
+    accTitle: Cost of a Defect by Delivery Stage
+    accDescr: The cost of fixing a defect rises at each stage, from the cost of a conversation at requirements, through design, development, and pre-release, to the cost of a hotfix and lost trust in production.
     A["Requirements<br/>~cost of a conversation"] --> B["Design<br/>~cost of a redraft"]
     B --> C["Development<br/>~cost of a code change"]
     C --> D["Pre-Release<br/>~cost of a retest cycle"]

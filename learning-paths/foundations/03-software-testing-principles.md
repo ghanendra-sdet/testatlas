@@ -1,5 +1,6 @@
 ---
 title: "Software Testing Principles"
+sidebar_label: "03 Software Testing Principles"
 description: "Seven foundational principles that shape how experienced testers think — not rules to memorize, but the mental model everything later in this path builds on."
 keywords: ["testing principles", "exhaustive testing", "pesticide paradox", "defect clustering", "absence of errors fallacy"]
 difficulty: "beginner"
@@ -22,18 +23,15 @@ Every module after this one describes a technique, a process, or a distinction. 
 
 Neither tester lacked effort. The difference was a set of principles that turn testing from "try a lot of things" into "try the things most likely to reveal a defect."
 
-```mermaid
-%% VIS-005 — The Seven Testing Principles
-mindmap
-  root((Testing<br/>Principles))
-    Shows presence of defects
-    Exhaustive testing impossible
-    Early testing saves money
-    Defects cluster
-    Pesticide paradox
-    Context-dependent
-    Absence-of-errors fallacy
-```
+**VIS-005 — The Seven Testing Principles** *(SVG infographic planned — see `VISUAL_STANDARDS.md` category 8; shown as structured cards until then, since a mindmap of seven unrelated labels didn't help a beginner faster than reading the list below)*:
+
+1. **Shows presence of defects, not their absence** — testing proves bugs exist; it never proves they don't.
+2. **Exhaustive testing is impossible** — testing is always a deliberate sample, never a complete one.
+3. **Early testing saves time and money** — a defect caught in review costs a conversation; caught in production, a hotfix.
+4. **Defects cluster** — a small share of modules usually contain a disproportionate share of defects.
+5. **The pesticide paradox** — the same tests, run repeatedly, eventually stop finding anything new.
+6. **Testing is context-dependent** — how much testing a feature needs depends on what it is and who depends on it.
+7. **Absence-of-errors is a fallacy** — zero known defects doesn't mean the product solves the right problem.
 
 *A dedicated SVG infographic for these seven principles is a good future candidate — see `VISUAL_STANDARDS.md` category 8 — once the visual identity for infographics is established. The mindmap above covers the same relationships in the interim.*
 

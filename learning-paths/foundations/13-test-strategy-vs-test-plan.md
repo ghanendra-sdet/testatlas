@@ -1,5 +1,6 @@
 ---
 title: "Test Strategy vs. Test Plan"
+sidebar_label: "13 Test Strategy vs. Test Plan"
 description: "One document says how a team approaches testing in general; the other says how testing will actually happen for this release. Confusing them leaves teams without either."
 keywords: ["test strategy", "test plan", "test planning", "QA documentation"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Strategy without a plan is philosophy with no execution. A plan without a strate
 ```mermaid
 %% VIS-016 — Strategy Informs Plan, Not the Other Way Around
 flowchart LR
+    accTitle: Strategy Informs Plan, Not the Other Way Around
+    accDescr: One stable test strategy informs multiple release-specific test plans, one per release.
     A["Test Strategy<br/>stable, org-wide"] -->|informs| B["Test Plan A<br/>Release 1"]
     A -->|informs| C["Test Plan B<br/>Release 2"]
     A -->|informs| D["Test Plan C<br/>Release 3"]

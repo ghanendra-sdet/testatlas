@@ -1,5 +1,6 @@
 ---
 title: "Verification vs. Validation"
+sidebar_label: "06 Verification vs. Validation"
 description: "Why 'we built it right' and 'we built the right thing' are two different questions, and how confusing them lets a correctly-built wrong feature reach production."
 keywords: ["verification vs validation", "verification", "validation", "requirements review", "static testing"]
 difficulty: "beginner"
@@ -31,6 +32,8 @@ Both teams skipped half the check. Verification catches "we built it wrong." Val
 ```mermaid
 %% VIS-009 — Verification vs. Validation
 flowchart TD
+    accTitle: Verification vs. Validation
+    accDescr: Requirements lead to verification, asking are we building it right, which leads to software, which leads to validation, asking are we building the right thing.
     A[Requirements] --> B["Verification<br/>(Are we building it right?)"]
     B --> C[Software]
     C --> D["Validation<br/>(Are we building the right thing?)"]

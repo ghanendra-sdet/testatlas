@@ -1,5 +1,6 @@
 ---
 title: "Quality Attributes"
+sidebar_label: "09 Quality Attributes"
 description: "Why 'does it work' is only one dimension of quality, and how to weigh functionality, performance, security, usability, reliability, and maintainability for a given feature."
 keywords: ["quality attributes", "non-functional requirements", "reliability", "usability", "maintainability"]
 difficulty: "beginner"
@@ -26,19 +27,7 @@ Both teams tested functionality carefully. Neither treated the *other* dimension
 
 Quality attributes are the dimensions a product needs to succeed on beyond raw functional correctness. Six matter most for the majority of products:
 
-```mermaid
-%% VIS-012 — The Six Quality Attributes
-mindmap
-  root((Quality<br/>Attributes))
-    Functionality
-    Performance
-    Security
-    Usability
-    Reliability
-    Maintainability
-```
-
-*A dedicated SVG infographic for these six attributes is a good future candidate — see `VISUAL_STANDARDS.md` category 8 — for the same reason as Software Testing Principles' seven principles.*
+**VIS-012 — The Six Quality Attributes** *(SVG infographic planned — see `VISUAL_STANDARDS.md` category 8; shown as cards until then)*: Functionality · Performance · Security · Usability · Reliability · Maintainability — six independent dimensions, not a process or hierarchy, which is why the table below (not a diagram) is where the real content lives.
 
 | Attribute | The Question It Answers |
 |---|---|

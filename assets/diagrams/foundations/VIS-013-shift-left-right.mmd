@@ -1,5 +1,7 @@
 %% VIS-013 — Shift-Left and Shift-Right, Relative to Release
 %% Used in: 10-shift-left-and-shift-right-testing.md
 flowchart LR
+    accTitle: Shift-Left and Shift-Right, Relative to Release
+    accDescr: Shift-left activities, like requirements and design review and static analysis, happen before release. Shift-right activities, like monitoring, canary releases, and real-traffic validation, happen after release.
     SL["⬅ Shift-Left<br/>requirements & design review,<br/>static analysis"] --> Rel[Release]
     Rel --> SR["Shift-Right ➡<br/>monitoring, canary releases,<br/>real-traffic validation"]
