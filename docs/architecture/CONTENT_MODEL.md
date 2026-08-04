@@ -88,7 +88,16 @@ Remember these five points:
 ✓ [Point 5]
 ```
 
-These three join the existing required elements (Common Mistakes, Best Practices, Interview Questions, Glossary, "What You Just Learned") as part of every Manual Testing module's Definition of Done. A Section Complete summary (see **Navigation and Discoverability**) is required once per section, not once per module.
+**When NOT to Use** — for any module teaching a technique or artifact (not every module — a mindset module like Thinking Like a Tester doesn't have a clean "don't use this" answer), a short section stating specific situations where applying the technique isn't worth the investment. Placed after Best Practices, before Mini Challenge. Knowing when a technique doesn't earn its cost is as real a skill as knowing how to apply it.
+
+```markdown
+## When NOT to Use [Technique/Artifact Name]
+
+- [Specific situation where the investment isn't worth it, and why]
+- [Another specific situation]
+```
+
+These four join the existing required elements (Common Mistakes, Best Practices, Interview Questions, Glossary, "What You Just Learned") as part of every Manual Testing module's Definition of Done.
 
 ### Opening Paragraph (Hook)
 Start with one paragraph that answers: **What is this page about, and why should you care?**
@@ -449,15 +458,17 @@ Use one term consistently throughout the page.
 
 ## Navigation and Discoverability
 
-### Section Complete Summaries (Manual Testing Onward)
-The final module in each curriculum section (per `LEARNING_PATHS.md`'s section breakdown) closes with a short "Section N Complete" summary, before the module's own Glossary: a checklist recap of what the section covered, and a one-line pointer to the next section. This is a per-*section* element, not per-module — most modules don't get one.
+### Section Review and Solutions Pages (Section 4 Onward)
 
-### Section Knowledge Checks and Solutions Pages (Manual Testing Onward)
-The same closing module also includes a "Section N Knowledge Check": several realistic scenarios requiring the learner to decide which technique(s) from the section apply, with no answers given inline — the point is active judgment, not a quiz with an answer key one scroll away.
+Sections 1–3 appended their closing content (Section Complete summary, Selection/Decision Matrix, and Knowledge Check) directly onto the last teaching module in the section. This was retired after it recurred a third time (Modules 3, 9, and 13 each ran long specifically because of it) — **from Section 4 onward, section-closing content gets two dedicated pages of its own**, not appended to whatever the last module happens to be. Not retrofitted onto Sections 1–3; their existing pattern stays as published.
 
-The answers live on a **separate Solutions page**, not folded into the next section's opening module — interrupting Section 3 with Section 2's answers breaks the learner's flow into the new section. A Solutions page is its own file (`learning-paths/manual-testing/0Na-section-N-solutions.md`, sorting immediately after that section's closing module by filename, before the next section's Module 1), with `sidebar_label` set to `"Section N — Solutions"` (no module number — it's not one of the path's 23 numbered modules, and shouldn't be counted as one or imply otherwise in the sidebar). For every scenario: the correct technique, why it's correct, why the other techniques from the section are less appropriate for this specific scenario, and the real-world reasoning behind the choice.
+**Section N Review** (its own file, `learning-paths/manual-testing/N-review.md` in numbering terms — e.g. `16a-section-4-review.md` if Module 16 closes the section — sorting immediately after the section's last module, `slug: section-N-review`, `sidebar_label: "Section N — Review"`, no module number): contains the section summary (checklist recap of what the section covered and how the pieces connect), a Technique/Decision/Selection Matrix as appropriate to that section's content, the Knowledge Check (realistic scenarios, no answers), and a one-line transition into the next section.
 
-**Slug**: Docusaurus only strips a *purely numeric* filename prefix (`09-`) when deriving a route — an alphanumeric prefix like `09a-` is not stripped, and the route would otherwise be `/09a-section-N-solutions`, leaking the internal numbering scheme into the URL. Set an explicit `slug: section-N-solutions` in the frontmatter to keep the filename's ordering benefit while producing a clean URL. Verified directly against a real build failure the first time this page was created — `npm run build`'s broken-link check catches a wrong assumption about this, but only after the fact, so get the slug right the first time for any future Solutions page.
+**Section N Solutions** (its own file, `slug: section-N-solutions`, `sidebar_label: "Section N — Solutions"`, sorting immediately after the Review page): for every Knowledge Check scenario, the correct answer, the explanation, why alternative approaches are less appropriate for that specific scenario, and the real-world reasoning behind the choice — the same depth Sections 2 and 3's Solutions pages already established, just now paired with a Review page instead of a bundled closing module.
+
+This keeps every teaching module's length consistent, gives every section the same predictable rhythm (teaching modules → Review → Solutions → next section), and makes the Review page independently linkable and revisitable — genuinely useful before an interview, not just once during first read-through.
+
+**Slug**: Docusaurus only strips a *purely numeric* filename prefix (`09-`) when deriving a route — an alphanumeric prefix like `09a-` is not stripped, and the route would otherwise leak the internal numbering scheme into the URL. Set an explicit `slug:` in the frontmatter on every Review and Solutions page to keep the filename's ordering benefit while producing a clean URL. Verified directly against a real build failure the first time a Solutions page was created — get the slug right the first time for any new one.
 
 ### Sidebar Organization
 Every learning path gets a `_category_.json` file that defines:

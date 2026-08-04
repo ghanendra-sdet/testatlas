@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Session-Based Test Management
 
 **Prerequisites**: You should already understand [Exploratory Testing Fundamentals](/learning-paths/manual-testing/exploratory-testing-fundamentals).
-**Leads to**: After this, you'll be ready for When to Use Structured vs. Exploratory Testing (coming soon).
+**Leads to**: After this, you'll be ready for [When to Use Structured vs. Exploratory Testing](/learning-paths/manual-testing/when-to-use-structured-vs-exploratory-testing).
 
 The previous module established that exploratory testing needs structure — a charter, active observation, real-time documentation — to be a real discipline rather than aimless clicking. Session-Based Test Management is what turns that individual discipline into something a whole team can schedule, manage, and hold accountable, the same way a sprint turns individual work into something a team can plan around together.
 
@@ -119,7 +119,7 @@ On a logistics platform, exploratory testing had been happening informally for o
 - How a SaaS team's session reports, reviewed together, revealed a real pattern (error-state handling) no single session surfaced alone
 - How to track exploratory testing coverage and metrics over time, the same way scripted testing coverage is tracked through an RTM
 
-**Next:** When to Use Structured vs. Exploratory Testing (coming soon)
+**Next:** [When to Use Structured vs. Exploratory Testing](/learning-paths/manual-testing/when-to-use-structured-vs-exploratory-testing)
 
 ## Related Topics
 
