@@ -1,0 +1,10 @@
+%% VIS-API-008 — Authorization Checks: Role and Ownership
+%% Used in: 08-authorization-and-access-control.md
+flowchart TB
+    accTitle: Authorization Checks — Role and Ownership
+    accDescr: After authentication succeeds, two separate authorization checks should both pass before a request is allowed — a role check confirming the identity's role permits this endpoint, and an ownership check confirming the identity actually owns the specific resource being requested. Missing either check independently produces vertical or horizontal privilege escalation.
+    A[Authenticated Request] --> B{Role Permits<br/>This Endpoint?}
+    B -->|No| C[403: vertical escalation blocked]
+    B -->|Yes| D{Identity Owns<br/>This Specific Resource?}
+    D -->|No| E[403: horizontal escalation blocked]
+    D -->|Yes| F[Request Proceeds]

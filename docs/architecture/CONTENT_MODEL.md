@@ -513,7 +513,7 @@ A learning module is complete only when every item below is true. This is the si
 - [ ] A realistic, production-inspired example is included — not a toy scenario
 - [ ] Common mistakes section included
 - [ ] Best practices section included
-- [ ] **From the Field, Senior QA Insight, Mini Challenge, Common Interview Mistake, and Quick Revision included** (Manual Testing modules and beyond — not required for Foundations, which predates this standard)
+- [ ] **From the Field, Senior QA Insight, Mini Challenge, Common Interview Mistake, and Quick Revision included** (Manual Testing modules and beyond — not required for Foundations, which predates this standard; Manual Testing Modules 1–7 also don't fully match this, as an accepted historical exception, not a defect — see `CURRICULUM_EVOLUTION.md` Entry 3 for the incremental-formalization timeline. Applies in full, from the first module, to every learning path built after this standard existed, including all of API Testing.)
 - [ ] Interview questions included, each with "what to look for" guidance
 - [ ] Glossary included for any term introduced that a reader wouldn't already know
 - [ ] Related Topics links to sibling and cross-path content

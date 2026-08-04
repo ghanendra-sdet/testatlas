@@ -60,6 +60,14 @@ Manual Testing v1.0 — curriculum already designed and frozen at 23 modules (`d
 
 ---
 
-## Unreleased — Manual Testing (in progress)
+## Unreleased — Manual Testing v1.0 (content complete, not yet tagged)
 
-Curriculum frozen at 23 modules across seven sections. Content development starting now.
+23/23 modules shipped across seven sections, plus 6 dedicated Section Review/Solutions pages (introduced Section 4 onward — see `docs/architecture/CURRICULUM_EVOLUTION.md` Entry 1). Committed (`2624d5b` and prior batch commits); not yet tagged `manual-testing-v1.0.0`. A Curriculum Consistency Sprint (2026-08-04) aligned `LEARNING_PATHS.md` with shipped reality and fixed one genuine content gap (Module 3's missing "From the Field"). Established two permanent architectural patterns during development, both documented in `CURRICULUM_EVOLUTION.md`: Section Review/Solutions pages, and Application Modules as a distinct content type (Modules 20–23).
+
+## Unreleased — API Testing v1.0 (content complete, pending commit)
+
+21/21 modules shipped across seven sections, plus 12 dedicated Section Review/Solutions pages (adopted from Section 1, reusing Manual Testing's Entry 1 pattern from day one — see `docs/architecture/LEARNING_PATHS.md`, Path 2 → Path 3). Uses Manual Testing v1.0 as its reference implementation throughout: reuses BVA/Equivalence Partitioning/Decision Tables/State Transitions by direct link rather than re-teaching them, extends the AtlasBank convention from Manual Testing (approved 2026-08-04, see `STYLE_GUIDE.md`), and reuses the Application Module pattern for Section 7 (Modules 18–21). Not yet committed — awaiting final approval.
+
+**Deviations from the original architecture proposal**, both flagged and approved during development: Section 7's Modules 18–19 stayed within AtlasBank (two contrasting multi-system scenarios) rather than introducing a second domain, since every prior module had used AtlasBank exclusively; and a documentation/shipped-content mismatch in `CURRICULUM_EVOLUTION.md` Entry 2 (it claimed Application Modules omit Quick Revision, but Manual Testing's own Modules 20/21/23 all shipped with one) was corrected rather than propagated into API Testing's template.
+
+**Content stays at a QA-validation level throughout Section 5 (API Security Testing)**: explicitly scoped to recognizing symptoms and reporting responsibly, never exploit construction — a deliberate boundary stated directly in Module 14.

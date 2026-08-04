@@ -1,5 +1,5 @@
 ---
-title: "Section 5 Review"
+title: "Manual Testing — Section 5 Review"
 slug: section-5-review
 sidebar_label: "Section 5 — Review"
 description: "A recap of Reporting and Communication — writing bug reports, execution reporting, and reviewing test cases — plus a Knowledge Check."

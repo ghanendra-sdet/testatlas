@@ -1,5 +1,5 @@
 ---
-title: "Section 5 Solutions"
+title: "Manual Testing — Section 5 Solutions"
 slug: section-5-solutions
 sidebar_label: "Section 5 — Solutions"
 description: "Answers and reasoning for Section 5's Knowledge Check — bug reports, execution reporting, and test case review."

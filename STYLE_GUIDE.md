@@ -98,6 +98,8 @@ This is a default, not a rule without exceptions: healthcare, e-commerce, insura
 
 Not retrofitted into Modules 1–12's existing banking examples — applies going forward from Section 3.
 
+**Extended to API Testing (approved 2026-08-04)**: AtlasBank is also the default domain for API Testing, at the user's explicit direction during API Testing v1.0 architecture review — learners already know the business domain from Manual Testing, so they can focus on API testing itself rather than learning a new product. API Testing examples use realistic AtlasBank-style banking APIs (authentication, customer, account, beneficiary, fund transfer, transaction, statement, card, KYC, notification endpoints) with representative JSON payloads. Same exception as above: don't force an AtlasBank API example where a different domain genuinely fits better.
+
 ## 7. Diagrams and visuals
 
 Use visuals when they make a relationship, flow, or comparison easier to understand than prose.

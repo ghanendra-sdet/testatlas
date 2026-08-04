@@ -1,0 +1,10 @@
+%% VIS-API-015 — CORS Preflight and Allowed-Origin Check
+%% Used in: 15-transport-security-cors-and-secure-communication.md
+flowchart TB
+    accTitle: CORS Preflight and Allowed-Origin Check
+    accDescr: A browser sends an OPTIONS preflight request before a cross-origin call. The server responds with its allowed origins, methods, and headers. If the requesting origin is allowed, the browser proceeds with the real request; if not, the browser blocks it before it's sent. A tester checks that the allowed-origins list is specific, not wildcarded, especially for credentialed requests.
+    A[Browser: Cross-Origin Request] --> B[OPTIONS Preflight Sent]
+    B --> C[Server Responds:<br/>Allowed Origins/Methods/Headers]
+    C --> D{Requesting Origin<br/>in Allowed List?}
+    D -->|Yes| E[Real Request Proceeds]
+    D -->|No| F[Browser Blocks Request]

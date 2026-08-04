@@ -19,13 +19,28 @@ Search existing issues and content before starting substantial work. This avoids
 
 For a new learning path, major project simulation, repository-wide pattern, or architectural change, open an issue or discussion first. Explain the learner problem, the proposed approach, alternatives considered, and maintenance implications. Do not begin a large change until there is agreement on its direction.
 
+## Local development setup
+
+```bash
+npm install        # once, after cloning
+npm run start       # local dev server with live reload, for previewing your changes
+npm run build        # production build — this is what CI/the required checks actually run
+npm run validate:diagrams   # required if you touched any Mermaid diagram
+```
+
+`npm run build` is stricter than `npm run start` — it fails on broken links (`onBrokenLinks: 'throw'`) where the dev server will just render a warning. Always run the full build before opening a PR, not just the dev server.
+
+## Writing your first piece of content
+
+If you're adding to an existing learning path (a module, a Section Review page), start at `AUTHOR_GUIDE.md` — it's the single entry point for "which document answers which question" and the exact step-by-step workflow, including which template to copy from `templates/`.
+
 ## Contribution workflow
 
 1. Read the relevant project standards.
 2. Create a focused branch from the default branch.
 3. Make the smallest complete change that solves the problem.
 4. Validate links, formatting, examples, code, and assets affected by your change.
-5. Open a pull request using the repository template.
+5. Open a pull request using `templates/pr-checklist.md` as your PR description.
 6. Respond to review feedback with context and respect.
 
 Do not combine unrelated changes in one pull request. A focused pull request is easier to review, easier to revert, and less likely to introduce accidental conflicts.

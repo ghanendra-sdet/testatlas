@@ -1,0 +1,9 @@
+%% VIS-API-014 — From Symptom to Responsible Report
+%% Used in: 14-injection-and-input-based-attacks.md
+flowchart LR
+    accTitle: From Symptom to Responsible Report
+    accDescr: A QA engineer submits unusual boundary-breaking input as part of ordinary testing, observes a suspicious symptom like a raw database error, and reports the finding responsibly rather than attempting to build or run an exploit.
+    A[Submit Unusual Input<br/>e.g., a quotation mark] --> B[Observe Response]
+    B --> C{Suspicious Symptom?<br/>raw error, leaked detail}
+    C -->|Yes| D[Report Responsibly<br/>not: build an exploit]
+    C -->|No| E[Continue Normal Testing]

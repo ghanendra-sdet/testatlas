@@ -1,0 +1,8 @@
+%% VIS-API-013 — Where Functional Testing Already Overlaps Security Testing
+%% Used in: 13-api-security-fundamentals.md
+flowchart LR
+    accTitle: Where Functional Testing Already Overlaps Security Testing
+    accDescr: Authorization testing already covers Broken Object Level Authorization. Data validation testing already covers excessive data exposure, by comparing response fields against what's actually needed. Error-response testing already covers security misconfiguration, by checking for leaked internal detail. Each security category maps to a skill this path already taught.
+    A[Authorization Testing<br/>Module 8] --> B[Broken Object Level<br/>Authorization]
+    C[Data Validation Testing<br/>Module 6] --> D[Excessive Data<br/>Exposure]
+    E[Error Response Testing<br/>Module 4] --> F[Security<br/>Misconfiguration]

@@ -94,7 +94,7 @@ But we *do* have pages that compare tools:
 |-----------------|----------|----------------|-----|
 | Automation Frameworks Comparison | `/learning-paths/automation/tool-comparison` | Automation Learning Path | Help learners choose, but principles stay general |
 | Performance Testing Tools | `/learning-paths/performance-testing/tool-comparison` | Performance Learning Path | k6, JMeter, Gatling all test the same concepts |
-| API Testing Tools | `/learning-paths/api-testing/tool-comparison` | API Testing Learning Path | Postman, REST Client, Bruno all send requests |
+| API Testing Tools | `/learning-paths/api-testing/api-testing-tools` | API Testing Learning Path | Postman, REST Client, Bruno all send requests |
 
 ---
 
@@ -111,9 +111,8 @@ But we *do* have pages that compare tools:
 
 **References** (from other paths, keep brief):
 
-1. **API Testing**: "Testing API Boundaries"
-   - Link to BVA node: "Start by understanding [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis)"
-   - Specific example: "API accepts amounts $0.01–$99,999.99. Test at boundaries: $0.00, $0.01, $99,999.99, $100,000.00"
+1. **API Testing** (as shipped, v1.0): [Applying API Testing: AtlasBank Loan and KYC Flow](/learning-paths/api-testing/applying-api-testing-loan-kyc-flow) and the [API Testing Capstone](/learning-paths/api-testing/api-testing-capstone) both link directly to this node rather than re-explaining it
+   - Specific example (capstone): international transfer amounts tested at $2,999.99/$3,000.00 (compliance boundary) and $9,999.99/$10,000.00 (daily-limit boundary)
 
 2. **Security Testing**: "Input Validation and Injection"
    - Link to BVA: "Attackers find injections at input boundaries. Use [BVA](/learning-paths/manual-testing/boundary-value-analysis) to test validation."
@@ -245,7 +244,7 @@ As TestAtlas grows, new knowledge nodes may emerge:
 | Emerging Concept | Currently Covered In | Future Node Candidate | Why |
 |------------------|----------------------|----------------------|-----|
 | Flakiness in Automation | Automation path (section) | `/learning-paths/automation/flakiness` (dedicated page) | Complex enough for its own node |
-| API Contract Testing | API Testing (section) | `/learning-paths/api-testing/contract-testing` | Growing practice with dedicated tools |
+| API Contract Testing (OpenAPI/schema validation) | Deliberately deferred from API Testing v1.0 (see `LEARNING_PATHS.md` Section 2 "As Shipped") | `/learning-paths/api-testing/contract-testing` | Growing practice with dedicated tools; not yet built |
 | Accessibility Testing | Not yet covered | `/learning-paths/manual-testing/accessibility` | Important enough for v1.0 |
 | Test Data Management | Automation path (section) | `/learning-paths/automation/test-data` | Critical for teams; complex topic |
 | Observability and Testing | Not yet covered | `/learning-paths/automation/observability` | Increasingly important for QA |

@@ -17,9 +17,9 @@ Each release is a meaningful checkpoint, not just a version bump. This is the or
 | v0.1.0 | Repository Foundation | ✅ Complete |
 | v0.2.0 | Architecture Freeze | ✅ Complete |
 | v0.3.0 | Website Foundation | ✅ Complete |
-| v0.4.0 | Foundations Learning Path | 🚧 Content Complete (17/17) — editorial review pending |
-| v0.5.0 | Manual Testing (Part 1) | Planned |
-| v0.6.0 | API Testing (Part 1) | Planned |
+| v0.4.0 | Foundations Learning Path | ✅ Complete (17/17, tagged `foundations-v1.0.0`) |
+| v0.5.0 | Manual Testing | ✅ Content Complete (23/23) — committed, not yet tagged |
+| v0.6.0 | API Testing | ✅ Content Complete (21/21) — pending commit |
 | v0.7.0 | Database Testing (SQL Fundamentals) | Planned |
 | v0.8.0 | Test Automation (Playwright) | Planned |
 | v0.9.0 | Project Simulations + Labs | Planned |
@@ -55,24 +55,26 @@ Ideas that aren't on this list — mascot/branding, gamification, accounts, and 
 - Top-level navigation connecting Learning Paths → Projects → Labs → Community
 - Visual identity pass (the mascot idea in NOT_NOW.md can inform this later, not block it now)
 
-### v0.4.0 — Foundations Learning Path
+### v0.4.0 — Foundations Learning Path ✅
 
 **Goal:** ship a complete, reliable Path 1 that every other path builds on.
 
 - All 17 modules written across six sections (Introduction, Software Development Context, Testing Fundamentals, Quality Mindset, Defect Management, Professional QA) — see `docs/architecture/LEARNING_PATHS.md`
-- Remaining before this milestone tags: a full editorial/consistency review across all 17 modules, and a Prerequisites-block retrofit on the seven earliest modules
+- Editorial/consistency review and Prerequisites-block retrofit both complete; tagged `foundations-v1.0.0`
 
-### v0.5.0 — Manual Testing (Part 1)
+### v0.5.0 — Manual Testing ✅
 
-**Goal:** the core test-design knowledge nodes every other path will reference.
+**Goal:** the core test-design knowledge nodes every other path references — became a full 23-module path, not just an initial "Part 1" slice.
 
-- Test design fundamentals, Boundary Value Analysis, Equivalence Partitioning, Decision Tables
+- All seven sections shipped: Test Design Foundations, Core Test Design Techniques (BVA, Equivalence Partitioning, Decision Tables, State Transitions, Combinatorial/Pairwise, Error Guessing), Writing and Organizing Tests, Exploratory and Ad Hoc Testing, Reporting and Communication, Applying Test Design Across Domains, and a Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 2
+- A Curriculum Consistency Sprint (2026-08-04) aligned documentation with shipped reality; committed, not yet tagged `manual-testing-v1.0.0`
 
-### v0.6.0 — API Testing (Part 1)
+### v0.6.0 — API Testing ✅
 
-**Goal:** apply test design to APIs.
+**Goal:** apply test design to APIs — became a full 21-module path, using Manual Testing as its reference implementation, not just an initial "Part 1" slice.
 
-- HTTP basics, JSON validation, designing API test cases, authentication testing
+- All seven sections shipped: API Testing Foundations, Data/Contracts/Test Cases, Auth and Access Control, Integration and Resilience, API Security Testing, Performance and Tooling, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 3
+- Content-complete, pending final review and commit
 
 ### v0.7.0 — Database Testing (SQL Fundamentals)
 

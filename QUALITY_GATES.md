@@ -4,14 +4,20 @@ A learning path cannot be tagged as a release until every gate below is satisfie
 
 ## Gates
 
+- [ ] **Every module passes `CURRICULUM_CHECKLIST.md`** — the per-page Definition of Done, self-certified by the author before this path-level pass even begins
+- [ ] **Every PR that shipped this path passed `REVIEW_CHECKLIST.md`** — independent reviewer verification, not just author self-certification
 - [ ] **QA Review passed** — a structured review sprint across Curriculum Consistency, Navigation, Learning Flow, Technical Validation, and Editorial Review (see `FOUNDATIONS_QA_REPORT.md` for the template this follows), with zero open Critical or Major findings
-- [ ] **Editorial review passed** — no unresolved repetition, weak examples, or overly long sections flagged during the QA review's Editorial suite
+- [ ] **Editorial review passed** — no unresolved repetition, weak examples, or overly long sections flagged during the QA review's Editorial suite; see `WRITING_GUIDELINES.md` for the specific/generic calibration this checks against
 - [ ] **Build passes** — `npm run build` succeeds with zero errors
 - [ ] **Links verified** — zero broken links, and zero dead `](#)` placeholder links (see the Forward Reference Rule in `STYLE_GUIDE.md`)
-- [ ] **Diagrams validated** — `npm run validate:diagrams` passes for every `.mmd` file touched. `npm run build` alone does not catch invalid Mermaid syntax (see `VISUAL_STANDARDS.md`), so this is a separate, required check
+- [ ] **Diagrams validated** — `npm run validate:diagrams` passes for every `.mmd` file touched. `npm run build` alone does not catch invalid Mermaid syntax (see `MERMAID_GUIDELINES.md`), so this is a separate, required check
+- [ ] **SEO checklist passed** — `SEO_CHECKLIST.md` run for every module, including the cross-path title-collision check (a real, found issue — see the Platform Consistency Sprint entry in `LEARNING_PATHS.md`)
+- [ ] **Accessibility checklist passed** — `ACCESSIBILITY_CHECKLIST.md` run for every module
 - [ ] **Navigation verified** — sidebar order matches the intended curriculum sequence; every module's Prerequisites "Leads to" line and bottom "Next" link agree with each other and point to real content
 - [ ] **Metadata complete** — every module has full frontmatter (title, description, keywords, difficulty, time_to_read, last_reviewed) and a Prerequisites block
+- [ ] **Recurring elements verified path-wide, not just per-module** — a repository-wide audit found all 17 API Testing modules missing 2 of 5 required elements despite each module individually looking complete; a per-module check alone did not catch a systemic, path-wide gap. Run a path-wide grep for each recurring element's exact marker text before tagging, not just a per-module visual check
 - [ ] **Learning outcomes verified** — the path's stated Learning Outcomes in `LEARNING_PATHS.md` are each achievable by completing the published modules, with no gap between what's promised and what's taught
+- [ ] **Reference Curriculum deviations documented** — if this path is Manual Testing or API Testing, or built after either was certified, every deviation from `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s defaults has a stated, evidenced reason in `LEARNING_PATHS.md`'s "As Shipped" notes
 - [ ] **Release notes written** — a `releases/` entry covering what was added, why it matters, who benefits, curriculum changes, and future work
 - [ ] **Version tagged** — a completed learning path is tagged using curriculum-product versioning (e.g. `v1.0-foundations`), independent of the site's own `v0.x` release-train numbering in `ROADMAP.md`. The two schemes track different things: `ROADMAP.md` versions the site's build-out sequence; a path's own tag versions that path as a standalone product, the way `LEARNING_PATHS.md`'s Curriculum Versioning section already tracks it (Foundations v1.0, Manual Testing v1.0, and so on)
 
@@ -28,7 +34,8 @@ Lighthouse isn't perfect, but it replaces reasoned-from-first-principles claims 
 
 ## Backlog (not active gates — tracked here so they aren't lost)
 
-- **CI Check: Mermaid Mirror Synchronization** — `scripts/validate-diagrams.mjs` currently validates each `.mmd` file's syntax but does not check that it stays byte-identical to its inline module counterpart (see `VISUAL_STANDARDS.md`'s "What goes here, and how it stays in sync"). Manual sync is adequate at the current scale (19 diagrams across 17 modules). Automate this — extend the script to diff inline fence against mirror file and fail on mismatch — once TestAtlas approaches roughly 100 diagrams across all learning paths, where manual drift becomes a real risk rather than a theoretical one.
+- **CI Check: Mermaid Mirror Synchronization** — `scripts/validate-diagrams.mjs` currently validates each `.mmd` file's syntax but does not check that it stays byte-identical to its inline module counterpart (see `MERMAID_GUIDELINES.md`'s "What goes here, and how it stays in sync"). Manual sync is adequate at the current scale (39 diagrams across Foundations, Manual Testing, and API Testing combined, as of 2026-08-04). Automate this — extend the script to diff inline fence against mirror file and fail on mismatch — once TestAtlas approaches roughly 100 diagrams across all learning paths, where manual drift becomes a real risk rather than a theoretical one.
+- **Automated content-quality checks** (recurring-element presence, keyword-count range, duplicate title/description detection, orphan-page detection) — currently all manual/grep-based, run during ad hoc sprints rather than on every PR. See `docs/architecture/AUTOMATION_SPECIFICATIONS.md` for implementation-ready specs, written but not yet built.
 
 ## Why This Exists
 

@@ -1,0 +1,9 @@
+%% VIS-AUTO-014 — Automation Debt Accumulates Without Active Maintenance
+%% Used in: 14-maintaining-automation-at-scale.md
+flowchart LR
+    accTitle: Automation Debt Accumulates Without Active Maintenance
+    accDescr: A suite that only ever adds tests, without periodic review, accumulates dead and unowned tests over time, eroding trust and slowing every run. A suite with periodic, deliberate maintenance reviews tests when features change, removing or updating what no longer earns its keep, staying a trusted asset instead of a growing liability.
+    A[Suite Grows Over Time] --> B{Periodic Maintenance?}
+    B -->|No| C[Dead + Unowned Tests<br/>Accumulate Silently]
+    B -->|Yes, scheduled review| D[Suite Stays Trusted<br/>and Understood]
+    C --> E[Trust Erodes,<br/>Runtime Grows Without Value]

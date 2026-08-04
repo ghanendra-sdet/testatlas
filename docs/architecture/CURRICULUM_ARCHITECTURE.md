@@ -42,53 +42,34 @@ See `LEARNING_PATHS.md` for full module-by-module scope, learning outcomes, and 
 
 ---
 
-### Path 2: Manual Testing and Test Design
+### Path 2: Manual Testing and Test Design ✅ Shipped (v1.0, 23 modules)
 **Target Audience**: QA professionals, manual testers, automation engineers (everyone designing tests)  
 **Prerequisites**: Foundations of Software Testing  
-**Duration**: 4–8 weeks  
 **Learning Objectives**:
-- Master test design techniques (boundary value analysis, equivalence partitioning, decision tables)
-- Understand how to create maintainable test cases
-- Learn to think about edge cases and failure modes
-- Apply test design to realistic domains
+- Master test design techniques (boundary value analysis, equivalence partitioning, decision tables, state transitions, combinatorial/pairwise, error guessing)
+- Understand how to create maintainable test cases, organize them, and build an RTM
+- Learn exploratory testing as a disciplined practice, and when to use it versus structured technique
+- Communicate defects and results precisely; review someone else's test cases
+- Apply test design to realistic domains (banking, e-commerce, healthcare, insurance)
 
-**Modules**:
-1. Test Design Fundamentals (reusable knowledge node)
-2. Equivalence Partitioning (reusable knowledge node)
-3. Boundary Value Analysis (reusable knowledge node)
-4. Decision Table Testing (reusable knowledge node)
-5. State Transition Testing (reusable knowledge node)
-6. Error Guessing and Experience-Based Techniques
-7. Combinatorial Testing
-8. Test Case Organization and Maintenance
-9. Applying Test Design to Real Projects
-10. Common Mistakes in Test Design
+**Actual shipped structure**: seven sections (Test Design Foundations → Core Test Design Techniques → Writing and Organizing Tests → Exploratory and Ad Hoc Testing → Reporting and Communication → Applying Test Design Across Domains → Capstone), plus 6 dedicated Section Review/Solutions pages. This list is deliberately not duplicated here — see `LEARNING_PATHS.md`, Path 2, for the full, authoritative, currently-accurate module-by-module breakdown, word counts, and dependency reasoning. This section previously listed a 10-module planning-stage sketch; it no longer matches what shipped and has been replaced with this pointer rather than a second, driftable copy.
 
 **Modules Feed Into**: API Testing, Automation Testing, Security Testing, Performance Testing
 
 ---
 
-### Path 3: API Testing
+### Path 3: API Testing ✅ Shipped (v1.0, 21 modules)
 **Target Audience**: API testers, backend QA, automation engineers  
-**Prerequisites**: Foundations, Manual Testing and Test Design (concepts apply equally to APIs)  
-**Duration**: 4–6 weeks  
+**Prerequisites**: Foundations, Manual Testing and Test Design (reuses its test-design toolkit directly rather than re-teaching it)  
 **Learning Objectives**:
-- Understand REST, gRPC, GraphQL from a testing perspective
-- Design API tests using the same techniques as manual testing
-- Test error handling, edge cases, and integrations
-- Validate data contracts and schemas
+- Read and validate HTTP requests/responses, headers, parameters, and payloads with tester-level precision
+- Apply Manual Testing's test-design techniques to API parameters and payloads
+- Test authentication, authorization, rate limiting, and session management
+- Test integration resilience — dependency failures, cascading failures, idempotency and retry safety
+- Test for common API security findings (BOLA, excessive data exposure, misconfiguration) from a functional QA vantage point
+- Apply everything across realistic, integrated AtlasBank features, closing with a capstone
 
-**Modules**:
-1. API Testing Fundamentals
-2. HTTP Basics for Testers
-3. JSON and Data Validation
-4. Designing API Test Cases (reuses test design concepts)
-5. Authentication and Authorization Testing
-6. Rate Limiting and Throttling
-7. Cascading Failures and Integration Testing
-8. API Security Testing (links to Security Testing path)
-9. Performance Testing APIs (links to Performance Testing path)
-10. API Testing Tools Comparison
+**Actual shipped structure**: seven sections (API Testing Foundations → Data, Contracts, and Test Cases → Auth and Access Control → Integration and Resilience → API Security Testing → Performance and Tooling → Application and Capstone), plus 12 dedicated Section Review/Solutions pages (adopted from its first section, reusing Manual Testing's own pattern). This list is deliberately not duplicated here — see `LEARNING_PATHS.md`, Path 3, for the full, authoritative, currently-accurate breakdown, including two mid-development architecture decisions (staying within the AtlasBank domain for Section 7 rather than introducing a second domain; a documentation correction to `CURRICULUM_EVOLUTION.md`). This section previously listed a 10-module planning-stage stub (API Testing Fundamentals, HTTP Basics, JSON and Data Validation...); it no longer matches what shipped and has been replaced with this pointer rather than a second, driftable copy.
 
 **Modules Feed Into**: Automation Testing, Security Testing, Performance Testing
 

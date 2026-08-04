@@ -1,0 +1,8 @@
+%% VIS-AUTO-012 — Sequential vs. Parallel Execution
+%% Used in: 12-parallel-execution.md
+flowchart TB
+    accTitle: Sequential vs. Parallel Execution
+    accDescr: Sequential execution runs tests one after another, with total runtime equal to the sum of every test's duration. Parallel execution distributes tests across multiple workers running simultaneously, reducing total runtime roughly to the suite duration divided by worker count, but requires strict test isolation to avoid tests interfering with each other's shared state.
+    A[Sequential:<br/>Test 1 → Test 2 → Test 3] --> B[Runtime = Sum of All Tests]
+    C[Parallel:<br/>Test 1, Test 2, Test 3<br/>run simultaneously] --> D[Runtime ≈ Duration / Worker Count]
+    C --> E{Requires Test Isolation:<br/>no shared, mutable state}

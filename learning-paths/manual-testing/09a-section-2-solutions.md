@@ -1,9 +1,9 @@
 ---
-title: "Section 2 Solutions"
+title: "Manual Testing — Section 2 Solutions"
 slug: section-2-solutions
 sidebar_label: "Section 2 — Solutions"
 description: "Answers and reasoning for Section 2's Knowledge Check — which technique fits each scenario, and why the alternatives fall short."
-keywords: ["test design technique selection", "boundary value analysis", "equivalence partitioning", "decision table testing", "state transition testing", "pairwise testing", "error guessing"]
+keywords: ["test design technique selection", "boundary value analysis", "decision table testing", "state transition testing", "error guessing"]
 difficulty: "beginner"
 time_to_read: "8 min"
 last_reviewed: "2026-08-04"

@@ -1,0 +1,10 @@
+%% VIS-API-009 — Rate Limiting Response Sequence
+%% Used in: 09-rate-limiting-throttling-and-session-management.md
+flowchart LR
+    accTitle: Rate Limiting Response Sequence
+    accDescr: A caller sends requests within their allowed rate and receives normal successful responses. Once the limit is exceeded, the API returns 429 Too Many Requests with a Retry-After header. A retry before the stated duration should still be rejected; a retry after it should succeed.
+    A[Requests Within Limit] --> B[Normal Responses]
+    C[Limit Exceeded] --> D[429 + Retry-After header]
+    D --> E{Retry Before<br/>Retry-After Elapses?}
+    E -->|Yes| F[Still 429]
+    E -->|No, waited| G[Normal Response Resumes]

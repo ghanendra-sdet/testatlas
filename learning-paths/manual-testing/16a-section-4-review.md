@@ -1,5 +1,5 @@
 ---
-title: "Section 4 Review"
+title: "Manual Testing — Section 4 Review"
 slug: section-4-review
 sidebar_label: "Section 4 — Review"
 description: "A recap of Exploratory and Ad Hoc Testing — exploratory fundamentals, session-based management, and choosing between structured and exploratory approaches — plus a Knowledge Check."

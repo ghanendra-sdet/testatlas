@@ -1,5 +1,5 @@
 ---
-title: "Section 4 Solutions"
+title: "Manual Testing — Section 4 Solutions"
 slug: section-4-solutions
 sidebar_label: "Section 4 — Solutions"
 description: "Answers and reasoning for Section 4's Knowledge Check — when to apply structured technique, exploratory testing, or both."

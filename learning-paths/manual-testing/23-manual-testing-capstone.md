@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Manual Testing Capstone: International Money Transfer
 
 **Prerequisites**: The entire Manual Testing path — every module in Sections 1 through 7.
-**Leads to**: This completes Manual Testing v1.0. From here, continue to API Testing (coming soon).
+**Leads to**: This completes Manual Testing v1.0. From here, continue to [API Testing](/learning-paths/api-testing/what-is-api-testing).
 
 Every module in this path taught one piece of the QA lifecycle. This capstone introduces nothing new — it walks one realistic feature through every phase, in order, the way a real QA engineer actually works a real assignment: from an ambiguous requirement to a shipped, verified fix. If any step below feels unfamiliar, that's a signal to revisit the linked module — everything here should already be familiar territory.
 
@@ -69,7 +69,7 @@ Every phase above used a module you already know. What the capstone adds isn't n
 
 ## Manual Testing Complete
 
-This is the final module in Manual Testing v1.0. Across twenty-three modules, this path covered the mindset behind test design, six core techniques for generating and reducing test ideas, the artifacts that make testing maintainable and provable (clear test cases, organization, an RTM, deliberate test data), exploratory testing as a disciplined practice, the judgment to choose between structured and exploratory approaches, precise communication of defects and results, the skill of reviewing someone else's work, integrated application across four real domains, and the recurring mistake patterns worth watching for in your own practice. From here, continue to API Testing (coming soon), where these same foundations — test design, technique selection, precise communication — get applied to a different surface: testing through an API instead of through a user interface.
+This is the final module in Manual Testing v1.0. Across twenty-three modules, this path covered the mindset behind test design, six core techniques for generating and reducing test ideas, the artifacts that make testing maintainable and provable (clear test cases, organization, an RTM, deliberate test data), exploratory testing as a disciplined practice, the judgment to choose between structured and exploratory approaches, precise communication of defects and results, the skill of reviewing someone else's work, integrated application across four real domains, and the recurring mistake patterns worth watching for in your own practice. From here, continue to [API Testing](/learning-paths/api-testing/what-is-api-testing), where these same foundations — test design, technique selection, precise communication — get applied to a different surface: testing through an API instead of through a user interface.
 
 ## Key Takeaways
 

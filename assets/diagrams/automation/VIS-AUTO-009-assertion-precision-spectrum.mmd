@@ -1,0 +1,8 @@
+%% VIS-AUTO-009 — Assertion Precision Spectrum
+%% Used in: 09-assertions-and-verification-strategies.md
+flowchart LR
+    accTitle: Assertion Precision Spectrum
+    accDescr: Assertions range from weak to strong. Checking only that an element exists is weakest and misses incorrect content. Checking exact text or value content is stronger and catches a real defect a presence-only check would miss.
+    A[Weakest:<br/>Element exists/visible] --> B[Partial:<br/>Text contains substring]
+    B --> C[Strong:<br/>Exact text/value match]
+    C --> D[Strongest:<br/>Multiple specific assertions<br/>on distinct properties]

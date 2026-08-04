@@ -1,0 +1,9 @@
+%% VIS-API-003 — RESTful Resource and Method Mapping
+%% Used in: 03-rest-architecture-and-api-design-principles.md
+flowchart LR
+    accTitle: RESTful Resource and Method Mapping
+    accDescr: The same resource URL, accounts by id, combined with different HTTP methods, produces different actions — GET retrieves, PUT replaces, PATCH partially updates, DELETE removes. The URL names the resource; the method carries the action.
+    R["/accounts/{id}"] -->|GET| A[Retrieve the account]
+    R -->|PUT| B[Replace the account]
+    R -->|PATCH| C[Partially update the account]
+    R -->|DELETE| D[Remove the account]

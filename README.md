@@ -47,20 +47,20 @@ The project combines structured learning with hands-on work:
 
 ## Learning paths
 
-TestAtlas will cover the core areas of modern software testing:
+TestAtlas covers the core areas of modern software testing. Three paths are live; the rest are planned:
 
-1. Foundations of Software Testing
-2. Manual Testing
-3. API Testing
-4. Database Testing
-5. Test Automation
-6. Performance Testing
-7. Security Testing
-8. AI for QA
-9. Interview Preparation
-10. Career Growth in Quality Engineering
+1. ✅ Foundations of Software Testing — shipped, v1.0
+2. ✅ Manual Testing — shipped, v1.0, 23 modules
+3. ✅ API Testing — shipped, v1.0, 21 modules
+4. Database Testing — planned
+5. Test Automation — planned
+6. Performance Testing — planned
+7. Security Testing — planned
+8. AI for QA — planned
+9. Interview Preparation — planned
+10. Career Growth in Quality Engineering — planned
 
-Each path will connect concepts with practical scenarios, examples, common failure modes, and related skills.
+Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped and planned path.
 
 ## What will be available
 

@@ -1,0 +1,10 @@
+%% VIS-API-004 — Request Lifecycle and Response Patterns
+%% Used in: 04-api-requests-and-responses.md
+flowchart TB
+    accTitle: Request Lifecycle and Response Patterns
+    accDescr: A request is built from a method, URL, headers, and body, then sent to the server, which returns one of three response patterns — success, empty, or error — each requiring a different verification focus.
+    A[Build Request:<br/>Method + URL + Headers + Body] --> B[Send to Server]
+    B --> C{Response Pattern}
+    C -->|Success| D[Verify every field,<br/>not just status]
+    C -->|Empty| E[Verify empty is the<br/>correct meaning here]
+    C -->|Error| F[Verify status, error code,<br/>and message all agree]

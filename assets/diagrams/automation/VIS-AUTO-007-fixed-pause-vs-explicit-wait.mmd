@@ -1,0 +1,10 @@
+%% VIS-AUTO-007 — Fixed Pause vs. Explicit Wait
+%% Used in: 07-synchronization-and-wait-strategies.md
+flowchart TB
+    accTitle: Fixed Pause vs. Explicit Wait
+    accDescr: A fixed pause waits a guessed duration regardless of actual application state, risking either a flaky failure if too short or wasted time if too long. An explicit wait checks for the actual condition, such as an element becoming visible, and proceeds the moment it's true, up to a defined maximum timeout.
+    A[Action Taken<br/>e.g., Submit Transfer] --> B{Wait Strategy}
+    B -->|Fixed Pause| C[Wait guessed duration<br/>regardless of actual state]
+    B -->|Explicit Wait| D[Wait for actual condition<br/>e.g., confirmation visible]
+    C --> E[Flaky if too short,<br/>wasteful if too long]
+    D --> F[Proceeds exactly when ready]

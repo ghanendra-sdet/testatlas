@@ -1,0 +1,13 @@
+%% VIS-API-002 — Anatomy of an HTTP Request and Response
+%% Used in: 02-http-fundamentals.md
+flowchart LR
+    accTitle: Anatomy of an HTTP Request and Response
+    accDescr: A request has a method, a URL, headers, and an optional body. A response has a status code, headers, and a body. A tester checks all parts of the response, not only the body.
+    subgraph Request
+    A[Method<br/>GET, POST, etc.] --- B[URL] --- C[Headers] --- D[Body<br/>optional]
+    end
+    Request --> Server[Server]
+    Server --> Response
+    subgraph Response
+    E[Status Code] --- F[Headers] --- G[Body]
+    end

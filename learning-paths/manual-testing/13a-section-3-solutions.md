@@ -1,5 +1,5 @@
 ---
-title: "Section 3 Solutions"
+title: "Manual Testing — Section 3 Solutions"
 slug: section-3-solutions
 sidebar_label: "Section 3 — Solutions"
 description: "Answers and reasoning for Section 3's Knowledge Check — which artifact or practice fits each scenario, and why."

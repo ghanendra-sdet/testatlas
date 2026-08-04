@@ -1,0 +1,9 @@
+%% VIS-API-001 — Testing Layers and What Each One Catches
+%% Used in: 01-what-is-api-testing.md
+flowchart TB
+    accTitle: Testing Layers and What Each One Catches
+    accDescr: Unit testing exercises a single function in isolation. API testing exercises the contract between systems, one layer up. UI testing exercises what a user actually sees and clicks, the outermost layer. Each layer catches defects the others cannot.
+    A[Unit Testing<br/>one function, isolated] --> B[API Testing<br/>the request/response contract]
+    B --> C[UI Testing<br/>what a user sees and clicks]
+    A -.->|"misses integration defects"| B
+    B -.->|"misses rendering defects"| C

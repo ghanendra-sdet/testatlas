@@ -2,6 +2,8 @@
 
 This document defines the 10 learning paths in TestAtlas, their learning objectives, target audience, and progression strategy.
 
+**Manual Testing v1.0 and API Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to.
+
 ## Design Principle
 
 Learning paths are role-based progressions: a junior QA takes a different path than an SDET, but both start at Foundations and may converge in Interview Prep. Each path is self-contained (learners can start and stop) and feeds into others (learners can specialize).
@@ -265,36 +267,158 @@ Results of a holistic audit run across all 23 modules plus the 6 Review/Solution
 
 ## Path 3: API Testing
 
-**Directory**: `/learning-paths/api-testing/`  
-**Position**: 3  
-**Prerequisites**: Foundations, Manual Testing and Test Design (concepts apply equally)  
-**Target Audience**: API testers, backend QA engineers, SDETs  
-**Estimated Duration**: 4–6 weeks  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for API Testing v1.0, produced against Manual Testing v1.0 (23/23 modules shipped, `2624d5b`) as the reference implementation. Nothing below is final until reviewed and approved; no module writing begins until then.
 
-**Learning Objectives**:
-- Understand REST, gRPC, GraphQL from a testing perspective
-- Design API tests using test design techniques
-- Test error handling, edge cases, and integrations
-- Validate data contracts and schemas
-- Understand authentication, authorization, and rate limiting
-- Test cascading failures and recovery
+### 1. Learning Path Overview
 
-**Modules** (planned for v0.1–v1.0):
-1. API Testing Fundamentals (why APIs matter, testing scope)
-2. HTTP Basics for Testers (status codes, methods, headers, body)
-3. JSON and Data Validation (parsing, schema validation, nulls)
-4. Designing API Test Cases (applying test design to API payloads)
-5. Authentication Testing (API keys, OAuth, JWTs)
-6. Authorization Testing (roles, permissions, data isolation)
-7. Rate Limiting and Throttling (testing quotas and backoff)
-8. Cascading Failures and Integration Testing (when one service is down)
-9. API Security Testing (injection, XXE, CORS, HTTPS)
-10. Performance Testing APIs (response time, throughput under load)
-11. API Testing Tools Comparison (Postman, REST Client, Bruno, code-based approaches)
-12. Common API Testing Mistakes
-13. Interview Preparation for API Testing
+**Directory**: `/learning-paths/api-testing/`
+**Position**: 3
+**Prerequisites**: Foundations (all 17 modules) and Manual Testing v1.0 — specifically [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals), [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis), [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning), [Decision Table Testing](/learning-paths/manual-testing/decision-table-testing), [State Transition Testing](/learning-paths/manual-testing/state-transition-testing), and [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases), all of which this path reuses directly rather than re-teaching.
+**Target Audience**: Testers who've completed Manual Testing and are ready to apply the same test-design discipline to a different surface — the API layer instead of the UI.
+**Estimated Duration**: 5–7 weeks (21 modules vs. Manual Testing's 23, but several modules — Security, Performance — carry more conceptual density per module).
 
-**Success Criteria**:
+**Learning Objectives** (path-level):
+- Apply test design techniques already learned (BVA, Equivalence Partitioning, Decision Tables, State Transitions) to API requests, payloads, and responses instead of UI fields and screens
+- Read and validate HTTP requests/responses, status codes, headers, and JSON bodies with tester-level precision
+- Validate API contracts and schemas, and test authentication, authorization, and rate-limiting behavior
+- Test integration resilience — timeouts, retries, cascading failures between dependent services
+- Identify common API security issues (OWASP API Top 10 scope) and evaluate an API's security posture as a tester, not a penetration tester
+- Test and interpret API performance under load
+- Select and justify an API testing tool for a given context
+- Apply the complete API testing lifecycle to one realistic, multi-phase feature (capstone)
+
+### 2. Curriculum Structure — Sections and Modules
+
+This path uses the **dedicated Section Review + Solutions page pattern from its first section** — not the bundled pattern Manual Testing Sections 1–3 used before recurrence proved it wrong (see [[curriculum-evolution]] Entry 1). There is no equivalent "early bundled" phase to migrate away from here, since the evidence already exists.
+
+#### Section 1 — API Testing Foundations (Modules 1–3)
+
+1. **API Testing Fundamentals** — *Objective*: why APIs matter as a distinct testing surface, where API testing sits relative to UI and unit testing, scope of this path. *Prerequisites*: Foundations complete. *Why it exists*: every path so far has opened with a fundamentals module establishing scope before technique; no evidence to deviate. *Est. length*: 1,900–2,300 words.
+2. **HTTP Basics for Testers** — *Objective*: methods, status codes, headers, request/response anatomy, read with the precision a tester needs (not a developer's). *Why it exists*: the API-equivalent of "reading a UI screen" — a foundational literacy module every later module assumes. *Est. length*: 2,000–2,400 words.
+3. **Applying Test Design to APIs** — *Objective*: explicitly reuse BVA, Equivalence Partitioning, Decision Tables, and State Transitions — already taught in Manual Testing — against API parameters, payload fields, and response states, rather than re-teaching the techniques. *Why it exists*: this is the Progressive Extraction principle in action ([[knowledge-graph]]): these four techniques are pre-designated knowledge nodes this path was always meant to reference, not duplicate. *Est. length*: 2,200–2,600 words (denser — it's bridging four prior techniques at once).
+
+**Section 1 Review + Solutions**: dedicated pages, per the migration policy above.
+
+#### Section 2 — Data, Contracts, and Test Cases (Modules 4–6)
+
+4. **JSON and Data Validation** — *Objective*: parsing, structural validation, null/missing-field handling, type mismatches. *Est. length*: 1,900–2,300 words.
+5. **API Schema and Contract Testing** — *Objective*: validating requests/responses against an OpenAPI/schema definition; what a contract-testing failure looks like versus a functional failure. *Why it exists*: this is genuinely new — Manual Testing has no schema/contract equivalent, since UI testing doesn't validate against a machine-readable contract the way APIs do. *Est. length*: 2,100–2,500 words.
+6. **Designing API Test Cases** — *Objective*: applying [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases)' structure to API-specific fields (endpoint, method, headers, body, expected status, expected response shape) rather than re-teaching test case writing from scratch. *Est. length*: 2,000–2,400 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Auth and Access Control (Modules 7–9)
+
+7. **Authentication Testing** — API keys, OAuth flows, JWTs — what a tester validates versus what's the implementation's concern. *Est. length*: 2,200–2,600 words.
+8. **Authorization Testing** — roles, permissions, data isolation between tenants/users (a real defect class: user A retrieving user B's data via a predictable ID). *Est. length*: 2,200–2,600 words.
+9. **Rate Limiting and Throttling** — testing quotas, backoff behavior, what a correct 429 response looks like. *Est. length*: 1,900–2,300 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Integration and Resilience (Modules 10–12)
+
+10. **Testing Service Integrations** — behavior when a dependent service is slow, unavailable, or returns malformed data. *Est. length*: 2,100–2,500 words.
+11. **Cascading Failure Testing** — timeout, retry, and circuit-breaker behavior across a chain of dependent services. *Est. length*: 2,200–2,600 words.
+12. **Idempotency and Retry Testing** — safe retries, duplicate-request handling (a real defect class distinct from anything Manual Testing covers, since UI testing rarely has to reason about network-level retry duplication). *Est. length*: 2,000–2,400 words.
+
+**Section 4 Review + Solutions**: dedicated pages.
+
+#### Section 5 — API Security Testing (Modules 13–15)
+
+13. **API Security Fundamentals** — OWASP API Security Top 10 from a functional tester's vantage point (what to test for, not how to build an exploit). *Est. length*: 2,200–2,600 words.
+14. **Injection and Input-Based Attacks** — SQL/command injection and malformed-payload attacks tested via API requests. *Est. length*: 2,100–2,500 words.
+15. **Transport Security and CORS** — HTTPS enforcement, CORS misconfiguration, what a tester can verify without specialized security tooling. *Est. length*: 1,900–2,300 words.
+
+**Section 5 Review + Solutions**: dedicated pages. This is a genuinely new section with no Manual Testing equivalent — see Point 10 below.
+
+#### Section 6 — Performance and Tooling (Modules 16–17)
+
+16. **Performance Testing APIs** — response time, throughput, and behavior under load, from a functional tester's perspective (not a full load-testing-engineer treatment — that's a separate future path). *Est. length*: 2,100–2,500 words.
+17. **API Testing Tools** — Postman, REST Client/Bruno, code-based approaches; how to choose, not a feature-by-feature comparison. *Est. length*: 1,900–2,300 words.
+
+**Section 6 Review + Solutions**: dedicated pages.
+
+#### Section 7 — Application and Capstone (Modules 18–21) — Application Modules
+
+Per [[curriculum-evolution]] Entry 2, this section is identified as application/synthesis **during design**, not retrofitted after the fact — all four modules ship as Application Modules from day one: `difficulty: "intermediate"`, no Mini Challenge/Quick Revision/three recurring callouts, no Section Review/Solutions pages (matching Manual Testing Sections 6–7, which also received none).
+
+18. **Applying API Testing to a Banking Domain** — full technique combination against a realistic AtlasBank-style API feature (open question — see Point 9). *Est. length*: 1,700–2,100 words.
+19. **Applying API Testing to a Healthcare/Insurance Domain** — same pattern, second domain, mirroring Manual Testing Modules 20–21's two-domain structure. *Est. length*: 1,700–2,100 words.
+20. **Common Mistakes in API Testing** — cross-cutting mistake patterns, mirroring Module 22's numbered-pattern structure (no separate "Common Mistakes" heading, since the module *is* that content). *Est. length*: 1,700–2,000 words.
+21. **API Testing Capstone** — one realistic, multi-phase feature walked end to end (see Point 9). *Est. length*: 1,900–2,200 words.
+
+### 3. Learning Objectives — Mapped to Sections
+
+Section 1 → literacy and technique transfer; Section 2 → data/contract precision; Section 3 → identity and access; Section 4 → resilience; Section 5 → security awareness; Section 6 → performance and tool judgment; Section 7 → synthesis. Every path-level objective listed in Section 1 above traces to exactly one section, matching Manual Testing's own one-to-one mapping between its stated objectives and its section structure.
+
+### 4. Dependency Map
+
+Foundations → Manual Testing (Sections 1–2 specifically: Test Design Fundamentals, BVA, Equivalence Partitioning, Decision Tables, State Transitions, Writing Clear Test Cases) → API Testing Section 1 (which explicitly bridges those techniques) → Sections 2–6 build linearly (contracts before auth, auth before resilience, resilience before security, security before performance/tooling) → Section 7 synthesizes all of it. No section skips a prerequisite the way, for example, Security assumes Auth (Section 3) is already understood before testing what happens when auth is deliberately bypassed.
+
+### 5. Estimated Module Lengths — Summary
+
+Instruction modules (Sections 1–6, 17 modules): 1,900–2,600 words each, matching Manual Testing's actual shipped range (2,197–3,120 words, excluding the two now-legacy bundled section-closers). Application modules (Section 7, 4 modules): 1,700–2,200 words, matching Manual Testing's actual Application Module range exactly (1,613–2,035 words). **Estimated path total**: roughly 39,000–45,000 words of module content — smaller than Manual Testing's 55,165 actual, consistent with 21 modules vs. 23 and the reasoning in Point 10 below.
+
+### 6. Review/Solutions Page Strategy
+
+Every section (1–6) gets a dedicated **Section N Review** page and **Section N Solutions** page from its first appearance — no bundled-into-last-module phase, since Manual Testing's Entry 1 evidence already exists and the user's instruction is not to introduce new patterns without evidence to deviate, not to re-earn already-earned ones. Section 7 gets no Review/Solutions pages, matching Manual Testing Sections 6–7's precedent (application modules synthesize rather than introduce new testable knowledge, so there's nothing a Knowledge Check would be checking that isn't already covered by the capstone itself).
+
+### 7. Application-Module Strategy
+
+Section 7 (Modules 18–21) is designated as Application Modules **at design time**, per Entry 2's explicit migration guidance ("future learning paths should identify their own application/synthesis sections during curriculum design, not after the fact"). Structure: `difficulty: "intermediate"`, no Mini Challenge, no Quick Revision, no From the Field/Senior QA Insight/Common Interview Mistake callouts, tighter word-count band. Module 20 additionally drops the separate "Common Mistakes" heading, mirroring Module 22's exact precedent.
+
+### 8. Capstone Approach
+
+**Recommendation**: one realistic feature — a banking transfer or payment API — walked through the complete API testing lifecycle in Module 21, mirroring the Manual Testing Capstone's structure: requirement analysis → test design (multiple techniques combined by risk shape) → test case writing → execution and defect reporting → review. This is an **open decision, not a default**: `STYLE_GUIDE.md` currently scopes the AtlasBank convention to Manual Testing specifically. Extending AtlasBank into an API-layer capstone (e.g., "AtlasBank Transfer API") would give the curriculum a recognizable throughline across paths, but that's a real scope decision the user should confirm before it's treated as established convention — this proposal recommends it but does not assume it. If declined, a standalone fictional API (not tied to AtlasBank) works equally well structurally.
+
+### 9. Differences from Manual Testing (evidence-justified only)
+
+- **21 modules vs. 23, fewer sections of "new" foundational skill**: Manual Testing was the first practical path and had to build artifact/process skills from zero (test case writing, RTM, test data design, defect reporting, review). API Testing is the *second* path and reuses those skills by direct reference (Module 6 explicitly reuses Writing Clear Test Cases rather than re-teaching it) rather than duplicating them — a direct application of the Progressive Extraction principle already documented in `KNOWLEDGE_GRAPH.md`, not a new pattern.
+- **A dedicated Security section (Section 5) with no Manual Testing equivalent**: APIs expose a security surface (injection via payloads, token handling, CORS, transport security) that UI-only manual testing doesn't foreground the same way. This is a genuine domain-specific addition, not invented without cause.
+- **Dedicated Section Review/Solutions pages from Section 1 onward**: not a new pattern — this is Manual Testing's own Entry 1 evidence applied from the start, exactly as that entry's migration policy directs.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the `slug:` fix for Review/Solutions pages, Application Modules as a distinct type — carries over unchanged, since no evidence suggests any of it doesn't apply to this path.
+
+### Decisions (Approved 2026-08-04)
+
+1. **AtlasBank for the API Capstone**: ✅ Approved. AtlasBank's scope is extended from Manual Testing into API Testing (see `STYLE_GUIDE.md`'s Recurring Fictional Product section) — learners already know the domain, so they can focus on API testing itself rather than a new product.
+2. **21-module/7-section structure**: ✅ Approved as proposed.
+3. **Difficulty tagging**: ❌ Declined. No path-specific difficulty taxonomy beyond the existing beginner/Application-Module-intermediate distinction. Avoid adding a new taxonomy without future evidence of need.
+
+### Section 1 — As Shipped
+
+Module 3 shipped as **"REST Architecture and API Design Principles"** rather than this proposal's original "Applying Test Design to APIs" — a deliberate substitution made when Section 1 was implemented: REST conventions are a genuinely new literacy this path needs before any later module can meaningfully apply prior test-design technique to API-specific fields, so it earned the Section 1 foundational slot instead. Explicit test-design-to-API application (BVA/Equivalence Partitioning/Decision Tables/State Transitions applied to parameters and payloads) is deferred to a later module, not dropped — Module 1 and Module 3 both reference it as "(coming soon)." Section 1 shipped with dedicated **Section 1 Review** and **Section 1 Solutions** pages (`03a-section-1-review.md`, `03b-section-1-solutions.md`), per this path's approved Point 6 (dedicated pages from the first section).
+
+### Section 2 — As Shipped
+
+Section 2 shipped as designed: **API Requests and Responses** (Module 4), **Headers, Parameters, and Payload Validation** (Module 5), **Data Validation and Response Verification** (Module 6) — retitled slightly from this proposal's original "JSON and Data Validation / API Schema and Contract Testing / Designing API Test Cases" three-module split, consolidating into a request-lifecycle-then-request-validation-then-response-validation progression instead. Dedicated schema/contract testing (OpenAPI validation) and API-specific test case writing (applying [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases)) remain future topics, not dropped — both are natural fits for a later module once Section 3's auth literacy exists to test against. Section 2 shipped with dedicated **Section 2 Review** and **Section 2 Solutions** pages (`06a-section-2-review.md`, `06b-section-2-solutions.md`).
+
+### Section 3 — As Shipped
+
+Section 3 shipped as designed: **API Authentication** (Module 7 — API keys, bearer tokens, JWTs, OAuth 2.0 concepts, the per-endpoint expired/malformed/tampered-token failure checklist), **Authorization and Access Control** (Module 8 — RBAC, resource ownership, horizontal/vertical privilege escalation, IDOR), **Rate Limiting, Throttling, and Session Management** (Module 9 — 429/Retry-After, burst vs. sustained limits, server-side token revocation). Section 3 shipped with dedicated **Section 3 Review** and **Section 3 Solutions** pages (`09a-section-3-review.md`, `09b-section-3-solutions.md`).
+
+### Section 4 — As Shipped
+
+Section 4 shipped as designed: **Testing Service Integrations** (Module 10 — dependency mapping, blocking/non-blocking classification, timeouts, mocking concept, webhooks), **Cascading Failures, Error Handling, and Fault Tolerance** (Module 11 — shared-resource exhaustion, circuit breakers, fail-fast, retry storms, standardized error responses), **Idempotency, Retry Logic, and Duplicate Request Prevention** (Module 12 — idempotency keys, safe vs. duplicate retries, race conditions, exactly-once vs. at-least-once). Section 4 shipped with dedicated **Section 4 Review** and **Section 4 Solutions** pages (`12a-section-4-review.md`, `12b-section-4-solutions.md`).
+
+### Section 5 — As Shipped
+
+Section 5 shipped as designed: **API Security Fundamentals** (Module 13 — CIA Triad, OWASP API Security Top 10 overview, BOLA and excessive data exposure as the two categories a functional tester is best positioned to catch), **Injection and Input-Based Attacks** (Module 14 — explicitly scoped to symptom recognition and responsible reporting, not exploit construction; mass assignment, realistic special-character input, file upload validation), **Transport Security, CORS, and Secure Communication** (Module 15 — HTTPS enforcement, CORS severity depending on endpoint sensitivity, dynamically-reflected-origin risk). Section 5 shipped with dedicated **Section 5 Review** and **Section 5 Solutions** pages (`15a-section-5-review.md`, `15b-section-5-solutions.md`). Per the task's explicit scope instruction, all security content stays at a QA-validation/identification level — no offensive exploitation technique or implementation-internals content was introduced.
+
+### Section 6 — As Shipped
+
+Section 6 shipped as designed: **Performance Testing APIs** (Module 16 — response time vs. throughput, sibling-endpoint comparison, moderate concurrent load, explicitly scoped short of full-scale load engineering), **API Testing Tools** (Module 17 — matching GUI-based/lightweight/code-based tool categories to exploratory-vs-maintained task categories, not a feature comparison). Section 6 shipped with dedicated **Section 6 Review** and **Section 6 Solutions** pages (`17a-section-6-review.md`, `17b-section-6-solutions.md`).
+
+### Section 7 — As Shipped
+
+Section 7 shipped as **Application and Capstone**, per the approved Decisions above, but with Modules 18–19 substantially redesigned from this proposal's original "Applying API Testing to a Banking Domain" / "...to a Healthcare/Insurance Domain" titles. **Reason for the change**: by the time Section 7 was reached, every module in this path (1–17) had used AtlasBank exclusively, per repeated explicit instruction across Sections 2–5's task prompts to keep AtlasBank canonical and not introduce new domains. Introducing healthcare/insurance for only two modules at the very end, with no setup anywhere earlier in this path, would have contradicted that standing instruction and, unlike Manual Testing (where multiple domains were already in active rotation well before its own Section 6), had no earlier foundation to build on. Flagged to the user directly rather than decided unilaterally; user approved staying within AtlasBank.
+
+**As shipped**: Module 18 — **Applying API Testing: AtlasBank Cross-Border Payment Flow** (combines Sections 3–4: authentication, authorization, resilience, idempotency) and Module 19 — **Applying API Testing: AtlasBank Loan and KYC Flow** (combines Sections 2, 4–5: data validation across a realistic input range, dependency failure-mode distinction, security). Module 20 — **Common Mistakes in API Testing** (six cross-cutting patterns, each traced to a real defect from an earlier module's own worked example) and Module 21 — **API Testing Capstone: International Money Transfer API** (the same underlying feature and compliance-aggregation defect as the Manual Testing capstone, now tested independently at the API layer — a deliberate narrative bookend, not a coincidence) close the path.
+
+**A second correction made during Section 7**: while using Manual Testing's Application Modules (20–23) as the literal template for API Testing's own Application Modules, direct inspection found `CURRICULUM_EVOLUTION.md` Entry 2 didn't match what actually shipped — it claimed Application Modules omit Quick Revision, but Modules 20, 21, and 23 all shipped *with* a Quick Revision section; only Mini Challenge and the three narrative callouts were actually, consistently omitted. Flagged to the user; approved fix: Entry 2's wording corrected (Quick Revision removed from the exclusion list, with a dated correction note), and API Testing's own Application Modules (18–21) follow the corrected, accurate pattern — Quick Revision retained, Mini Challenge and the three callouts omitted. Module 22's own additional inconsistency (it shipped with both a Mini Challenge and two of the three callouts) was left as-is, per the existing policy against retrofitting already-shipped content for uniformity alone.
+
+**Progress**: 21 / 21 modules shipped. **API Testing v1.0 is complete.**
+
+**Success Criteria** (unchanged from the original stub, still accurate):
 - Learner designs tests for a REST API including happy path, edge cases, and error scenarios
 - Learner identifies security issues in an API design
 - Learner explains when API testing differs from UI testing
@@ -339,39 +463,97 @@ Results of a holistic audit run across all 23 modules plus the 6 Review/Solution
 
 ## Path 5: Test Automation
 
-**Directory**: `/learning-paths/automation/`  
-**Position**: 5  
-**Prerequisites**: Foundations, Manual Testing and Test Design  
-**Target Audience**: Automation engineers, SDETs, developers writing tests  
-**Estimated Duration**: 6–12 weeks  
+**Status**: 🚧 In progress. Sections 1–4 (Modules 1–12) below are approved and being implemented against `REFERENCE_CURRICULUM_CERTIFICATION.md`'s defaults, per direct user specification (module titles and section grouping given explicitly, in place of a separate architecture-proposal document — the equivalent decisions this section normally records are captured inline below instead).
 
-**Learning Objectives**:
-- Understand test automation principles and design patterns
-- Build maintainable test automation using frameworks like Playwright
-- Understand page object model and abstraction layers
-- Integrate tests into CI/CD pipelines
-- Write automation that is fast, reliable, and understandable
-- Test automation frameworks and tool trade-offs
+**Directory**: `/learning-paths/automation/`
+**Position**: 5
+**Prerequisites**: Foundations, Manual Testing and Test Design — reuses its test-design toolkit and artifact skills directly rather than re-teaching them, the same Progressive Extraction pattern API Testing established
+**Target Audience**: Automation engineers, SDETs, developers writing tests
+**Estimated Duration**: 6–10 weeks (Sections 1–4; more sections likely follow beyond this scope)
 
-**Modules** (planned for v0.1–v1.0):
-1. Why Automate? (mindset: what should be automated vs. manual)
-2. Test Automation Principles (maintainability, reliability, speed)
-3. Designing Automation from Test Cases (test design → automation)
-4. Page Object Model (abstraction and maintainability)
-5. Locator Strategies and Best Practices (selectors that survive change)
-6. Waiting Strategies and Flakiness (timing issues are the biggest automation problem)
-7. Data-Driven Testing (parameterizing test cases)
-8. CI/CD Integration (running tests automatically)
-9. Parallel Execution and Performance (scaling test runs)
-10. Maintaining Automation at Scale (refactoring, removing dead tests)
-11. Tool Comparison: Playwright vs. Selenium vs. Others
-12. Common Automation Mistakes (brittle tests, false positives, slow feedback loops)
-13. Interview Preparation for Automation Questions
+**Learning Objectives** (Sections 1–4):
+- Understand what automation is for, and how to select which test cases actually belong in an automated suite
+- Understand automation framework fundamentals, the Page Object Model, and data-driven testing as design patterns — concepts first, tool syntax second
+- Diagnose and prevent test flakiness: synchronization, wait strategies, and assertion design
+- Report results, integrate into CI/CD, and run tests in parallel reliably
 
-**Success Criteria**:
-- Learner writes maintainable automation for a realistic workflow
-- Learner explains why a test is flaky and fixes it
-- Learner refactors brittle tests into reliable ones
+**Architecture decisions made for this path** (defaults inherited from `REFERENCE_CURRICULUM_CERTIFICATION.md` unless noted):
+- **Domain**: continues AtlasBank as the system under test (its web app — Internet Banking, Admin Portal — automated via Playwright/Selenium/Cypress-style examples) rather than introducing a new fictional entity, per the "reuse unless a genuine reason exists" instruction and consistent with API Testing's own extension of AtlasBank.
+- **Tool coverage**: concept-first, tool-second throughout — a principle (e.g., an explicit wait vs. a synchronization primitive) is taught before any framework-specific syntax, and no single framework (Playwright, Selenium, Cypress) is treated as canonical; examples rotate or show comparative snippets deliberately, per explicit instruction to avoid framework bias.
+- **Review/Solutions pages**: dedicated pages from Section 1, per the certified default.
+- **Recurring elements**: all five (From the Field, Senior QA Insight, Mini Challenge, Common Interview Mistake, Quick Revision) on every instruction module from Module 1 onward — applying the lesson from the Platform Consistency Sprint's largest finding (API Testing shipped all 17 modules missing two of five) by checking this explicitly at each module, not just at a later audit.
+- **Cross-path title disambiguation**: applied proactively from the first Section Review/Solutions page (`"Automation Testing — Section N Review"`), since Manual Testing and API Testing both already have Sections 1–4 — this collision is now anticipated, not discovered after the fact.
+- **Application Modules**: none in Sections 1–4 scope; a later section (mistakes/tool-comparison/capstone, per the original stub below) would identify its own application-module section at design time when reached.
+
+### Section 1 — Automation Foundations (Modules 1–3)
+1. Introduction to Automation Testing
+2. Automation vs. Manual Testing
+3. Selecting the Right Test Cases for Automation
+
+### Section 2 — Framework and Design Patterns (Modules 4–6)
+4. Automation Framework Fundamentals
+5. Page Object Model
+6. Data-Driven Testing
+
+### Section 3 — Reliability and Verification (Modules 7–9)
+7. Synchronization and Wait Strategies
+8. Test Stability and Flaky Tests
+9. Assertions and Verification Strategies
+
+### Section 4 — Reporting and Execution at Scale (Modules 10–12)
+10. Test Reporting
+11. CI/CD Integration
+12. Parallel Execution
+
+**Success Criteria** (Sections 1–4):
+- Learner explains what should and shouldn't be automated, and why
+- Learner designs a maintainable Page Object Model for a realistic feature
+- Learner diagnoses a flaky test's root cause and fixes it, not just retries it
+- Learner explains how a suite integrates into CI/CD and runs safely in parallel
+
+**Remaining, not yet scoped in detail**: the original stub's later topics (maintaining automation at scale, tool comparison, common automation mistakes, interview preparation) likely become a Section 5 Application/Capstone phase, following the same identify-at-design-time policy as every certified path — to be proposed once Sections 1–4 are reviewed, not assumed now.
+
+### Section 1 — As Shipped
+
+Shipped as designed: **Introduction to Automation Testing** (Module 1 — execution vs. design distinction, automation-candidate criteria), **Automation vs. Manual Testing** (Module 2 — complementary, not competing, framed around risk category), **Selecting the Right Test Cases for Automation** (Module 3 — multi-criteria framework plus anti-criteria). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped from the start, with proactive cross-path title disambiguation (`"Automation Testing — Section 1 Review"`) since API Testing already has a Section 1 Review.
+
+### Section 2 — As Shipped
+
+Shipped as designed: **Automation Framework Fundamentals** (Module 4 — six structural concerns, tool-agnostic, brief Playwright/Selenium/Cypress/TestNG/JUnit comparison with no framework bias), **Page Object Model** (Module 5), **Data-Driven Testing** (Module 6 — explicitly linked back to Manual Testing's BVA/Equivalence Partitioning/Test Data Design rather than re-teaching test-value selection). Dedicated **Section 2 Review** and **Section 2 Solutions** pages, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as designed: **Synchronization and Wait Strategies** (Module 7 — hardcoded pause vs. explicit wait, tool-agnostic with a Playwright/Cypress automatic-waiting note), **Test Stability and Flaky Tests** (Module 8 — diagnosis over blind retry, explicitly including "the application itself" as a possible root cause, not just the test), **Assertions and Verification Strategies** (Module 9 — assertion precision spectrum, explicitly linked back to Manual Testing's Writing Clear Test Cases). Dedicated **Section 3 Review** and **Section 3 Solutions** pages, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as designed: **Test Reporting** (Module 10 — actionable failure reports, expected/actual detail, screenshots, failure history), **CI/CD Integration** (Module 11 — the required-check mechanism that makes automation a real gate, not just automatic execution; tool-agnostic, GitHub Actions/Jenkins mentioned as examples only), **Parallel Execution** (Module 12 — runtime benefit vs. the strict test-isolation requirement it demands, closing with a real isolation-defect example). Dedicated **Section 4 Review** and **Section 4 Solutions** pages, cross-path disambiguated.
+
+**Progress**: 12 / 12 modules shipped. **Automation Testing Sections 1–4 complete.**
+
+### Section 5 — Application and Capstone (Approved Architecture Proposal, 2026-08-05)
+
+**Status**: 📋 Approved, implementation beginning. Full proposal reasoning lives in this session's Engineering Review; summarized here per standard practice.
+
+**Modules**:
+13. Choosing and Comparing Automation Tools (Instruction) — genuinely new content: deliberate tool selection, absent from Sections 1–4's tool-agnostic framing
+14. Maintaining Automation at Scale (Instruction) — genuinely new content: suite health after it's built and stable, never covered in Sections 1–4
+15. Applying Automation: AtlasBank Fund Transfer Suite (Application) — data-driven, assertion-heavy integrated scenario
+16. Applying Automation: AtlasBank Onboarding and KYC Flow (Application) — synchronization/CI-integration-heavy contrasting scenario
+17. Common Mistakes in Test Automation (Application) — cross-cutting synthesis, third instance of this cross-path pattern (after Manual Testing Module 22, API Testing Module 20)
+18. Automation Testing Capstone (Application) — automates the same international-transfer feature Manual Testing and API Testing already capstoned, continuing that explicit cross-path narrative thread
+
+**Deviation from precedent, evidenced**: 6 modules instead of Manual Testing's/API Testing's 4, because two modules (13–14) are genuinely new instruction content the original stub identified and Sections 1–4 never covered — unlike either reference path's closing section, which was 100% synthesis. Rejected the stub's "Interview Preparation" module — every module already has its own Interview Questions section; neither reference path built a dedicated interview-prep module despite the identical redundancy.
+
+**No Section 5 Review/Solutions pages** — matching Manual Testing Sections 6–7 and API Testing Section 7's identical precedent.
+
+**Estimated total**: ~13,000–15,000 words across 6 modules. Path total on completion: 18 modules — smaller than both reference paths, consistent with this path's tighter section pacing throughout.
+
+### Section 5 — As Shipped
+
+Shipped as proposed: Modules 13–14 (Instruction, 2,214/2,425 words), Modules 15–18 (Application, 1,312–1,412 words — leaner than API Testing's own Application Module range, within `CONTENT_MODEL.md`'s tolerance and consistent with the "tighter, more focused" quality that pattern is designed to produce). Module 18's capstone confirmed the same aggregation-window compliance defect Manual Testing's and API Testing's capstones each independently found at their own layer — a deliberate, evidenced third confirmation, not a coincidence. No Section 5 Review/Solutions pages, per the approved proposal. Zero deviations from the approved architecture proposal during implementation.
+
+**Progress**: 18 / 18 modules shipped. **Automation Testing v1.0 complete.**
 
 ---
 

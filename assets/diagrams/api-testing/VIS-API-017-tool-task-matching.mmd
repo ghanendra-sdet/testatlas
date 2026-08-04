@@ -1,0 +1,8 @@
+%% VIS-API-017 — Matching Tool Category to Task Category
+%% Used in: 17-api-testing-tools.md
+flowchart LR
+    accTitle: Matching Tool Category to Task Category
+    accDescr: Exploratory, one-off testing favors a GUI-based or lightweight REST client, prioritizing fast setup with no coding required. A maintained regression suite favors a code-based approach, prioritizing shared logic and automated pipeline integration. Many real teams use both, matched to task.
+    A[Exploratory, One-Off Testing] --> B[GUI-Based or<br/>Lightweight Client]
+    C[Maintained Regression Suite] --> D[Code-Based Approach]
+    B -.->|both used together<br/>on most real teams| D
