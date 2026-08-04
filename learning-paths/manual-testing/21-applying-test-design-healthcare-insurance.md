@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Applying Test Design Across Domains: Healthcare and Insurance
 
 **Prerequisites**: You should already understand [Applying Test Design Across Domains: Banking and E-Commerce](/learning-paths/manual-testing/applying-test-design-banking-ecommerce).
-**Leads to**: After this, you'll be ready for Common Mistakes in Test Design (coming soon).
+**Leads to**: After this, you'll be ready for [Common Mistakes in Test Design](/learning-paths/manual-testing/common-mistakes-in-test-design).
 
 Banking and e-commerce showed two domains where financial accuracy and state/timing risk dominated. Healthcare and insurance foreground something the previous module's domains didn't emphasize as directly: regulatory traceability. In both domains, proving what was tested often matters as much as the testing itself — a real shift in emphasis this module makes explicit.
 
@@ -67,7 +67,7 @@ Healthcare and insurance both foreground the RTM in a way banking and e-commerce
 - How a healthcare scheduling defect and an insurance underwriting defect both required integrated technique combination, not any single technique alone, to catch
 - Why severity judgments in regulated domains sometimes require contextual weight beyond a purely mechanical technical-impact assessment
 
-**Next:** Common Mistakes in Test Design (coming soon)
+**Next:** [Common Mistakes in Test Design](/learning-paths/manual-testing/common-mistakes-in-test-design)
 
 ## Related Topics
 
