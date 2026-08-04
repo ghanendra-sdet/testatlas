@@ -114,6 +114,10 @@ Per the previous module, most requirements describe the happy path by default �
 **Practice 4: Match the intensity of adversarial and business-mindset scrutiny to actual risk.**
 Reuse Foundations' risk-based reasoning directly: the more a feature involves money, security, or a rule the business actually cares about, the more this module's habits are worth applying in full.
 
+:::note From the Field
+On a subscription-billing project, a "cancel subscription" feature was tested thoroughly from a user-mindset perspective — confirming the cancellation flow was clear, the confirmation screen was accurate, and the account status updated correctly. It shipped clean. A business-mindset question nobody asked during testing surfaced only after a real customer complaint: canceling mid-billing-cycle immediately revoked access, instead of continuing access through the period the customer had already paid for — a real business rule the requirement never stated but the company was contractually expected to honor. User mindset alone had confirmed the feature worked exactly as built; nobody had asked what the business actually needed guaranteed until a customer did.
+:::
+
 ## Mini Challenge
 
 **Scenario**: A feature lets users apply one referral code when creating a new account, giving both the new user and the person who referred them a small account credit.
