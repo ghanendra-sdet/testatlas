@@ -58,4 +58,4 @@ Five realistic scenarios. For each, decide which skill or artifact from this sec
 
 ## Continue to Section 6
 
-**Applying Test Design Across Domains**, starting with Banking and E-Commerce — where every technique and artifact from Sections 2 through 5 gets applied together, in one integrated exercise per domain.
+**Applying Test Design Across Domains**, starting with [Banking and E-Commerce](/learning-paths/manual-testing/applying-test-design-banking-ecommerce) — where every technique and artifact from Sections 2 through 5 gets applied together, in one integrated exercise per domain.

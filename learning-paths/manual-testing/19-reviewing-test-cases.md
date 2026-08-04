@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Reviewing Test Cases
 
 **Prerequisites**: You should already understand [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases), [Test Case Organization and Naming](/learning-paths/manual-testing/test-case-organization-and-naming), and [Requirement Traceability Matrix (RTM)](/learning-paths/manual-testing/requirement-traceability-matrix).
-**Leads to**: After this, you'll be ready for Applying Test Design Across Domains: Banking and E-Commerce (coming soon).
+**Leads to**: After this, you'll be ready for [Applying Test Design Across Domains: Banking and E-Commerce](/learning-paths/manual-testing/applying-test-design-banking-ecommerce).
 
 Every module so far has taught you to produce something — test ideas, test cases, an RTM, execution reports. This module teaches a different, less obvious skill: reviewing what someone *else* produced, and finding real gaps in it. In a real QA job, this is a skill used constantly, often more than writing test cases from scratch — and it's a genuinely different capability from writing well, not a byproduct of it.
 
@@ -137,7 +137,7 @@ On a healthcare platform, a test case review process existed on paper but was co
 - How an AtlasBank team's collaborative review caught a compliance-documentation gap, a vague expected result, and a duplicate test case in one review session
 - How to give specific, actionable review feedback that actually gets acted on
 
-**Next:** Applying Test Design Across Domains: Banking and E-Commerce (coming soon)
+**Next:** [Applying Test Design Across Domains: Banking and E-Commerce](/learning-paths/manual-testing/applying-test-design-banking-ecommerce)
 
 ## Related Topics
 

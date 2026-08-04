@@ -69,4 +69,4 @@ These are the answers to the [Section 5 Review](/learning-paths/manual-testing/s
 
 Scenarios 3 and 5 both center on the review module, but for different specific checks (duplication versus the broader readability-instead-of-gaps mistake) — if you conflated them, it's worth rereading Module 19's five-dimension framework (completeness, ambiguity, duplicates, coverage, maintainability) to see how each is a distinct, specific check, not one general "review well" instruction.
 
-**Continue to Section 6**: Applying Test Design Across Domains (coming soon), where every technique and artifact from Sections 2 through 5 gets applied together, in one integrated exercise per domain.
+**Continue to Section 6**: [Applying Test Design Across Domains: Banking and E-Commerce](/learning-paths/manual-testing/applying-test-design-banking-ecommerce), where every technique and artifact from Sections 2 through 5 gets applied together, in one integrated exercise per domain.
