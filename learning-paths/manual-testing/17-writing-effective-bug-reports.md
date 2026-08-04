@@ -11,7 +11,7 @@ last_reviewed: "2026-08-04"
 # Writing Effective Bug Reports
 
 **Prerequisites**: You should already understand Foundations' [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) and [Severity vs. Priority](/learning-paths/foundations/severity-vs-priority), plus every technique in Sections 2–4 of this path.
-**Leads to**: After this, you'll be ready for Test Execution and Reporting Results (coming soon).
+**Leads to**: After this, you'll be ready for [Test Execution and Reporting Results](/learning-paths/manual-testing/test-execution-and-reporting-results).
 
 Foundations' Defect Life Cycle taught the states a defect moves through; Severity vs. Priority taught how it gets triaged. Neither taught the actual writing skill that feeds both — a bug report precise enough that a developer can reproduce the defect and act on it without a single follow-up question. Every technique in this path, structured or exploratory, eventually produces the same output: a defect that needs to be written up well enough for someone else to fix.
 
@@ -122,7 +122,7 @@ On an e-commerce project, a bug report simply stated "checkout sometimes fails" 
 - How a healthcare scheduling defect's precise reproduction steps turned a multi-day investigation into a same-day fix
 - When a lighter-weight report is a reasonable, deliberate choice rather than a shortcut
 
-**Next:** Test Execution and Reporting Results (coming soon)
+**Next:** [Test Execution and Reporting Results](/learning-paths/manual-testing/test-execution-and-reporting-results)
 
 ## Related Topics
 
