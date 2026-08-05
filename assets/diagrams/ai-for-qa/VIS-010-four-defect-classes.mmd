@@ -1,0 +1,8 @@
+%% VIS-010 — Four Related AI Quality Defect Classes
+flowchart TD
+    accTitle: Four Related AI Quality Defect Classes
+    accDescr: Hallucination testing verifies factual claims trace back to real retrieved data. Bias testing checks consistent response quality across different question framings. Safety testing verifies the feature correctly declines out-of-scope requests. Reliability testing checks consistency across repeated queries and appropriate expression of uncertainty when data is unavailable.
+    A[AI Support Assistant Response] --> B[Hallucination: does every claim<br/>trace to real retrieved data?]
+    A --> C[Bias: consistent quality<br/>across different framings?]
+    A --> D[Safety: correctly declines<br/>out-of-scope requests?]
+    A --> E[Reliability: consistent across<br/>repeats, honest about gaps?]

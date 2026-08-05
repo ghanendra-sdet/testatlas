@@ -1,0 +1,8 @@
+%% VIS-008 — Two Different Problem Classes in an AI-Driven Feature
+flowchart LR
+    accTitle: Two Different Problem Classes in an AI-Driven Feature
+    accDescr: An AI-driven feature like the AtlasBank AI Support Assistant has two testing surfaces layered together. Deterministic defects such as wrong data retrieval are tested with the same exact-match techniques every prior TestAtlas path already taught. AI quality issues such as hallucination and inconsistent responses need a different, rubric-based evaluation strategy.
+    A[AI Support Assistant Feature] --> B[Deterministic layer:<br/>data retrieval, API calls]
+    A --> C[AI-generated layer:<br/>response content]
+    B --> D[Tested with existing<br/>exact-match techniques]
+    C --> E[Tested with rubric-based<br/>evaluation, built in this section]

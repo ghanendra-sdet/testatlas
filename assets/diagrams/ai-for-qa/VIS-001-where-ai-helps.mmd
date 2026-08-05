@@ -1,0 +1,11 @@
+%% VIS-001 — Where AI Helps and Where It Doesn't in QA Work
+flowchart LR
+    accTitle: Where AI Helps and Where It Doesn't in QA Work
+    accDescr: AI is strong at drafting first-pass artifacts and pattern recognition across large input. AI is weak at judgment calls requiring business context, genuinely novel discovery, and accountability, which always remain the human tester's responsibility regardless of what tool produced the draft.
+    A[QA Task] --> B{What kind of task?}
+    B -->|Drafting a first-pass artifact| C[AI accelerates this]
+    B -->|Pattern recognition across large input| C
+    B -->|Judgment call needing business context| D[Human judgment required]
+    B -->|Novel, unanticipated discovery| D
+    C --> E[Always reviewed before use —<br/>AI accelerates, doesn't replace]
+    D --> E

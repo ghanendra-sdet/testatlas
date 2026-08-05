@@ -1,0 +1,8 @@
+%% VIS-002 — A Genuine Human-in-the-Loop Checkpoint vs a Formality
+flowchart LR
+    accTitle: A Genuine Human-in-the-Loop Checkpoint vs a Formality
+    accDescr: A genuine human-in-the-loop review compares AI output against a specific, defined verification target before the output can be used. A formality review only checks that output reads fluently and looks well-formatted, providing no real protection against confidently wrong content.
+    A[AI generates output] --> B{Review type?}
+    B -->|Formality: reads well?| C[Rubber-stamped —<br/>provides no real protection]
+    B -->|Genuine: matches defined target?| D[Verified against requirement/<br/>contract/standard]
+    D --> E[Output trusted for use]

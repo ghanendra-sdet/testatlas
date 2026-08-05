@@ -1,0 +1,8 @@
+%% VIS-009 — Prompt Testing and Rubric-Based Evaluation
+flowchart TD
+    accTitle: Prompt Testing and Rubric-Based Evaluation
+    accDescr: Prompt testing generates a set of realistic input variations for the same underlying question, including formal, informal, typo-containing, and ambiguous phrasings. Each variation's response is then scored against a structured rubric covering accuracy, completeness, relevance, and tone, rather than a single pass or fail verdict.
+    A[One underlying question] --> B[Generate realistic phrasing variations:<br/>formal, informal, typos, ambiguous]
+    B --> C[Run each variation against the feature]
+    C --> D[Score each response against a rubric:<br/>accuracy, completeness, relevance, tone]
+    D --> E[Identify which variations score<br/>lower — a real, specific finding]

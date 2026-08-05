@@ -1,0 +1,9 @@
+%% VIS-007 — AI-Assisted Defect Triage as a Hypothesis, Not a Diagnosis
+flowchart LR
+    accTitle: AI-Assisted Defect Triage as a Hypothesis, Not a Diagnosis
+    accDescr: An AI-suggested root cause is treated as a starting hypothesis, then verified directly against actual logs, code, or data before being trusted. If verification fails to confirm the hypothesis, the investigation proceeds using an existing systematic trace method instead of continuing to trust the unverified suggestion.
+    A[AI suggests a root cause] --> B[Treat as a hypothesis,<br/>not a diagnosis]
+    B --> C[Verify directly against<br/>actual logs/code/data]
+    C --> D{Confirmed?}
+    D -->|Yes| E[Now a verified finding]
+    D -->|No| F[Apply systematic trace method<br/>from scratch]

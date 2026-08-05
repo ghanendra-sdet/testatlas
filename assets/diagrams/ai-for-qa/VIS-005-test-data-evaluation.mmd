@@ -1,0 +1,12 @@
+%% VIS-005 — Evaluating AI-Generated Test Data Against Existing Criteria
+flowchart LR
+    accTitle: Evaluating AI-Generated Test Data Against Existing Criteria
+    accDescr: AI-generated test data is evaluated against the same four criteria already established for realistic test data: volume, shape, distribution, and format validity beyond surface plausibility. A batch that looks individually plausible can still fail on distribution or format validity specifically.
+    A[AI-generated test data batch] --> B[Volume: enough data?]
+    A --> C[Shape: realistic structure?]
+    A --> D[Distribution: realistic spread,<br/>not uniform by default?]
+    A --> E[Format validity: passes real<br/>rules, not just surface pattern?]
+    B --> F[Evaluated against existing<br/>Test Data Design criteria]
+    C --> F
+    D --> F
+    E --> F

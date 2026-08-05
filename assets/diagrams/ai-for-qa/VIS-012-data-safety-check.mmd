@@ -1,0 +1,7 @@
+%% VIS-012 — Checking Data Safety Before Sending It to an External AI Tool
+flowchart TD
+    accTitle: Checking Data Safety Before Sending It to an External AI Tool
+    accDescr: Before sending any content to an external AI tool, check whether it contains customer PII, credentials or secrets, proprietary code, or compliance-sensitive data. If it does, use a safer alternative such as synthetic data or a sanitized snippet instead of sending the real content.
+    A[Content to send to an AI tool] --> B{Contains customer PII,<br/>credentials, proprietary code,<br/>or compliance-sensitive data?}
+    B -->|Yes| C[Use a safer alternative:<br/>synthetic data, sanitized snippet]
+    B -->|No| D[Safe to send as-is]

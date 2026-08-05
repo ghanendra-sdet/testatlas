@@ -1,0 +1,8 @@
+%% VIS-004 — The AI-Assisted Test Case Generation Workflow
+flowchart TD
+    accTitle: The AI-Assisted Test Case Generation Workflow
+    accDescr: The workflow starts with a clear requirement as input, lets AI produce an initial draft, then applies Boundary Value Analysis and Equivalence Partitioning systematically to find coverage gaps, and applies hallucination review to verify every stated expected result against the actual requirement.
+    A[Clear, specific requirement] --> B[AI drafts initial test cases]
+    B --> C[Apply BVA/Equivalence Partitioning<br/>systematically to find gaps]
+    C --> D[Apply hallucination review to<br/>every stated expected result]
+    D --> E[Corrected, complete test case set]

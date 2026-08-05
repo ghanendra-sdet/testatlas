@@ -1,0 +1,9 @@
+%% VIS-003 — The Core Hallucination-Recognition Habit
+flowchart TD
+    accTitle: The Core Hallucination-Recognition Habit
+    accDescr: When reviewing AI output, identify every specific, checkable claim it makes, such as an endpoint, field, rule, or root cause, then verify each one directly against its real source rather than judging the output by how plausible or confident it sounds.
+    A[AI-generated content] --> B[Identify every specific,<br/>checkable claim]
+    B --> C[Verify each claim directly<br/>against its real source]
+    C --> D{Confirmed in the<br/>real source?}
+    D -->|Yes| E[Trustworthy for this claim]
+    D -->|No| F[Hallucination — do not use]

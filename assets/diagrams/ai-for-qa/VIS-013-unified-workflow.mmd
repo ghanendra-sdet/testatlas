@@ -1,0 +1,9 @@
+%% VIS-013 — The Unified AI Quality Assurance Workflow
+flowchart TD
+    accTitle: The Unified AI Quality Assurance Workflow
+    accDescr: Every AI-assisted artifact is routed through the same four-step workflow. First identify the artifact type. Then apply the specific review standard this path already established for that type. Then check data safety if applicable. Then log the outcome to the audit trail, regardless of which reviewer is involved.
+    A[AI-assisted artifact produced] --> B[1: Identify artifact type]
+    B --> C[2: Apply the specific,<br/>correct review standard]
+    C --> D[3: Check data safety,<br/>if applicable]
+    D --> E[4: Log outcome to audit trail]
+    E --> F[Artifact trusted for use]
