@@ -88,6 +88,16 @@ const config: Config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'resources',
+        path: 'resources',
+        routeBasePath: 'resources',
+        sidebarPath: './sidebarsResources.ts',
+        editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/`,
+      },
+    ],
+    [
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
@@ -95,7 +105,7 @@ const config: Config = {
         indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: ['project', 'learning-paths'],
+        docsRouteBasePath: ['project', 'learning-paths', 'resources'],
         searchResultLimits: 8,
       },
     ],
@@ -160,6 +170,13 @@ const config: Config = {
           sidebarId: 'learningPathsSidebar',
           position: 'left',
           label: 'Learning Paths',
+        },
+        {
+          type: 'docSidebar',
+          docsPluginId: 'resources',
+          sidebarId: 'resourcesSidebar',
+          position: 'left',
+          label: 'Resources',
         },
         {
           type: 'docSidebar',
