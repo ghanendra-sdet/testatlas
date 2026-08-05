@@ -1,0 +1,10 @@
+%% VIS-004 — CRUD Validation Checklist
+flowchart TD
+    accTitle: CRUD Validation Checklist
+    accDescr: For every Create, Read, Update, or Delete operation, a tester verifies three things — the intended row changed correctly, no unintended row changed, and any related rows were handled as designed.
+    A[Operation under test] --> B{Did the intended row<br/>change correctly?}
+    A --> C{Did any unintended<br/>row also change?}
+    A --> D{Were related rows<br/>handled as designed?}
+    B --> E[Verified with a direct query]
+    C --> E
+    D --> E

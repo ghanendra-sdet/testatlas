@@ -1,0 +1,11 @@
+%% VIS-007 — Testing Trigger Coverage Across Every Write Path
+flowchart TD
+    accTitle: Testing Trigger Coverage Across Every Write Path
+    accDescr: A single trigger on the Customers table can be reached through multiple different write paths, including the standard UI flow, a bulk batch job, and a manual override tool. Each path must be tested independently, since a trigger that fires correctly on one path is not guaranteed to fire on another.
+    A[kyc_status changes via...] --> B[Standard UI flow]
+    A --> C[Bulk batch job]
+    A --> D[Manual override tool]
+    B --> E{Did the trigger fire?}
+    C --> E
+    D --> E
+    E --> F[Verified independently per path]

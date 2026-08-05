@@ -1,0 +1,9 @@
+%% VIS-011 — Testing for Least Privilege at the Data Layer
+flowchart TD
+    accTitle: Testing for Least Privilege at the Data Layer
+    accDescr: A tester compares an application's actual database privileges against the documented set of tables and operations it legitimately needs. Any privilege granted beyond that documented need is a reportable finding, regardless of whether the application currently exercises it.
+    A[Query the app's granted privileges] --> C[Compare against documented needs]
+    B[Document what the app actually needs] --> C
+    C --> D{Any privilege beyond<br/>documented need?}
+    D -->|Yes| E[Reportable finding]
+    D -->|No| F[Least privilege confirmed]

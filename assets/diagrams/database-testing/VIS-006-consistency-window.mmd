@@ -1,0 +1,9 @@
+%% VIS-006 — Where Consistency Defects Hide in a Multi-Step Operation
+flowchart TD
+    accTitle: Where Consistency Defects Hide in a Multi-Step Operation
+    accDescr: A multi-step operation like a fund transfer has two steps, debit and credit. If it completes both steps cleanly or fails before either step, the data stays consistent. If it fails between the two steps, the data becomes inconsistent even though each individual row still passes its own constraints.
+    A[Operation starts] --> B[Step 1: Debit sender]
+    B --> C{Interrupted here?}
+    C -->|No| D[Step 2: Credit receiver]
+    C -->|Yes| E[Inconsistent: debited but not credited]
+    D --> F[Consistent: both steps completed]

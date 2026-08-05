@@ -427,37 +427,153 @@ Section 7 shipped as **Application and Capstone**, per the approved Decisions ab
 
 ## Path 4: Database Testing
 
-**Directory**: `/learning-paths/database-testing/`  
-**Position**: 4  
-**Prerequisites**: Foundations, Manual Testing and Test Design  
-**Target Audience**: QA engineers testing data-heavy systems, data specialists, backend testers  
-**Estimated Duration**: 3–5 weeks  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for Database Testing v1.0, produced against Manual Testing v1.0, API Testing v1.0, and Automation Testing v1.0 (all certified) as the reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then.
 
-**Learning Objectives**:
-- Write basic SQL for testing (not for the database team, but for QA)
-- Understand data integrity and consistency
-- Test ETL and data pipelines
-- Validate data state after operations
-- Understand transactions and concurrency
-- Test constraints and relationships
+### 1. Learning Path Overview
 
-**Modules** (planned for v0.1–v1.0):
-1. SQL Basics for QA (SELECT, INSERT, UPDATE, DELETE, WHERE, ORDER BY)
-2. Writing Assertions with SQL (SELECT to verify expected state)
-3. Data Integrity Testing (checking constraints are enforced)
-4. Transaction and Concurrency Testing (ACID properties, deadlocks)
-5. Referential Integrity (foreign keys, orphaned records)
-6. Testing ETL Pipelines (data in → transformation → data out)
-7. Testing Denormalization and Caching
-8. Data Validation Checklists (common mistakes in data operations)
-9. Performance Implications of Queries (indexes, query plans)
-10. Common Database Testing Mistakes
-11. Interview Preparation for Database Testing
+**Directory**: `/learning-paths/database-testing/`
+**Position**: 4
+**Prerequisites**: Foundations (all 17 modules) and Manual Testing v1.0 — specifically [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals), [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis), and [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning), all reused directly against constraints and data states rather than re-taught — `KNOWLEDGE_GRAPH.md` already pre-designates BVA and Equivalence Partitioning as reused by Database Testing (lines 47–48), so this path is completing a link the graph already anticipated, not inventing a new one.
+**Target Audience**: Testers who've completed Manual Testing and want to verify what actually happened to the data, not just what the UI or API reports back — QA engineers on data-heavy systems, backend testers, anyone whose bug reports currently stop at "the UI shows the wrong value" instead of tracing it to the row that caused it.
+**Estimated Duration**: 4–6 weeks (16 modules — smaller than Manual Testing's 23 and API Testing's 21, comparable to Automation Testing's 18).
+
+**Industry alignment**: SQL literacy and the ability to verify data state directly (rather than only through the UI/API) is one of the most commonly cited "gap skills" in QA job postings and interview loops — most QA roles above entry level expect at least basic SELECT/JOIN/aggregate fluency, and this path is scoped to close exactly that gap from a tester's, not a DBA's, vantage point.
+
+**Learning Objectives** (path-level):
+- Write SQL confidently enough to verify what a feature actually did to the data — not to administer a database
+- Apply test design techniques already learned (BVA, Equivalence Partitioning) to constraints, keys, and data boundaries instead of UI fields or API parameters
+- Validate CRUD operations, constraints, keys, and relationships directly against the data layer
+- Reason about data integrity, consistency, and transactional behavior (ACID) from a tester's perspective — recognizing a violation, not implementing the mechanism
+- Read and use stored procedures, views, and triggers well enough to test around them
+- Investigate a data-layer defect systematically: trace a wrong UI/API value back to the query, row, or transaction that produced it
+- Test database performance and security at a QA level — index awareness and slow-query recognition, not DBA tuning; access-control and injection awareness, not penetration testing
+- Validate backup, recovery, and audit-trail behavior for compliance-relevant systems
+- Apply the complete database-testing toolkit to realistic banking and e-commerce scenarios, and to one end-to-end capstone
+
+### 2. Curriculum Structure — Sections and Modules
+
+This path uses the **dedicated Section Review + Solutions page pattern from Section 1**, per the certified default established in `REFERENCE_CURRICULUM_CERTIFICATION.md` and applied without deviation by both API Testing and Automation Testing.
+
+#### Section 1 — Database Foundations (Modules 1–3)
+
+1. **What is Database Testing?** — *Objective*: why testers verify the data layer directly instead of trusting the UI/API to report it accurately; where database testing sits relative to manual, API, and automation testing already covered. *Prerequisites*: Foundations complete. *Why it exists*: every path so far opens with a fundamentals module establishing scope before technique — no evidence to deviate. *Est. length*: 1,900–2,300 words.
+2. **Relational Database Fundamentals** — *Objective*: tables, rows, columns, primary/foreign keys, schemas, and relationships, taught at the depth a tester needs to reason about data — not database design or normalization theory. *Why it exists*: the conceptual vocabulary every later module assumes; parallels API Testing's HTTP Basics as a new-surface literacy module. *Est. length*: 1,900–2,300 words.
+3. **SQL for Testers** — *Objective*: SELECT, WHERE, ORDER BY, JOIN, GROUP BY, and aggregate functions (COUNT, SUM), taught as a verification tool ("did the data end up the way the feature says it should have") rather than as general SQL literacy. *Why it exists*: the direct SQL-equivalent of API Testing's HTTP Basics and Automation's Framework Fundamentals — a new technical surface this entire path is built on. *Est. length*: 2,200–2,600 words (denser — it's the path's core technical-literacy module).
+
+**Section 1 Review + Solutions**: dedicated pages, per the migration policy established in `CURRICULUM_EVOLUTION.md` Entry 1.
+
+#### Section 2 — Data Validation (Modules 4–6)
+
+4. **CRUD Validation** — *Objective*: verifying Create, Read, Update, and Delete operations actually did what the feature claims — the right row changed, the right row didn't, nothing else moved. *Est. length*: 2,000–2,400 words.
+5. **Constraints, Keys, and Relationships** — *Objective*: testing that NOT NULL, UNIQUE, primary-key, and foreign-key constraints are actually enforced, and what an orphaned or duplicate record looks like when they aren't — explicitly applying [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis) and [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning) to constraint boundaries rather than re-teaching the techniques. *Why it exists*: this is the Progressive Extraction principle in action — `KNOWLEDGE_GRAPH.md` pre-designated exactly this link. *Est. length*: 2,200–2,600 words.
+6. **Data Integrity and Consistency** — *Objective*: what "the data is correct" actually means across a multi-table operation — consistency after a partial failure, stale reads, and the difference between a UI bug and a data bug. *Est. length*: 2,100–2,500 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Advanced Database Testing (Modules 7–9)
+
+7. **Stored Procedures, Views, and Triggers** — *Objective*: testing business logic that lives in the database itself — what a tester verifies about a stored procedure's output, a view's projection, and a trigger's side effect, without needing to write one from scratch. *Est. length*: 2,100–2,500 words.
+8. **Transactions, Locks, and Concurrency** — *Objective*: ACID properties from a tester's perspective (recognizing a violation — a lost update, a dirty read, a deadlock symptom — not implementing isolation levels), and what concurrent-access defects actually look like in a bug report. *Why it exists*: genuinely new content — no prior path tests concurrent data access this directly. *Est. length*: 2,300–2,600 words (this path's most conceptually dense module).
+9. **Database Defect Investigation** — *Objective*: the systematic trace from "the UI shows the wrong number" back through the API response, the query, and the row/transaction that actually caused it — this path's equivalent of Automation's flaky-test diagnosis chapter, applied to data instead of test infrastructure. *Est. length*: 2,200–2,600 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Performance and Security (Modules 10–12)
+
+10. **Database Performance Testing** — *Objective*: recognizing a slow query, index awareness (what an index is for, not how to design one), and query-plan literacy at a level a tester can use to file a precise performance defect. *Why it exists*: deliberately scoped to QA-level recognition, not DBA-level tuning — matching how API Testing's Performance module stopped short of full load-engineering treatment. *Est. length*: 2,000–2,400 words.
+11. **Database Security Testing** — *Objective*: access-control testing at the data layer (who can query what), SQL injection recognition from a tester's vantage point (identification and reporting, not exploit construction — same scope discipline API Testing's Injection module used), and sensitive-data-at-rest awareness. *Est. length*: 2,000–2,400 words.
+12. **Backup, Recovery, and Audit Validation** — *Objective*: what a tester verifies about backup integrity, recovery correctness, and audit-log completeness — directly relevant to AtlasBank's compliance-heavy domain. *Est. length*: 1,900–2,300 words.
+
+**Section 4 Review + Solutions**: dedicated pages. **Deliberate scope decision**: Performance and Security share one section rather than each getting a dedicated section the way API Testing gave Security its own (Section 5). Reason: this path's explicit scope is "basics" for both (see Database Scope in the originating task) — a full dedicated-section treatment of either would exceed what a QA-level (not DBA- or security-specialist-level) database tester needs, and there's no equivalent depth requirement here that API Testing's OWASP API Top 10 treatment had.
+
+#### Section 5 — Application Modules & Capstone (Modules 13–16) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts (From the Field, Senior QA Insight, Common Interview Mistake) omitted, no Section Review/Solutions pages — matching Manual Testing Sections 6–7, API Testing Section 7, and Automation Section 5's identical precedent.
+
+13. **Applying Database Testing: AtlasBank Banking Database Validation** — full technique combination against AtlasBank's Accounts, Transactions, Beneficiaries, and Loans tables. *Est. length*: 1,700–2,100 words.
+14. **Applying Database Testing: E-Commerce Database Validation** — same pattern, second domain, mirroring Manual Testing Modules 20–21's and API Testing Modules 18–19's two-domain structure (order/inventory/payment tables instead of banking tables, since forcing a second AtlasBank scenario here would repeat rather than diversify the practice surface). *Est. length*: 1,700–2,100 words.
+15. **Common Mistakes in Database Testing** — cross-cutting mistake patterns, mirroring Manual Testing Module 22 / API Testing Module 20 / Automation Module 17's identical structure (no separate "Common Mistakes" heading — the module *is* that content). *Est. length*: 1,700–2,000 words.
+16. **Database Testing Capstone: AtlasBank End-to-End Database Verification** — see Section 8 below. *Est. length*: 1,900–2,200 words.
+
+### 3. Learning Objectives — Mapped to Sections
+
+Section 1 → literacy (relational concepts, SQL as a verification tool); Section 2 → CRUD/constraint/integrity precision, direct technique reuse from Manual Testing; Section 3 → advanced mechanics (stored logic, concurrency, defect tracing); Section 4 → performance and security awareness at QA depth; Section 5 → synthesis across two domains plus one capstone. Every path-level objective listed in Section 1 traces to exactly one section, matching every certified path's own one-to-one mapping.
+
+### 4. Dependency Map
+
+Foundations → Manual Testing (Test Design Fundamentals, BVA, Equivalence Partitioning specifically) → Database Testing Section 1 (which establishes the new SQL/relational literacy those techniques get applied against) → Section 2 (constraints/keys, explicitly reusing BVA/Equivalence Partitioning) → Section 3 (advanced mechanics, assumes Section 2's integrity vocabulary) → Section 4 (performance/security, assumes querying fluency from Sections 1–3) → Section 5 (synthesizes all of it across two domains and a capstone). No section skips a prerequisite — Section 3's concurrency module, for instance, assumes Section 2's transaction-adjacent integrity concepts are already in place.
+
+### 5. AtlasBank Integration Strategy
+
+Database Testing **extends AtlasBank** as its primary domain, continuing the precedent set by Manual Testing (Section 3 onward) and extended by API Testing and Automation Testing. This path adds the data layer underneath tables already implied by those paths' examples: **Customers, Accounts, Transactions, Beneficiaries, Loans, Cards, Audit Logs, KYC, Payments**. SQL examples throughout Sections 1–4 draw from this schema (e.g., verifying a transfer's double-entry via `Transactions`, checking `Beneficiaries` foreign-key integrity against `Accounts`, confirming `Audit Logs` completeness for a `KYC` status change). Module 14 deliberately steps outside AtlasBank into **AtlasShop**, a named e-commerce entity (orders, inventory, payments) approved specifically so learners get a genuinely different schema and data model, not an unnamed placeholder — the same reason Manual Testing and API Testing each used a second domain in their own Application sections. Practicing the same techniques against an unfamiliar schema is a different, valuable skill from applying them to an already-memorized one. `STYLE_GUIDE.md`'s existing exception applies unchanged: don't force AtlasBank where a different domain genuinely fits better.
+
+### 6. Application-Module Strategy
+
+Section 5 (Modules 13–16) is designated as Application Modules at design time, per `CURRICULUM_EVOLUTION.md` Entry 2's corrected migration guidance: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, tighter word-count band (1,700–2,200 words), no Section Review/Solutions pages.
+
+### 7. Capstone Proposal
+
+**Recommendation**: **AtlasBank End-to-End Database Verification** (Module 16) — the same underlying AtlasBank international-transfer compliance-aggregation defect that Manual Testing, API Testing, and Automation Testing each independently rediscovered at their own layer (test-case design, API contract, automated suite), now traced to its actual source: a data-layer aggregation error, found via the SQL joins and window-based queries this path teaches in Sections 2–3. This would be the fourth independent confirmation of the same defect at a fourth layer — a deliberate narrative bookend across all four shipped/proposed paths, not a coincidence, and the strongest possible demonstration of *why* database-layer verification matters (the UI, the API, and the automated suite could all look correct while the underlying data aggregation is still wrong).
+
+Unlike API Testing's original proposal — where extending AtlasBank into a new layer was a genuinely open decision requiring confirmation — this recommendation applies an already-approved, three-times-confirmed pattern rather than opening a new one, so it's presented here as the adopted approach rather than a blocking question. If a reason emerges during implementation to deviate (as happened with API Testing's own Section 7 domain substitution), it will be flagged the same way that was.
+
+### 8. Review/Solutions Page Strategy
+
+Every section (1–4) gets a dedicated **Section N Review** page and **Section N Solutions** page from its first appearance, per the certified default — cross-path title disambiguation applied proactively (`"Database Testing — Section N Review"`), since Manual Testing, API Testing, and Automation Testing all already have Sections 1–4. Section 5 gets no Review/Solutions pages, matching every other path's Application section precedent.
+
+### 9. Word-Count Targets and Estimated Total Curriculum Size
+
+Instruction modules (Sections 1–4, 12 modules): 1,900–2,600 words each, matching the certified range every prior path has shipped within. Application modules (Section 5, 4 modules): 1,700–2,200 words, matching API Testing's approved Application Module band (Automation's own Application Modules shipped tighter, 1,312–1,412 words, which remains within `CONTENT_MODEL.md`'s tolerance as a lower bound, not a target). **Estimated path total**: roughly 30,000–35,000 words across 16 modules — smaller than API Testing's ~39,000–45,000 and Automation's ~13,000–15,000-for-its-own-Section-5-alone-plus-12-earlier-modules, consistent with this being the narrowest-scope certified-track path so far (16 modules, one clearly bounded technical surface).
+
+### 10. Differences from the Reference Curricula (evidence-justified only)
+
+- **Combined Performance + Security section (Section 4)** instead of each getting its own dedicated section the way API Testing dedicated Section 5 to Security alone: both are explicitly scoped to "basics" per this path's originating task, not full specialist depth — a deliberate, evidenced scope decision, not an oversight.
+- **New foundational literacy module (SQL for Testers, Module 3)**: parallels HTTP Basics for Testers (API Testing) and Automation Framework Fundamentals (Automation Testing) — every path so far has needed exactly one new-surface-literacy module in Section 1, and this is Database Testing's.
+- **Direct reuse of BVA and Equivalence Partitioning against constraints (Module 5)** rather than re-teaching test-value selection — not a new pattern; `KNOWLEDGE_GRAPH.md` pre-designated this exact link before this proposal was written.
+- **16 modules / 5 sections**, the smallest of the four tracks proposed or shipped so far — Database Testing is a single, well-bounded technical surface (the data layer) rather than a discipline with its own sub-specializations the way API Testing's security/performance/tooling sections each represented, so it doesn't need as many sections to cover its scope completely.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the Application Module structure, dedicated Review/Solutions pages from Section 1 — carries over unchanged, since no evidence suggests any of it doesn't apply to this path.
+
+### Decisions (Approved 2026-08-05)
+
+1. **AtlasBank extension into Database Testing**: ✅ Approved (see Section 5 above) — applying an already-three-times-approved pattern, not a new open question.
+2. **Capstone as the fourth independent confirmation of the AtlasBank compliance defect**: ✅ Approved (see Section 7), plus one additional database-specific defect (referential integrity, transaction consistency, or audit-log persistence) discoverable only through direct database validation — the layer no prior capstone could reach.
+3. **16-module / 5-section structure**: ✅ Approved as proposed.
+4. **Test Data Management**: ✅ Stays integrated throughout (CRUD Validation, Data Integrity, and the Application Modules) rather than becoming a standalone module — a dedicated module would overemphasize it relative to the rest of the curriculum. Module 14's original placeholder question is resolved: no standalone module.
+5. **Module 14's contrasting domain**: ✅ **AtlasShop** — a named e-commerce entity, keeping AtlasBank as the primary domain while giving learners a genuinely different schema and data model to practice against, without introducing a fully unrelated fictional universe.
 
 **Success Criteria**:
-- Learner writes SQL queries to verify expected data state after a feature
-- Learner designs tests for an ETL pipeline
-- Learner identifies data integrity issues in a system
+- Learner writes a SQL query to verify what a feature actually did to the data, not just what the UI or API reported
+- Learner identifies a constraint, integrity, or concurrency defect directly from the data layer, and traces a UI-visible bug back to its data-layer cause
+- Learner tests database performance and security at a QA level of depth (recognition and reporting, not DBA-level tuning or exploit construction)
+- Learner applies the full toolkit to a realistic banking and a realistic e-commerce scenario, and completes an end-to-end capstone
+
+### Section 1 — As Shipped
+
+Shipped as designed: **What is Database Testing?** (Module 1 — the four-layer diagram distinguishing database testing from UI/API/automated-suite testing, and the interruption/retry principle), **Relational Database Fundamentals** (Module 2 — tables, keys, relationship types, and the AtlasBank schema ER diagram), **SQL for Testers** (Module 3 — `SELECT`/`WHERE`/`ORDER BY`/`JOIN`/`GROUP BY`/`COUNT`/`SUM`/`EXISTS`, taught as verification tools against real AtlasBank tables). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped from the start, with proactive cross-path title disambiguation (`"Database Testing — Section 1 Review"`).
+
+### Section 2 — As Shipped
+
+Shipped as designed: **CRUD Validation** (Module 4 — a systematic per-operation framework, including the "did anything unintended also change" check most UI-only testing structurally misses), **Constraints, Keys, and Relationships** (Module 5 — NOT NULL/UNIQUE/PK/FK/CHECK constraints, with [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis) and [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning) applied directly to constraint boundaries, per this path's approved Progressive Extraction link), **Data Integrity and Consistency** (Module 6 — cross-row consistency under partial-failure interruption, and the UI-bug-vs-data-bug diagnostic). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as designed: **Stored Procedures, Views, and Triggers** (Module 7 — testing database-resident business logic, and trigger-coverage testing across every distinct write path that can fire a trigger, not just the obvious one), **Transactions, Locks, and Concurrency** (Module 8 — ACID from a tester's vantage, and deliberately-triggered concurrent tests for lost updates, dirty reads, and deadlocks), **Database Defect Investigation** (Module 9 — the systematic, outside-in trace chain from a vague symptom to a specific, reproducible root cause, tying every earlier module's defect class together). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as designed: **Database Performance Testing** (Module 10 — realistic-data-volume scaling tests, QA-level index awareness, and N+1 query detection via observable query counts), **Database Security Testing** (Module 11 — least-privilege verification, SQL injection symptom recognition using legitimate special-character input, and data-at-rest checks, all scoped to identification and reporting per API Testing's own precedent), **Backup, Recovery, and Audit Validation** (Module 12 — why a backup job's own success status isn't evidence of restorability, and trigger-coverage testing extended specifically to compliance-relevant audit trails). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated. Performance and Security remained one combined section as proposed, both scoped deliberately to QA-level "basics."
+
+### Section 5 — As Shipped (Approved 2026-08-05)
+
+Shipped per the approved decisions: Test Data Management stayed integrated throughout rather than becoming a standalone module; Module 14 used **AtlasShop**, a named e-commerce entity, as its contrasting domain.
+
+**Modules**: **Applying Database Testing: AtlasBank Loan Disbursement Validation** (Module 13, Application — combining Sections 1–4 against a loan lifecycle feature; found an under-scoped disbursement-cap constraint, a lost-update financial discrepancy under concurrent early repayment, and an audit-trail gap on an automated auto-debit path), **Applying Database Testing: AtlasShop Database Validation** (Module 14, Application — the same toolkit against a genuinely unfamiliar e-commerce schema; found a non-atomic stock check-and-decrement, a resulting inventory overselling lost update, and a least-privilege gap in a read-only analytics tool), **Common Mistakes in Database Testing** (Module 15, Application — six cross-cutting patterns, each traced to a real defect from earlier in this path, mirroring Manual Testing Module 22 / API Testing Module 20 / Automation Module 17's identical structure), **Database Testing Capstone: AtlasBank End-to-End Database Verification** (Module 16, Application — see below).
+
+**Capstone**: independently rediscovered the same AtlasBank compliance-aggregation defect (a rolling-hour check where the business rule requires a full calendar day) that Manual Testing, API Testing, and Automation Testing each already found at their own layer — the fourth independent confirmation, and the first able to trace the defect to its exact query-level root cause (the stored procedure's date-range clause) rather than only its symptom, since only direct database access can read the query logic itself. Also introduced one genuinely new, database-specific defect per the approved capstone requirement: an audit-trail gap where a nightly batch reconciliation job updates compliance-flag state via a bulk `UPDATE` that bypasses the same audit trigger the real-time path correctly fires — invisible to every layer above the database, since none of the other three capstones had any visibility into whether a trigger fired.
+
+**No Section 5 Review/Solutions pages** — matching every other path's identical Application Module precedent.
+
+**Progress**: 16 / 16 modules shipped. **Database Testing v1.0 is complete.**
 
 ---
 

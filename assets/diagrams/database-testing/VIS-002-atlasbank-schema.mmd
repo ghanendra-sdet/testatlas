@@ -1,0 +1,29 @@
+%% VIS-002 — AtlasBank Core Table Relationships
+erDiagram
+    accTitle: AtlasBank Core Table Relationships
+    accDescr: Customers has a one-to-many relationship with Accounts, meaning one customer can have many accounts. Accounts has a one-to-many relationship with both Transactions and Beneficiaries, meaning one account can have many transactions and many beneficiaries.
+    CUSTOMERS ||--o{ ACCOUNTS : "has"
+    ACCOUNTS ||--o{ TRANSACTIONS : "generates"
+    ACCOUNTS ||--o{ BENEFICIARIES : "lists"
+    CUSTOMERS {
+        int customer_id PK
+        string name
+        string kyc_status
+    }
+    ACCOUNTS {
+        int account_id PK
+        int customer_id FK
+        decimal balance
+        string account_type
+    }
+    TRANSACTIONS {
+        int transaction_id PK
+        int account_id FK
+        decimal amount
+        string status
+    }
+    BENEFICIARIES {
+        int beneficiary_id PK
+        int account_id FK
+        string beneficiary_name
+    }

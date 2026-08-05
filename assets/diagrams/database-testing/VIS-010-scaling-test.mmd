@@ -1,0 +1,9 @@
+%% VIS-010 — Testing Query Performance at Realistic Data Volume
+flowchart LR
+    accTitle: Testing Query Performance at Realistic Data Volume
+    accDescr: The same query is run first against a small test dataset, then against a realistically large one. If response time grows sharply with data volume, that scaling pattern is the reportable finding, not the response time at small scale alone.
+    A[Run query against small test data] --> C[Compare response times]
+    B[Run same query against realistic-volume data] --> C
+    C --> D{Response time grows<br/>sharply with volume?}
+    D -->|Yes| E[Likely index/scaling issue — reportable]
+    D -->|No| F[Scales acceptably]

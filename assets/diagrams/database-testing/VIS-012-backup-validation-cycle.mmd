@@ -1,0 +1,9 @@
+%% VIS-012 — The Backup Validation Cycle
+flowchart LR
+    accTitle: The Backup Validation Cycle
+    accDescr: A backup job completing successfully is only the first step. The backup must then actually be restored into an isolated test environment, and the restored data verified directly, before the backup can genuinely be trusted.
+    A[Backup job reports success] --> B[Restore into isolated test environment]
+    B --> C[Verify tables present and row counts plausible]
+    C --> D{Matches expectations?}
+    D -->|Yes| E[Backup genuinely trustworthy]
+    D -->|No| F[Backup process has a real gap]

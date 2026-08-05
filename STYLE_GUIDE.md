@@ -100,6 +100,10 @@ Not retrofitted into Modules 1–12's existing banking examples — applies goin
 
 **Extended to API Testing (approved 2026-08-04)**: AtlasBank is also the default domain for API Testing, at the user's explicit direction during API Testing v1.0 architecture review — learners already know the business domain from Manual Testing, so they can focus on API testing itself rather than learning a new product. API Testing examples use realistic AtlasBank-style banking APIs (authentication, customer, account, beneficiary, fund transfer, transaction, statement, card, KYC, notification endpoints) with representative JSON payloads. Same exception as above: don't force an AtlasBank API example where a different domain genuinely fits better.
 
+**Extended to Automation Testing**: AtlasBank is also the domain under test for Automation Testing — its web app (Internet Banking, Admin Portal) automated via Playwright/Selenium/Cypress-style examples — continuing the same "reuse unless a genuine reason exists" reasoning as the API Testing extension above.
+
+**Extended to Database Testing (approved 2026-08-05)**: AtlasBank's data layer is the default schema for Database Testing — Customers, Accounts, Transactions, Beneficiaries, Loans, Cards, Audit Logs, KYC, and Payments tables — per that path's architecture proposal in `LEARNING_PATHS.md`. Module 14 deliberately steps outside AtlasBank into **AtlasShop**, a named e-commerce entity, for its second Application Module domain, the same way Manual Testing and API Testing each used a second domain in their own Application sections.
+
 ## 7. Diagrams and visuals
 
 Use visuals when they make a relationship, flow, or comparison easier to understand than prose.

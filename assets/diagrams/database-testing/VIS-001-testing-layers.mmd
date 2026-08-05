@@ -1,0 +1,11 @@
+%% VIS-001 — Where Database Testing Sits Relative to Other Testing Layers
+flowchart LR
+    accTitle: Where Database Testing Sits Relative to Other Testing Layers
+    accDescr: A feature is tested through the UI, the API, and an automated suite, all of which verify the interface a caller sees. Database testing is the one layer that verifies the actual stored data underneath all three, independent of what any interface reports.
+    A[Feature] --> B[UI Testing<br/>What's displayed]
+    A --> C[API Testing<br/>What's returned]
+    A --> D[Automated Suite<br/>Interface assertions]
+    A --> E[Database Testing<br/>What's actually stored]
+    B -.can look correct while.-> E
+    C -.can look correct while.-> E
+    D -.can look correct while.-> E

@@ -1,0 +1,7 @@
+%% VIS-003 — How a JOIN Connects Two Tables for Verification
+flowchart LR
+    accTitle: How a JOIN Connects Two Tables for Verification
+    accDescr: A JOIN query combines rows from the Customers table and the Accounts table by matching customer_id in both, producing one result row per matching account for verification.
+    A[Customers table] -->|customer_id matches| C[JOIN result]
+    B[Accounts table] -->|customer_id matches| C
+    C --> D[One verifiable row per matching account]

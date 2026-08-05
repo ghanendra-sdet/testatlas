@@ -1,0 +1,9 @@
+%% VIS-009 — The Database Defect Investigation Trace Chain
+flowchart LR
+    accTitle: The Database Defect Investigation Trace Chain
+    accDescr: A defect investigation traces backward from what the user sees, through the UI display layer, the API response layer, the query behind that response, and finally the underlying stored data itself, checking each layer in order to find where the actual defect lives.
+    A[User sees wrong value] --> B[UI Display Layer]
+    B --> C[API Response Layer]
+    C --> D[Query Behind the Response]
+    D --> E[Underlying Stored Data]
+    E --> F[Specific row / transaction / write path]

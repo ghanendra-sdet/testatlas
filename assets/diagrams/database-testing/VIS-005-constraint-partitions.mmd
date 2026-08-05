@@ -1,0 +1,8 @@
+%% VIS-005 — Testing a Constraint With Two Equivalence Partitions
+flowchart LR
+    accTitle: Testing a Constraint With Two Equivalence Partitions
+    accDescr: A constraint creates two partitions of possible values, those that satisfy it and those that violate it. One representative insert from each partition is enough to verify the constraint is actually enforced.
+    A[Constraint under test] --> B[Partition: satisfies constraint]
+    A --> C[Partition: violates constraint]
+    B --> D[Insert should succeed]
+    C --> E[Insert should be rejected]

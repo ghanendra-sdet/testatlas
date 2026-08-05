@@ -1,0 +1,9 @@
+%% VIS-008 — How a Lost Update Happens
+flowchart TD
+    accTitle: How a Lost Update Happens
+    accDescr: Two operations both read the same starting balance of 1000 before either writes. Operation A computes a new balance of 200 and writes it. Operation B, still working from the original 1000 it read earlier, computes a different new balance of 200 for a different withdrawal and overwrites Operation A's result, silently losing the effect of Operation A's withdrawal.
+    A[Both operations read balance = 1000] --> B[Operation A computes new balance]
+    A --> C[Operation B computes new balance]
+    B --> D[Operation A writes its result]
+    C --> E[Operation B writes its result, overwriting A]
+    E --> F[Operation A's withdrawal is silently lost]
