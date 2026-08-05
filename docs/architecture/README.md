@@ -1,6 +1,6 @@
 # TestAtlas Architecture
 
-This directory contains the frozen architecture that governs how TestAtlas is built. These 11 documents were designed before writing further educational content, following the principle: **design the system content lives within, then let content grow independently without duplication or chaos.**
+This directory contains the architecture that governs how TestAtlas is built. The original 11 documents below were designed before writing further educational content, following the principle: **design the system content lives within, then let content grow independently without duplication or chaos.** Nine more documents were added after three learning paths actually shipped — governance, certification, and contributor-platform documents that couldn't have been written accurately before there was real, shipped content to generalize from. See **Documents Added After First Content Shipped**, below the original 11.
 
 ## Architecture Freeze
 
@@ -30,6 +30,23 @@ Changes to these documents require an explicit architecture review, not a casual
 | [VERSIONING_STRATEGY.md](./VERSIONING_STRATEGY.md) | How does TestAtlas evolve from v0.1 to v1.0+? What's the release cadence? |
 | [REAL_WORLD_EXPERIENCE_LIBRARY.md](./REAL_WORLD_EXPERIENCE_LIBRARY.md) | How is 8+ years of institutional QA knowledge captured — defects, postmortems, anti-patterns, root causes? |
 | [ARCHITECTURE_DECISIONS.md](./ARCHITECTURE_DECISIONS.md) | Why was each major structural decision made — not what the structure is, but the reasoning and trade-offs behind it? |
+
+## Documents Added After First Content Shipped
+
+Written once Manual Testing, API Testing, and Automation Testing existed as real, shipped content — each one generalizes from actual evidence, not speculation, the same evidence-based-evolution standard `CURRICULUM_EVOLUTION.md` itself sets.
+
+| Document | Answers |
+|----------|---------|
+| [SEO_GUIDELINES.md](./SEO_GUIDELINES.md) | What SEO conventions does Docusaurus handle automatically vs. require a contributor to follow by hand? |
+| [VISUAL_STANDARDS.md](./VISUAL_STANDARDS.md) | What's the Mermaid diagram convention — theming, accessibility hooks, mirror-file sync, Visual IDs? |
+| [CURRICULUM_EVOLUTION.md](./CURRICULUM_EVOLUTION.md) | Which structural curriculum patterns changed after shipping, why, and under what evidence bar? |
+| [REFERENCE_CURRICULUM_CERTIFICATION.md](./REFERENCE_CURRICULUM_CERTIFICATION.md) | What makes Manual Testing, API Testing, and Automation Testing the certified default every future path is built against? |
+| [AUTOMATION_TESTING_CERTIFICATION.md](./AUTOMATION_TESTING_CERTIFICATION.md) | Automation Testing's own certification record — what was audited, what was found, what's accepted as a known exception |
+| [REPOSITORY_STANDARDS.md](./REPOSITORY_STANDARDS.md) | What file/folder/frontmatter/heading/diagram conventions does the repo already follow consistently? |
+| [AUTOMATION_SPECIFICATIONS.md](./AUTOMATION_SPECIFICATIONS.md) | Implementation-ready specs for validation checks not yet built (frontmatter, headings, cross-references, duplicate metadata) |
+| [ARCHITECTURE_OVERVIEW.md](./ARCHITECTURE_OVERVIEW.md) | The narrative "why does TestAtlas work this way" tour, tying governance, evolution, and certification together |
+
+Root-level (not in this directory, but part of the same platform): `AUTHOR_GUIDE.md`, `CURRICULUM_CHECKLIST.md`, `REVIEW_CHECKLIST.md`, `SEO_CHECKLIST.md`, `ACCESSIBILITY_CHECKLIST.md`, `MERMAID_GUIDELINES.md`, `WRITING_GUIDELINES.md`, and `templates/` — the contributor-facing authoring platform. Start at `AUTHOR_GUIDE.md`, not here, if you're writing content rather than studying architecture.
 
 ## Routing Status (Live Site Wiring)
 
@@ -102,5 +119,8 @@ A content type only produces reachable pages once it has a registered `@docusaur
 
 **Reasoning behind the major decisions is recorded in [ARCHITECTURE_DECISIONS.md](./ARCHITECTURE_DECISIONS.md)** as a set of Architecture Decision Records (ADRs) — the changelog for *why*, not just *what*.
 
-**Architecture approved and frozen.**
-**Next milestone**: Resume content creation — Module 2 of Manual Testing and Test Design, built directly against this architecture (correct page length per CONTENT_MODEL.md, correct knowledge-node placement per KNOWLEDGE_GRAPH.md). Per project direction: the ratio from here forward is roughly 10% architecture, 90% content — new structural changes to this directory require a new ADR and a compelling reason, not routine editing.
+**Architecture approved and frozen for its original 11 documents.** The later nine documents (see above) were added under the same discipline — evidence-based, written after real content existed to generalize from, not speculative.
+
+**Current status (2026-08-05)**: Manual Testing v1.0 (23 modules), API Testing v1.0 (21 modules), and Automation Testing v1.0 (18 modules) are all complete and certified — 62 modules across three Reference Curricula. See `docs/architecture/LEARNING_PATHS.md` for full per-path detail and `REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means. TestAtlas is preparing for its `v1.0.0` public release; see `RELEASE_READINESS.md` at the repository root for the release-readiness record.
+
+**Next milestone**: a fourth learning path, proposed against `REFERENCE_CURRICULUM_CERTIFICATION.md`'s defaults following `AUTHOR_GUIDE.md`'s workflow — not yet started, not yet chosen. New structural changes to this directory still require a compelling, evidenced reason, not routine editing.

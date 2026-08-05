@@ -2,6 +2,8 @@
 
 This document defines how TestAtlas evolves from v0.1 through v1.0+ — what's included in each version, the release cadence, and how content changes between versions.
 
+**Status note (2026-08-05)**: the phased timeline below (Phase 1 "August 2026," Phase 3 v1.0 "April 2027") was written speculatively, before any content existed, and reality has significantly outpaced it — three full, certified learning paths (Manual Testing, API Testing, Automation Testing, 62 modules) shipped within days of each other, and v1.0.0 is releasing now, in August 2026, not April 2027. The month-by-month phase structure below is preserved as a record of the original plan, not a current forecast — treat the **Version Numbering**, **Content Stability**, **Breaking Changes**, **Release Checklist**, and **Sunset Policy** sections as current policy; treat the dated phase breakdown as historical planning content, superseded by `ROADMAP.md`'s milestone table and `docs/architecture/LEARNING_PATHS.md`'s actual per-path progress notes for current status.
+
 ## Design Principle
 
 TestAtlas doesn't wait for perfection. We release small, frequent versions with clear promises about what's included and what's not. Each version is a stable snapshot; learners can follow a v0.5 learning path and complete it without disruption.
@@ -253,6 +255,20 @@ Before releasing any version:
 - [ ] Email to learners (if subscribed)
 
 ---
+
+## Labels Strategy
+
+A small, deliberately limited label set — more labels than anyone can keep straight defeats the point of labeling at all. Full taxonomy, including suggested colors and exact descriptions ready to create on GitHub, lives in `docs/community/LABELS.md`; this section states the policy.
+
+**Categories**: Type (exactly one per issue/PR — `content`, `bug`, `proposal`, `question`, `docs`), Status (`needs-triage`, `needs-decision`, `blocked`, `in-progress`), contribution-difficulty (`good first issue`, `help wanted`), and curriculum path (optional, content-type issues only — one per shipped path).
+
+Don't invent a new label for a one-off situation — use a clear issue title and description instead. Labels exist for filtering across many issues, not for describing one.
+
+## Milestone Strategy
+
+A milestone represents one release, matching `CHANGELOG.md`'s entries — `v1.0.0`, `v1.1.0`, and so on. Every issue and PR intended for a specific release gets that release's milestone; anything without a milestone is unscheduled, not implicitly "next."
+
+Don't create a milestone for a partial unit of work (a single module, a single section) — a learning path's own progress is tracked in `docs/architecture/LEARNING_PATHS.md`'s per-path "As Shipped" notes, not duplicated into GitHub milestones. Milestones exist at the site-release level, matching the granularity `ROADMAP.md` and `CHANGELOG.md` already track.
 
 ## Long-Term Vision (v2.0+)
 

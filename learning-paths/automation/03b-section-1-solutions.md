@@ -3,7 +3,7 @@ title: "Automation Testing — Section 1 Solutions"
 slug: section-1-solutions
 sidebar_label: "Section 1 — Solutions"
 description: "Answers and reasoning for Section 1's Knowledge Check — applying frequency, stability, determinism, business risk, and novelty to five realistic automation-candidate scenarios."
-keywords: ["automation candidate knowledge check", "test automation solutions"]
+keywords: ["automation candidate knowledge check", "test automation solutions", "automation vs manual testing", "test selection criteria"]
 difficulty: "beginner"
 time_to_read: "7 min"
 last_reviewed: "2026-08-05"

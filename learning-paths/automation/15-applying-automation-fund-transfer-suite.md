@@ -19,7 +19,7 @@ Every module so far taught one concern at a time — a framework pattern, a reli
 
 Building automated coverage for AtlasBank's fund-transfer feature: selecting a beneficiary, entering an amount, confirming, and verifying the resulting balance and confirmation state — the same feature this path has referenced throughout Sections 1–4's individual examples, now built as one real, coherent suite.
 
-## Framework and Design (Sections 2)
+## Framework and Design (Section 2)
 
 Applying [Page Object Model](/learning-paths/automation/page-object-model) directly: a `TransferPage` object with intent-named methods (`selectBeneficiary()`, `enterAmount()`, `submitTransfer()`), composing a shared `NavigationBar` component object rather than duplicating navigation locators — exactly that module's own composition guidance. Applying [Data-Driven Testing](/learning-paths/automation/data-driven-testing): the transfer-amount boundary set (per [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis)) — $0.00, $0.01, $9,999.99, $10,000.00 — runs through one shared test definition, one row per value, including a deliberately non-round value ($333.33) specifically to probe for a rounding defect, per that module's own realistic-data lesson.
 

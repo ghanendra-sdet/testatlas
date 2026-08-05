@@ -45,6 +45,18 @@ If you're adding to an existing learning path (a module, a Section Review page),
 
 Do not combine unrelated changes in one pull request. A focused pull request is easier to review, easier to revert, and less likely to introduce accidental conflicts.
 
+## Contribution examples, by size
+
+Not sure how big a change should be? Three real shapes:
+
+**Smallest — a typo or a broken link.** Fix it directly, one file, one focused PR. No proposal needed, no discussion required first. Example: correcting a misspelled term in a module's Glossary section.
+
+**Small — a content correction or a clearer example.** Open a Content Correction issue first if you're not certain the fix is right (see `SUPPORT.md`); if you're confident, open the PR directly with a clear description of what was wrong and why the fix is correct. Example: a stale claim in a governance document, or an outdated cross-link.
+
+**Larger — a new module or a structural addition.** Start at `AUTHOR_GUIDE.md`, not with the PR. A new module needs its place in an already-approved path plan; a new learning path needs a Learning Path Proposal issue before any content is written. See `docs/community/GOOD_FIRST_ISSUES.md` for a curated list of scoped starting points if you're looking for something concrete to pick up.
+
+Match your contribution's size to the process it actually needs — a one-word fix doesn't need an architecture proposal, and a new learning path shouldn't skip one.
+
 ## Content expectations
 
 For learning content, explain why the topic matters, what it is, when to use it, and how it works in real projects. Add realistic examples and common mistakes when they improve the lesson.

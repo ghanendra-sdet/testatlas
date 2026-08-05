@@ -2,7 +2,9 @@
 
 **Certified 2026-08-04, during the TestAtlas Platform Consistency Sprint.**
 
-**Manual Testing v1.0** (23 modules) and **API Testing v1.0** (21 modules) are certified as TestAtlas's **Reference Curricula** — the standard every future learning path is built against. This document exists so that standard is explicit and portable, not something a future contributor has to reverse-engineer by reading 44 modules and eight architecture documents.
+**Manual Testing v1.0** (23 modules), **API Testing v1.0** (21 modules), and **Automation Testing v1.0** (18 modules, certified 2026-08-05 — see `AUTOMATION_TESTING_CERTIFICATION.md`) are certified as TestAtlas's **Reference Curricula** — the standard every future learning path is built against. This document exists so that standard is explicit and portable, not something a future contributor has to reverse-engineer by reading 62 modules and eight architecture documents.
+
+Automation Testing is the first path built entirely against this certification rather than against a single prior example — its own audit found zero structural deviations and, notably, zero recurring-element gaps from Module 1 onward, the exact defect class that was this certification's largest single finding when API Testing was first audited. That's the certification working as intended: a documented lesson, applied proactively by the next path, not rediscovered.
 
 This document doesn't repeat what's already defined elsewhere — it points to the source of each rule and states *why it's certified*, so the certification can be re-verified later rather than taken on faith.
 
@@ -67,4 +69,4 @@ This certification covers **structure and process** — the patterns in Sections
 - Production deployment readiness (`QUALITY_GATES.md`'s post-deployment gates remain unmet — no public URL yet)
 - Content accuracy beyond what's been reviewed in the Engineering Reviews already delivered for each batch
 
-**Next path** (per the user's own stated intent): Automation Testing, which should be architected as a proposal against this certification's defaults before any module content is written.
+**Next path**: to be determined by the user. Whichever path comes next should be architected as a proposal against this certification's defaults, following Automation Testing's own example of a written architecture proposal reviewed and approved before any module content was written.

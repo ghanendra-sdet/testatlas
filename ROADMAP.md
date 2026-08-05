@@ -18,14 +18,14 @@ Each release is a meaningful checkpoint, not just a version bump. This is the or
 | v0.2.0 | Architecture Freeze | ✅ Complete |
 | v0.3.0 | Website Foundation | ✅ Complete |
 | v0.4.0 | Foundations Learning Path | ✅ Complete (17/17, tagged `foundations-v1.0.0`) |
-| v0.5.0 | Manual Testing | ✅ Content Complete (23/23) — committed, not yet tagged |
-| v0.6.0 | API Testing | ✅ Content Complete (21/21) — pending commit |
-| v0.7.0 | Database Testing (SQL Fundamentals) | Planned |
-| v0.8.0 | Test Automation (Playwright) | Planned |
-| v0.9.0 | Project Simulations + Labs | Planned |
-| v0.10.0 | Interview Academy | Planned |
-| v0.11.0 | AI Testing | Planned |
-| v1.0.0 | Public Launch | Planned |
+| v0.5.0 | Manual Testing | ✅ Complete (23/23), certified |
+| v0.6.0 | API Testing | ✅ Complete (21/21), certified |
+| v0.7.0 | Test Automation | ✅ Complete (18/18), certified — shipped ahead of Database Testing's original slot, once its own architecture proposal was ready; sequence isn't strictly first-proposed-first-shipped |
+| v0.8.0 | Authoring Platform + Release Preparation | ✅ Complete — contributor documentation, templates, repository standards, community-health files |
+| **v1.0.0** | **Public Launch** | **In progress** — see `RELEASE_READINESS.md` |
+| v1.1.0+ | Database Testing, Performance Testing, Security Testing, AI for QA, Interview Preparation, Project Simulations + Labs, Career Growth | Planned, post-v1.0.0 |
+
+**Revised from the original plan**: v1.0.0 was originally sequenced after Database Testing, Project Simulations, Interview Academy, and AI Testing (see the now-superseded v0.9–v0.11 entries below, kept for historical record). That sequencing is revised — v1.0.0 now ships with the three complete, certified curricula (Manual Testing, API Testing, Automation Testing) plus Foundations, rather than holding the first stable public release back for four more learning paths. Everything below v1.1.0 becomes an extension of a stable, released platform, not a precondition for reaching v1.0.0 at all — matching how the project's own actual pace (three certified paths shipped within days of each other) outstripped the original month-by-month plan.
 
 Ideas that aren't on this list — mascot/branding, gamification, accounts, and similar — are intentionally parked in `NOT_NOW.md` at the repository root, not forgotten, just not competing with the roadmap above.
 
@@ -74,38 +74,31 @@ Ideas that aren't on this list — mascot/branding, gamification, accounts, and 
 **Goal:** apply test design to APIs — became a full 21-module path, using Manual Testing as its reference implementation, not just an initial "Part 1" slice.
 
 - All seven sections shipped: API Testing Foundations, Data/Contracts/Test Cases, Auth and Access Control, Integration and Resilience, API Security Testing, Performance and Tooling, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 3
-- Content-complete, pending final review and commit
+- Certified as a Reference Curriculum
 
-### v0.7.0 — Database Testing (SQL Fundamentals)
+### v0.7.0 — Test Automation ✅
 
-**Goal:** give testers enough SQL to verify state, not just click through UI.
+**Goal:** turn designed tests into maintainable automation — an 18-module path using both Manual Testing and API Testing as reference implementations, shipped ahead of Database Testing in the original sequence once its own architecture proposal was approved.
 
-- SQL basics for QA, writing assertions, data integrity testing
+- Five sections shipped: Automation Foundations, Framework and Design Patterns, Reliability and Verification, Reporting and Execution at Scale, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 5
+- Certified as a Reference Curriculum with the cleanest audit result of the three paths (`docs/architecture/AUTOMATION_TESTING_CERTIFICATION.md`)
 
-### v0.8.0 — Test Automation (Playwright)
+### v0.8.0 — Authoring Platform + Release Preparation ✅
 
-**Goal:** turn designed tests into maintainable automation.
+**Goal:** turn three shipped paths' proven patterns into a reusable platform for every future path, then prepare for public release.
 
-- Automation principles, page object model, CI/CD integration, flakiness
+- `AUTHOR_GUIDE.md`, per-concern checklists, nine contributor templates, `docs/architecture/REPOSITORY_STANDARDS.md`, `docs/architecture/AUTOMATION_SPECIFICATIONS.md`
+- `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, GitHub issue/PR templates, `RELEASE_READINESS.md`
 
-### v0.9.0 — Project Simulations + Labs
+### v1.1.0+ — Planned, Post-Launch (originally sequenced before v1.0.0, now revised)
 
-**Goal:** connect concepts to realistic, end-to-end domain work.
+The following were originally planned as v0.9–v0.11, blocking the first public release. They're now v1.1+ work, built on a stable, already-released platform instead of gating the release:
 
-- First 2–3 project simulations (starting with high-value domains such as banking and e-commerce)
-- First wave of runnable labs (automation, API, SQL)
-
-### v0.10.0 — Interview Academy
-
-**Goal:** turn learning into job readiness.
-
-- Interview question bank, mock interview structures, scenario-based practice
-
-### v0.11.0 — AI Testing
-
-**Goal:** cover testing AI-driven features and using AI in QA work, with clear limits.
-
-- Testing LLM outputs, prompt testing fundamentals, responsible-use guidance
+- **Database Testing** (SQL Fundamentals) — SQL basics for QA, writing assertions, data integrity testing
+- **Performance Testing**, **Security Testing**, **AI for QA** — each proposed against `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s defaults, following `AUTHOR_GUIDE.md`'s workflow, same as every path so far
+- **Project Simulations + Labs** — first 2–3 end-to-end project simulations, first wave of runnable labs
+- **Interview Academy** — question bank, mock interview structures, scenario-based practice
+- **Career Growth in Quality Engineering**
 
 ### v1.0.0 — Public Launch
 

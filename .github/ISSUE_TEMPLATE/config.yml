@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support and General Questions
+    url: https://github.com/ghanendra-sdet/testatlas/blob/main/SUPPORT.md
+    about: Read SUPPORT.md to find the right place for your specific need before opening an issue.

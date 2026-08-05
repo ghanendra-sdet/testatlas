@@ -2,7 +2,7 @@
 
 This document defines the 10 learning paths in TestAtlas, their learning objectives, target audience, and progression strategy.
 
-**Manual Testing v1.0 and API Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to.
+**Manual Testing v1.0, API Testing v1.0, and Automation Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to, and `AUTOMATION_TESTING_CERTIFICATION.md` for Automation Testing's own certification record.
 
 ## Design Principle
 

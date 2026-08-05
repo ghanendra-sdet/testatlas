@@ -60,14 +60,34 @@ Manual Testing v1.0 — curriculum already designed and frozen at 23 modules (`d
 
 ---
 
-## Unreleased — Manual Testing v1.0 (content complete, not yet tagged)
+## Unreleased — v1.0.0 (TestAtlas Public Launch, in preparation)
 
-23/23 modules shipped across seven sections, plus 6 dedicated Section Review/Solutions pages (introduced Section 4 onward — see `docs/architecture/CURRICULUM_EVOLUTION.md` Entry 1). Committed (`2624d5b` and prior batch commits); not yet tagged `manual-testing-v1.0.0`. A Curriculum Consistency Sprint (2026-08-04) aligned `LEARNING_PATHS.md` with shipped reality and fixed one genuine content gap (Module 3's missing "From the Field"). Established two permanent architectural patterns during development, both documented in `CURRICULUM_EVOLUTION.md`: Section Review/Solutions pages, and Application Modules as a distinct content type (Modules 20–23).
+Three certified learning paths, the TestAtlas Authoring Platform, and full GitHub/community-health readiness — the release this file's "Unreleased" entries below are consolidating into. Not yet tagged.
 
-## Unreleased — API Testing v1.0 (content complete, pending commit)
+### Manual Testing v1.0 — Certified
 
-21/21 modules shipped across seven sections, plus 12 dedicated Section Review/Solutions pages (adopted from Section 1, reusing Manual Testing's Entry 1 pattern from day one — see `docs/architecture/LEARNING_PATHS.md`, Path 2 → Path 3). Uses Manual Testing v1.0 as its reference implementation throughout: reuses BVA/Equivalence Partitioning/Decision Tables/State Transitions by direct link rather than re-teaching them, extends the AtlasBank convention from Manual Testing (approved 2026-08-04, see `STYLE_GUIDE.md`), and reuses the Application Module pattern for Section 7 (Modules 18–21). Not yet committed — awaiting final approval.
+23/23 modules shipped across seven sections, plus 6 dedicated Section Review/Solutions pages (introduced Section 4 onward — see `docs/architecture/CURRICULUM_EVOLUTION.md` Entry 1). A Curriculum Consistency Sprint (2026-08-04) aligned `LEARNING_PATHS.md` with shipped reality and fixed one genuine content gap (Module 3's missing "From the Field"). Established two permanent architectural patterns during development, both documented in `CURRICULUM_EVOLUTION.md`: Section Review/Solutions pages, and Application Modules as a distinct content type (Modules 20–23). Certified as a Reference Curriculum in `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`.
+
+### API Testing v1.0 — Certified
+
+21/21 modules shipped across seven sections, plus 12 dedicated Section Review/Solutions pages (adopted from Section 1, reusing Manual Testing's Entry 1 pattern from day one). Uses Manual Testing v1.0 as its reference implementation throughout: reuses BVA/Equivalence Partitioning/Decision Tables/State Transitions by direct link rather than re-teaching them, extends the AtlasBank convention from Manual Testing, and reuses the Application Module pattern for Section 7 (Modules 18–21).
 
 **Deviations from the original architecture proposal**, both flagged and approved during development: Section 7's Modules 18–19 stayed within AtlasBank (two contrasting multi-system scenarios) rather than introducing a second domain, since every prior module had used AtlasBank exclusively; and a documentation/shipped-content mismatch in `CURRICULUM_EVOLUTION.md` Entry 2 (it claimed Application Modules omit Quick Revision, but Manual Testing's own Modules 20/21/23 all shipped with one) was corrected rather than propagated into API Testing's template.
 
 **Content stays at a QA-validation level throughout Section 5 (API Security Testing)**: explicitly scoped to recognizing symptoms and reporting responsibly, never exploit construction — a deliberate boundary stated directly in Module 14.
+
+A repository-wide Platform Consistency Sprint (2026-08-04) subsequently found and fixed a real, path-wide gap: all 17 API Testing instruction modules were missing two of five required recurring elements (From the Field, Senior QA Insight) — fixed across every module, plus several smaller SEO/accessibility/cross-link findings.
+
+### Automation Testing v1.0 — Certified
+
+18 modules across five sections: Automation Foundations, Framework and Design Patterns, Reliability and Verification, Reporting and Execution at Scale, and Application/Capstone. Uses both Manual Testing and API Testing as reference implementations. Section 5's architecture (6 modules instead of the 4-module precedent) was proposed and approved explicitly before implementation, justified by two genuinely new-content topics (deliberate tool selection, long-term suite maintenance) the reference paths' closing sections never needed. The capstone automates the same AtlasBank International Transfer feature Manual Testing and API Testing each already tested at their own layer, independently rediscovering the same real compliance-aggregation defect a third time — a deliberate, evidenced cross-path payoff.
+
+Applied the Platform Consistency Sprint's largest lesson proactively: all five recurring elements present from Module 1, with zero gaps found on its own dedicated certification audit (`docs/architecture/AUTOMATION_TESTING_CERTIFICATION.md`) — the cleanest audit result of the three paths.
+
+### TestAtlas Authoring Platform
+
+Contributor documentation (`AUTHOR_GUIDE.md`, `CURRICULUM_CHECKLIST.md`, `REVIEW_CHECKLIST.md`, `SEO_CHECKLIST.md`, `ACCESSIBILITY_CHECKLIST.md`, `MERMAID_GUIDELINES.md`, `WRITING_GUIDELINES.md`), nine reusable templates under `templates/`, `docs/architecture/REPOSITORY_STANDARDS.md`, and `docs/architecture/AUTOMATION_SPECIFICATIONS.md` (implementation-ready specs for validation not yet built). Built after all three paths shipped, so every convention documented is a verified, evidenced pattern rather than a speculative one.
+
+### Release Preparation
+
+`CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, GitHub issue and pull request templates, and `RELEASE_READINESS.md` added ahead of the public `v1.0.0` tag.

@@ -41,10 +41,10 @@ Manual Testing v1.0 and API Testing v1.0 are TestAtlas's **Reference Curricula**
 ## Workflow: proposing a new learning path
 
 1. Read `REFERENCE_CURRICULUM_CERTIFICATION.md` in full — it's your default. Deviate only where you have a stated, evidenced reason, the same bar API Testing itself was held to.
-2. Draft an architecture proposal using `templates/architecture-proposal-template.md`. It must cover: overview, section-by-section module breakdown with learning objectives and word-count estimates, dependency map, Review/Solutions strategy, Application-Module strategy, capstone approach, and — only if evidenced — differences from the Reference Curricula.
+2. Draft an architecture proposal using `templates/architecture-proposal.md`. It must cover: overview, section-by-section module breakdown with learning objectives and word-count estimates, dependency map, Review/Solutions strategy, Application-Module strategy, capstone approach, and — only if evidenced — differences from the Reference Curricula.
 3. Get the proposal approved before writing any module content.
 4. Build section by section. After each section: run `CURRICULUM_CHECKLIST.md` on every new module, full validation, and update `LEARNING_PATHS.md` with an "As Shipped" note for that section (including any deviation from the original proposal and why).
-5. Flag — don't silently resolve — any point where you hit a real governance decision, a proposed new curriculum pattern, or a contradiction between documentation and shipped content. Use `templates/engineering-review-template.md` to report progress at natural checkpoints.
+5. Flag — don't silently resolve — any point where you hit a real governance decision, a proposed new curriculum pattern, or a contradiction between documentation and shipped content. Use `templates/engineering-review.md` to report progress at natural checkpoints.
 6. Once the whole path is complete, it goes through `QUALITY_GATES.md` before being tagged.
 
 ## What "Reference Curriculum" actually constrains
