@@ -27,7 +27,52 @@ Both teams tested functionality carefully. Neither treated the *other* dimension
 
 Quality attributes are the dimensions a product needs to succeed on beyond raw functional correctness. Six matter most for the majority of products:
 
-**VIS-012 — The Six Quality Attributes** *(SVG infographic planned — see `VISUAL_STANDARDS.md` category 8; shown as cards until then)*: Functionality · Performance · Security · Usability · Reliability · Maintainability — six independent dimensions, not a process or hierarchy, which is why the table below (not a diagram) is where the real content lives.
+**VIS-012 — The Six Quality Attributes**
+
+<svg viewBox="0 0 700 620" role="img" aria-labelledby="vis012-title vis012-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="vis012-title">The Six Quality Attributes</title>
+  <desc id="vis012-desc">Six independent quality attributes arranged around a central "Product Quality" hub, with no hierarchy between them: Functionality, Performance, Security, Usability, Reliability, and Maintainability.</desc>
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <line x1="350" y1="310" x2="350" y2="100" stroke="#0a98a8" stroke-width="2"/>
+    <line x1="350" y1="310" x2="540" y2="200" stroke="#0a98a8" stroke-width="2"/>
+    <line x1="350" y1="310" x2="540" y2="420" stroke="#0a98a8" stroke-width="2"/>
+    <line x1="350" y1="310" x2="350" y2="520" stroke="#0a98a8" stroke-width="2"/>
+    <line x1="350" y1="310" x2="160" y2="420" stroke="#0a98a8" stroke-width="2"/>
+    <line x1="350" y1="310" x2="160" y2="200" stroke="#0a98a8" stroke-width="2"/>
+
+    <circle cx="350" cy="310" r="72" fill="#087f8c"/>
+    <text x="350" y="304" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">Product</text>
+    <text x="350" y="324" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">Quality</text>
+
+    <circle cx="350" cy="70" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="350" y="65" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Functionality</text>
+    <text x="350" y="83" text-anchor="middle" fill="#3a4a4d" font-size="10">Does it do the job?</text>
+
+    <circle cx="570" cy="190" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="570" y="185" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Performance</text>
+    <text x="570" y="203" text-anchor="middle" fill="#3a4a4d" font-size="10">Fast enough to use?</text>
+
+    <circle cx="570" cy="430" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="570" y="425" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Security</text>
+    <text x="570" y="443" text-anchor="middle" fill="#3a4a4d" font-size="10">Protected from misuse?</text>
+
+    <circle cx="350" cy="550" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="350" y="545" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Usability</text>
+    <text x="350" y="563" text-anchor="middle" fill="#3a4a4d" font-size="10">Can users get it done?</text>
+
+    <circle cx="130" cy="430" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="130" y="425" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Reliability</text>
+    <text x="130" y="443" text-anchor="middle" fill="#3a4a4d" font-size="10">Works over time?</text>
+
+    <circle cx="130" cy="190" r="62" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+    <text x="130" y="185" text-anchor="middle" fill="#05565f" font-size="14" font-weight="700">Maintainability</text>
+    <text x="130" y="203" text-anchor="middle" fill="#3a4a4d" font-size="10">Safe to change later?</text>
+  </g>
+</svg>
+
+**Figure 1 — The Six Quality Attributes.** Six independent dimensions of product quality, radiating equally from the same center — not a process or a hierarchy. *Source: TestAtlas.*
+
+The table below is where the real testing content lives — the diagram shows that these six are parallel, not sequential.
 
 | Attribute | The Question It Answers |
 |---|---|

@@ -23,7 +23,78 @@ Every module after this one describes a technique, a process, or a distinction. 
 
 Neither tester lacked effort. The difference was a set of principles that turn testing from "try a lot of things" into "try the things most likely to reveal a defect."
 
-**VIS-005 — The Seven Testing Principles** *(SVG infographic planned — see `VISUAL_STANDARDS.md` category 8; shown as structured cards until then, since a mindmap of seven unrelated labels didn't help a beginner faster than reading the list below)*:
+**VIS-005 — The Seven Testing Principles**
+
+<svg viewBox="0 0 900 400" role="img" aria-labelledby="vis005-title vis005-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="vis005-title">The Seven Testing Principles</title>
+  <desc id="vis005-desc">Seven independent, parallel principles of software testing, shown as equal cards with no hierarchy between them: presence of defects, exhaustive testing impossible, early testing saves cost, defects cluster, pesticide paradox, context-dependent testing, and absence-of-errors fallacy.</desc>
+  <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
+    <g>
+      <rect x="20" y="20" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="50" cy="50" r="18" fill="#087f8c"/>
+      <text x="50" y="56" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">1</text>
+      <text x="35" y="90" fill="#05565f" font-size="14" font-weight="700">Shows presence</text>
+      <text x="35" y="108" fill="#05565f" font-size="14" font-weight="700">of defects</text>
+      <text x="35" y="132" fill="#3a4a4d" font-size="12">Never proves</text>
+      <text x="35" y="148" fill="#3a4a4d" font-size="12">their absence</text>
+    </g>
+    <g>
+      <rect x="240" y="20" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="270" cy="50" r="18" fill="#087f8c"/>
+      <text x="270" y="56" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">2</text>
+      <text x="255" y="90" fill="#05565f" font-size="14" font-weight="700">Exhaustive testing</text>
+      <text x="255" y="108" fill="#05565f" font-size="14" font-weight="700">is impossible</text>
+      <text x="255" y="132" fill="#3a4a4d" font-size="12">Always a sample,</text>
+      <text x="255" y="148" fill="#3a4a4d" font-size="12">never complete</text>
+    </g>
+    <g>
+      <rect x="460" y="20" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="490" cy="50" r="18" fill="#087f8c"/>
+      <text x="490" y="56" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">3</text>
+      <text x="475" y="90" fill="#05565f" font-size="14" font-weight="700">Early testing</text>
+      <text x="475" y="108" fill="#05565f" font-size="14" font-weight="700">saves time &amp; money</text>
+      <text x="475" y="132" fill="#3a4a4d" font-size="12">Review costs a chat;</text>
+      <text x="475" y="148" fill="#3a4a4d" font-size="12">production costs more</text>
+    </g>
+    <g>
+      <rect x="680" y="20" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="710" cy="50" r="18" fill="#087f8c"/>
+      <text x="710" y="56" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">4</text>
+      <text x="695" y="90" fill="#05565f" font-size="14" font-weight="700">Defects cluster</text>
+      <text x="695" y="132" fill="#3a4a4d" font-size="12">A small share of</text>
+      <text x="695" y="148" fill="#3a4a4d" font-size="12">modules hold most bugs</text>
+    </g>
+    <g>
+      <rect x="130" y="200" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="160" cy="230" r="18" fill="#087f8c"/>
+      <text x="160" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">5</text>
+      <text x="145" y="270" fill="#05565f" font-size="14" font-weight="700">The pesticide</text>
+      <text x="145" y="288" fill="#05565f" font-size="14" font-weight="700">paradox</text>
+      <text x="145" y="312" fill="#3a4a4d" font-size="12">Same tests, run again,</text>
+      <text x="145" y="328" fill="#3a4a4d" font-size="12">stop finding new bugs</text>
+    </g>
+    <g>
+      <rect x="350" y="200" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="380" cy="230" r="18" fill="#087f8c"/>
+      <text x="380" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">6</text>
+      <text x="365" y="270" fill="#05565f" font-size="14" font-weight="700">Testing is</text>
+      <text x="365" y="288" fill="#05565f" font-size="14" font-weight="700">context-dependent</text>
+      <text x="365" y="312" fill="#3a4a4d" font-size="12">Depth depends on what</text>
+      <text x="365" y="328" fill="#3a4a4d" font-size="12">it is, who depends on it</text>
+    </g>
+    <g>
+      <rect x="570" y="200" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
+      <circle cx="600" cy="230" r="18" fill="#087f8c"/>
+      <text x="600" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">7</text>
+      <text x="585" y="270" fill="#05565f" font-size="14" font-weight="700">Absence-of-errors</text>
+      <text x="585" y="288" fill="#05565f" font-size="14" font-weight="700">is a fallacy</text>
+      <text x="585" y="312" fill="#3a4a4d" font-size="12">Zero known defects</text>
+      <text x="585" y="328" fill="#3a4a4d" font-size="12">≠ the right product</text>
+    </g>
+  </g>
+</svg>
+
+**Figure 1 — The Seven Testing Principles.** Seven independent principles with no hierarchy between them — each is a separate lens a tester applies, not a sequence of steps. *Source: TestAtlas.*
 
 1. **Shows presence of defects, not their absence** — testing proves bugs exist; it never proves they don't.
 2. **Exhaustive testing is impossible** — testing is always a deliberate sample, never a complete one.
@@ -32,8 +103,6 @@ Neither tester lacked effort. The difference was a set of principles that turn t
 5. **The pesticide paradox** — the same tests, run repeatedly, eventually stop finding anything new.
 6. **Testing is context-dependent** — how much testing a feature needs depends on what it is and who depends on it.
 7. **Absence-of-errors is a fallacy** — zero known defects doesn't mean the product solves the right problem.
-
-*A dedicated SVG infographic for these seven principles is a good future candidate — see `VISUAL_STANDARDS.md` category 8 — once the visual identity for infographics is established. The mindmap above covers the same relationships in the interim.*
 
 ## What the Seven Principles Are
 

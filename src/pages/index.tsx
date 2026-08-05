@@ -17,27 +17,30 @@ const learningPaths: LearningPath[] = [
     title: 'Foundations of Software Testing',
     description: 'What testing actually is, and why it matters before you write a single test case.',
     href: '/learning-paths/foundations/what-is-software-testing',
-    status: 'Live',
+    status: 'Live · 17 modules',
   },
   {
     title: 'Manual Testing & Test Design',
     description: 'Boundary values, equivalence classes, decision tables — designing tests that catch real problems.',
-    status: 'v0.5.0',
+    href: '/learning-paths/manual-testing/test-design-fundamentals',
+    status: 'Live · 23 modules, certified',
   },
   {
     title: 'API Testing',
     description: 'Apply test design to REST APIs: contracts, authentication, error handling, edge cases.',
-    status: 'v0.6.0',
-  },
-  {
-    title: 'Database Testing',
-    description: 'Enough SQL to verify what actually happened to the data, not just what the UI shows.',
-    status: 'v0.7.0',
+    href: '/learning-paths/api-testing/what-is-api-testing',
+    status: 'Live · 21 modules, certified',
   },
   {
     title: 'Test Automation',
     description: 'Turn designed test cases into automation that survives real change, not just the demo.',
-    status: 'v0.8.0',
+    href: '/learning-paths/automation/introduction-to-automation-testing',
+    status: 'Live · 18 modules, certified',
+  },
+  {
+    title: 'Database Testing',
+    description: 'Enough SQL to verify what actually happened to the data, not just what the UI shows.',
+    status: 'Planned',
   },
   {
     title: 'Performance Testing',
@@ -52,12 +55,12 @@ const learningPaths: LearningPath[] = [
   {
     title: 'AI and Testing',
     description: 'Testing LLM-driven features, prompt evaluation, and where traditional QA falls short.',
-    status: 'v0.11.0',
+    status: 'Planned',
   },
   {
     title: 'Interview Preparation',
     description: 'Scenario-based practice for the interviews QA candidates actually get asked.',
-    status: 'v0.10.0',
+    status: 'Planned',
   },
   {
     title: 'Career & Leadership',
@@ -88,22 +91,22 @@ const comingNext = [
   {
     label: 'Project Simulations',
     description: 'End-to-end QA workflows inside realistic products — starting with banking and e-commerce.',
-    status: 'v0.9.0',
+    status: 'v1.1+',
   },
   {
     label: 'QA Labs',
     description: 'Runnable exercises with setup, acceptance criteria, and a working solution: automation, API, SQL.',
-    status: 'v0.9.0',
+    status: 'v1.1+',
   },
   {
     label: 'Interview Academy',
     description: 'A question bank and mock-interview structures built from real QA hiring loops.',
-    status: 'v0.10.0',
+    status: 'v1.1+',
   },
   {
     label: 'Resources',
     description: 'Templates and checklists — test plans, bug reports, requirement traceability matrices.',
-    status: 'Planned',
+    status: 'v1.1+',
   },
 ];
 
@@ -135,15 +138,15 @@ export default function Home(): ReactNode {
               </Link>
             </div>
             <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>Foundations ✅ Complete</li>
-              <li className={styles.heroBadge}>17 Modules</li>
-              <li className={styles.heroBadge}>35,000+ Words</li>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>4 Paths Live</li>
+              <li className={styles.heroBadge}>79 Modules</li>
+              <li className={styles.heroBadge}>3 Certified Curricula</li>
               <li className={styles.heroBadge}>Free</li>
               <li className={styles.heroBadge}>Open Source</li>
             </ul>
             <p className={styles.heroStatus}>
-              Foundations is live today. Nine more learning paths are being built in the open — see
-              what&rsquo;s next below.
+              Foundations, Manual Testing, API Testing, and Test Automation are live today — 79 modules in
+              total. Six more learning paths are being built in the open — see what&rsquo;s next below.
             </p>
           </div>
         </section>
@@ -171,8 +174,8 @@ export default function Home(): ReactNode {
               <p className={styles.eyebrow}>Where to go next</p>
               <h2 className={styles.sectionTitle}>Learning paths</h2>
               <p>
-                Ten role-based paths share one foundation. Start with the one that&rsquo;s live &mdash;
-                everything else is being built against the same architecture, in order.
+                Ten role-based paths share one foundation. Four are live today &mdash; everything else is
+                being built against the same architecture, proposed and reviewed before a module is written.
               </p>
             </div>
             <div className={styles.pathGrid}>

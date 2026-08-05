@@ -47,3 +47,28 @@
 .theme-doc-markdown > h1:first-child {
   letter-spacing: -0.03em;
 }
+
+/* Sidebar: distinguish a learning path's modules from the path itself once
+   expanded — a left guide-line groups the nested items, and a lighter,
+   smaller style keeps the parent category visually dominant. */
+.menu__list .menu__list {
+  margin-top: 0.125rem;
+  margin-left: 0.5rem;
+  padding-left: 0.65rem;
+  border-left: 2px solid var(--ifm-color-emphasis-300);
+}
+
+.menu__list .menu__list .menu__link {
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.menu__list .menu__list .menu__link:hover {
+  color: var(--ifm-color-primary);
+}
+
+.menu__list .menu__list .menu__link--active {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
