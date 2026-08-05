@@ -104,6 +104,10 @@ Not retrofitted into Modules 1–12's existing banking examples — applies goin
 
 **Extended to Database Testing (approved 2026-08-05)**: AtlasBank's data layer is the default schema for Database Testing — Customers, Accounts, Transactions, Beneficiaries, Loans, Cards, Audit Logs, KYC, and Payments tables — per that path's architecture proposal in `LEARNING_PATHS.md`. Module 14 deliberately steps outside AtlasBank into **AtlasShop**, a named e-commerce entity, for its second Application Module domain, the same way Manual Testing and API Testing each used a second domain in their own Application sections.
 
+**Extended to Performance Testing (approved 2026-08-05)**: both AtlasBank and AtlasShop are reused as Performance Testing's two Application Module domains — AtlasBank's steady, predictable transfer traffic and AtlasShop's bursty, sale-driven checkout traffic providing a deliberate load-shape contrast. No third domain was introduced.
+
+**AtlasBank AI Support Assistant (approved 2026-08-05)**: an official AtlasBank feature, introduced for AI for QA v1.0 — TestAtlas's first AI-native feature, since testing AI-driven content requires an actual AI feature to test, which no domain previously covered. Deliberately, permanently scoped to six question categories only: transaction questions, card support, loan FAQs, KYC guidance, account information, and payment help. It is not, and should never become, a general-purpose chatbot — it exists purely as a realistic system under test, the same way every other AtlasBank feature exists to illustrate a testing concept rather than as a product in its own right. Any future module referencing the AI Support Assistant should stay within these six categories rather than expanding its scope informally.
+
 ## 7. Diagrams and visuals
 
 Use visuals when they make a relationship, flow, or comparison easier to understand than prose.

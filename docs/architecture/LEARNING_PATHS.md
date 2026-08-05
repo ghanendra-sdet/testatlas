@@ -2,7 +2,7 @@
 
 This document defines the 10 learning paths in TestAtlas, their learning objectives, target audience, and progression strategy.
 
-**Manual Testing v1.0, API Testing v1.0, and Automation Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to, and `AUTOMATION_TESTING_CERTIFICATION.md` for Automation Testing's own certification record.
+**Manual Testing v1.0, API Testing v1.0, Automation Testing v1.0, and Database Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to, and `AUTOMATION_TESTING_CERTIFICATION.md` / `DATABASE_TESTING_CERTIFICATION.md` for each path's own certification record.
 
 ## Design Principle
 
@@ -675,39 +675,165 @@ Shipped as proposed: Modules 13–14 (Instruction, 2,214/2,425 words), Modules 1
 
 ## Path 6: Performance Testing
 
-**Directory**: `/learning-paths/performance-testing/`  
-**Position**: 6  
-**Prerequisites**: Foundations, one of (Manual Testing, API Testing, Database Testing)  
-**Target Audience**: Performance engineers, backend QA, DevOps engineers  
-**Estimated Duration**: 4–8 weeks  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for Performance Testing v1.0, produced against Manual Testing v1.0, API Testing v1.0, Automation Testing v1.0, and Database Testing v1.0 (all certified) as the reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then. **All four certified paths remain frozen — this proposal modifies none of them.**
 
-**Learning Objectives**:
-- Understand performance testing types (load, stress, spike, soak)
-- Design load tests that reflect realistic scenarios
-- Use performance testing tools (k6, JMeter, Gatling, Locust)
-- Identify bottlenecks and troubleshoot performance issues
-- Connect performance problems to architecture and resources
-- Report performance results to non-technical stakeholders
+### 1. Learning Path Overview
 
-**Modules** (planned for v0.1–v1.0):
-1. Performance Testing Fundamentals (why it matters, what we measure)
-2. Load, Stress, Spike, and Soak Testing Defined (each type, when to use)
-3. Performance Metrics and SLOs (latency, throughput, resource use, acceptable thresholds)
-4. Load Testing Tools Comparison (k6, JMeter, Gatling, Locust, their trade-offs)
-5. Designing Load Tests That Reflect Reality (realistic user behavior, not unrealistic peaks)
-6. Baseline, Ramp, and Spike Profiles (how to structure a load test)
-7. Identifying and Troubleshooting Bottlenecks (CPU? Memory? Database? Network?)
-8. Performance Reporting and Root Cause Analysis (explaining findings)
-9. Database Performance Testing (joins, indexes, query optimization)
-10. API Performance Under Load (response time degradation, timeout handling)
-11. Frontend Performance Testing (rendering, memory leaks)
-12. Common Performance Testing Mistakes (unrealistic scenarios, ignoring steady state)
-13. Interview Preparation for Performance Questions
+**Directory**: `/learning-paths/performance-testing/`
+**Position**: 6
+**Prerequisites**: Foundations (all 17 modules), plus at least one of Manual Testing, API Testing, or Database Testing — this path assumes general test-design fluency and, for its data-layer bottleneck content specifically, light familiarity with [Database Performance Testing](/learning-paths/database-testing/database-performance-testing)'s QA-level scope (referenced, not re-taught).
+**Target Audience**: Testers and QA engineers moving from functional correctness into non-functional testing — performance-focused QA, backend testers, and SDETs asked to own load testing for the first time.
+**Estimated Duration**: 6–9 weeks (17 modules).
+
+**Industry alignment**: performance testing is consistently named as a "next skill" QA engineers are asked to grow into once functional testing is established, and job postings for Senior QA / SDET roles frequently list load/stress testing and basic capacity reasoning as expected, not specialist-only, skills — this path is scoped to close that specific gap, not to produce a dedicated performance engineer.
+
+**Learning Objectives** (path-level):
+- Understand the distinct performance testing types (load, stress, spike, soak, volume) and when each is the right tool
+- Read and set meaningful performance metrics and SLOs, not arbitrary numbers
+- Model realistic workload and design a test environment and test data that produce trustworthy results
+- Run a performance test using a real tool (JMeter, with concept-first framing applying to k6/Gatling/Locust equally)
+- Analyze results to find the actual bottleneck, not just observe that something was slow
+- Monitor a system under load and connect findings to real architecture and resource constraints
+- Report performance findings and plan for future capacity, both to technical and non-technical stakeholders
+- Apply the complete performance-testing toolkit to a realistic AtlasBank feature under load, and to one capstone
+
+### 2. Curriculum Structure — Sections and Modules
+
+This path uses the **dedicated Section Review + Solutions page pattern from Section 1**, per the certified default every prior path has applied without deviation.
+
+#### Section 1 — Performance Testing Foundations (Modules 1–3)
+
+1. **What is Performance Testing?** — *Objective*: why correctness (what every prior path taught) and performance (does it stay correct fast enough, under real load) are two different, both-necessary questions; where this path sits relative to Database Testing's and API Testing's own QA-level performance modules, which it references rather than repeats. *Prerequisites*: Foundations complete. *Why it exists*: every certified path opens with a fundamentals module establishing scope before technique — no evidence to deviate. *Est. length*: 1,900–2,300 words.
+2. **Performance Testing Types** — *Objective*: load, stress, spike, soak, and volume testing, taught together as one module (each type is a variation on "how load is shaped over time," not five unrelated concepts) rather than split into five separate pages. *Why it exists*: mirrors `KNOWLEDGE_GRAPH.md`'s own Progressive Extraction discipline — these five stay one node until a real, separate reference need splits them, the same reasoning that's kept Combinatorial/Pairwise Testing and the six Quality Attributes each as one page. *Est. length*: 2,200–2,600 words (denser — five distinct types, each needing a clear, memorable distinction).
+3. **Performance Metrics and SLOs** — *Objective*: latency, throughput, error rate, and resource utilization as the core metrics; how a meaningful SLO threshold is set (tied to real user/business impact) versus an arbitrary round number. *Est. length*: 2,000–2,400 words.
+
+**Section 1 Review + Solutions**: dedicated pages, per the certified default.
+
+#### Section 2 — Designing a Performance Test (Modules 4–6)
+
+4. **Workload Modeling** — *Objective*: turning real or estimated usage patterns into a realistic test workload — concurrent users, request mix, think time — instead of an arbitrary number picked because it sounded big enough. *Est. length*: 2,100–2,500 words.
+5. **Test Environment Design** — *Objective*: why a performance test run against a scaled-down or misconfigured environment produces numbers that don't transfer to production, and what "close enough to production" actually requires. *Est. length*: 1,900–2,300 words.
+6. **Test Data for Performance** — *Objective*: realistic data *volume* and *shape* for a performance test, explicitly building on [Database Performance Testing](/learning-paths/database-testing/database-performance-testing)'s own "small test data hides this defect class" lesson — referenced directly, not re-taught, since that module already established the core principle at QA-recognition depth; this module extends it to designing the data a dedicated performance test actually needs. *Est. length*: 2,000–2,400 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Executing Performance Tests (Modules 7–9)
+
+7. **Performance Testing Tools** — *Objective*: JMeter fundamentals as the primary worked tool, with concept-first framing (what a test plan, a thread group, and an assertion are *for*) that transfers directly to k6/Gatling/Locust, mirroring Automation Testing's own tool-agnostic, concept-first discipline and API Testing's own Tools module structure — not a single-tool tutorial. *Est. length*: 2,200–2,600 words.
+8. **Load and Stress Testing in Practice** — *Objective*: structuring an actual load test (baseline → ramp → sustained) and an actual stress test (pushing past expected capacity to find the breaking point), using the workload model and environment from Section 2. *Est. length*: 2,200–2,600 words.
+9. **Spike, Soak, and Volume Testing in Practice** — *Objective*: the same practical structuring for the three remaining types from Module 2 — a sudden traffic spike, a long-duration soak run (catching memory leaks and slow degradation), and a large-data-volume run. *Est. length*: 2,100–2,500 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Analysis and Operations (Modules 10–13)
+
+10. **Bottleneck Analysis and Monitoring** — *Objective*: reading monitoring data (CPU, memory, database, network) during and after a test run to identify *which* resource is actually the constraint, not just that something was slow. Combines bottleneck identification and the monitoring/observability tooling that makes it possible into one module, since one doesn't function without the other. *Est. length*: 2,300–2,600 words.
+11. **Result Analysis and Reporting** — *Objective*: turning raw test output into a defensible finding, and communicating it to both an engineering audience (percentile latency, error budgets) and a non-technical stakeholder (business-impact framing) — the same dual-audience discipline [Writing Effective Bug Reports](/learning-paths/manual-testing/writing-effective-bug-reports) established for defects, applied here to performance findings. *Est. length*: 2,000–2,400 words.
+12. **Capacity Planning** — *Objective*: using performance-test results to forecast when current infrastructure will no longer meet demand, and what a testable, credible capacity recommendation looks like. *Est. length*: 1,900–2,300 words.
+13. **Performance Defect Investigation** — *Objective*: a systematic, repeatable trace from "the system feels slow" to a specific, reproducible root cause — this path's own version of [Database Defect Investigation](/learning-paths/database-testing/database-defect-investigation)'s closing-the-toolkit module, tying Modules 1–12 together the same way that module tied Database Testing's own techniques together. *Est. length*: 2,200–2,600 words.
+
+**Section 4 Review + Solutions**: dedicated pages.
+
+#### Section 5 — Application Modules & Capstone (Modules 14–17) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, no Section Review/Solutions pages — matching every certified path's identical Section 5 precedent.
+
+14. **Applying Performance Testing: AtlasBank Fund Transfer Under Load** — full technique combination (workload modeling, load + stress testing, bottleneck analysis) against AtlasBank's fund-transfer feature. *Est. length*: 1,700–2,100 words.
+15. **Applying Performance Testing: AtlasShop Checkout Under Load** — same pattern, second domain, continuing Database Testing's own AtlasShop extension rather than introducing a third fictional entity — checkout and inventory-reservation flows have a genuinely different load shape (bursty, sale-driven) than steady banking traffic, a deliberate contrast. *Est. length*: 1,700–2,100 words.
+16. **Common Mistakes in Performance Testing** — cross-cutting mistake patterns, mirroring every certified path's identical Common-Mistakes-module structure (no separate "Common Mistakes" heading — the module *is* that content). *Est. length*: 1,700–2,000 words.
+17. **Performance Testing Capstone** — see Section 8 below. *Est. length*: 1,900–2,200 words.
+
+### 3. Learning Objectives — Mapped to Sections
+
+Section 1 → literacy (types, metrics, SLOs); Section 2 → test design (workload, environment, data); Section 3 → execution (tools, running each test type); Section 4 → analysis, reporting, capacity, and systematic investigation; Section 5 → synthesis across two domains plus one capstone. Every path-level objective listed in Section 1 traces to exactly one section, matching every certified path's own one-to-one mapping.
+
+### 4. Dependency Map
+
+Foundations → (Manual Testing, API Testing, or Database Testing — any one satisfies the prerequisite) → Performance Testing Section 1 (establishes performance-specific literacy) → Section 2 (design, assumes Section 1's metrics vocabulary) → Section 3 (execution, assumes Section 2's design artifacts exist to run) → Section 4 (analysis, assumes Section 3 produced real results to analyze) → Section 5 (synthesizes all of it). Module 6 explicitly bridges from [Database Performance Testing](/learning-paths/database-testing/database-performance-testing) rather than re-teaching its core lesson — the clearest Progressive Extraction link this path has, alongside Combinatorial/Pairwise Testing's pre-designated reuse per `KNOWLEDGE_GRAPH.md`.
+
+### 5. AtlasBank Integration Strategy
+
+Performance Testing **extends both AtlasBank and AtlasShop** as its Application Module domains, continuing the precedent Database Testing most recently established (the first path to name a second, contrasting domain rather than leaving it unnamed). AtlasBank's fund-transfer flow provides steady, predictable traffic; AtlasShop's checkout flow provides bursty, sale-driven traffic — a deliberate load-shape contrast neither prior path's own examples needed to make, since neither was testing *under load* specifically. Sections 1–4's own examples draw from both schemas as needed for variety, per `STYLE_GUIDE.md`'s existing exception (don't force a domain where a different one fits better).
+
+### 6. Application-Module Strategy
+
+Section 5 (Modules 14–17) is designated as Application Modules at design time, per `CURRICULUM_EVOLUTION.md` Entry 2's corrected migration guidance: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, tighter word-count band (1,700–2,200 words), no Section Review/Solutions pages.
+
+### 7. Review/Solutions Page Strategy
+
+Every section (1–4) gets a dedicated **Section N Review** page and **Section N Solutions** page from its first appearance, per the certified default — cross-path title disambiguation applied proactively (`"Performance Testing — Section N Review"`), since all four certified paths already have Sections 1–4. Section 5 gets no Review/Solutions pages, matching every certified path's Application section precedent.
+
+### 8. Capstone Proposal
+
+**Recommendation**: **AtlasBank International Transfer Under Load** (Module 17) — the same feature Manual Testing, API Testing, Automation Testing, and Database Testing each already tested at their own layer, now tested for the first time *under realistic concurrent load* rather than for correctness. This is a genuinely new angle, not a fifth repetition of the same finding: the prior four capstones all independently found the same compliance-aggregation-window defect: at low, uncontended traffic. This capstone's distinctive contribution is testing whether the *fix* (and the feature generally) holds up under realistic peak load — proposed finding: the compliance-check stored procedure Database Testing's own capstone identified (`WHERE created_at > NOW() - INTERVAL '1 hour'`, since corrected) becomes a measurable bottleneck under concurrent load even after correctness is fixed, because the corrected calendar-day query scans a wider row range per check — a real, previously-invisible performance cost of the correctness fix itself, only discoverable by a dedicated load test. This is presented as a recommendation, not an assumed default, the same way every capstone proposal before it has been — but it continues an established, four-times-confirmed pattern rather than opening a new one.
+
+### 9. Word-Count Targets and Estimated Total Curriculum Size
+
+Instruction modules (Sections 1–4, 13 modules): 1,900–2,600 words each, matching the certified range every prior path has shipped within. Application modules (Section 5, 4 modules): 1,700–2,200 words, matching the approved default band (Database Testing's own Application Modules shipped leaner, 1,435–1,779, which remains within `CONTENT_MODEL.md`'s tolerance as a lower bound, not a target). **Estimated path total**: roughly 32,000–37,000 words across 17 modules — between Database Testing's ~30,000–35,000 and API Testing's ~39,000–45,000, consistent with this path's 17-module scope.
+
+### 10. Industry Alignment (restated, see also Section 1)
+
+Load/stress testing and basic capacity reasoning are commonly expected of Senior QA and SDET roles, not reserved for a dedicated performance-engineering specialist — this path is scoped to that realistic expectation, explicitly not to the deeper, infrastructure-level specialization a dedicated Site Reliability or Performance Engineering role would need.
+
+### 11. Differences from the Reference Curricula (evidence-justified only)
+
+- **Two Application Module domains from the start (AtlasBank and AtlasShop, Modules 14–15)**, continuing rather than introducing this pattern — Database Testing already established a second, named domain; this path reuses both rather than inventing a third.
+- **Section 4 runs four modules instead of three**: Bottleneck Analysis/Monitoring, Result Analysis/Reporting, Capacity Planning, and Performance Defect Investigation are four genuinely distinct concerns that don't compress further without losing a real objective — Database Testing's own Section 4 similarly ran a non-default size (three modules, deliberately combining Performance+Security) when the content required it; this is the same "size follows content, not a fixed template" principle applied in the other direction.
+- **Five performance-testing types taught as one module (Module 2)** rather than five separate ones — directly applying `KNOWLEDGE_GRAPH.md`'s Progressive Extraction discipline (already used for Combinatorial/Pairwise Testing and the six Quality Attributes) to a new case, not inventing a new principle.
+- **17 modules / 5 sections**, comparable in scope to Database Testing (16) and Automation Testing (18) — a single, well-bounded discipline (performance testing) rather than one with its own internal sub-specializations the way API Testing's security/performance/tooling sections each represented.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the Application Module structure, dedicated Review/Solutions pages from Section 1 — carries over unchanged, since no evidence suggests any of it doesn't apply to this path.
+
+### Decisions
+
+1. **AtlasBank and AtlasShop as this path's two Application domains**: recommended (see Section 5) — applying an already-established pattern, not opening a new one.
+2. **Capstone as a fifth, load-specific confirmation layer on the same AtlasBank feature, surfacing a new performance cost of the Database Testing capstone's own fix**: recommended (see Section 8) — flagged explicitly per template convention; genuinely new content (a performance finding, not a repeated correctness finding), not just narrative continuity for its own sake.
+3. **17-module / 5-section structure, with Module 2 consolidating five performance-testing types into one module**: as proposed above, pending review.
+
+### Open Questions for Review
+
+1. **This path's own certified-frozen constraint**: since Manual Testing, API Testing, Automation Testing, and Database Testing are all certified and explicitly frozen per this proposal's own instruction, the capstone's proposed finding (a performance cost in Database Testing's already-shipped, already-certified fix) can be *described and tested* by this path, but nothing in Database Testing itself would be retrofitted to reflect it — worth confirming this framing (a new finding *about* frozen content, not a change *to* it) is the intended interpretation before Module 17 is written.
+2. **Tool choice for worked examples**: JMeter is proposed as primary (per the originating task's explicit scope list), with k6/Gatling/Locust referenced conceptually rather than given equal worked-example treatment — confirm this asymmetry (one primary tool, others referenced) is acceptable, or whether a more tool-agnostic treatment (no single primary tool, matching Automation Testing's own stricter tool-neutrality) is preferred instead.
 
 **Success Criteria**:
-- Learner designs a load test for a realistic scenario
-- Learner analyzes performance results and identifies the bottleneck
-- Learner explains performance findings to a non-technical stakeholder
+- Learner designs a realistic load test (workload model, environment, data) for a given feature, not just runs a tool with default settings
+- Learner runs a performance test and correctly identifies the actual bottleneck from monitoring data, not just that something was slow
+- Learner reports a performance finding appropriately to both a technical and a non-technical audience, and produces a credible capacity recommendation
+- Learner applies the full toolkit to a realistic AtlasBank and AtlasShop scenario, and completes an end-to-end capstone
+
+### Approved Decisions (2026-08-05)
+
+1. **Capstone framing**: approved with clarification — the capstone must not imply Database Testing's certified fix was wrong or needs changing. Reframed explicitly as five layers each answering a different question about the *same, already-correct* implementation (Manual Testing found the business-rule defect; API Testing verified service-layer behavior; Database Testing identified the stored-procedure implementation; Automation Testing keeps the regression fixed; Performance Testing evaluates the operational *cost*, under production-scale load, of that already-correct solution) — a new quality attribute of correct code, not a new defect in it. Keeps all four certified curricula internally consistent; nothing about Database Testing is implied to need revisiting.
+2. **Tool neutrality**: approved — follow Automation Testing's own precedent. Concepts first; JMeter as the primary worked example specifically because it's open-source and widely adopted, not because it's canonical; other tools (k6, Gatling, Locust, plus Grafana/Prometheus for monitoring) introduced where educationally appropriate without being given equal worked-example treatment. The curriculum teaches "how performance testing works," not "how JMeter works."
+
+### Section 1 — As Shipped
+
+Shipped with a revised module list, given directly at implementation time (the same "module titles specified directly, equivalent decisions captured inline" pattern Automation Testing's own Sections 1–4 used): **What is Performance Testing?** (Module 1 — correctness vs. performance as independent properties, explicitly building on rather than duplicating Database Testing's and API Testing's own QA-level performance-recognition modules), **Performance Metrics and SLAs** (Module 2 — latency/throughput/error rate/resource utilization, percentiles vs. averages, the SLA-vs-SLO distinction), **Performance Testing Strategy** (Module 3 — risk-based prioritization of what deserves dedicated testing, the baseline→load→stress sequencing dependency, what a written strategy captures). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped, cross-path disambiguated (`"Performance Testing — Section 1 Review"`).
+
+**Deviation from the original proposal**: Module 2 was originally proposed as "Performance Testing Types," with metrics/SLOs as Module 3. As implemented, Module 2 became **Performance Metrics and SLAs** and Module 3 became the new **Performance Testing Strategy** (a planning-layer module not in the original 17-module proposal); **Performance Testing Types** moved to open Section 2 as Module 4 instead. This restructuring was specified directly in the implementation task, the same way Automation Testing's own Section 1 modules were — not discovered as a defect requiring correction.
+
+### Section 2 — As Shipped
+
+Shipped as directed: **Performance Testing Types** (Module 4 — load, stress, spike, soak, and volume testing kept as one module per `KNOWLEDGE_GRAPH.md`'s Progressive Extraction discipline, the same reasoning already applied to Combinatorial/Pairwise Testing and the six Quality Attributes), **Performance Test Environment** (Module 5 — infrastructure, network, third-party dependency, and configuration parity; why an unrealistically fast mock can hide the real bottleneck), **Test Data for Performance** (Module 6 — volume, shape, and distribution as three separate properties, extending rather than repeating Database Testing's own small-test-data lesson). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as directed: **Performance Testing Tools** (Module 7 — the four concepts any performance tool implements, mapped onto JMeter as this path's primary worked example per Decision 2, with k6/Gatling/Locust and Grafana/Prometheus introduced as alternative implementations, never canonical), **Executing Load, Stress, Spike, Soak, and Volume Tests** (Module 8 — the distinct ramp-up/duration configuration each type actually requires), **Bottleneck Analysis and Monitoring** (Module 9 — correlating a load timeline against CPU/memory/database/network timelines to identify the actual constraint). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as directed: **Result Analysis and Reporting** (Module 10 — producing coordinated technical and business-impact reports from one finding), **Capacity Planning** (Module 11 — combining a confirmed ceiling with a real growth trend and safety margin into a forecast), **Performance Defect Investigation** (Module 12 — a six-step systematic trace from vague symptom to reproducible root cause, tying the entire path together). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 5 — As Shipped (Approved 2026-08-05)
+
+Shipped per the approved decisions: the capstone frames Performance Testing as a fifth, distinct question ("what does an already-correct implementation cost under load?") about the same feature four other certified paths verified, explicitly not a defect in or contradiction of any of them; tool treatment stayed concept-first throughout, with JMeter as primary worked example only.
+
+**Modules**: **Applying Performance Testing: AtlasBank Loan Application Under Load** (Module 13, Application — combining Sections 1–4 against a loan-application feature; found a spike-specific document-verification service scaling lag invisible to load/stress testing, and an independent organic-growth capacity forecast), **Applying Performance Testing: AtlasShop Checkout Under Load** (Module 14, Application — AtlasShop's bursty, sale-driven load shape as a deliberate contrast to AtlasBank's steady traffic; confirmed Database Testing's own AtlasShop overselling defect additionally produces a retry-amplification effect under spike-level concurrency, resolved by the same already-known data-layer fix), **Common Mistakes in Performance Testing** (Module 15, Application — six cross-cutting patterns, each traced to a real defect from earlier in this path, mirroring every other certified path's identical Common-Mistakes structure), **Performance Testing Interview Scenarios** (Module 16, Application — six multi-part scenarios requiring synthesis across the full toolkit, deliberately distinct from the single recall-style question pairs every other module already has), **Performance Testing Capstone** (Module 17, Application — see below).
+
+**Capstone**: per the approved five-layer framing (Decision 1), evaluates the operational cost of the already-correct AtlasBank compliance-aggregation fix under real production-scale load — finding that the corrected calendar-day query, while functionally correct, scales non-linearly with an individual account's same-day transfer count, a genuinely new finding invisible to Manual, API, Database, and Automation Testing's own small-scale correctness testing. Explicitly reported as an operational cost and optimization opportunity, not a defect, per Decision 1's required framing — nothing about it implies Database Testing's certified fix needs revisiting.
+
+**No Section 5 Review/Solutions pages** — matching every other certified path's identical Application Module precedent.
+
+**Progress**: 17 / 17 modules shipped. **Performance Testing v1.0 is content complete**, pending certification.
 
 ---
 
@@ -751,43 +877,160 @@ Shipped as proposed: Modules 13–14 (Instruction, 2,214/2,425 words), Modules 1
 
 ---
 
-## Path 8: AI and Testing (Future-Focused)
+## Path 8: AI for QA
 
-**Directory**: `/learning-paths/ai-testing/`  
-**Position**: 8  
-**Prerequisites**: Foundations  
-**Target Audience**: QA engineers preparing for AI-driven testing, ML engineers  
-**Estimated Duration**: 4–6 weeks (evolving as AI changes)  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for AI for QA v1.0, produced against all five certified Reference Curricula (Manual, API, Automation, Database, Performance Testing) as reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then. **All five certified paths remain frozen — this proposal modifies none of them.**
 
-**Learning Objectives** (v0.1 scope):
-- Understand how AI changes QA work
-- Test LLM outputs and AI-driven features
-- Evaluate prompt quality and model behavior
-- Synthetic data generation for testing
-- Safety and hallucination testing
+**Scope decision (approved 2026-08-05)**: this path **broadens** the original "AI and Testing" stub rather than replacing or duplicating it. Two genuinely different angles are unified under one curriculum: (a) QA engineers **using AI tools** to test more productively — test case generation, test data creation, AI-assisted automation, defect analysis — and (b) QA engineers **testing AI-driven product features** — LLM output quality, hallucination detection, bias, safety. These are related (both require understanding AI's failure modes) but distinct skills, and the proposal below teaches the shared foundation once, then branches.
 
-**Modules** (v0.1 scope):
-1. AI in Testing: Opportunity and Risk (how AI changes QA)
-2. Testing LLM-Generated Content (quality, safety, accuracy)
-3. Prompt Testing Fundamentals (designing prompts, evaluating responses)
-4. Evaluating AI Outputs (factual accuracy, relevance, tone)
-5. Synthetic Data Generation (using AI to create test data)
-6. Safety Testing for AI Systems (harmful outputs, bias)
-7. AI Evaluation Frameworks (DeepEval, RAGAS, custom metrics)
-8. Hallucination Detection (when LLMs make things up)
-9. Bias Testing in AI Systems (fairness across demographics)
+### 1. Learning Path Overview
 
-**Future Expansion** (v1.0+ as field evolves):
-- Agent Testing (multi-step AI workflows)
-- RAG Testing (retrieval-augmented generation)
-- Model Evaluation (specialized)
-- LLM Performance Benchmarking
-- Adversarial Testing (jailbreaks, prompt injection against LLMs)
+**Directory**: `/learning-paths/ai-for-qa/`
+**Position**: 8
+**Prerequisites**: Foundations (all 17 modules), plus at least one of Manual Testing, API Testing, or Automation Testing — Section 2's AI-assisted techniques explicitly apply AI to test design, API testing, and automation work those paths already taught, not re-teaching the underlying discipline.
+**Target Audience**: Working QA engineers integrating AI tools into their existing practice, and testers who need to validate AI-driven features as part of their product's own functionality.
+**Estimated Duration**: 6–9 weeks (17 modules).
+
+**Industry alignment**: AI-assisted development and testing tooling has moved from novelty to default expectation across QA job postings in a short span, while testing AI-driven product features (chatbots, recommendation engines, AI-assisted workflows) is an increasingly common feature-testing requirement, not a specialist ML role. This path is explicitly **not** a prompt-engineering course and **not** a machine-learning course — it's scoped to what a working QA engineer needs: using AI tools with judgment, and testing AI features with the same rigor applied to any other feature.
+
+**Learning Objectives** (path-level):
+- Understand where AI genuinely helps QA work and where it introduces new risk, without treating either "AI replaces testers" or "AI is irrelevant to testing" as true
+- Apply human-in-the-loop review to any AI-generated testing artifact, recognizing hallucination and low-quality output before it enters a test suite
+- Use AI tools to accelerate test case generation, test data creation, API testing, automation authoring, defect analysis, and exploratory testing — always with the same review discipline
+- Test AI-driven product features for output quality, hallucination, bias, and safety, using evaluation frameworks and metrics appropriate to non-deterministic systems
+- Apply AI governance and security judgment appropriate to a QA role — what data is safe to send to an AI tool, and what oversight a team's AI usage needs
+- Apply the complete toolkit to a realistic AtlasBank AI feature, combining both angles in one capstone
+
+### 2. Curriculum Structure — Sections and Modules
+
+This path uses the **dedicated Section Review + Solutions page pattern from Section 1**, per the certified default every prior path has applied without deviation.
+
+#### Section 1 — Foundations of AI for QA (Modules 1–3)
+
+1. **AI in Software Testing** — *Objective*: where AI genuinely helps QA work today, where it doesn't, and why neither "replaces testers" nor "irrelevant to testing" holds up; sets this path's explicit scope (not prompt engineering, not ML). *Prerequisites*: Foundations complete. *Why it exists*: every certified path opens with a fundamentals module establishing scope before technique — no evidence to deviate. *Est. length*: 1,900–2,300 words.
+2. **Responsible AI Usage and Human-in-the-Loop QA** — *Objective*: the core operating principle this entire path depends on — AI output is a draft requiring review, never a final artifact; what "human-in-the-loop" concretely means for test case review, code review, and output verification. *Why it exists*: this is the load-bearing concept every later module assumes; establishing it before any AI-assisted technique prevents the single biggest real-world failure mode (uncritical AI-output acceptance). *Est. length*: 2,000–2,400 words.
+3. **Reviewing AI Output and Recognizing Hallucination** — *Objective*: concrete, practiced skill for catching a plausible-sounding but wrong AI output — a fabricated API endpoint in a generated test, a test case for behavior the feature doesn't have, a confidently wrong root-cause suggestion. *Why it exists*: the practical skill Module 2's principle requires; taught once here and referenced, not re-taught, by every later module in Sections 2–3. *Est. length*: 2,200–2,600 words.
+
+**Section 1 Review + Solutions**: dedicated pages, per the certified default.
+
+#### Section 2 — AI-Assisted Testing Techniques (Modules 4–7)
+
+4. **AI-Assisted Test Case Generation** — *Objective*: using AI to draft test cases from a requirement or user story, then applying [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals)'s existing technique (BVA, Equivalence Partitioning) to evaluate and correct AI-drafted cases, not accept them wholesale. *Est. length*: 2,000–2,400 words.
+5. **AI-Assisted Test Data Creation** — *Objective*: using AI to generate realistic test data, explicitly applying [Test Data Design](/learning-paths/manual-testing/test-data-design)'s and [Test Data for Performance](/learning-paths/performance-testing/test-data-for-performance)'s existing volume/shape/distribution criteria to evaluate whether AI-generated data is actually realistic, not just plausible-looking. *Est. length*: 1,900–2,300 words.
+6. **AI-Assisted API Testing and Automation** — *Objective*: using AI to draft API test scripts and automation code (Playwright/Selenium-style), reviewed against [API Testing](/learning-paths/api-testing/what-is-api-testing)'s and [Automation Testing](/learning-paths/automation/introduction-to-automation-testing)'s own existing standards — not a new automation framework, an AI-assisted way of authoring within the ones already taught. *Est. length*: 2,200–2,600 words.
+7. **AI-Assisted Defect Analysis and Exploratory Testing** — *Objective*: using AI to help triage a defect (suggesting probable root cause from a stack trace or log) and to suggest exploratory testing charters, both explicitly reviewed per Module 3's hallucination-recognition skill before being trusted. *Est. length*: 2,100–2,500 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Testing AI-Driven Features (Modules 8–11)
+
+8. **Testing LLM-Generated Content** — *Objective*: what a tester validates about AI-generated product content (a chatbot response, a summarization feature) — accuracy, relevance, tone — as a distinct feature-testing surface, not a general AI-literacy topic. *Est. length*: 2,100–2,500 words.
+9. **Prompt Testing Fundamentals** — *Objective*: testing how a product feature's own prompts behave across realistic and edge-case inputs — the AI-feature equivalent of boundary testing, applied to prompt-input space. *Est. length*: 2,000–2,400 words.
+10. **AI Evaluation Frameworks and Metrics** — *Objective*: structured evaluation approaches (DeepEval, RAGAS-style frameworks, custom metrics) for scoring AI output quality systematically, rather than ad hoc manual review alone — this path's equivalent of a dedicated tools module. *Est. length*: 2,200–2,600 words.
+11. **Hallucination, Bias, and Safety Testing for AI Features** — *Objective*: testing an AI-driven feature itself for hallucinated claims, demographic or fairness bias, and harmful-output risk — the product-safety counterpart to Module 3's tool-output-review skill, applied to what a shipped feature produces for real users. *Est. length*: 2,300–2,600 words (this path's most conceptually dense module, combining three related defect classes deliberately, the same consolidation reasoning Performance Testing applied to its five test types).
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — AI Governance and Security (Modules 12–13)
+
+12. **AI Governance for QA Teams** — *Objective*: what a QA team needs in place before adopting AI tools at scale — usage policy, review requirements, accountability for AI-assisted work products. *Est. length*: 1,900–2,300 words.
+13. **AI Security Considerations for QA Workflows** — *Objective*: what data is unsafe to send to an external AI tool (customer data, credentials, proprietary code), and prompt-injection-style risks specific to AI-assisted testing workflows — scoped to QA-relevant awareness, not a security-specialist treatment. *Est. length*: 2,000–2,400 words.
+
+**Section 4 Review + Solutions**: dedicated pages. **Deliberate scope decision**: two modules, not three or four — governance and security are both explicitly scoped to QA-relevant awareness (matching Database Testing's own "basics" scope decision for its combined Performance+Security section), not a full compliance or security-engineering treatment.
+
+#### Section 5 — Application Modules & Capstone (Modules 14–17) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, no Section Review/Solutions pages.
+
+14. **Applying AI for QA: AtlasBank AI-Assisted Test Suite** — combining Section 2's techniques (AI-assisted test cases, test data, API/automation scripts, defect triage) against a realistic AtlasBank feature. *Est. length*: 1,700–2,100 words.
+15. **Applying AI for QA: AtlasBank AI Support Assistant** — testing a new, purpose-built AtlasBank AI feature (a customer-support assistant) for content quality, prompt robustness, hallucination, and bias, combining Section 3's techniques. *Est. length*: 1,700–2,100 words.
+16. **Common Mistakes in AI for QA** — cross-cutting mistake patterns across both angles, mirroring every certified path's identical Common-Mistakes structure. *Est. length*: 1,700–2,000 words.
+17. **AI for QA Capstone** — see Section 8 below. *Est. length*: 1,900–2,200 words.
+
+### 3. Learning Objectives — Mapped to Sections
+
+Section 1 → foundational judgment (where AI helps, human-in-the-loop, hallucination recognition); Section 2 → AI-assisted productivity across existing certified disciplines; Section 3 → testing AI as a product feature; Section 4 → governance and security awareness; Section 5 → synthesis across both angles plus one capstone. Every path-level objective traces to exactly one section, matching every certified path's own one-to-one mapping.
+
+### 4. Dependency Map
+
+Foundations → (Manual Testing, API Testing, or Automation Testing — any one satisfies the prerequisite) → AI for QA Section 1 (the shared foundation both angles need) → Section 2 (AI-assisted productivity, explicitly reusing Manual/API/Automation/Performance Testing's own existing standards as the bar AI output is reviewed against) → Section 3 (testing AI features, a genuinely new surface with no prior-path equivalent) → Section 4 (governance/security, assumes familiarity with the AI-assisted workflows from Section 2) → Section 5 (synthesizes both angles). Section 2 is the path's clearest Progressive Extraction application — reviewing AI-generated test cases against BVA/Equivalence Partitioning, AI-generated test data against Test Data Design's criteria, and AI-generated automation against Automation Testing's own standards, rather than inventing new review criteria.
+
+### 5. AtlasBank Integration Strategy
+
+AI for QA **extends AtlasBank** as its primary domain, continuing the precedent every certified path has established. Section 2's examples apply AI assistance to already-familiar AtlasBank scenarios (drafting test cases for the fund-transfer flow, generating realistic AtlasBank-shaped test data). Section 3 introduces one new, narrow AtlasBank surface this path specifically needs: the **AtlasBank AI Support Assistant** — approved 2026-08-05 as an official AtlasBank feature, recorded in `STYLE_GUIDE.md`. Deliberately scoped, per the approved decision, to six question categories only (transaction questions, card support, loan FAQs, KYC guidance, account information, payment help) — not a general-purpose chatbot. It exists purely as a realistic system under test, the same way every other AtlasBank feature exists to illustrate a testing concept, not as a product in its own right.
+
+### 6. Application-Module Strategy
+
+Section 5 (Modules 14–17) is designated as Application Modules at design time, per `CURRICULUM_EVOLUTION.md` Entry 2's corrected migration guidance: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, tighter word-count band (1,700–2,200 words), no Section Review/Solutions pages.
+
+### 7. Review/Solutions Page Strategy
+
+Every section (1–4) gets a dedicated **Section N Review** page and **Section N Solutions** page from its first appearance, per the certified default — cross-path title disambiguation applied proactively (`"AI for QA — Section N Review"`), since all five certified paths already have Sections 1–4. Section 5 gets no Review/Solutions pages, matching every certified path's Application section precedent.
+
+### 8. Capstone Proposal
+
+**Approved 2026-08-05**: unlike every certified path's capstone, this path does **not** continue the International Money Transfer narrative thread — that storyline served its purpose across five technical testing disciplines, and forcing an "AI angle" onto it would feel artificial rather than genuine. Instead, the **AI for QA Capstone** (Module 17) centers on the **AtlasBank AI Support Assistant** — TestAtlas's first AI-native feature, a natural, dedicated fit for this path rather than a sixth layer bolted onto an existing narrative. The capstone combines both of this path's angles: using AI-assisted techniques (Section 2) to build the assistant's own test suite, then testing the assistant itself (Section 3) for hallucination, bias, and safety within its intentionally scoped six question categories, closing with an explicit statement of what human review caught that fully-automated AI-assisted testing alone would have missed — directly reinforcing this path's central theme: AI accelerates testing, it does not replace engineering judgment.
+
+### 9. Word-Count Targets and Estimated Total Curriculum Size
+
+Instruction modules (Sections 1–4, 13 modules): 1,900–2,600 words each, matching the certified range every prior path has shipped within. Application modules (Section 5, 4 modules): 1,700–2,200 words, matching the approved default band. **Estimated path total**: roughly 33,000–38,000 words across 17 modules — comparable to Database Testing (16 modules) and Performance Testing (17 modules).
+
+### 10. Industry Alignment (restated, see also Section 1)
+
+AI-assisted testing tooling is now a common expectation in QA job postings, not a specialist niche; testing AI-driven features is an increasingly ordinary feature-testing requirement as more products ship AI-powered functionality. This path is scoped to a working QA engineer's actual needs on both fronts — explicitly not prompt engineering or ML engineering, which remain out of scope per the originating task's own framing.
+
+### 11. Differences from the Reference Curricula (evidence-justified only)
+
+- **This path unifies two genuinely different angles** (using AI to test; testing AI features) under one curriculum rather than two separate paths — an explicit, approved scope decision (Section 2 of this proposal's header), not an default architectural pattern.
+- **A new AtlasBank *feature* (the AI Support Assistant) introduced within Section 3** — not a new domain, but the first time a certified or proposed path has needed to introduce net-new AtlasBank product surface rather than reusing an existing one; justified by Section 3's specific, otherwise-unmeetable need for a real AI feature to test.
+- **The capstone breaks the five-path International Transfer narrative thread** — flagged explicitly as an open decision in Section 8, not assumed.
+- **Section 4 runs two modules instead of three**, both explicitly scoped to QA-relevant awareness rather than specialist depth — the same "size follows content, not a fixed template" reasoning Database Testing's and Performance Testing's own non-default section sizes already established.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the Application Module structure, dedicated Review/Solutions pages from Section 1 — carries over unchanged.
+
+### Decisions (Approved 2026-08-05)
+
+1. **Capstone domain break**: ✅ Approved — the International Transfer narrative thread is not continued; the capstone centers on the AtlasBank AI Support Assistant as TestAtlas's first AI-native feature.
+2. **New AtlasBank feature**: ✅ Approved — the AtlasBank AI Support Assistant is now an official AtlasBank feature, intentionally scoped to six question categories (transaction questions, card support, loan FAQs, KYC guidance, account information, payment help), not a general-purpose chatbot. Recorded in `STYLE_GUIDE.md`.
+3. **Path slug**: ✅ Approved — `/learning-paths/ai-for-qa/` is the permanent slug.
+4. **Curriculum principle** (new, added at approval): every AI-assisted workflow throughout this path reinforces one central theme — *AI accelerates testing; it does not replace engineering judgment*. Verification before generation, review before acceptance, applied consistently across every module, not just Section 1's foundational treatment of it.
 
 **Success Criteria**:
-- Learner tests an LLM feature and identifies quality issues
-- Learner designs synthetic test data for an AI system
-- Learner explains why traditional QA approaches don't work for AI
+- Learner uses an AI tool to draft a testing artifact (test case, test data, automation script) and correctly identifies what needs correction before use
+- Learner tests an AI-driven feature for output quality, hallucination, and bias using a structured evaluation approach
+- Learner explains what data is unsafe to share with an AI tool and what governance a team's AI usage needs
+- Learner applies the complete toolkit to a realistic AtlasBank AI feature, combining AI-assisted testing technique with AI-feature testing in one capstone
+
+### Section 1 — As Shipped
+
+Shipped as designed: **AI in Software Testing** (Module 1 — where AI accelerates QA work vs. where judgment stays essential; establishes this path's central, recurring theme: AI accelerates testing, it does not replace engineering judgment), **Responsible AI Usage and Human-in-the-Loop QA** (Module 2 — the difference between a genuine review checkpoint and a rubber-stamp formality; why a review needs a specific, defined verification target), **Reviewing AI Output and Recognizing Hallucinations** (Module 3 — the practiced, mechanical skill of verifying every specific, checkable claim against its real source; taught once, referenced by every later module). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped, cross-path disambiguated (`"AI for QA — Section 1 Review"`).
+
+### Section 2 — As Shipped
+
+Shipped as designed: **AI-Assisted Test Case Generation** (Module 4 — AI drafts, Boundary Value Analysis/Equivalence Partitioning applied explicitly to the draft to find what its obvious-shape coverage misses), **AI-Assisted Test Data Creation** (Module 5 — AI-generated batches evaluated against existing volume/shape/distribution criteria, plus format-validity checks against real validation logic), **AI-Assisted API and Automation Authoring** (Module 6 — reviewed against API Testing's and Automation Testing's own existing standards: real endpoint accuracy, Page Object Model, explicit waits, precise assertions), **AI-Assisted Defect Analysis and Exploratory Testing** (Module 7 — an AI-suggested root cause treated as a hypothesis requiring verification via Database/Performance Testing's own systematic trace methods; AI-generated exploratory charters treated as a starting point, not a substitute for human discovery). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as directed: **Testing AI-Driven Features** (Module 8 — the deterministic-vs-AI-quality distinction, per the reviewer's explicit guidance: wrong API response/incorrect database update/missing validation/performance bottleneck as deterministic defects, vs. hallucination/prompt sensitivity/inconsistent responses/bias/safety failures/grounding failures as AI quality issues; introduces the AtlasBank AI Support Assistant as this section's scoped system under test), **Prompt Testing and Evaluation** (Module 9 — realistic phrasing variation testing, scored against a structured accuracy/completeness/relevance/tone rubric instead of pass/fail), **Hallucinations, Bias, Safety, and Reliability** (Module 10 — four related defect classes consolidated into one module per the same type-consolidation reasoning Performance Testing applied to its five test types: grounding verification, framing-consistency testing, scope-boundary testing, and consistency/appropriate-uncertainty testing). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+**Deviation from the original proposal**: Module 9 combines what the proposal split into two modules ("Prompt Testing Fundamentals" and "AI Evaluation Frameworks and Metrics") into one, "Prompt Testing and Evaluation" — specified directly at implementation time, the same pattern used for this path's own Section 1/2 reordering.
+
+### Section 4 — As Shipped
+
+Shipped as directed: **AI Governance for QA** (Module 11 — the four elements a real governance policy needs: approved tools, per-artifact-type review requirements, accountability, an audit trail), **AI Security and Privacy Awareness** (Module 12 — what's unsafe to send to an external AI tool, and prompt injection awareness for AI-assisted analysis of real user-generated content), **Human Review Workflows and AI Quality Assurance** (Module 13 — assembling every review standard from Sections 1–4 into one unified, four-step operational workflow; this section's closing-the-toolkit module, the same role [Database Defect Investigation](/learning-paths/database-testing/database-defect-investigation) and [Performance Defect Investigation](/learning-paths/performance-testing/performance-defect-investigation) played in their own paths). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated.
+
+**Deviation from the original proposal**: Section 4 shipped with three modules instead of the proposal's two, adding Module 13 as a genuinely new, synthesis-role module — a real, evidenced size difference (matching Automation Testing's own precedent for Section 5 running six modules instead of four when content required it), not a template deviation.
+
+### Section 5 — As Shipped (Approved 2026-08-05)
+
+Shipped per the approved decisions: the capstone centers on the AtlasBank AI Support Assistant rather than continuing the International Transfer narrative thread; the Assistant's documented six-category scope (transaction questions, card support, loan FAQs, KYC guidance, account information, payment help) held consistently across every Section 5 module.
+
+**Modules**: **Applying AI for QA: AtlasBank AI Support Assistant Validation** (Module 14, Application — Section 3's full toolkit applied systematically across all six documented categories; found a payment-help-specific completeness gap under ambiguous phrasing, and a scope-boundary gap specific to mixed in-scope/out-of-scope requests), **Applying AI for QA: AI-Assisted End-to-End QA Workflow** (Module 15, Application — Section 2's full toolkit applied across one realistic feature's complete lifecycle, routed through Section 4's unified review workflow; found a real boundary-adjacent defect specifically because review was applied consistently at every stage), **Common Mistakes in AI for QA** (Module 16, Application — six cross-cutting patterns, each traced to a real defect earlier in this path, mirroring every other certified path's identical Common-Mistakes structure), **AI for QA Capstone: AtlasBank AI Support Assistant End-to-End Verification** (Module 17, Application — see below).
+
+**Capstone**: per the approved decisions, does not continue the International Transfer narrative thread — centers on the AI Support Assistant as TestAtlas's first AI-native feature instead. Combines AI-accelerated test preparation (Section 2), AI-feature testing (Section 3), and governance/audit review (Section 4) into one lifecycle, closing with three explicit findings from three different layers: a BVA-coverage gap AI's own draft missed, a new compound AI-quality pattern found only by testing two previously-separate gap types together, and a real data-safety incident caught by the governance audit-trail process itself — not by any testing technique — reinforcing this path's central theme (AI accelerates, it does not replace engineering judgment) in three structurally different forms.
+
+**No Section 5 Review/Solutions pages** — matching every other certified path's identical Application Module precedent.
+
+**Progress**: 17 / 17 modules shipped. **AI for QA v1.0 is content complete**, pending certification.
 
 ---
 
