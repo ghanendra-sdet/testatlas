@@ -1,0 +1,9 @@
+%% VIS-004 — Five Performance Test Types, Five Distinct Load Shapes Over Time
+flowchart TD
+    accTitle: Five Performance Test Types, Five Distinct Load Shapes Over Time
+    accDescr: Load testing ramps to and holds expected peak traffic. Stress testing increases past expected peak until failure. Spike testing increases suddenly and sharply. Soak testing holds a sustained moderate level over an extended duration. Volume testing holds load intensity roughly constant while increasing the underlying data volume instead.
+    A[Performance Test] --> B[Load: ramp to expected peak]
+    A --> C[Stress: past peak, to failure]
+    A --> D[Spike: sudden, sharp increase]
+    A --> E[Soak: sustained, extended duration]
+    A --> F[Volume: large data, not traffic]

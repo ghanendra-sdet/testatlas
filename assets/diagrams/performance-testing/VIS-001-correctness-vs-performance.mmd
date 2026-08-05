@@ -1,0 +1,12 @@
+%% VIS-001 — Correctness and Performance Are Independent Properties
+flowchart LR
+    accTitle: Correctness and Performance Are Independent Properties
+    accDescr: A feature can be correct but slow under load, or fast but incorrect. Only a feature that is both correct and performant under real load is actually ready for production traffic.
+    A[Feature] --> B{Correct?}
+    A --> C{Fast enough<br/>under real load?}
+    B -->|Yes| D[Functionally ready]
+    C -->|Yes| E[Performance ready]
+    D --> F{Both Yes?}
+    E --> F
+    F -->|Yes| G[Actually production-ready]
+    F -->|No| H[Not ready, regardless of which one failed]

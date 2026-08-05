@@ -1,0 +1,8 @@
+%% VIS-002 — Why a Percentile Reveals What an Average Hides
+flowchart LR
+    accTitle: Why a Percentile Reveals What an Average Hides
+    accDescr: An average response time can look acceptable while a real tail of slow requests exists, because the average is pulled down by a large number of fast requests. A percentile metric like p95 specifically reports the value at the slow end of the distribution, revealing that tail directly.
+    A[Raw response times<br/>across all requests] --> B[Average: pulled toward<br/>the fast majority]
+    A --> C[p95: reports the<br/>slow tail directly]
+    B --> D[Can look acceptable<br/>while hiding a real problem]
+    C --> E[Surfaces exactly what<br/>real users would notice]

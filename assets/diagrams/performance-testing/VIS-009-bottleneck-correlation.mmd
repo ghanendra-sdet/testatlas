@@ -1,0 +1,13 @@
+%% VIS-009 — Correlating Load and Resource Timelines to Find the Actual Bottleneck
+flowchart TD
+    accTitle: Correlating Load and Resource Timelines to Find the Actual Bottleneck
+    accDescr: Bottleneck analysis overlays the load-generation timeline showing when response time degraded against separate resource-utilization timelines for CPU, memory, database connections, and network. The resource whose utilization curve bends sharply at the same moment response time degrades is the actual bottleneck.
+    A[Response time degrades<br/>at a specific moment] --> B{Which resource's<br/>utilization curve bends<br/>at that same moment?}
+    B --> C[CPU near limit at that moment?]
+    B --> D[Memory climbing at that moment?]
+    B --> E[DB connections exhausted<br/>at that moment?]
+    B --> F[Network saturated<br/>at that moment?]
+    C --> G[That resource is the<br/>actual bottleneck]
+    D --> G
+    E --> G
+    F --> G

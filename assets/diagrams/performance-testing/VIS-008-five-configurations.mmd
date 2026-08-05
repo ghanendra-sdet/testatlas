@@ -1,0 +1,9 @@
+%% VIS-008 — Five Configuration Profiles for Five Test Types
+flowchart TD
+    accTitle: Five Configuration Profiles for Five Test Types
+    accDescr: Each performance test type is configured differently. Load tests ramp gradually to a held peak. Stress tests ramp in increments past peak until failure. Spike tests ramp almost immediately to a brief peak. Soak tests ramp gradually to a sustained, extended-duration hold. Volume tests keep load roughly constant while data volume varies instead.
+    A[Test Configuration] --> B[Load: gradual ramp, held peak]
+    A --> C[Stress: incremental ramp past peak]
+    A --> D[Spike: near-immediate ramp]
+    A --> E[Soak: gradual ramp, extended hold]
+    A --> F[Volume: constant load, varying data]

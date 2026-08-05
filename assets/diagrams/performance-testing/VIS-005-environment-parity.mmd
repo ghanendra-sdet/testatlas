@@ -1,0 +1,8 @@
+%% VIS-005 — Does This Test Environment Actually Predict Production?
+flowchart TD
+    accTitle: Does This Test Environment Actually Predict Production?
+    accDescr: A performance test result only meaningfully predicts production behavior if the test environment matches production across infrastructure, network conditions, third-party dependencies, and configuration, or if every known gap is explicitly documented and factored into interpretation.
+    A[Performance test environment] --> B{Matches production across<br/>infra, network, dependencies,<br/>configuration?}
+    B -->|Yes| C[Result meaningfully predicts production]
+    B -->|No, but gap is documented| D[Result interpreted with<br/>explicit adjustment]
+    B -->|No, gap is unknown/undocumented| E[Result may be actively misleading]

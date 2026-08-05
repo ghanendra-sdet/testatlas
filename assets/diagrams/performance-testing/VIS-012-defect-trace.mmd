@@ -1,0 +1,10 @@
+%% VIS-012 — The Performance Defect Investigation Trace
+flowchart TD
+    accTitle: The Performance Defect Investigation Trace
+    accDescr: A performance defect investigation moves through six steps in order: confirm the symptom with real metrics, identify which test type would reproduce it, reproduce it deliberately, correlate monitoring data to find the actual cause, determine whether it is a defect or a capacity issue, and report with reproducibility and a recommendation.
+    A[Vague symptom reported] --> B[1: Confirm with real percentile data]
+    B --> C[2: Identify likely test type]
+    C --> D[3: Reproduce deliberately]
+    D --> E[4: Correlate monitoring to find cause]
+    E --> F[5: Defect or capacity issue?]
+    F --> G[6: Report with reproducibility<br/>and a recommendation]

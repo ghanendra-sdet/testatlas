@@ -1,0 +1,7 @@
+%% VIS-003 — The Standard Performance Test Sequence
+flowchart LR
+    accTitle: The Standard Performance Test Sequence
+    accDescr: A performance testing effort should run a baseline test first to establish normal behavior, then a load test at expected peak, then a stress test to find the actual breaking point, before moving to more specific test types like spike, soak, and volume testing.
+    A[Baseline: normal load] --> B[Load: expected peak]
+    B --> C[Stress: past expected peak]
+    C --> D[Spike / Soak / Volume:<br/>specific conditions]
