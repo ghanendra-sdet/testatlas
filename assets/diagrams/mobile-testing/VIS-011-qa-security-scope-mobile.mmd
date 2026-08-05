@@ -1,0 +1,10 @@
+%% VIS-011 — QA-Level Security Scope Applied to Mobile-Specific Concerns
+flowchart TD
+    accTitle: QA-Level Security Scope Applied to Mobile-Specific Concerns
+    accDescr: The identification-not-exploitation security testing scope already established in earlier TestAtlas paths applies unchanged to mobile, extended to three mobile-specific concerns: local storage encryption, certificate pinning, and insecure inter-app communication.
+    A[Existing QA-Level Security Scope:<br/>identify, don't exploit] --> B[Local storage encryption]
+    A --> C[Certificate pinning]
+    A --> D[Insecure inter-app communication]
+    B --> E[Route confirmed concerns<br/>to a security specialist]
+    C --> E
+    D --> E

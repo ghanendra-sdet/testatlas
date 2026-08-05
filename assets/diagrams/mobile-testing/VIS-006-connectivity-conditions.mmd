@@ -1,0 +1,10 @@
+%% VIS-006 — Three Distinct Connectivity Conditions to Test Deliberately
+flowchart TD
+    accTitle: Three Distinct Connectivity Conditions to Test Deliberately
+    accDescr: Sudden loss, degradation, and network switching are three distinct connectivity conditions a mobile app can experience, each capable of exposing different defects. All three need deliberate, separate testing rather than assuming a stable connection represents real usage.
+    A[Connectivity Testing] --> B[Sudden loss:<br/>airplane mode, dead zone]
+    A --> C[Degradation:<br/>slow, high-latency connection]
+    A --> D[Network switching:<br/>Wi-Fi to cellular mid-request]
+    B --> E[Each tested deliberately —<br/>stable Wi-Fi alone represents none of them]
+    C --> E
+    D --> E

@@ -1,0 +1,7 @@
+%% VIS-010 — Server-Side Performance Testing Extended to Device-Side Constraints
+flowchart LR
+    accTitle: Server-Side Performance Testing Extended to Device-Side Constraints
+    accDescr: The existing performance testing toolkit of metrics, SLAs, and bottleneck analysis applies to mobile without modification. What changes is what gets measured, adding battery consumption, memory usage over time, and behavior under variable, not just absent, network conditions.
+    A[Existing Performance Testing Toolkit] --> B[Applied to servers:<br/>response time, throughput]
+    A --> C[Applied to mobile devices:<br/>battery, memory over time, variable network]
+    C --> D[Same analysis method,<br/>different measured layer]

@@ -1,0 +1,10 @@
+%% VIS-012 — Reading a Crash Log Before Attempting Reproduction
+flowchart TD
+    accTitle: Reading a Crash Log Before Attempting Reproduction
+    accDescr: A systematic crash analysis reads four fields in order before attempting reproduction. What crashed, from the stack trace. Where it crashed, from device and OS data. When it crashed, from the preceding user action. How often and for whom, from grouping multiple reports to reveal device-specific patterns.
+    A[Incoming Crash Reports] --> B[What: stack trace]
+    A --> C[Where: device, manufacturer, OS version]
+    A --> D[When: preceding user action]
+    A --> E[How often, for whom:<br/>group reports for patterns]
+    E --> F[Device-specific or universal?]
+    F --> G[Targeted, informed<br/>reproduction attempt]

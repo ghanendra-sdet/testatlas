@@ -1,0 +1,8 @@
+%% VIS-002 — Testing Both Platforms for Their Real Differences
+flowchart TD
+    accTitle: Testing Both Platforms for Their Real Differences
+    accDescr: A feature with shared underlying logic can still behave differently on Android and iOS because of real platform differences in navigation, permissions, background execution, and distribution. Testing only one platform and assuming the other matches misses defects specific to the untested platform's own conventions.
+    A[Feature with shared logic] --> B[Android: system back button,<br/>different background limits]
+    A --> C[iOS: in-app navigation,<br/>different background limits]
+    B --> D[Tested specifically against<br/>Android's own conventions]
+    C --> E[Tested specifically against<br/>iOS's own conventions]

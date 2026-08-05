@@ -1,0 +1,10 @@
+%% VIS-004 — Three Distinct Installation Paths, Three Distinct Risks
+flowchart TD
+    accTitle: Three Distinct Installation Paths, Three Distinct Risks
+    accDescr: Fresh install, upgrade from a prior version, and uninstall then reinstall are three distinct paths a mobile app can be installed through. Fresh install testing alone cannot expose migration defects specific to the upgrade path or data-clearing defects specific to the uninstall and reinstall path.
+    A[Installation Testing] --> B[Fresh install:<br/>no prior data]
+    A --> C[Upgrade: carries forward<br/>prior local data]
+    A --> D[Uninstall/reinstall:<br/>data should be fully cleared]
+    B --> E[Simplest, most commonly<br/>tested by default]
+    C --> F[Exposes data-migration<br/>defects fresh install can't]
+    D --> G[Exposes data-clearing<br/>defects fresh install can't]

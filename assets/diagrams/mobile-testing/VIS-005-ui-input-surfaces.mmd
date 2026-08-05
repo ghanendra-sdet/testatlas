@@ -1,0 +1,7 @@
+%% VIS-005 — Applying Existing Test Design Technique to Mobile UI Input Surfaces
+flowchart LR
+    accTitle: Applying Existing Test Design Technique to Mobile UI Input Surfaces
+    accDescr: Boundary Value Analysis and Equivalence Partitioning apply directly to mobile-specific UI input surfaces. Touch gestures form equivalence classes such as single tap versus rapid double tap. Screen rotation creates a boundary specifically at the transition between orientations, especially mid-interaction. Soft keyboard appearance is tested for whether focused input and underlying content remain correctly accessible.
+    A[Existing Technique] --> B[Equivalence Partitioning:<br/>touch gesture types]
+    A --> C[Boundary Value Analysis:<br/>rotation transition, especially mid-interaction]
+    A --> D[Applied to: soft keyboard<br/>appearance and content visibility]

@@ -1,0 +1,9 @@
+%% VIS-008 — One Behavioral Framework Applied to Every Hardware Capability
+flowchart TD
+    accTitle: One Behavioral Framework Applied to Every Hardware Capability
+    accDescr: The same five-state framework applies to any hardware-dependent feature, regardless of which specific capability it uses: capability available and permission granted, permission denied, runtime permission change, hardware unavailable, and recovery once the condition resolves.
+    A[Any Hardware-Dependent Feature] --> B[Available + granted:<br/>happy path]
+    A --> C[Permission denied:<br/>graceful degradation?]
+    A --> D[Runtime change:<br/>revoked or re-granted while running]
+    A --> E[Hardware unavailable:<br/>doesn't exist or is OS-disabled]
+    A --> F[Recovery: detects the<br/>condition resolving correctly?]

@@ -1,6 +1,6 @@
 # Learning Paths
 
-This document defines the 10 learning paths in TestAtlas, their learning objectives, target audience, and progression strategy.
+This document defines the 11 learning paths in TestAtlas, their learning objectives, target audience, and progression strategy. Mobile Testing (Path 9) was added after the original 10-path plan, once the six technical paths ahead of it (Foundations through AI for QA) were certified — see that path's own architecture proposal for the evidenced reasoning behind adding an 11th path rather than treating the original count as fixed.
 
 **Manual Testing v1.0, API Testing v1.0, Automation Testing v1.0, and Database Testing v1.0 are certified Reference Curricula** — see `REFERENCE_CURRICULUM_CERTIFICATION.md` for the structure and process every future path should default to, and `AUTOMATION_TESTING_CERTIFICATION.md` / `DATABASE_TESTING_CERTIFICATION.md` for each path's own certification record.
 
@@ -1034,10 +1034,160 @@ Shipped per the approved decisions: the capstone centers on the AtlasBank AI Sup
 
 ---
 
-## Path 9: Interview Preparation
+## Path 9: Mobile Testing
+
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for Mobile Testing v1.0, produced against all six certified Reference Curricula (Manual, API, Automation, Database, Performance Testing, AI for QA) as reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then. **All six certified paths remain frozen — this proposal modifies none of them.**
+
+**Scope note**: Mobile Testing was not part of TestAtlas's original 10-path plan — it's proposed here as an evidenced 11th path, added because six technical reference curricula are now certified and mobile testing is a real, commonly-cited gap for QA engineers job-hunting today. Adding it required renumbering the two not-yet-built stub paths after it (Interview Preparation, Career and Leadership) from Position 9/10 to 10/11 — a safe renumbering, since neither has any built content or route yet.
+
+### 1. Learning Path Overview
+
+**Directory**: `/learning-paths/mobile-testing/`
+**Position**: 9
+**Prerequisites**: Foundations (all 17 modules), Manual Testing (test design toolkit), and Automation Testing (framework and reliability concepts) — this path assumes general test-design fluency and automation-framework literacy, applying both to the mobile-specific surface rather than re-teaching either.
+**Target Audience**: QA engineers moving into mobile app testing for the first time, and automation engineers extending existing web/API automation skill into mobile.
+**Estimated Duration**: 6–9 weeks (16 modules).
+
+**Industry alignment**: mobile testing is one of the most commonly cited skill gaps in QA job postings — most consumer and fintech products now ship a mobile app as a primary, not secondary, surface, and testers who can reason about device fragmentation, platform differences, and mobile-specific failure modes (interrupted connectivity, backgrounding, permissions) are in real, ongoing demand. This path is scoped to that practical gap, not to native mobile development.
+
+**Learning Objectives** (path-level):
+- Understand what's genuinely different about mobile testing versus web/API testing — device fragmentation, platform differences (Android vs. iOS), and mobile-specific failure modes
+- Apply existing test-design technique (from Manual Testing) to mobile-specific functional surfaces: installation/upgrade, UI/navigation, network interruption and offline behavior
+- Test across device and platform variation systematically, applying combinatorial/pairwise technique to the specific problem of device fragmentation
+- Test mobile-specific hardware and platform integration: sensors, permissions, hardware access
+- Apply Performance Testing's own toolkit to mobile-specific constraints (battery, memory-constrained devices, variable network conditions) rather than re-deriving it
+- Apply mobile-specific security testing (local data storage, certificate pinning, mobile-specific attack surface) building on API and Database Testing's own security scope discipline
+- Investigate mobile crashes and logs systematically, using this project's established defect-investigation pattern
+- Apply the complete toolkit to a realistic AtlasBank and AtlasShop mobile app, and complete one capstone
+
+### 2. Curriculum Structure — Sections and Modules
+
+This path uses the **dedicated Section Review + Solutions page pattern from Section 1**, per the certified default every prior path has applied without deviation.
+
+#### Section 1 — Mobile Testing Foundations (Modules 1–3)
+
+1. **What is Mobile Testing?** — *Objective*: what's genuinely different about testing a mobile app versus a web app or API — device fragmentation, platform constraints, mobile-specific failure modes (interrupted connectivity, backgrounding, low battery); where this path builds on, not repeats, prior paths' own testing techniques. *Prerequisites*: Foundations complete. *Why it exists*: every certified path opens with a fundamentals module establishing scope before technique — no evidence to deviate. *Est. length*: 1,900–2,300 words.
+2. **Android vs. iOS Testing** — *Objective*: the genuine platform differences a tester needs to account for — permission models, UI conventions, distribution/update mechanisms, platform-specific testing tools — taught as practical testing differences, not an OS-internals course. *Est. length*: 2,000–2,400 words.
+3. **Mobile Device Ecosystem** — *Objective*: the real scope of device fragmentation (screen sizes, OS versions, manufacturer customizations) a mobile tester has to reason about, setting up Section 3's systematic treatment. *Est. length*: 1,900–2,300 words.
+
+**Section 1 Review + Solutions**: dedicated pages, per the certified default.
+
+#### Section 2 — Functional Mobile Testing (Modules 4–6)
+
+4. **Installation and Upgrade Testing** — *Objective*: testing fresh install, upgrade-from-a-prior-version, and uninstall/reinstall paths — a testing surface with no direct web/API equivalent. *Est. length*: 2,000–2,400 words.
+5. **Mobile UI and Navigation Testing** — *Objective*: applying [Test Design Fundamentals](/learning-paths/manual-testing/test-design-fundamentals)'s existing technique (BVA, Equivalence Partitioning) to mobile-specific UI inputs (touch gestures, screen rotation, soft keyboard behavior) rather than re-teaching test design from scratch. *Est. length*: 2,100–2,500 words.
+6. **Network, Interruptions, and Offline Testing** — *Objective*: testing behavior under interrupted, degraded, or absent connectivity — backgrounding mid-operation, a call interrupting the app, offline queuing and reconnect-triggered retry — explicitly building on [Testing Service Integrations](/learning-paths/api-testing/testing-service-integrations) and [Cascading Failures, Error Handling, and Fault Tolerance](/learning-paths/api-testing/cascading-failures-error-handling-and-fault-tolerance)'s resilience concepts rather than re-deriving them. *Why it exists*: this is the module most directly setting up this path's own capstone angle. *Est. length*: 2,300–2,600 words (denser — the most consequential functional-testing surface unique to mobile).
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Device and Platform Testing (Modules 7–9)
+
+7. **Device Fragmentation** — *Objective*: systematically testing across the real device/OS-version/screen-size combination space, explicitly applying [Combinatorial and Pairwise Testing](/learning-paths/manual-testing/combinatorial-and-pairwise-testing)'s existing technique — the exact reuse `KNOWLEDGE_GRAPH.md` already anticipated for this path. *Est. length*: 2,200–2,600 words.
+8. **Sensors, Permissions, and Hardware** — *Objective*: testing features depending on device hardware (camera, GPS, biometrics) and the platform permission model governing access to them — a genuinely new testing surface with no prior-path equivalent. *Est. length*: 2,100–2,500 words.
+9. **Compatibility and Responsive Behavior** — *Objective*: testing that UI and functionality hold up correctly across the device/screen variation Module 7 mapped, closing Section 3's systematic device-testing arc. *Est. length*: 2,000–2,400 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Performance and Security (Modules 10–12)
+
+10. **Mobile Performance Testing** — *Objective*: applying [Performance Testing](/learning-paths/performance-testing/what-is-performance-testing)'s own metrics and test-type toolkit to mobile-specific constraints — battery consumption, memory-constrained devices, variable/degraded network conditions — rather than re-teaching performance testing from scratch. *Est. length*: 2,200–2,600 words.
+11. **Mobile Security Testing** — *Objective*: mobile-specific security concerns — local data storage encryption, certificate pinning, insecure inter-app communication — applying [Database Security Testing](/learning-paths/database-testing/database-security-testing)'s and [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals)'s own QA-level, identification-not-exploitation scope discipline to a new surface. *Est. length*: 2,100–2,500 words.
+12. **Crash Analysis and Logging** — *Objective*: a systematic trace from a crash report or log to a specific, reproducible cause — this path's own version of the closing-the-toolkit investigation module every certified path has included. *Est. length*: 2,200–2,600 words.
+
+**Section 4 Review + Solutions**: dedicated pages.
+
+#### Section 5 — Application Modules & Capstone (Modules 13–16) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, no Section Review/Solutions pages.
+
+13. **Applying Mobile Testing: AtlasBank Mobile App Validation** — full technique combination against a realistic AtlasBank mobile banking app scenario. *Est. length*: 1,700–2,100 words.
+14. **Applying Mobile Testing: AtlasShop Mobile App Validation** — same pattern, second domain, continuing Database/Performance Testing's own AtlasShop extension rather than introducing a third fictional entity. *Est. length*: 1,700–2,100 words.
+15. **Common Mistakes in Mobile Testing** — cross-cutting mistake patterns, mirroring every certified path's identical Common-Mistakes-module structure. *Est. length*: 1,700–2,000 words.
+16. **Mobile Testing Capstone** — see Section 8 below. *Est. length*: 1,900–2,200 words.
+
+### 3. Learning Objectives — Mapped to Sections
+
+Section 1 → literacy (what's different about mobile, platform basics, device landscape); Section 2 → functional testing on mobile-specific surfaces; Section 3 → systematic device/platform coverage; Section 4 → performance, security, and crash investigation; Section 5 → synthesis across two domains plus one capstone. Every path-level objective traces to exactly one section, matching every certified path's own one-to-one mapping.
+
+### 4. Dependency Map
+
+Foundations → Manual Testing (test design toolkit, specifically Combinatorial/Pairwise Testing) → Automation Testing (framework/reliability concepts, prerequisite for this path generally) → Mobile Testing Section 1 (mobile-specific literacy) → Section 2 (functional testing, explicitly bridging from API Testing's resilience concepts for Module 6) → Section 3 (device/platform, explicitly bridging from Combinatorial/Pairwise Testing for Module 7) → Section 4 (performance/security, bridging from Performance Testing and Database/API Security Testing) → Section 5 (synthesizes all of it). This path has the widest set of cross-path bridges of any TestAtlas path so far — a direct consequence of being proposed after six, not one or two, certified reference curricula already existed to build on.
+
+### 5. AtlasBank Mobile App Integration Strategy
+
+Mobile Testing **extends AtlasBank** with a mobile client — the existing AtlasBank Internet Banking product, now tested through its mobile app surface rather than web. This is a new *client*, not a new domain or a new fictional feature — the same underlying AtlasBank accounts, transfers, and compliance rules Manual, API, Database, Automation, and Performance Testing have all already used, now tested through mobile-specific concerns (offline transfer queuing, biometric login, push notification handling for transaction confirmations).
+
+### 6. AtlasShop Mobile App Integration Strategy
+
+Mobile Testing also extends **AtlasShop** (Database and Performance Testing's own established second domain) with a mobile client — a shopping app tested for the same bursty, sale-driven load shape Performance Testing already established, now combined with mobile-specific concerns (background app refresh during a flash sale, interrupted checkout on a dropped connection). This continues the precedent of reusing an existing second domain rather than introducing a third.
+
+### 7. Application-Module Strategy
+
+Section 5 (Modules 13–16) is designated as Application Modules at design time, per `CURRICULUM_EVOLUTION.md` Entry 2's corrected migration guidance: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, tighter word-count band (1,700–2,200 words), no Section Review/Solutions pages.
+
+### 8. Capstone Proposal
+
+**Recommendation**: **AtlasBank Mobile International Transfer, Interrupted** (Module 16) — a genuine, natural sixth layer on TestAtlas's recurring AtlasBank compliance-aggregation narrative, not a forced one. Every prior technical path (Manual, API, Database, Automation, Performance) tested this feature at a layer where connectivity was assumed stable; mobile testing's own core subject — interrupted, degraded, and offline connectivity (Module 6) — creates a genuinely new, mobile-specific angle: a customer initiating an international transfer, then losing connectivity mid-transaction (a dropped signal, the app backgrounded by an incoming call), and the app's offline-queue-and-retry behavior on reconnect. Proposed finding: the retry logic, reconnecting after an interruption, doesn't correctly check whether the original request already completed server-side before resubmitting — a mobile-specific duplicate-transfer risk, related to but distinct from every prior capstone's own finding, discoverable only by a mobile-specific interruption test no other layer's testing technique would produce. This is a recommendation requiring confirmation, per template convention — not an assumed default.
+
+### 9. Review/Solutions Page Strategy
+
+Every section (1–4) gets a dedicated **Section N Review** page and **Section N Solutions** page from its first appearance, per the certified default — cross-path title disambiguation applied proactively (`"Mobile Testing — Section N Review"`), since all six certified paths already have Sections 1–4. Section 5 gets no Review/Solutions pages, matching every certified path's Application section precedent.
+
+### 10. Word-Count Targets and Estimated Total Curriculum Size
+
+Instruction modules (Sections 1–4, 12 modules): 1,900–2,600 words each, matching the certified range every prior path has shipped within. Application modules (Section 5, 4 modules): 1,700–2,200 words, matching the approved default band. **Estimated path total**: roughly 31,000–36,000 words across 16 modules — comparable to Database Testing (16 modules).
+
+### 11. Industry Alignment and Justification (restated, see also Section 1)
+
+Mobile testing is consistently named as a top skill gap in QA hiring, since most consumer-facing and fintech products now treat mobile as a primary client, not a secondary one. Every module's justification above ties to either a genuinely new mobile-specific surface (installation, sensors/permissions, device fragmentation) or an explicit, evidenced reuse of an existing TestAtlas technique applied to that new surface (BVA to mobile UI, Combinatorial/Pairwise to device fragmentation, Performance Testing's toolkit to mobile constraints, API/Database security scope to mobile security) — no module was added without either justification.
+
+### Differences from the Reference Curricula (evidence-justified only)
+
+- **Widest cross-path dependency set of any TestAtlas path** — a direct, evidenced consequence of being proposed after six certified paths exist to build on, not a new architectural pattern.
+- **Proposed as an evidenced 11th path, requiring renumbering two not-yet-built stub paths** — a real, one-time structural change (documented at the top of this section), not a recurring pattern for future paths to expect.
+- **Capstone introduces a mobile-specific angle (interrupted connectivity) on the existing AtlasBank narrative** rather than a new business-logic finding — a natural extension of Module 6's own core subject, not an invented tie-in.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the Application Module structure, dedicated Review/Solutions pages from Section 1 — carries over unchanged.
+
+### Decisions (Approved 2026-08-05)
+
+1. **Capstone**: ✅ Approved — continues the AtlasBank compliance-transfer narrative as its sixth layer (Manual → business rule; API → service behavior; Database → stored procedure; Automation → regression prevention; Performance → operational cost; Mobile → real-world connectivity behavior), demonstrated through interrupted connectivity, backgrounding, retry behavior, and synchronization after reconnect specifically — conditions only a mobile environment naturally produces.
+2. **Position/renumbering**: ✅ Approved — Mobile Testing at Position 9; Interview Preparation and Career and Leadership renumbered to 10/11.
+3. **Curriculum principle** (added at approval): remain concept-first throughout — mobile testing principles, device behavior, lifecycle, UX, interruptions, sensors, permissions, and synchronization taught independently of any automation framework. Any tool discussion (Appium, Maestro, Espresso, XCUITest, Detox) explains WHY, WHAT, and HOW before naming a specific tool, the same discipline Performance Testing applied to JMeter.
+
+**Success Criteria**:
+- Learner identifies what's genuinely different about testing a mobile app versus a web or API surface
+- Learner designs a device/platform coverage strategy applying Combinatorial/Pairwise Testing to real fragmentation
+- Learner applies Performance Testing's and Database/API Security Testing's own toolkits to mobile-specific constraints, without re-deriving either
+- Learner applies the complete toolkit to a realistic AtlasBank and AtlasShop mobile app, and completes an end-to-end capstone
+
+### Section 1 — As Shipped
+
+Shipped as designed: **What is Mobile Testing?** (Module 1 — the five mobile-specific surfaces with no web/API equivalent: lifecycle, connectivity, device/platform fragmentation, hardware/sensors, distribution), **Android vs. iOS Testing** (Module 2 — real, testable platform differences in navigation, permissions, background execution, and distribution), **Mobile Device Ecosystem** (Module 3 — the four real fragmentation dimensions, and why device selection should be driven by real usage data). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 2 — As Shipped
+
+Shipped as designed: **Installation and Upgrade Testing** (Module 4 — fresh install, upgrade from a real prior version, and uninstall/reinstall as three distinct paths, each exposing risks the others can't), **Mobile UI and Navigation Testing** (Module 5 — Boundary Value Analysis and Equivalence Partitioning applied directly to touch gestures, screen rotation transitions, and soft keyboard behavior), **Network, Interruptions, and Offline Testing** (Module 6 — three connectivity conditions, offline queuing, and retry-on-reconnect safety, building directly on API Testing's own idempotency and resilience techniques — this path's own capstone-setting module). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as designed: **Device Fragmentation** (Module 7 — applying Combinatorial and Pairwise Testing directly to the device/OS-version/manufacturer combination space, generating a pairwise-verified test set with a stated coverage guarantee), **Sensors, Permissions, and Hardware** (Module 8 — a single five-state behavioral framework, per the reviewer's explicit anti-checklist guidance: available/granted, denied, runtime permission change, hardware unavailable, recovery — applied consistently across biometric, camera, and GPS features rather than device-by-device), **Compatibility and Responsive Behavior** (Module 9 — distinguishing functional compatibility from visual responsive behavior on the same pairwise device set, closing this section's systematic device-testing arc). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as designed: **Mobile Performance Testing** (Module 10 — extending, not replacing, the existing Performance Testing toolkit to mobile's device-side constraints: battery consumption, memory usage over extended sessions, and performance under degraded-but-connected network conditions), **Mobile Security Testing** (Module 11 — applying this path's established QA-level, identification-not-exploitation security scope to local storage encryption, certificate pinning, and insecure inter-app communication), **Crash Analysis and Logging** (Module 12 — a systematic, four-field crash-log reading framework — what, where, when, how often/for whom — applied before attempting reproduction, closing this section's toolkit). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 5 — As Shipped
+
+Shipped as designed: **Applying Mobile Testing: AtlasBank Fund Transfer Across Real-World Conditions** (Module 13 — combining Sections 1–4's techniques against AtlasBank's fund-transfer flow, finding a rotation-triggered amount-reset defect, a responsive-behavior defect hiding a confirmation button, and a device-specific crash cluster sharing one root cause with the first finding), **Applying Mobile Testing: AtlasShop Checkout Under Real-World Conditions** (Module 14 — the same techniques applied to AtlasShop's structurally different, state-accumulating cart feature, finding cart data lost across an app upgrade, a duplicate cart entry from feature-specific unsafe retry, and a genuine product-gallery memory leak), **Common Mobile Testing Mistakes** (Module 15 — six cross-cutting mistake patterns, each traced to a real defect earlier in the path), **Mobile Testing Capstone: AtlasBank Mobile End-to-End Verification** (Module 16 — the same International Money Transfer feature five other certified paths already verified from their own layer, now confirmed safe under real mobile-device conditions specifically: connectivity interrupted mid-transaction combined with the app being backgrounded, verifying retry logic checks actual outcome before resubmitting and never duplicates the compliance-critical transfer). No Section 5 Review/Solutions pages, matching every certified path's Application section precedent.
+
+**Progress**: 16 / 16 modules shipped. **Mobile Testing v1.0 complete.**
+
+---
+
+## Path 10: Interview Preparation
 
 **Directory**: `/learning-paths/interview-preparation/`  
-**Position**: 9  
+**Position**: 10  
 **Prerequisites**: Foundations (minimum), any technical path (recommended)  
 **Target Audience**: Job seekers, career-changers, QA professionals  
 **Estimated Duration**: 2–8 weeks (depends on preparation depth)  
@@ -1071,10 +1221,10 @@ Shipped per the approved decisions: the capstone centers on the AtlasBank AI Sup
 
 ---
 
-## Path 10: Career and Leadership in QA
+## Path 11: Career and Leadership in QA
 
 **Directory**: `/learning-paths/career/`  
-**Position**: 10  
+**Position**: 11  
 **Prerequisites**: Foundations + 1+ years QA experience  
 **Target Audience**: QA professionals, team leads, QA managers, QA directors  
 **Estimated Duration**: Ongoing (career development)  
@@ -1118,8 +1268,10 @@ Foundations (gateway)
     ├─→ Manual Testing → API Testing → Interview Prep
     │       ↓
     │    Automation ──→ Performance → Career
-    │       ↓
-    │    Database Testing
+    │       ↓            ↓
+    │    Database    Mobile Testing
+    │    Testing         ↓
+    │                 AI for QA
     │
     └─→ Security Testing ────→ Interview Prep
            ↓
@@ -1127,7 +1279,8 @@ Foundations (gateway)
 
 Specialized Paths:
     Performance Testing → Career
-    AI Testing → (emerging, connects to all)
+    AI for QA → (connects to all six technical paths ahead of it)
+    Mobile Testing → (connects to Manual, API, Database, Automation, Performance)
 ```
 
 ---
@@ -1140,6 +1293,7 @@ Learners can switch paths at any time, but some transitions are smoother:
 - Manual Testing → API Testing (concepts apply directly)
 - Manual Testing → Automation (design first, then automate)
 - Automation → Performance Testing (load testing uses the same tools)
+- Automation → Mobile Testing (device/platform automation extends the same framework concepts)
 - Any path → Interview Prep (prerequisites satisfied)
 - Any path → Career (after 1+ years experience)
 

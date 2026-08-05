@@ -1,0 +1,7 @@
+%% VIS-007 — Applying Pairwise Testing to Device Fragmentation
+flowchart LR
+    accTitle: Applying Pairwise Testing to Device Fragmentation
+    accDescr: Device tier, OS version, screen size, and manufacturer form a combinatorial space too large to test exhaustively. Applying pairwise testing generates a much smaller set of test combinations that still guarantees every pair of dimension values is tested together at least once.
+    A[Device tier × OS version ×<br/>screen size × manufacturer] --> B{Exhaustive testing?}
+    B -->|Impractical — too many combinations| C[Apply Pairwise Testing]
+    C --> D[Smaller test set, every pair<br/>of values covered at least once]

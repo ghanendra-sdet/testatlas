@@ -1,0 +1,8 @@
+%% VIS-009 — Compatibility and Responsive Behavior Are Two Distinct Checks
+flowchart LR
+    accTitle: Compatibility and Responsive Behavior Are Two Distinct Checks
+    accDescr: The same pairwise-selected device set from Device Fragmentation is tested with two distinct lenses. Compatibility confirms underlying functionality works correctly. Responsive behavior confirms the visual layout actually adapts correctly, including whether critical controls are genuinely visible and reachable without requiring an unprompted scroll.
+    A[Pairwise Device Set] --> B[Compatibility:<br/>does functionality work?]
+    A --> C[Responsive behavior:<br/>does layout actually adapt?]
+    B --> D[A feature can pass this<br/>while failing the other]
+    C --> D
