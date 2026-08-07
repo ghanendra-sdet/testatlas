@@ -70,7 +70,8 @@ const learningPaths: LearningPath[] = [
   {
     title: 'Interview Preparation',
     description: 'Scenario-based practice for the interviews QA candidates actually get asked.',
-    status: 'Planned',
+    href: '/learning-paths/interview-preparation/how-qa-interviews-are-structured',
+    status: 'Live · 21 modules, certified',
   },
   {
     title: 'Career & Leadership',
@@ -148,17 +149,17 @@ export default function Home(): ReactNode {
               </Link>
             </div>
             <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>9 Paths Live</li>
-              <li className={styles.heroBadge}>167 Modules</li>
-              <li className={styles.heroBadge}>8 Certified Reference Curricula</li>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>10 Paths Live</li>
+              <li className={styles.heroBadge}>188 Modules</li>
+              <li className={styles.heroBadge}>9 Certified Reference Curricula</li>
               <li className={styles.heroBadge}>Free</li>
               <li className={styles.heroBadge}>Open Source</li>
             </ul>
             <p className={styles.heroStatus}>
-              Foundations plus eight certified curricula — Manual Testing, API Testing, Test Automation,
-              Database Testing, Performance Testing, AI for QA, Mobile Testing, and Security Testing — are
-              live today, 167 modules in total. Two more learning paths remain planned — see what&rsquo;s
-              next below.
+              Foundations plus nine certified curricula — Manual Testing, API Testing, Test Automation,
+              Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing, and
+              Interview Preparation — are live today, 188 modules in total. One more learning path remains
+              planned — see what&rsquo;s next below.
             </p>
           </div>
         </section>

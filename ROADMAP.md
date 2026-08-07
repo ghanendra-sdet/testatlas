@@ -27,9 +27,11 @@ Each release is a meaningful checkpoint, not just a version bump. This is the or
 | v1.2.0 | Performance Testing | ✅ Complete (17/17), certified |
 | v1.3.0 | AI for QA | ✅ Complete (17/17), certified |
 | v1.4.0 | Mobile Testing | ✅ Complete (16/16), certified — added as an evidenced 11th path (Position 9), not part of the original 10-path plan; see `docs/architecture/LEARNING_PATHS.md` |
-| **v1.5.0+** | **Security Testing, Interview Preparation, Project Simulations + Labs, Career Growth** | **Planned** — paused for real learner/contributor feedback before starting; see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note |
+| v1.1.0 | Security Testing | ✅ Complete (22/22), certified — see `docs/architecture/SECURITY_TESTING_CERTIFICATION.md` |
+| v1.2.0 | Interview Preparation | ✅ Complete (21/21), certified — built on `feature/interview-preparation`, merged after practitioner review; see `docs/architecture/LEARNING_PATHS.md`, Path 10 |
+| **v1.3.0+** | **Project Simulations + Labs, Career Growth** | **Planned** — paused for real learner/contributor feedback before starting; see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note |
 
-**Revised from the original plan**: v1.0.0 was originally sequenced after Database Testing, Project Simulations, Interview Academy, and AI Testing (see the now-superseded v0.9–v0.11 entries below, kept for historical record). That sequencing was revised — v1.0.0 shipped with the three complete, certified curricula (Manual Testing, API Testing, Automation Testing) plus Foundations, rather than holding the first stable public release back for four more learning paths. v1.1.0 through v1.4.0 then shipped as extensions of that stable, released platform — Database Testing, Performance Testing, AI for QA, and Mobile Testing, each independently certified — matching the project's own actual pace (seven certified paths shipped within days of each other) rather than the original month-by-month plan. With seven certified curricula and 128 modules now live (145 including Foundations), active curriculum work is deliberately paused before v1.5.0: the next path starts from real feedback, not automatically.
+**Revised from the original plan**: v1.0.0 was originally sequenced after Database Testing, Project Simulations, Interview Academy, and AI Testing (see the now-superseded v0.9–v0.11 entries below, kept for historical record). That sequencing was revised — v1.0.0 shipped with the three complete, certified curricula (Manual Testing, API Testing, Automation Testing) plus Foundations, rather than holding the first stable public release back for four more learning paths. v1.1.0 through v1.4.0 then shipped as extensions of that stable, released platform — Database Testing, Performance Testing, AI for QA, and Mobile Testing, each independently certified — matching the project's own actual pace (seven certified paths shipped within days of each other) rather than the original month-by-month plan. With nine certified curricula and 171 modules now live (188 including Foundations), active curriculum work is deliberately paused before the next path: the next path starts from real feedback, not automatically.
 
 Ideas that aren't on this list — mascot/branding, gamification, accounts, and similar — are intentionally parked in `NOT_NOW.md` at the repository root, not forgotten, just not competing with the roadmap above.
 
@@ -131,11 +133,10 @@ Ideas that aren't on this list — mascot/branding, gamification, accounts, and 
 
 ### v1.5.0+ — Planned, Feedback-Gated
 
-With seven certified curricula and 145 modules live, further curriculum work is deliberately paused for real learner and contributor feedback before it resumes — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note. When it does resume, candidates are:
+With nine certified curricula and 188 modules live (including Foundations), further curriculum work is deliberately paused for real learner and contributor feedback before it resumes — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note. When it does resume, candidates are:
 
-- **Security Testing** — QA-focused security testing as its own discipline, distinct from the domain-specific security already taught inside API, Database, Mobile, and AI for QA testing
 - **Project Simulations + Labs** — first 2–3 end-to-end project simulations, first wave of runnable labs
-- **Interview Academy** — question bank, mock interview structures, scenario-based practice
+- **Career Growth in Quality Engineering** — building a test strategy, leading a QA team, growing beyond individual execution
 - **Career Growth in Quality Engineering**
 
 Each still gets a written architecture proposal, reviewed and approved before any module content is written, following the six most recent paths' own example — but the trigger for starting is feedback and deliberate decision, not this roadmap alone.
