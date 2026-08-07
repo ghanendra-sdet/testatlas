@@ -190,6 +190,11 @@ const config: Config = {
           label: 'GitHub',
           position: 'right',
         },
+        {
+          href: 'https://www.linkedin.com/in/ghanendra-yadav/',
+          label: 'LinkedIn',
+          position: 'right',
+        },
       ],
     },
     footer: {
