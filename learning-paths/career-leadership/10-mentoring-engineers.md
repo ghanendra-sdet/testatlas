@@ -91,7 +91,7 @@ At AtlasBank, a Staff QA Engineer mentoring a junior tester on the Internet Bank
 
 - [Developing Leadership Skills and Technical Credibility](/learning-paths/career-leadership/developing-leadership-skills-and-technical-credibility) — The same "hardest unowned problem" pattern, here deliberately created as a mentoring opportunity
 - [Delegation and Decision Making](/learning-paths/career-leadership/delegation-and-decision-making) — How mentoring connects to deciding what to hand off and to whom
-- Coaching (coming soon, Section 6) — A related but distinct skill focused more on performance and growth conversations than technical judgment-building
+- [Coaching](/learning-paths/career-leadership/coaching) — A related but distinct skill focused more on performance and growth conversations than technical judgment-building
 
 ## Interview Questions
 

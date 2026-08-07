@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Test Governance
 
 **Prerequisites**: [Quality Engineering as a Discipline](/learning-paths/career-leadership/quality-engineering-as-a-discipline)
-**Leads to**: After this, you'll be ready for Quality KPIs and Defect Metrics, opening Section 5 (coming soon).
+**Leads to**: After this, you'll be ready for [Quality KPIs and Defect Metrics](/learning-paths/career-leadership/quality-kpis-and-defect-metrics).
 
 ## Why This Matters
 
@@ -88,7 +88,7 @@ As AtlasBank grew from roughly 40 to over 150 engineers, its Head of QA recogniz
 
 - [Organization-Wide Quality Strategy](/learning-paths/career-leadership/organization-wide-quality-strategy) — The same centralize-only-what-genuinely-needs-it reasoning this module applies specifically to governance
 - [Quality Engineering as a Discipline](/learning-paths/career-leadership/quality-engineering-as-a-discipline) — How distributed testing ownership and narrow governance work together rather than in tension
-- Quality KPIs and Defect Metrics (coming soon, Section 5) — The measurement layer that makes governance standards verifiable rather than merely stated
+- [Quality KPIs and Defect Metrics](/learning-paths/career-leadership/quality-kpis-and-defect-metrics) — The measurement layer that makes governance standards verifiable rather than merely stated
 
 ## Interview Questions
 
