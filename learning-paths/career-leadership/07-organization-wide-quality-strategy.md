@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Organization-Wide Quality Strategy
 
 **Prerequisites**: [Release Strategy](/learning-paths/career-leadership/release-strategy)
-**Leads to**: After this, you'll be ready for Leading Without Authority, opening Section 3 (coming soon).
+**Leads to**: After this, you'll be ready for [Leading Without Authority](/learning-paths/career-leadership/leading-without-authority).
 
 ## Why This Matters
 

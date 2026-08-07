@@ -110,7 +110,7 @@ A Senior QA Engineer at a mid-size SaaS company was offered a "QA Lead" role aft
 ## Related Topics
 
 - [Developing Leadership Skills and Technical Credibility](/learning-paths/career-leadership/developing-leadership-skills-and-technical-credibility) — What actually builds influence on each of these three tracks
-- Running QA Teams (coming soon, Section 3) — What the Management track's daily work actually involves once you're in it
+- [Running QA Teams](/learning-paths/career-leadership/running-qa-teams) — What the Management track's daily work actually involves once you're in it
 - [Evaluating and Negotiating an Offer](/learning-paths/interview-preparation/evaluating-and-negotiating-an-offer) — The same clarify-before-accepting discipline, applied to external offers rather than internal promotions
 
 ## Interview Questions

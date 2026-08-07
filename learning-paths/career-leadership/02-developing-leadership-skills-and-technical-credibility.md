@@ -110,7 +110,7 @@ At a mid-size fintech company, a Senior QA Engineer noticed the team's checkout-
 ## Related Topics
 
 - [QA Career Roadmap: IC vs. Technical Lead vs. Manager](/learning-paths/career-leadership/qa-career-roadmap-ic-vs-technical-lead-vs-manager) — The three tracks this credibility is the shared foundation for
-- Leading Without Authority (coming soon, Section 3) — Applying this same credibility directly, before any formal title exists
+- [Leading Without Authority](/learning-paths/career-leadership/leading-without-authority) — Applying this same credibility directly, before any formal title exists
 - [Presenting Your Testing Work Credibly](/learning-paths/interview-preparation/presenting-your-testing-work-credibly) — The same structured-communication discipline, applied specifically to interviews
 
 ## Interview Questions
