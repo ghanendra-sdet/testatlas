@@ -159,7 +159,11 @@ Many candidates answer "database testing is basically the same as API testing, j
 Remember these five points:
 
 ✓ Database testing verifies the actual stored data, not the interface reporting on it.
+
 ✓ A feature can present a fully correct UI/API response while writing incorrect data underneath.
+
 ✓ This is a QA-scoped skill (functional correctness), not database administration (performance, schema, infrastructure).
+
 ✓ Interruption and retry scenarios are where data-layer defects most commonly hide.
+
 ✓ This path reuses Manual Testing's test-design toolkit (BVA, Equivalence Partitioning) against a new surface — data boundaries — starting in Section 2.

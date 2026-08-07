@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ State your query plan in plain English before writing any SQL.
+
 ✓ Verify your own result by stating what you expect before or after running the query.
+
 ✓ Name and fix your own mistakes aloud rather than hiding them.
+
 ✓ A live SQL exercise evaluates reasoning about data, not just correct syntax.
+
 ✓ A small syntax slip is recoverable if your stated logic was already correct — silence is what makes it costly.

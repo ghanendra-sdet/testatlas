@@ -126,7 +126,11 @@ Compare your five rounds against the evaluator notes. The rapid cross-domain rou
 Remember these five points:
 
 ✓ Answer each round before reading the model answer.
+
 ✓ Rounds 1–4 evaluate deep technical reasoning; Round 5 evaluates calibrated, brief, cross-domain scoping.
+
 ✓ State your plan or diagnostic question before proposing a solution, in every round.
+
 ✓ Compare your own performance across both mock-interview tracks to find whether your gaps are technical or cross-domain.
+
 ✓ Every model answer reuses an existing TestAtlas curriculum directly — none introduces new technical content.

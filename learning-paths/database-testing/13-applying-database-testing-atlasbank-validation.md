@@ -107,7 +107,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine multiple sections' techniques against one integrated, realistic feature — don't just re-confirm each technique in isolation.
+
 ✓ A constraint visible in the application layer still needs direct database-level verification.
+
 ✓ Test every distinct write path a feature has (primary and secondary/automated) for every concern, not just the obvious one.
+
 ✓ A defect found in one dimension (concurrency) is a signal to deliberately check adjacent dimensions (audit coverage) on the same feature.
+
 ✓ Integrated testing finds defects no single technique, tested alone, would surface.

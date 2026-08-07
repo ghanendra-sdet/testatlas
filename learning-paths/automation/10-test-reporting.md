@@ -154,7 +154,11 @@ Many candidates answer "you should log more information" without naming anything
 Remember these five points:
 
 ✓ A test report's job is answering "real defect or something else" fast, without a re-run.
+
 ✓ Capture expected vs. actual values explicitly for every assertion failure.
+
 ✓ Capture a screenshot (or equivalent) at the moment of failure for UI-based tests, by default.
+
 ✓ Surface a test's recent failure history alongside its current result.
+
 ✓ Design reports for a reader who wasn't present when the test was written.

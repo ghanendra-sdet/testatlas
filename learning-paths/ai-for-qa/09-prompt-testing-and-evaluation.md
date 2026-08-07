@@ -156,7 +156,11 @@ Many candidates describe evaluating an AI response as simply "checking if it loo
 Remember these five points:
 
 ✓ Prompt testing covers realistic phrasing variation — formal, informal, typos, ambiguous — not just one clean test question.
+
 ✓ Score AI responses against a structured, multi-dimension rubric, not a binary pass/fail.
+
 ✓ Test genuinely ambiguous phrasing specifically, distinct from informality or typos.
+
 ✓ A response can score well on one rubric dimension and poorly on another — track them independently.
+
 ✓ Evaluation frameworks (DeepEval, RAGAS-style tools) implement the rubric concept — no single tool is canonical.

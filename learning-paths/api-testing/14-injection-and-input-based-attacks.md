@@ -186,7 +186,11 @@ Some candidates, trying to sound thorough, describe attempting to actually extra
 Remember these five points:
 
 ✓ This module's scope is symptom recognition and responsible reporting — not building or running exploits, which requires specialized authorization.
+
 ✓ Realistic input (apostrophes, special characters in real names) often reveals validation gaps that "clean" input testing misses.
+
 ✓ Test mass assignment by deliberately including undocumented fields in a write request and confirming they're ignored.
+
 ✓ A raw system error in a response is a priority finding — report it immediately with full reproduction detail, don't probe further independently.
+
 ✓ Validate file uploads by actual content, not filename, and confirm enforcement is server-side, not just client-side.

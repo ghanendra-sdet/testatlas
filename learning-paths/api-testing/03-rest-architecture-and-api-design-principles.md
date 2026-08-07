@@ -169,7 +169,11 @@ Many candidates answer "REST means it uses HTTP methods and JSON." That's true b
 Remember these five points:
 
 ✓ REST is a set of conventions — resource-named URLs, method-carried verbs, statelessness, consistent status codes — not a formal protocol.
+
 ✓ A naming or convention inconsistency across routes is often a lead pointing at a real behavioral defect, not just cosmetic noise.
+
 ✓ Compare routes to each other, not just each route to its own documentation — cross-route inconsistencies are invisible one route at a time.
+
 ✓ REST conventions only apply where an API is meant to be RESTful — don't force them onto GraphQL, RPC-style, or legacy APIs.
+
 ✓ Statelessness is a testable claim, not something to assume — send identical requests in different contexts and check for unexpected behavior differences.

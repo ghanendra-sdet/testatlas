@@ -182,7 +182,11 @@ Many candidates answer "I'd send a lot of requests quickly and check for a 429."
 Remember these five points:
 
 ✓ Rate limiting is a testable functional concern — test it directly, don't leave it entirely to infrastructure.
+
 ✓ A correct 429 includes a Retry-After value; test both retrying-too-soon (should fail) and waiting-then-retrying (should succeed).
+
 ✓ Test what a rate limit is actually keyed to, not just whether it triggers — a narrowly-scoped limit can be bypassed while appearing to work.
+
 ✓ Burst limits and sustained limits are independent and need separate test cases.
+
 ✓ Verify token revocation by replaying a token after logout — client-side deletion alone proves nothing about server-side enforcement.

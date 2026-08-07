@@ -163,7 +163,11 @@ Many candidates describe a good bug report as one that's simply "detailed," with
 Remember these five points:
 
 ✓ A bug report's value depends on reproducibility — vague steps, especially around sequence and timing, are the most common way a real defect becomes hard to act on.
+
 ✓ State Severity and Priority separately, using Foundations' actual distinction, to preserve their triage value.
+
 ✓ Include the Reproducibility field explicitly — it saves real debugging time either way.
+
 ✓ Match reporting rigor to how far the defect needs to travel — full structure for shared, tracked defects.
+
 ✓ "I saw something happen once" is a real observation, but capturing exact reproduction is what makes it actionable.

@@ -115,7 +115,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real API testing assignment moves continuously from contract review to risk-driven technique selection to execution to reporting to boundary-aware verification.
+
 ✓ Technique selection should be driven by a feature's actual risk shape, not a fixed, uniformly-applied checklist.
+
 ✓ The same real defect found independently at two different layers (UI and API) confirms a genuine implementation gap, not a layer-specific artifact.
+
 ✓ Idempotency and similar per-endpoint concerns need re-testing on every new endpoint — never assumed from another endpoint's result.
+
 ✓ Verification after a fix should test the fix's actual boundary and hold across varied conditions, not just re-run the original failing case once.

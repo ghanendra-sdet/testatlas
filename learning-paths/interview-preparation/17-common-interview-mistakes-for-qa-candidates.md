@@ -103,7 +103,11 @@ A newer candidate studies each interview round type as an unrelated skill to pre
 Remember these five points:
 
 ✓ Recognize the round type and adapt your answer's shape accordingly, in every round, not just technical ones.
+
 ✓ Make your reasoning visible — narrate your process, don't just present conclusions.
+
 ✓ Stay specific — a concrete example beats a generic claim in every round type.
+
 ✓ Frame disagreement around evidence and outcome, never blame.
+
 ✓ Scope your answers honestly — overreaching produces a weaker result than honest, correctly-scoped confidence.

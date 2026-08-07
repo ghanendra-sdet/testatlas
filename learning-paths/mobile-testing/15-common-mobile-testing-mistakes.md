@@ -110,7 +110,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Select devices via pairwise generation with a stated coverage guarantee, never by convenience alone.
+
 ✓ Test the rotation transition itself, not just the two resulting static orientation states.
+
 ✓ Always test the send-to-confirmation reconnect window on every feature with a write action.
+
 ✓ Apply the full five-state hardware framework — including runtime change and recovery — to every hardware-dependent feature.
+
 ✓ Treat device-side battery, memory, storage, and certificate checks as required, not inferred from server-side results.

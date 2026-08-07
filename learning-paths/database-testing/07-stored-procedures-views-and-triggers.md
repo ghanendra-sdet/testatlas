@@ -175,7 +175,11 @@ Many candidates answer that a trigger either "works" or "doesn't work," without 
 Remember these five points:
 
 ✓ Stored procedures need both their output and their side effects verified — the same multi-row discipline as any other write.
+
 ✓ Views need to be tested for liveness against underlying changes, not just checked once at setup.
+
 ✓ A view's restricted columns need structural verification, not just absence from one observed query.
+
 ✓ A trigger's firing behavior can differ across write paths — test every distinct path, not just the easiest one.
+
 ✓ Bulk/batch operations are a common, disproportionate source of trigger-coverage gaps compared to single-row UI flows.

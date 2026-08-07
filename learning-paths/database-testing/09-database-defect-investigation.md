@@ -155,7 +155,11 @@ Many candidates jump straight to "I'd check the database" without first ruling o
 Remember these five points:
 
 ✓ Trace a vague symptom outside-in: UI display, then API response, then query logic, then underlying data.
+
 ✓ Always start with the fastest, cheapest check — comparing a displayed value to a direct query.
+
 ✓ An investigation isn't complete until the defect is reproducible on demand.
+
 ✓ Pattern-match a found defect against this path's established classes (duplicate, constraint gap, consistency failure, trigger gap, lost update).
+
 ✓ A well-traced defect report reaches a developer already containing the specific query, rows, and defect class — not a vague description.

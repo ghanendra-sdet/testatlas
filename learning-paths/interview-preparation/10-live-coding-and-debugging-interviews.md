@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Read and understand failing code before proposing or making any change.
+
 ✓ Ask whether the failure is consistent or intermittent as your first diagnostic question.
+
 ✓ State your hypothesis explicitly before testing it.
+
 ✓ A debugging exercise evaluates diagnostic process as much as the final fix.
+
 ✓ A wrong-but-stated hypothesis, corrected aloud, is stronger than a silent guess.

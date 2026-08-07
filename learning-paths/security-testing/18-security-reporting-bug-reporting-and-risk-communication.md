@@ -144,7 +144,11 @@ Many candidates, when a finding isn't getting prioritized, assume the technical 
 Remember these five points:
 
 ✓ Write two coordinated artifacts for every security-relevant finding: a technical report and a plain-language risk summary.
+
 ✓ The risk summary answers "why does this matter," not a simplified version of "how do I fix this."
+
 ✓ Apply this dual-audience discipline to every security finding, not just the most severe ones.
+
 ✓ Keep the risk summary specific and evidence-based — never vague alarm to force urgency.
+
 ✓ Existing, technically-accurate but unprioritized findings can often be resolved by adding a risk summary alone.

@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Ask narrowing questions before proposing any specific cause.
+
 ✓ Reason through multiple possible causes at different layers, not a single guess.
+
 ✓ State how you'd confirm or rule out your hypothesis, not just what you suspect.
+
 ✓ The specific final cause matters less than whether your process was systematic.
+
 ✓ A demonstrated process transfers to unfamiliar systems — a lucky guess doesn't.

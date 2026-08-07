@@ -180,7 +180,11 @@ Many candidates answer "wildcard CORS is always bad and should never be used." T
 Remember these five points:
 
 ✓ Confirm plain HTTP is actually rejected, not just that HTTPS works — the two are independently testable.
+
 ✓ A wildcard or dynamically-reflected CORS origin is far more severe on a credentialed, sensitive endpoint than a public one.
+
 ✓ Test for a dynamically-reflected origin specifically, since it can defeat credentialed-request protection without a literal wildcard.
+
 ✓ Never disable certificate validation in test tooling just to make a test pass more conveniently.
+
 ✓ Check for `Secure`, `HttpOnly`, and `SameSite` flags on any session cookie.

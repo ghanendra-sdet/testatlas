@@ -147,7 +147,11 @@ Many candidates describe installation testing as covering "does the app install 
 Remember these five points:
 
 ✓ Fresh install, upgrade, and uninstall/reinstall are three distinct installation paths, each with its own risk.
+
 ✓ Upgrade testing exercises data-migration logic a fresh install structurally cannot reach.
+
 ✓ Test upgrading from more than one prior version back, given real-world version-adoption lag.
+
 ✓ Populate upgrade test data realistically, matching a real long-time user's accumulated state.
+
 ✓ Directly verify uninstall/reinstall clears local data completely, especially for sensitive content.

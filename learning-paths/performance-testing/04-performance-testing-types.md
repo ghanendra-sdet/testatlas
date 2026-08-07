@@ -166,7 +166,11 @@ Many candidates describe spike testing as simply "a load test that runs faster,"
 Remember these five points:
 
 ✓ Load testing confirms expected traffic is handled well; stress testing finds the actual breaking point — different questions, not different intensities of the same question.
+
 ✓ Spike testing measures reaction speed to a sudden surge, not just peak intensity reached gradually.
+
 ✓ Soak testing's extended duration is the only way to catch slow, sustained-duration degradation — it can't be shortcut.
+
 ✓ Volume testing checks performance against data growth, independent of concurrent traffic.
+
 ✓ Match the test type to a feature's actual, specific risk profile, not a fixed checklist applied identically everywhere.

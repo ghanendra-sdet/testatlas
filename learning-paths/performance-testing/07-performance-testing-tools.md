@@ -172,7 +172,11 @@ Many candidates describe JMeter as "the" performance testing tool without acknow
 Remember these five points:
 
 ✓ Every performance tool implements four concepts: virtual users, request scripts, timing control, and metrics capture/reporting.
+
 ✓ JMeter is this path's primary worked example because it's free and widely adopted — not because it's canonical.
+
 ✓ k6, Gatling, and Locust implement the same concepts through code, better suited to version control and CI/CD.
+
 ✓ Monitoring tools (Grafana, Prometheus) and load-generation tools serve different purposes, often used together.
+
 ✓ Define a test in plain-language concepts before opening any specific tool.

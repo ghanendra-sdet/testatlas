@@ -149,7 +149,11 @@ Many candidates describe mobile performance testing as an entirely separate disc
 Remember these five points:
 
 ✓ Mobile performance testing extends the existing Performance Testing toolkit — the method doesn't change, the measured layer does.
+
 ✓ Battery consumption, memory usage over extended sessions, and variable-network performance are mobile's three device-side additions.
+
 ✓ Test memory over an extended, repeated-use session, not just a single short pass, to catch leaks.
+
 ✓ Measure background activity's resource cost separately from active, foreground use.
+
 ✓ "No network" and "slow network" are distinct test conditions — handling one correctly doesn't guarantee the other.

@@ -86,7 +86,11 @@ This is the efficient way to verify real improvement.
 Remember these five points:
 
 ✓ Name the specific round and specific gap — never a vague general impression.
+
 ✓ Connect every identified gap directly back to the module or technique that addresses it.
+
 ✓ Re-test the specific weak round, not the entire simulation, once reviewed.
+
 ✓ Ask a clarifying question when real feedback is too vague to act on.
+
 ✓ How you receive feedback is itself being evaluated, in a real interview context.

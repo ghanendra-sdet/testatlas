@@ -107,7 +107,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine Sections 1–5's individual techniques against one realistic, integrated feature — don't just re-confirm each technique in isolation.
+
 ✓ A horizontal access-control failure and a data over-exposure issue can exist independently on the same feature.
+
 ✓ A clean test result is genuine, valuable evidence — document it as explicitly as a defect.
+
 ✓ Apply logging coverage checks even to routine-looking features that carry real fraud or business risk.
+
 ✓ Combined, realistic testing is what a genuine security-testing effort actually looks like, not isolated single-technique checks.

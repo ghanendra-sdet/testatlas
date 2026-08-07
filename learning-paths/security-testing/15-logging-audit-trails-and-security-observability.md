@@ -144,7 +144,11 @@ Many candidates describe audit-log testing only in terms of confirming logs exis
 Remember these five points:
 
 ✓ Test two distinct concerns: logging coverage (are the right events captured) and log integrity (can entries be tampered with).
+
 ✓ General-purpose activity logging can look complete while missing security-relevant categories entirely.
+
 ✓ Always test whether a privileged user can modify or delete log entries describing their own actions.
+
 ✓ A log entry needs enough attributable detail (who, what, when) to actually provide accountability.
+
 ✓ Build logging requirements into a feature's initial design, not retrofitted after a gap is found.

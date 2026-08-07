@@ -112,7 +112,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Verify data directly with a query — an interface passing tells you nothing about the underlying data's correctness.
+
 ✓ For every Update/Delete, confirm unrelated rows stayed untouched, not just that the intended row is correct.
+
 ✓ Test every documented constraint with a direct database write — don't trust documentation alone.
+
 ✓ Deliberately test interrupted and concurrent scenarios — this defect class doesn't appear under clean, single-operation conditions.
+
 ✓ Test triggers, performance, and security at realistic scale and across every write path, not just the most convenient one.

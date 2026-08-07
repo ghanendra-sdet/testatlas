@@ -113,7 +113,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Verify the request itself, not just the response, especially in copied or reused test data.
+
 ✓ Test the API's actual surface directly, not just what the current UI happens to send.
+
 ✓ Test an actual invalid value for every constrained field or parameter, not just its presence or absence.
+
 ✓ After any retry test, check the full resulting state, not just whether the retried request itself succeeded.
+
 ✓ Test each concern on each individually relevant endpoint — a passing result elsewhere is not evidence.

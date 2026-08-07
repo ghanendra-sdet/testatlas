@@ -162,7 +162,11 @@ Many candidates jump straight to "check the database" or "check the CPU" without
 Remember these five points:
 
 ✓ A performance finding isn't complete without identifying which specific resource caused the degradation.
+
 ✓ Monitor all four dimensions together — CPU, memory, database, network — not just the most obvious guess.
+
 ✓ Correlate the load timeline against resource timelines; the bottleneck is whichever resource bends at the same moment.
+
 ✓ Capture monitoring data throughout every test run, not retroactively.
+
 ✓ Include correlated graphs, not just a text description, in the defect report handed to developers.

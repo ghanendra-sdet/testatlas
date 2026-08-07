@@ -94,7 +94,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ A strong scenario answer synthesizes multiple modules' concepts in the right order, not one isolated recalled fact.
+
 ✓ Vague language in a complaint ("sometimes," "on weekends") is real diagnostic signal worth naming explicitly.
+
 ✓ A long streak of passing tests can mean the tests themselves are invalid, not that everything is genuinely fine.
+
 ✓ Reconcile contradictory stakeholders by checking for a reporting gap before assuming either side is wrong.
+
 ✓ Verify a claimed fix by re-running the exact original reproduction steps, not by general impression.

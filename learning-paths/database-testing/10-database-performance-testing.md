@@ -163,7 +163,11 @@ Many candidates describe performance testing purely in terms of load (many concu
 Remember these five points:
 
 ✓ Test performance at realistic data volume, not small sample data — this defect class hides at small scale.
+
 ✓ A tester recognizes the missing-index symptom (response time scaling sharply with data volume); designing the index is a developer/DBA's job.
+
 ✓ The N+1 pattern is observable directly via query count at different result-set sizes.
+
 ✓ Report a scaling comparison (small vs. large volume), not a single response time.
+
 ✓ Distinguish "slow and scaling with volume" from "slow regardless of volume" — they point to different causes.

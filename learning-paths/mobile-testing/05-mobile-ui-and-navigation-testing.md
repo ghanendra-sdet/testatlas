@@ -144,7 +144,11 @@ Many candidates describe testing "both portrait and landscape" as sufficient rot
 Remember these five points:
 
 ✓ Apply Boundary Value Analysis and Equivalence Partitioning directly to mobile UI inputs — no new technique needed.
+
 ✓ Test the rotation transition itself, especially mid-interaction, not just each orientation independently.
+
 ✓ Distinct touch gestures (tap, double-tap, long-press) are separate equivalence classes needing their own tests.
+
 ✓ Test soft keyboard appearance directly — focused input and underlying content both need verified accessibility.
+
 ✓ Test interruptions specifically mid-interaction, where real mobile UI defects concentrate.

@@ -181,7 +181,11 @@ Many candidates answer "a cascading failure is when one service going down cause
 Remember these five points:
 
 ✓ A cascading failure spreads through a shared resource to components with no direct dependency on the original failure.
+
 ✓ Test dependency failures under realistic concurrent load — cascading failure is fundamentally a concurrency phenomenon, invisible in one-request-at-a-time testing.
+
 ✓ Confirm a circuit breaker both trips at its documented threshold and resets at its documented cooldown.
+
 ✓ Verify retries use backoff and jitter, not immediate synchronized retry, to avoid retry storms.
+
 ✓ A standardized error response with a trace ID is what makes diagnosing where a cascading failure originated actually practical.

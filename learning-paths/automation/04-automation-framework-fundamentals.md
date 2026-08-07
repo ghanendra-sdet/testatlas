@@ -170,7 +170,11 @@ Many candidates answer by naming a specific tool ("we used Playwright, so we had
 Remember these five points:
 
 ✓ A framework is a set of structural decisions, not a specific tool — installing one doesn't automatically give you the other.
+
 ✓ Six concerns every framework addresses: test runner, locators, assertions, configuration, reporting, reusable setup/teardown.
+
 ✓ Framework cost starts compounding from the second test case, not some later threshold.
+
 ✓ Duplicated shared logic (especially login) is the most common, most costly sign of a missing framework.
+
 ✓ Choose a tool based on your team's actual language stack and application — the underlying structural concepts transfer regardless.

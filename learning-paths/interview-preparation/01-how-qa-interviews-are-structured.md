@@ -119,7 +119,11 @@ A newer candidate prepares one general-purpose "good answer" style and applies i
 Remember these five points:
 
 ✓ A QA interview loop typically contains behavioral, technical/domain, scenario/take-home, and panel rounds.
+
 ✓ Scenario and take-home rounds evaluate structured reasoning, not factual recall — treating them as trivia is a costly mistake.
+
 ✓ Ask a clarifying question in open-ended scenario rounds rather than guessing at assumed scope.
+
 ✓ Recognize the round type within the first exchange and adapt your answer's shape accordingly.
+
 ✓ Calibrate technical depth to the actual audience present, especially in panel rounds.

@@ -161,7 +161,11 @@ Many candidates describe assertions generically ("I'd assert the expected result
 Remember these five points:
 
 ✓ Assertion precision determines what a test can actually catch — presence-only checks miss incorrect content.
+
 ✓ Assert on what a user would actually care about (exact text, specific values), not a weaker proxy.
+
 ✓ Use exact-match assertions wherever a genuinely correct, specific value exists to check against.
+
 ✓ Choose hard vs. soft assertions deliberately — based on whether a failure makes subsequent steps meaningless.
+
 ✓ When a real defect escapes an automated test, check the assertion's precision before assuming the test wasn't run.

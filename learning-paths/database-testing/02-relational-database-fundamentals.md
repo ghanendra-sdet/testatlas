@@ -194,7 +194,11 @@ Many candidates can recite the definitions of primary and foreign keys correctly
 Remember these five points:
 
 ✓ Tables hold rows of one kind of record; primary keys guarantee each row is unique.
+
 ✓ Foreign keys connect tables and model real relationships, enforced by the database, not just application logic.
+
 ✓ Whenever a row changes or is deleted, ask what else has a foreign key pointing at it.
+
 ✓ Relationship type (one-to-many, many-to-many, one-to-one) changes what "correctly handled" means for a given change.
+
 ✓ Reading a schema before test design tells you which tables a feature will touch — the same reconnaissance value as reading a requirement first.

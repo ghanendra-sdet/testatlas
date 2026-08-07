@@ -110,7 +110,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Define a specific verification target for every review — a formality check with no target catches almost nothing.
+
 ✓ Verify specific, checkable claims directly — never trust AI output's confident tone as evidence of correctness.
+
 ✓ Apply BVA/Equivalence Partitioning explicitly to AI-drafted test cases — obvious-shape coverage isn't real boundary coverage.
+
 ✓ Separate an AI feature's deterministic layer from its AI-generation layer — apply exact-match and rubric evaluation to the right one.
+
 ✓ Default to synthetic/sanitized data for AI tools, and build one consistent, logged workflow — don't rely on individual memory.

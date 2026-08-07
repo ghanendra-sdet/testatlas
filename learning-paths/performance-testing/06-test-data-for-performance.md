@@ -154,7 +154,11 @@ Many candidates equate "realistic test data" with "enough rows," without conside
 Remember these five points:
 
 ✓ Volume, shape, and distribution are three separate properties of realistic test data — each matters independently.
+
 ✓ Production data is often skewed, not evenly distributed — evenly-distributed test data misses where real problems concentrate.
+
 ✓ Synthetic data matching production's real shape avoids the privacy risk of using raw production data directly.
+
 ✓ Reset test data to a known state before each comparable test run, so result differences reflect real performance changes.
+
 ✓ This module extends, not repeats, Database Testing's own small-test-data lesson — deliberate data design for a full testing effort, not just symptom recognition.

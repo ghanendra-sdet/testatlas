@@ -166,7 +166,11 @@ Many candidates answer "flaky tests waste time because you have to re-run them."
 Remember these five points:
 
 ✓ A flaky test's real cost is eroded trust — its real failures get dismissed along with its false ones.
+
 ✓ Automatically retrying failures without diagnosis can mask a real regression exactly as easily as a real test defect.
+
 ✓ Common root causes: missing synchronization, test order dependency, shared unmanaged data, environment inconsistency, genuine application race conditions.
+
 ✓ Flakiness can be a real, valuable signal about the application, not just a test-authoring problem.
+
 ✓ A pattern of intermittent failure deserves the same seriousness as a consistent one.

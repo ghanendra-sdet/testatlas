@@ -163,7 +163,11 @@ Many candidates answer "because it's faster than UI testing." That's true but in
 Remember these five points:
 
 ✓ API testing exercises the request/response contract directly, independent of any UI.
+
 ✓ A passing UI test provides no evidence that the API response underneath it is actually correct.
+
 ✓ Requests reachable only via direct API calls (not through the UI's validation) need their own test coverage.
+
 ✓ API testing, UI testing, and unit testing catch different defect classes — use all three, not one instead of the others.
+
 ✓ This path applies Manual Testing's test-design toolkit to APIs; it doesn't re-teach test design from zero.

@@ -105,7 +105,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Apply Section 3's full toolkit systematically across every documented category, not a representative sample.
+
 ✓ AI quality issues can be category-specific — a pattern in one capability area may not generalize to others.
+
 ✓ Test mixed in-scope/out-of-scope requests as their own distinct condition, not just each extreme separately.
+
 ✓ A validation pass isn't complete until both the deterministic and AI-quality layers are explicitly covered.
+
 ✓ Systematic, full-scope testing finds real, specific gaps that spot-testing a feature's most obvious cases would miss.

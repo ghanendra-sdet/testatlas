@@ -103,7 +103,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine strategy, execution, and analysis techniques against one integrated feature — don't just re-confirm each technique in isolation.
+
 ✓ Match test type to a feature's actual known risk — a real announced event justifies a dedicated spike test.
+
 ✓ A spike test can reveal defects load and stress testing structurally cannot.
+
 ✓ Treat a capacity forecast and a specific defect finding as separate, independently actionable report items.
+
 ✓ Shape test data to match real population distribution, not a uniform assumption.

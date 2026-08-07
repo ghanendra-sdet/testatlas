@@ -112,7 +112,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Automate by risk and value (frequency + business risk), not by what's easiest to script.
+
 ✓ Default to explicit waits targeting the real condition — never guess a fixed pause duration.
+
 ✓ Diagnose an intermittent failure's root cause before relying on a retry as anything more than a temporary mitigation.
+
 ✓ Assert on specific, correct content — not just that something exists or appears.
+
 ✓ Verify automation is configured as a required, merge-blocking check — running automatically isn't the same as being enforced.

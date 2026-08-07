@@ -96,7 +96,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real automation effort moves through tool/candidate selection, structure, reliability, verification, enforcement, and maintenance as one connected process.
+
 ✓ The same real defect was independently confirmed at three testing layers across three TestAtlas paths — meaningful, not coincidental, agreement.
+
 ✓ Automation's distinctive value is durability — catching a known defect class repeatedly, automatically, on every future change.
+
 ✓ A test proven to catch a real, significant defect deserves explicit protection during future suite maintenance.
+
 ✓ Professional automation is one continuous process, not a sequence of disconnected exercises.

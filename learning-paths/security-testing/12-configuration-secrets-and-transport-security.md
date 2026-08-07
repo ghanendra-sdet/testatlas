@@ -146,7 +146,11 @@ Many candidates describe "security testing" entirely in terms of feature behavio
 Remember these five points:
 
 ✓ Environment-level testing (headers, rate limiting, configuration secrets) is distinct from feature-level testing.
+
 ✓ Verify security headers directly in live responses — never assume from documented policy.
+
 ✓ Test rate limiting on every abusable endpoint, not just login.
+
 ✓ Review configuration and environment-template files specifically for accidentally-committed secrets.
+
 ✓ A feature can be entirely correct while its environment has a real, independent security gap.

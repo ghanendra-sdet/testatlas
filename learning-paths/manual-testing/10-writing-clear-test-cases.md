@@ -178,7 +178,11 @@ Many candidates describe a good test case as one that's "detailed," without spec
 Remember these five points:
 
 ✓ A test case's usefulness depends on precision — vague steps, data, or expected results make it effectively unusable by someone else.
+
 ✓ Atomic test cases verify one specific thing, so failures are immediately diagnosable.
+
 ✓ A complete expected result covers secondary effects, not just the headline outcome.
+
 ✓ Describe elements by function, not appearance, so test cases survive cosmetic changes.
+
 ✓ Match the level of formal detail to how the test case will actually be used — full structure for shared or repeated tests, lighter for one-off checks.

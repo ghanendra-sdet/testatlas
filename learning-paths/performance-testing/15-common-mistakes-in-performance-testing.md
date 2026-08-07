@@ -110,7 +110,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Performance readiness is never inferred from functional test results alone — it needs its own dedicated testing effort.
+
 ✓ Report and test against percentiles (p95, p99), never an average alone.
+
 ✓ Rank candidate features by traffic, business criticality, and risk before allocating testing time.
+
 ✓ Configure each test type deliberately — ramp-up shape and duration, not just a different report label.
+
 ✓ Never close an investigation without correlating resource data against the load timeline to find the actual cause.

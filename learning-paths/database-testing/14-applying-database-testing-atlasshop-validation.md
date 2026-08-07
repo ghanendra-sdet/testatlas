@@ -107,7 +107,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ This path's toolkit generalizes — every technique transferred directly to AtlasShop's unfamiliar schema without new technique.
+
 ✓ Verify post-operation state directly, not just whether an operation succeeded or failed.
+
 ✓ A non-atomic check-then-write pattern can produce both a state-consistency gap and a genuine concurrency defect.
+
 ✓ N+1 query patterns and least-privilege gaps are schema-independent defect classes, not specific to any one domain.
+
 ✓ Practicing against an unfamiliar schema confirms the underlying skill, not just familiarity with one system.

@@ -146,7 +146,11 @@ Many candidates describe "responsive testing" as only relevant to small-screen t
 Remember these five points:
 
 ✓ Compatibility (functionality) and responsive behavior (layout) are two distinct checks — a feature can pass one and fail the other.
+
 ✓ Automated test harnesses can mask real visibility defects by interacting with elements regardless of true on-screen visibility.
+
 ✓ Test responsive behavior on both small screens (truncation) and large screens (wasted space, poor adaptation).
+
 ✓ Reuse the pairwise-generated device set from Device Fragmentation — responsive testing is a new lens, not a new device-selection problem.
+
 ✓ Specifically verify critical actions are visible without requiring an unprompted scroll.

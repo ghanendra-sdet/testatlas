@@ -119,7 +119,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ A feature's actual risk shape, not a fixed checklist, should determine which testing concerns get weighted most heavily.
+
 ✓ Test a calculation across its realistic input range — a defect can be isolated to one specific value.
+
 ✓ Distinguish a dependency's different failure modes (ambiguous result vs. no response) and test each separately.
+
 ✓ Re-verify a previously-fixed defect class on a new, related feature rather than assuming it generalized.
+
 ✓ Combining multiple sections' concerns against a real feature surfaces defects no single concern, tested alone, would catch.

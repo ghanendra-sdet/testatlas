@@ -114,7 +114,11 @@ No new terms are introduced in this capstone — every concept used above is def
 Remember these five points:
 
 ✓ Run the full loop continuously, under real time pressure, without pausing to review modules mid-way.
+
 ✓ Self-assess against a specific checklist — name specific rounds and specific gaps, not general impressions.
+
 ✓ Every technique in this capstone was already taught earlier — integration under pressure is the new part.
+
 ✓ Depth calibration (Round 4) is as much a tested skill as technical depth (Round 2).
+
 ✓ This path's own cross-link-heavy design mirrors the exact discipline it teaches: reference and apply, don't re-derive.

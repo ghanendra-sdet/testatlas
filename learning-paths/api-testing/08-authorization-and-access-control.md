@@ -176,7 +176,11 @@ Many candidates define IDOR correctly but, when asked how they'd test for it, an
 Remember these five points:
 
 ✓ Authentication proves who you are; authorization determines what you can do — a system can pass one while failing the other completely.
+
 ✓ Horizontal escalation (another user's data) and vertical escalation (higher-privilege functionality) are distinct failure directions, each needing dedicated test cases.
+
 ✓ Test IDOR directly by substituting a resource ID belonging to a different, real identity and confirming rejection.
+
 ✓ Confirm a role can't do what it shouldn't, not just that it can do what it should — the negative case catches over-permissive implementations.
+
 ✓ Re-test authorization on any endpoint touched by a change, even one unrelated to authorization itself — regressions can happen silently.

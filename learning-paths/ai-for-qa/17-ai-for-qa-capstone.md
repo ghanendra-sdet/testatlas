@@ -88,7 +88,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real AI-for-QA effort moves through AI-accelerated preparation, AI-feature testing, and governance/audit review as one connected process.
+
 ✓ AI quality issues don't always sort into one named category — testing previously-found gap types together can reveal a new, compound pattern.
+
 ✓ A governance audit-trail process can catch real findings no testing technique is positioned to catch, since the problem may be in test preparation, not the feature itself.
+
 ✓ This capstone deliberately breaks from the International Transfer narrative thread — the AI Support Assistant is TestAtlas's first AI-native feature and its own natural closing point.
+
 ✓ "AI accelerates, it does not replace engineering judgment" held true in three structurally different forms across this capstone's three phases.

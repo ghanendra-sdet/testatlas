@@ -144,7 +144,11 @@ Many candidates name specific scanning tools without explaining the underlying s
 Remember these five points:
 
 ✓ SAST analyzes source code without running the app; DAST exercises the running application's real behavior.
+
 ✓ SAST's structural limit: it can't confirm what the running application actually does.
+
 ✓ DAST's structural limit: it can't see anything with no runtime-observable behavior.
+
 ✓ A mature practice uses both — each covers what the other structurally cannot see.
+
 ✓ The underlying concept matters more than expertise in any one specific scanning tool — none is canonical.

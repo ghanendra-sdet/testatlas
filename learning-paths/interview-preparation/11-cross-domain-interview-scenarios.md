@@ -125,7 +125,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Calibrate your answer depth to your actual role — overreaching usually produces a weaker answer, not a stronger one.
+
 ✓ Name the right high-level framework for each domain, even briefly, to demonstrate real awareness.
+
 ✓ It's legitimate to name what you'd need to learn, verify, or escalate to a specialist.
+
 ✓ Refusing to engage at all is just as costly as overreaching.
+
 ✓ This module consolidates four existing TestAtlas curricula — it doesn't re-teach any of them.

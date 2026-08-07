@@ -164,7 +164,11 @@ Many candidates give an enthusiastic but vague answer ("AI is the future of test
 Remember these five points:
 
 ✓ AI accelerates testing; it does not replace engineering judgment — this path's central, recurring theme.
+
 ✓ AI is strong at drafting first-pass artifacts and pattern recognition across large input.
+
 ✓ AI is weak at judgment calls needing business context, novel discovery, and carries no accountability for what ships.
+
 ✓ This path is QA engineering with AI as a tool — not prompt engineering, not machine learning.
+
 ✓ Map your own team's tasks explicitly against the drafting-vs-judgment distinction, rather than adopting or rejecting AI uniformly.

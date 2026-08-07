@@ -151,7 +151,11 @@ Many candidates describe access-control testing only in terms of one direction (
 Remember these five points:
 
 ✓ Test both horizontal (wrong owner, same role) and vertical (higher role) privilege escalation as separate checks.
+
 ✓ A hidden UI element is not evidence of server-side enforcement — construct the underlying request directly to verify.
+
 ✓ Application-layer and data-layer access control are independent checks — a defect can exist at either alone.
+
 ✓ Re-test the opposite direction whenever an access-control fix ships.
+
 ✓ Data isolation is the general property both horizontal and vertical escalation are specific failures of.

@@ -110,7 +110,11 @@ Every pattern above has the same underlying shape: a shortcut that feels reasona
 Remember these five points:
 
 ✓ Security testing is identification-and-reporting using legitimate access — never assume it requires offensive, penetration-testing skill.
+
 ✓ Verify directly — never trust a hidden UI element, documented policy, or stated requirement as evidence of actual enforcement.
+
 ✓ Test sustained and concurrent conditions, not just a single, isolated attempt.
+
 ✓ Treat every security property as independently testable — a clean result on one says nothing about the others.
+
 ✓ Keep security checks inside standard QA process: written, traceable, and actually blocking on failure.

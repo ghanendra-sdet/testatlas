@@ -90,7 +90,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real database-verification effort moves through data-shape validation, constraint testing, cross-row consistency, and trigger/audit coverage as one connected process.
+
 ✓ The same real aggregation defect was confirmed a fourth time — and only direct database access traced it to its exact query-level cause.
+
 ✓ A second, genuinely new defect (a batch-path audit-trail gap) was found using techniques with no equivalent at the UI, API, or automated-suite layers.
+
 ✓ Database testing's value isn't redundant with other layers — it reaches root causes and defect classes none of them structurally can.
+
 ✓ Testing every write path (primary and secondary/batch) applies to trigger and audit coverage exactly as it does to every other concern this path taught.

@@ -108,7 +108,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Evaluate total compensation — base, bonus and vesting, benefits, equity — not just the headline salary.
+
 ✓ Confirm the offered role's scope matches what was discussed throughout the interview process.
+
 ✓ Ground any negotiation in specific, factual evidence, never a vague request.
+
 ✓ A written offer is the easiest point to clarify a mismatch — before starting, not after.
+
 ✓ This module is scoped to the individual-contributor offer moment, not longer-horizon career strategy.

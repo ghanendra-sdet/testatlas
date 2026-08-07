@@ -143,7 +143,11 @@ Many candidates describe security test cases as needing an entirely different te
 Remember these five points:
 
 ✓ A security test case uses the same structure as any test case, plus one addition: traceability to the security requirement or abuse case it verifies.
+
 ✓ Unwritten security knowledge, even when real, isn't provable or transferable coverage.
+
 ✓ Include security test cases in the standard regression suite, not a separate document.
+
 ✓ Review traceability links whenever the underlying security requirement changes.
+
 ✓ Written, traceable security test cases survive staff turnover — individual knowledge alone doesn't.

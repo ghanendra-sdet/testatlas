@@ -168,7 +168,11 @@ Many candidates answer with a flat preference ("I always use Postman" or "code i
 Remember these five points:
 
 ✓ Match tool category to task category — exploratory versus maintained/repeated — as the primary decision, not a feature checklist.
+
 ✓ GUI-based clients are strong for fast exploration but harder to maintain consistently at scale.
+
 ✓ Code-based approaches have higher setup cost but centralize shared logic and integrate naturally into CI/CD pipelines.
+
 ✓ Many real teams deliberately use both categories together, each for what it's genuinely strongest at.
+
 ✓ Re-evaluate tool choice as a suite's actual usage pattern changes — this is a reasonable response, not a reversal of a past mistake.

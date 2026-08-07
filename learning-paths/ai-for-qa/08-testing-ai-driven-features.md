@@ -150,7 +150,11 @@ Many candidates describe AI features as simply "unpredictable" or "hard to test"
 Remember these five points:
 
 ✓ Deterministic defects and AI quality issues are different problem classes needing different evaluation strategies.
+
 ✓ A deterministic defect reproduces identically; an AI quality issue can vary even with identical input.
+
 ✓ Every AI-driven feature has a deterministic layer (existing techniques apply) and an AI-generation layer (needs rubric-based evaluation).
+
 ✓ Inconsistent results from an exact-match assertion against AI output usually mean the wrong test method, not necessarily a real defect.
+
 ✓ The AtlasBank AI Support Assistant stays within its documented six-category scope in every example — never a general-purpose chatbot.

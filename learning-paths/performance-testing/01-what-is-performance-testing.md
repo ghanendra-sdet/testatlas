@@ -154,7 +154,11 @@ Many candidates answer that performance testing is "just testing how fast someth
 Remember these five points:
 
 ✓ Correctness and performance under load are independent properties — a system can pass one and fail the other.
+
 ✓ Performance testing asks whether a system stays correct and responsive under real, realistic load.
+
 ✓ This path builds on, not duplicates, Database Testing's and API Testing's own QA-level performance-recognition modules.
+
 ✓ A single test at one traffic level can't reveal a system's actual breaking point.
+
 ✓ Plan performance testing ahead of known high-traffic events, with enough lead time to actually fix what's found.

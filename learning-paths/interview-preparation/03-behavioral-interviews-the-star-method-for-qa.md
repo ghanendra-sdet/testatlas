@@ -118,7 +118,11 @@ A newer candidate treats behavioral questions as a chance to tell their best sto
 Remember these five points:
 
 ✓ STAR's four parts aren't equally weighted — Situation and Task should be brief; Action should dominate the answer.
+
 ✓ A specific Action (what evidence, what argument, what technique) is far stronger than a vague one.
+
 ✓ Close with a specific, concrete Result, ideally including reflection on what you'd do differently.
+
 ✓ STAR makes a genuine memory retrievable and clear, not a better story than what actually happened.
+
 ✓ Answer in under two minutes — a structured, concise answer reads as more confident than a long, unstructured one.

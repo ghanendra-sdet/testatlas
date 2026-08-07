@@ -150,7 +150,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ This module assembles every review standard from Sections 1–4 into one unified, four-step workflow — no new standards.
+
 ✓ The four steps: identify artifact type, apply the correct specific review, check data safety, log the outcome.
+
 ✓ Knowing review standards and having them consistently applied across a team are different achievements.
+
 ✓ A workflow too heavyweight for real delivery pressure provides no more actual protection than no workflow.
+
 ✓ Log every review outcome, not just problem findings — an unlogged clean review is indistinguishable from no review at all.

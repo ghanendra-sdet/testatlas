@@ -114,7 +114,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real QA assignment moves continuously between analysis, design, execution, reporting, and review — not as isolated steps.
+
 ✓ Technique selection should combine multiple methods based on the feature's actual risk shape.
+
 ✓ Requirement ambiguities raised early (Phase 1) prevent real defects later — the aggregation-window gap traced back to a question asked, then not fully implemented.
+
 ✓ A review pass after a fix can catch a related boundary the original fix verification alone might miss.
+
 ✓ Nothing in this capstone was new — professional QA skill is moving fluently between everything already learned.

@@ -151,7 +151,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ AI-assisted test case generation accelerates drafting — it doesn't replace applying BVA/Equivalence Partitioning explicitly afterward.
+
 ✓ AI's draft tends to cover a requirement's obvious shape, not its actual boundary-adjacent values.
+
 ✓ Apply the systematic technique check explicitly — a "looks thorough" read isn't the same as real BVA coverage.
+
 ✓ Verify every stated expected result independently, separate from checking input-value coverage.
+
 ✓ A clear, specific requirement as input improves the starting draft but doesn't remove the need for systematic review.

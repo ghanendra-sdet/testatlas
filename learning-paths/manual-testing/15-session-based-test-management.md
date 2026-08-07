@@ -162,7 +162,11 @@ Many candidates describe a session report as just a record of "what bugs were fo
 Remember these five points:
 
 ✓ Session-based test management turns exploratory testing into a schedulable, accountable team practice.
+
 ✓ A session has a charter, a time box (typically 60-90 minutes), a debrief, and a documented report.
+
 ✓ "Not Reached" is as valuable as "Defects Found" — it makes gaps visible and trackable instead of invisible.
+
 ✓ Reviewing session reports together across a sprint can reveal patterns no single session shows alone.
+
 ✓ Charter selection should be risk-based, connecting directly to what changed and what's known to be higher-risk.

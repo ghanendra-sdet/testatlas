@@ -143,7 +143,11 @@ Many candidates describe AI governance in terms of restricting or banning AI too
 Remember these five points:
 
 ✓ AI governance is a team-level policy layer — individual review habits alone don't provide team-wide accountability.
+
 ✓ A real policy names approved tools, maps review requirements per artifact type, states accountability, and maintains an audit trail.
+
 ✓ Map governance review requirements directly to this path's own established, specific standards.
+
 ✓ A recorded audit trail turns a vague problem into a fast, specific, traceable finding.
+
 ✓ Revisit governance policy periodically, incorporating lessons from real incidents.

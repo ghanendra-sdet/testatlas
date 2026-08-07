@@ -150,7 +150,11 @@ Many candidates describe authentication testing as complete once valid and inval
 Remember these five points:
 
 ✓ Authentication testing covers four surfaces: password policy, lockout/rate limiting, MFA, and credential handling.
+
 ✓ Always test repeated failed-login behavior — the single highest-value, most commonly skipped authentication test.
+
 ✓ Test MFA enforcement across every authentication path, not just the primary login form.
+
 ✓ Verify password policy enforcement at submission, never trust UI help text alone.
+
 ✓ Deliberately inspect logs, URLs, and error messages for credential exposure.

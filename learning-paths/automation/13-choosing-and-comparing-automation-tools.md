@@ -160,7 +160,11 @@ Many candidates answer with a fixed personal favorite ("I always use Playwright,
 Remember these five points:
 
 ✓ Choose a tool in order: team language fit, application requirements, maintenance capacity, then features as a tie-breaker.
+
 ✓ A trending, excellent tool can still be the wrong fit for a specific team or application with an unaddressed constraint.
+
 ✓ The same team can correctly choose different tools for different applications with genuinely different requirements.
+
 ✓ Selenium and TestNG/JUnit solve different, complementary concerns — not competing alternatives.
+
 ✓ Community size and documentation depth are a real, ongoing maintenance factor worth weighing deliberately.

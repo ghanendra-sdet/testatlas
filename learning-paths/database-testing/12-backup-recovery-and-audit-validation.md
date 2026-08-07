@@ -169,7 +169,11 @@ Many candidates answer that a consistent "success" status over time is itself re
 Remember these five points:
 
 ✓ A backup job's "success" status only confirms the process ran — only an actual restore confirms the backup is usable.
+
 ✓ Recovery testing checks both data correctness after restore and that any gap matches the documented recovery point.
+
 ✓ Audit-log completeness is trigger-coverage testing (Module 7) applied specifically to compliance-relevant fields.
+
 ✓ Backup-restore verification needs to be recurring and scheduled, not a one-time check.
+
 ✓ Compare restored row counts against a known baseline, not just table presence — presence alone can hide a significant data gap.

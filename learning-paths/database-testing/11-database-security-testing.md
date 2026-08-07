@@ -185,7 +185,11 @@ Many candidates answer with an attempted exploit payload (like a classic injecti
 Remember these five points:
 
 ✓ Least-privilege gaps are directly testable by comparing granted database privileges against documented, legitimate need.
+
 ✓ Test for SQL injection symptoms using realistic, legitimate input containing special characters — not just obviously adversarial payloads.
+
 ✓ Stop at symptom identification and precise reporting for injection testing — exploit construction is out of QA scope.
+
 ✓ Confirm sensitive data at rest isn't stored in plain, readable form with a direct query — don't trust documentation alone.
+
 ✓ All three checks here mirror API Testing's own identification-not-exploitation security scope, applied to the data layer.

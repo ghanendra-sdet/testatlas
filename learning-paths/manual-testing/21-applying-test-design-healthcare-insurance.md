@@ -98,7 +98,11 @@ Healthcare and insurance both foreground the RTM in a way banking and e-commerce
 Remember these five points:
 
 ✓ Healthcare and insurance foreground RTM-driven compliance traceability more directly than banking or e-commerce.
+
 ✓ Decision Table Testing dominates both domains' eligibility and consent logic.
+
 ✓ An incomplete decision table can silently hide a compliance-relevant gap, like a bypassed manual review requirement.
+
 ✓ Severity in regulated domains sometimes requires contextual judgment beyond a purely mechanical technical-impact assessment.
+
 ✓ Across every domain this path has covered, the dominant technique follows the domain's actual risk shape.

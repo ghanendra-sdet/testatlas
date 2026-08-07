@@ -150,7 +150,11 @@ Many candidates describe "simplifying" a technical report for a non-technical au
 Remember these five points:
 
 ✓ Every performance report needs pass/fail against SLO, the correlated finding, reproducibility, and a recommendation.
+
 ✓ Produce two coordinated reports from the same finding: detailed technical, and plain-language business-impact.
+
 ✓ State pass/fail against the defined SLO explicitly and first.
+
 ✓ Include exact reproduction steps, mirroring bug-report reproducibility discipline.
+
 ✓ Always include a clear recommendation, not just a description of the finding.

@@ -145,7 +145,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ An AI-suggested root cause is a hypothesis requiring direct verification — never a diagnosis to act on directly.
+
 ✓ AI-generated exploratory charters are a useful starting point, not a complete session plan.
+
 ✓ Technical detail and confidence in an AI explanation are not evidence it's correct.
+
 ✓ Use existing systematic trace methods (Database/Performance Defect Investigation) to verify any AI-suggested cause.
+
 ✓ Dedicated exploratory testing sessions remain essential — AI cannot replace genuine, in-session human discovery.

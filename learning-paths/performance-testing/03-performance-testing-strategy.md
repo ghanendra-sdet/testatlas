@@ -151,7 +151,11 @@ Many candidates answer that they'd test "the most complex" or "the most recently
 Remember these five points:
 
 ✓ Prioritize performance testing by traffic volume, business criticality, and known/expected risk — not by ease of testing.
+
 ✓ Test types have a dependent order: baseline before load, load before stress.
+
 ✓ A written strategy (scope, objectives, success criteria, environment, schedule) is what a team can be held accountable to.
+
 ✓ A decision not to test a low-risk feature should be explicit and documented, not a silent gap.
+
 ✓ The same risk-based prioritization functional testing already taught applies directly to performance testing.

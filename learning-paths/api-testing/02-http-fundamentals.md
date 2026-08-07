@@ -181,7 +181,11 @@ Many candidates answer "4xx is client error, 5xx is server error" and stop there
 Remember these five points:
 
 ✓ Check status code, headers, and body on every response — not the body alone.
+
 ✓ Status codes carry specific meaning; verify the exact code matches the scenario, not just its success/error range.
+
 ✓ Two meaningfully different real scenarios can produce identical-looking bodies — a status code can be the only thing that distinguishes them.
+
 ✓ An HTTP method's stated intent (like `GET` having no side effects) is itself testable.
+
 ✓ A 4xx-vs-5xx mismatch is a real, reportable defect, since it misleads anything reacting differently to each range.

@@ -143,7 +143,11 @@ Many candidates recite OWASP Top 10 category names without connecting them to an
 Remember these five points:
 
 ✓ The OWASP Top 10 is an orientation map and shared vocabulary — not a mechanical testing checklist.
+
 ✓ This path's own later modules provide the actual testing technique behind each relevant OWASP category.
+
 ✓ The general OWASP Top 10 and the OWASP API Security Top 10 are distinct lists for distinct surfaces.
+
 ✓ Naming a finding's OWASP category in a defect report communicates its shape and severity immediately.
+
 ✓ Knowing category names is a communication skill — the testing technique itself comes from this path's dedicated modules.

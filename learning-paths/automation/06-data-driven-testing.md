@@ -166,7 +166,11 @@ Many candidates describe data-driven testing as "testing with different data" wi
 Remember these five points:
 
 ✓ Data-driven testing separates test logic (written once) from test data (a set of rows) — reducing the cost of adding or changing coverage.
+
 ✓ The data set should come from deliberate test design technique (BVA, Equivalence Partitioning), not guessing.
+
 ✓ Use realistic, non-round values in the data set — clean values can hide real calculation defects.
+
 ✓ Test data deserves version control and review discipline equal to test logic.
+
 ✓ Separate data from logic once a test runs against more than one input — the same "extract on genuine reuse" judgment as Page Object Model.

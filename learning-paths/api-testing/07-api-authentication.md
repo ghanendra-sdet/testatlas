@@ -199,7 +199,11 @@ Many candidates answer "authentication is login and authorization is permissions
 Remember these five points:
 
 ✓ Authentication answers "who are you" (fails as 401); authorization answers "what are you allowed to do" (fails as 403).
+
 ✓ Test authentication enforcement at every protected endpoint individually — it's often inconsistent across endpoints even when login itself works.
+
 ✓ Expired-token behavior is a common, distinct place for enforcement to be missing or inconsistent.
+
 ✓ Test access tokens and refresh tokens as two separate areas — they can fail independently of each other.
+
 ✓ A malformed or tampered token should return a clean 401, not a server error — the two are different, both-reportable defect classes.

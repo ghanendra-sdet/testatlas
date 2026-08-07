@@ -157,7 +157,11 @@ Many candidates describe connectivity testing as confirming the app shows an app
 Remember these five points:
 
 ✓ Test three distinct connectivity conditions: sudden loss, degradation, and network switching.
+
 ✓ Verify offline actions genuinely queue, persist, and submit correctly on reconnect.
+
 ✓ The highest-stakes risk is retry logic resubmitting without checking whether the original request already succeeded.
+
 ✓ Test the specific window between request-sent and confirmation-received, where duplicate-submission defects live.
+
 ✓ Re-verify a retry-safety fix generalizes across every feature with similar risk, rather than assuming it does.

@@ -122,7 +122,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine multiple sections' testing concerns against one real, integrated feature — don't just re-confirm each concern in isolation.
+
 ✓ A high-risk feature can carry its own additional, feature-specific authorization rule beyond the standard checklist.
+
 ✓ Idempotency and race-condition safety need testing per endpoint, not generalized from another endpoint's result.
+
 ✓ Excessive-data-exposure and cross-field validation checks apply directly to any new feature's own response shape.
+
 ✓ Integrated testing finds defects no single concern, tested alone, would have surfaced.

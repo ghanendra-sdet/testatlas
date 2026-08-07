@@ -102,7 +102,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ A feature's actual risk shape, not a fixed checklist, should determine which testing concerns get weighted most heavily.
+
 ✓ Test an external dependency's full documented response range, not just its happy path.
+
 ✓ Test isolation risk extends to shared external dependency interactions, not just internal application state.
+
 ✓ CI trigger frequency can reasonably vary per suite, based on genuine runtime and risk considerations.
+
 ✓ Combining multiple sections' concerns against a real feature surfaces defects no single concern, tested alone, would catch.

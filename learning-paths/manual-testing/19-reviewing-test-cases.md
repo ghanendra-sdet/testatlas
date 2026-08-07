@@ -178,7 +178,11 @@ Many candidates describe test case review as primarily checking for clarity and 
 Remember these five points:
 
 ✓ Reviewing test cases is a genuinely different skill from writing them — it requires actively checking for what's missing.
+
 ✓ A substantive review checks completeness, ambiguity, duplicates, coverage, and maintainability, not just readability.
+
 ✓ Cross-reference against every relevant requirement source, not just the primary document — real gaps often hide in addenda or side documents.
+
 ✓ Give specific, actionable feedback ("missing coverage for X") rather than vague impressions.
+
 ✓ A rubber-stamped review provides the appearance of quality assurance without its actual substance.

@@ -165,7 +165,11 @@ Many candidates answer "I'd automate the most critical features first" without n
 Remember these five points:
 
 ✓ A good automation candidate scores well on frequency, stability, determinism, and business risk together.
+
 ✓ Frequency alone isn't sufficient — a frequently-run but low-risk check is still a weak candidate.
+
 ✓ Anti-criteria (subjective judgment, active redesign, genuine exploration, extreme rarity) can disqualify a candidate outright.
+
 ✓ Prioritize by risk and value, not ease of implementation — the easiest candidates aren't always the most worth automating.
+
 ✓ Document deprioritized candidates with a specific reason and revisit condition, so the decision stays reviewable.

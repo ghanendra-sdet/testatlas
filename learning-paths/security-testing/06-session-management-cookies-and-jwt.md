@@ -151,7 +151,11 @@ Many candidates confuse session fixation with session hijacking, or describe tes
 Remember these five points:
 
 ✓ Test whether the session identifier changes at login — persistence and fixation are different, separately-testable properties.
+
 ✓ Inspect actual response headers for `Secure`, `HttpOnly`, and `SameSite` flags — never trust stated policy alone.
+
 ✓ Test JWT validation by observing behavior with an expired or malformed token, never by forging one.
+
 ✓ Apply session and cookie checks to every authentication-adjacent flow, not just the primary login form.
+
 ✓ Two independently minor findings on the same session mechanism can combine into a more serious one — test each property deliberately.

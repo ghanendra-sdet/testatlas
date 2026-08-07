@@ -168,7 +168,11 @@ Many candidates answer that this situation "shouldn't happen if the constraints 
 Remember these five points:
 
 ✓ Single-row validity (constraints) and cross-row consistency are different checks — neither substitutes for the other.
+
 ✓ Consistency defects concentrate in the interruption window between steps of a multi-step operation.
+
 ✓ Name the specific invariant a multi-row operation should preserve before designing a test case for it.
+
 ✓ Diagnose UI bug vs. data bug with one direct query comparing stored data to what the interface displays.
+
 ✓ Deliberately interrupting multi-step operations in test environments is how partial-failure consistency defects get found before release.

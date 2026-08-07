@@ -161,7 +161,11 @@ Many candidates describe security testing as "a more technical version of penetr
 Remember these five points:
 
 ✓ Security testing is identification-and-reporting using legitimate access — not penetration testing or exploit construction.
+
 ✓ The CIA Triad turns "is this secure" into three specific, independently-testable questions.
+
 ✓ A feature can pass two CIA properties and fail the third — test all three, always.
+
 ✓ Security-relevant defects show up in ordinary features as often as in obviously sensitive ones.
+
 ✓ Stop at verification, not extraction — confirming a defect exists is sufficient; continuing to exploit it isn't testing anymore.

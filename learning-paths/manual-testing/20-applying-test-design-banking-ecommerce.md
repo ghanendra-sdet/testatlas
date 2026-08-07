@@ -104,7 +104,11 @@ Banking's dominant risk is financial-accuracy — boundary values and decision-t
 Remember these five points:
 
 ✓ Real features need multiple techniques combined, weighted by where the domain's actual risk concentrates.
+
 ✓ Banking's dominant risk is deterministic and boundary-driven; e-commerce's is state- and timing-driven.
+
 ✓ BVA and Equivalence Partitioning caught a tier-boundary rate defect no representative mid-tier value would have found.
+
 ✓ State Transition and Pairwise Testing caught a concurrent-checkout inventory defect isolated testing would have missed.
+
 ✓ State reproducibility explicitly — deterministic (a specific value) versus timing-dependent (concurrent actions) — in every bug report.

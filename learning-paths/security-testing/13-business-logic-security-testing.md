@@ -154,7 +154,11 @@ Many candidates, when asked for an example of a security defect, default to a te
 Remember these five points:
 
 ✓ Business logic security defects have no technical vulnerability signature — every individual piece of code can be correct.
+
 ✓ Test workflow-step bypass by attempting to reach a later step without completing an earlier required one.
+
 ✓ Test "once only" business rules under concurrent, near-simultaneous requests, not just sequential ones.
+
 ✓ A well-formed, validly-typed submitted value can still be a manipulated one — verify the server checks it independently.
+
 ✓ No automated scanner finds this defect class — only deliberate test design against the workflow as a whole does.

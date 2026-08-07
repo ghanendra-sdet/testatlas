@@ -154,7 +154,11 @@ Many candidates describe hardware testing as covering only the granted and denie
 Remember these five points:
 
 ✓ Apply one behavioral framework — available/granted, denied, runtime change, hardware unavailable, recovery — to every hardware-dependent feature.
+
 ✓ Runtime permission changes are distinct from the initial grant/deny decision, and a common source of overlooked defects.
+
 ✓ Permission denial and hardware unavailability require different app behavior — don't treat them as the same test case.
+
 ✓ Always test recovery explicitly — does the app detect a resolved condition without a manual workaround.
+
 ✓ A consistent framework across features reveals recurring defect patterns a checklist-style, feature-by-feature approach misses.

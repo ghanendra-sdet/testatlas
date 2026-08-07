@@ -99,7 +99,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ A resume claim is an entry point; the specific, retrievable example behind it is the real credibility.
+
 ✓ Apply the same precision standard from test-case and bug-report writing to discussing your own work.
+
 ✓ Prepare two or three fully fleshed-out examples per resume line before the interview.
+
 ✓ Name actual techniques, actual defects, and actual outcomes — never stay in generalities.
+
 ✓ Accurately represent your own individual contribution, without overclaiming or underselling.

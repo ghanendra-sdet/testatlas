@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ A deliberate, named pause before answering reads as confidence, not weakness.
+
 ✓ Structure your thinking-aloud so it resolves into a clear point, not rambling.
+
 ✓ Pair genuine uncertainty with a credible next step, never a bluffed guess.
+
 ✓ A confidently bluffed wrong answer damages credibility more than an honest "I don't know."
+
 ✓ Delivery shapes an interviewer's read of your judgment as much as the content itself.

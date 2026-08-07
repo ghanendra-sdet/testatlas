@@ -107,7 +107,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine Sections 1–4's individual techniques against one realistic, integrated flow — don't just re-confirm each technique in isolation.
+
 ✓ Prioritize retry-safety and responsive-behavior testing specifically on financially consequential flows.
+
 ✓ Cross-reference new defects and crash reports against device profiles already implicated in other findings.
+
 ✓ A rotation-triggered defect, a responsive-behavior defect, and a crash cluster can share one underlying device-specific root cause.
+
 ✓ Mobile testing finds defects specific to real-world device, connectivity, and orientation behavior — its own distinct layer in the AtlasBank story.

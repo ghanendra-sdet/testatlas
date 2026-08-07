@@ -103,7 +103,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Match primary test type to a feature's actual defining load shape — spike testing for bursty, sale-driven traffic.
+
 ✓ This path's toolkit transfers directly to an unfamiliar schema and load shape, the same way Database Testing's own AtlasShop module confirmed.
+
 ✓ A correctness defect and a performance-amplification effect can share the same root cause, confirmed independently by different paths' techniques.
+
 ✓ Cross-reference known findings from other certified paths when testing the same underlying feature or schema.
+
 ✓ State explicit negative findings, not just positive defects — "checked and confirmed fine" is real, useful information.

@@ -114,7 +114,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Attach every framework-design decision you describe to the specific problem it solved.
+
 ✓ Frame tool-choice reasoning around your team's actual constraints, not a stated brand preference.
+
 ✓ Explicitly acknowledge that a different context might reasonably choose differently.
+
 ✓ Name at least one real limitation or a decision you'd reconsider today.
+
 ✓ The strongest answers sound like a retrospective — problem, decision, tradeoff — not a features list.

@@ -199,7 +199,11 @@ Many candidates answer "I'd check that the value makes sense" without naming a s
 Remember these five points:
 
 ✓ Structural correctness (field present, right type) says nothing about whether the value itself is actually correct.
+
 ✓ Use realistic, non-round test data for numeric and financial fields — clean values can hide rounding and calculation defects entirely.
+
 ✓ Validate nested objects and arrays with the same field-by-field rigor as the top level — their presence alone verifies nothing.
+
 ✓ `null`, a missing field, and an empty value each carry a distinct, real meaning — never treat them as interchangeable.
+
 ✓ Identify cross-field business rules in advance (a calculated total, a timestamp ordering) rather than relying on noticing something looks odd after the fact.

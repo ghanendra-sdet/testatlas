@@ -158,7 +158,11 @@ Many candidates describe mobile testing as differing from web testing mainly in 
 Remember these five points:
 
 ✓ Mobile testing includes everything web/API testing covers, plus lifecycle, connectivity, device/platform fragmentation, and hardware/sensor surfaces.
+
 ✓ Correct business logic doesn't guarantee correct mobile behavior under interruption conditions.
+
 ✓ App lifecycle (foreground/background/killed) has no direct web equivalent.
+
 ✓ Connectivity variability is a routine, common mobile condition, not a rare edge case.
+
 ✓ This path builds on prior TestAtlas paths' test-design and automation-framework literacy rather than repeating it.

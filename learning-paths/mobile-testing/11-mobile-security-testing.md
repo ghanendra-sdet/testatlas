@@ -151,7 +151,11 @@ Many candidates describe mobile security testing only in terms of login and pass
 Remember these five points:
 
 ✓ QA-level security testing means identifying plausible concerns and routing them to a specialist, not exploiting them — unchanged from earlier paths.
+
 ✓ Local storage encryption, certificate pinning, and insecure inter-app communication are mobile's three specific concerns.
+
 ✓ Mobile apps most often leak data in what's stored on the device after login, not in the login flow itself.
+
 ✓ Verify defensive mechanisms like certificate pinning explicitly — don't assume they work because they were implemented.
+
 ✓ Local storage inspection should be a standing, every-release regression check, not a one-time verification.

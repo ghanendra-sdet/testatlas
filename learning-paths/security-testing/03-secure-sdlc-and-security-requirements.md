@@ -145,7 +145,11 @@ Many candidates describe shift-left security only as "running security scans ear
 Remember these five points:
 
 ✓ Shift-left security means writing security requirements at design time, not auditing right before release.
+
 ✓ A testable requirement states a specific, verifiable constraint — never a vague goal like "should be secure."
+
 ✓ Every abuse case from threat modeling should become a written requirement, not stay a discussion.
+
 ✓ Plan the specific test case for each security requirement before the feature is built.
+
 ✓ The absence of a specific, testable security requirement is itself a finding worth raising early.

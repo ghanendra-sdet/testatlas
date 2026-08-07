@@ -156,7 +156,11 @@ Many candidates describe parallel execution as a pure win ("it makes tests run f
 Remember these five points:
 
 ✓ Parallel execution reduces total runtime roughly proportional to worker count, without making individual tests faster.
+
 ✓ Genuine test isolation — no shared, mutable state assumed exclusive — is a strict requirement, not optional.
+
 ✓ A suite that passes reliably sequentially can fail unpredictably once parallelized, exposing previously-hidden shared-state defects.
+
 ✓ A new failure pattern correlated with parallelization is a genuine isolation defect, not routine flakiness to retry past.
+
 ✓ Expect less-than-linear speedup in practice, due to setup overhead and shared infrastructure limits.

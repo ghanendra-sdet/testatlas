@@ -181,7 +181,11 @@ Many candidates can define ACID properties from memory but can't describe how th
 Remember these five points:
 
 ✓ A transaction is a group of operations that succeed or fail together — the mechanism behind partial-failure protection.
+
 ✓ ACID's four properties: Atomicity, Consistency, Isolation, Durability — recognize a violation of each, don't just define them.
+
 ✓ Isolation violations (lost updates, dirty reads, deadlocks) require genuine concurrent testing — a single-operation test cannot find them.
+
 ✓ Concurrency tests can be timing-dependent — run them repeatedly, not once.
+
 ✓ Prioritize concurrency testing specifically on features touching shared or contested data, not every feature equally.

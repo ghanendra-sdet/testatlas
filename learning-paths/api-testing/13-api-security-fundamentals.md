@@ -182,7 +182,11 @@ Many candidates treat "security testing" as entirely someone else's job and can'
 Remember these five points:
 
 ✓ Several common, high-impact API security findings (BOLA, excessive data exposure) are caught with the same skills this path already taught, not a separate discipline.
+
 ✓ BOLA is about wrong ownership; excessive data exposure is about too many fields, even for correctly-owned data.
+
 ✓ Compare a response's actual fields against what the calling screen genuinely uses, as a deliberate, specific check.
+
 ✓ Read error responses for leaked internal detail (stack traces, file paths) as carefully as success responses.
+
 ✓ Report a security finding with the same precise, evidence-based structure as any other defect — typically at higher severity for real data exposure.

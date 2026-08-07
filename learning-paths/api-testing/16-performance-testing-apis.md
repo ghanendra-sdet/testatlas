@@ -168,7 +168,11 @@ Many candidates either say "performance testing isn't my job" or describe attemp
 Remember these five points:
 
 ✓ Correctness and adequate speed are independent claims — record response time as routine practice, not an afterthought.
+
 ✓ Compare an endpoint's response time against similar sibling endpoints — a simple, effective relative check.
+
 ✓ Test with moderate concurrent load to catch a degradation invisible in single-request testing.
+
 ✓ Distinguish a real performance defect (disproportionate scaling) from an untested capacity limitation.
+
 ✓ Full-scale load and stress testing is outside this module's scope — it belongs to dedicated performance engineering.

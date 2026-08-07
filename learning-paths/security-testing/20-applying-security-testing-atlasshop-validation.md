@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ The same Sections 1–5 techniques surface different real findings depending on a feature's structural shape.
+
 ✓ Test both horizontal and vertical access control on multi-tenant features — a different role can be the real risk.
+
 ✓ Environment-level findings (headers, cloud storage) can exist independently of feature-level access-control correctness.
+
 ✓ Report findings with genuinely different urgency separately, not bundled into one.
+
 ✓ A clean result on one check doesn't predict the result of a different, independent check on the same feature.

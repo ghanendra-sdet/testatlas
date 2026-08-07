@@ -166,7 +166,11 @@ Many candidates can define latency, throughput, and error rate correctly but des
 Remember these five points:
 
 ✓ The four core metrics — latency, throughput, error rate, resource utilization — each answer a different question.
+
 ✓ Percentiles (p95, p99) reveal a real slow tail that an average can hide completely.
+
 ✓ An SLA is an external, often contractual commitment; an SLO is a team's own, typically tighter internal target.
+
 ✓ Test against the SLO, not the raw SLA, to build in a genuine safety margin.
+
 ✓ Every performance threshold should be tied to a real business, contractual, or user-experience reason.

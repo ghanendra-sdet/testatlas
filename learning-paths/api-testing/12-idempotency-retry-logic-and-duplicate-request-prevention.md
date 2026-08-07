@@ -184,7 +184,11 @@ Many candidates answer "I'd send the same request twice with the same idempotenc
 Remember these five points:
 
 ✓ A retry "succeeding" says nothing about safety — check whether the underlying effect happened once or twice, not just the retried response.
+
 ✓ Idempotency keys let a server recognize a retry and return the original result — test this directly, don't assume it from documentation.
+
 ✓ Test near-simultaneous requests, not just sequential retries, to catch a real idempotency race condition.
+
 ✓ Treat "request never arrived," "response never arrived," and "processing failed mid-way" as three distinct, individually-testable retry scenarios.
+
 ✓ Financial and other high-consequence operations deserve the deepest idempotency testing — duplication risk there has direct, real cost.

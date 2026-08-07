@@ -159,7 +159,11 @@ Many candidates answer "automation makes testing faster" without qualifying what
 Remember these five points:
 
 ✓ Automation replaces repeated *execution* of an already-designed test — not test design or judgment.
+
 ✓ The clearest automation fit: repeated, deterministic, stable checks — regression suites specifically.
+
 ✓ Exploratory testing structurally cannot be automated — it depends on human perception and judgment.
+
 ✓ A large, hastily-automated suite that fails unreliably erodes trust faster than a small, reliable one builds it.
+
 ✓ Automation requires ongoing maintenance — it's an engineering deliverable, not a one-time task.

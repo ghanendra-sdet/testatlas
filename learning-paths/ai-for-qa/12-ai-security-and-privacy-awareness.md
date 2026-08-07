@@ -153,7 +153,11 @@ Many candidates express general wariness about AI tools and data privacy without
 Remember these five points:
 
 ✓ Customer PII, credentials, proprietary code, and compliance-sensitive data are unsafe to send to an external AI tool by default.
+
 ✓ Synthetic, well-shaped test data often provides equal AI-assisted debugging value without the real-data risk.
+
 ✓ Review user-generated content (tickets, logs) for embedded, unusual instruction-like text before AI-assisted processing.
+
 ✓ Data-safety checks belong inside the same governance and audit-trail structure already established for AI usage generally.
+
 ✓ Treat "can I paste this into an AI tool" as a genuine question every time, not an assumed-safe routine action.

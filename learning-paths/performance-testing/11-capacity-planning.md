@@ -153,7 +153,11 @@ Many candidates describe capacity planning as simply "provisioning more servers 
 Remember these five points:
 
 ✓ Capacity planning combines a confirmed stress-test ceiling with a real, observed growth trend to produce a forecast date.
+
 ✓ A credible recommendation states the ceiling, current load, growth rate, projected crossing date, and a margin-adjusted action date.
+
 ✓ Use real analytics data for growth rate, not an assumption.
+
 ✓ Build in a safety margin — scaling infrastructure takes real lead time.
+
 ✓ Revisit capacity forecasts on a recurring, scheduled cadence, not as a one-time exercise.

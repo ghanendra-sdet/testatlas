@@ -148,7 +148,11 @@ Many candidates describe "input sanitization" as a single combined step covering
 Remember these five points:
 
 ✓ Input validation and output encoding are two separate defenses — a feature can pass one and fail the other.
+
 ✓ Input validation protects the system; output encoding protects the viewer.
+
 ✓ Use a standard, harmless proof string for output-encoding checks — never a genuinely malicious payload.
+
 ✓ Test output encoding on every feature that displays user-submitted content, not just the first one checked.
+
 ✓ This testing stays within QA's identification scope — no specialized offensive skill is required.

@@ -234,7 +234,11 @@ Many candidates answer `WHERE column = NULL` when asked how to check for an empt
 Remember these five points:
 
 ✓ `SELECT`, `WHERE`, and `ORDER BY` retrieve, filter, and sequence — the foundation of every verification query.
+
 ✓ `JOIN` verifies across related tables, using the same foreign-key relationships from the previous module.
+
 ✓ `COUNT` + `GROUP BY` is the standard duplicate-detection pattern; `SUM` + `GROUP BY` is the standard reconciliation pattern.
+
 ✓ `= NULL` never matches — always use `IS NULL` or `IS NOT NULL` for empty-value checks.
+
 ✓ Always filter (`WHERE`) before trusting an aggregate (`SUM`, `COUNT`) — the aggregate is only as correct as its filter.

@@ -169,7 +169,11 @@ Many candidates describe Page Object Model as "putting locators in a separate fi
 Remember these five points:
 
 ✓ Page Object Model separates *how to interact with a page* from *what a test expects to be true*.
+
 ✓ A page object contains locators and intent-named action methods; assertions stay in the test.
+
 ✓ A UI change only requires updating the page object, not every test that uses it — the core maintenance benefit.
+
 ✓ Compose shared components (navigation, headers) across page objects rather than duplicating their locators.
+
 ✓ Extract a page object once genuine reuse exists — the second time a locator repeats, not preemptively for every page.

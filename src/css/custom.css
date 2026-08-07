@@ -73,6 +73,9 @@
   font-size: 0.85rem;
   font-weight: 400;
   color: var(--ifm-color-emphasis-700);
+  padding-top: 0.4rem;
+  padding-bottom: 0.4rem;
+  line-height: 1.35;
 }
 
 .menu__list .menu__list .menu__link:hover {
@@ -82,4 +85,27 @@
 .menu__list .menu__list .menu__link--active {
   color: var(--ifm-color-primary);
   font-weight: 600;
+  background-color: var(--ifm-menu-color-background-active);
+  border-radius: 0.375rem;
+}
+
+/* Top-level learning-path names: bolder and looser line-height so a wrapped
+   two-line title (e.g. "Foundations of Software Testing") stays readable
+   instead of reading as cramped filler text next to the collapse arrow. */
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__link,
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item > .menu__list-item-collapsible > .menu__link {
+  font-weight: 600;
+  line-height: 1.35;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Space out top-level path entries so a fully expanded sidebar reads as
+   distinct sections rather than one dense, continuous block. */
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item {
+  margin-top: 0.35rem;
+}
+
+.theme-doc-sidebar-menu > .menu__list > .menu__list-item:first-child {
+  margin-top: 0;
 }

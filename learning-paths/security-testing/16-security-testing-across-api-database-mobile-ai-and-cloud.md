@@ -164,7 +164,11 @@ Many candidates describe API security, mobile security, and cloud security as th
 Remember these five points:
 
 ✓ This path's CIA Triad and access-control principles are the same discipline already applied inside API, Database, Mobile, and AI for QA's own security modules.
+
 ✓ Reference each surface's dedicated module for surface-specific mechanics — don't re-derive them.
+
 ✓ The shared responsibility model assigns configuration choices to the team, not the cloud provider.
+
 ✓ Test cloud storage for public-access misconfiguration by attempting unauthenticated access directly.
+
 ✓ Extend least-privilege testing to automated service identities, not just human user roles.

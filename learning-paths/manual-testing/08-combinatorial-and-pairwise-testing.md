@@ -164,7 +164,11 @@ Many candidates describe pairwise testing as simply "a way to reduce the number 
 Remember these five points:
 
 ✓ Combinatorial explosion makes exhaustive combination testing impractical once more than a few variables are involved.
+
 ✓ Pairwise testing guarantees every pair of values across every two variables is tested together at least once.
+
 ✓ The guarantee is about pairs specifically — it doesn't guarantee catching three-or-more-way interaction defects.
+
 ✓ Confirm which combinations are actually legitimate before generating a pairwise set — don't waste coverage on invalid combinations.
+
 ✓ Small, business-rule-driven combination sets favor Decision Table Testing; large, environment-driven spaces favor pairwise reduction.

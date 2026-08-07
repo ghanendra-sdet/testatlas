@@ -162,7 +162,11 @@ Many candidates answer "explicit waits are better because they're more precise" 
 Remember these five points:
 
 ✓ Timing mismatches, not logic errors, are the leading cause of automation failure.
+
 ✓ A hardcoded pause guesses a duration — too short causes flakiness, too long wastes time every run.
+
 ✓ An explicit wait targets the actual condition and proceeds the moment it's true — the correct default.
+
 ✓ Modern tools (Playwright, Cypress) automate some waiting, but the underlying concept still applies.
+
 ✓ An intermittent, environment-dependent failure is a strong signal to suspect timing before suspecting the application.

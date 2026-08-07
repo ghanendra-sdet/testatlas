@@ -107,7 +107,11 @@ No new terms are introduced in this module — every technique used above is def
 Remember these five points:
 
 ✓ Test-design interview prompts evaluate method, not just the resulting case list.
+
 ✓ State your technique (BVA, Equivalence Partitioning) before generating any specific case.
+
 ✓ Name exact boundary values, never approximate ones.
+
 ✓ Think aloud — narrate your reasoning, don't work silently toward a final list.
+
 ✓ Ask a scope-clarifying question before treating your answer as complete.

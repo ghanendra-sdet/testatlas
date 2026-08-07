@@ -192,7 +192,11 @@ Many candidates answer "path parameters are in the URL path and query parameters
 Remember these five points:
 
 ✓ Headers, parameters, and payload are three independent validation surfaces — test each deliberately, not just the one that feels most interesting.
+
 ✓ Path parameters identify the resource (usually required, invalid usually means 404); query parameters filter/modify the request (usually optional, invalid usually means 400).
+
 ✓ Test an actual invalid query parameter value, not just its presence or absence — a real defect can hide specifically in the invalid-value case.
+
 ✓ Identify a payload's mandatory/optional field boundary before writing missing-field test cases.
+
 ✓ Response headers (like Content-Type) deserve the same verification as request headers, including on error paths.

@@ -150,7 +150,11 @@ Many candidates describe Android/iOS differences only in terms of visual design 
 Remember these five points:
 
 ✓ Android and iOS have real, testable differences: navigation, permissions, background execution, distribution.
+
 ✓ Shared underlying logic doesn't guarantee shared platform-level behavior — test each platform's own conventions directly.
+
 ✓ Android's system-level back navigation is a distinctly Android testing surface with no iOS equivalent.
+
 ✓ Test the permission request, denial, and re-grant cycle on each platform independently.
+
 ✓ Background-dependent behavior (uploads, sync) needs testing on both platforms, expecting genuinely different results.

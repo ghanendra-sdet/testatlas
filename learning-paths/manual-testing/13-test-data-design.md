@@ -205,7 +205,11 @@ Five realistic scenarios. For each, decide which artifact or practice from this 
 Remember these five points:
 
 ✓ Test data deserves the same deliberate design as the test case it supports — convenient data often can't exercise the risks that matter most.
+
 ✓ Six categories matter: valid, invalid, boundary, null, duplicate, and production-like data.
+
 ✓ Production-like, realistically messy data catches defects clean data structurally cannot — as with rounding errors and special-character handling.
+
 ✓ Never use real customer or patient data in testing — synthetic data can be realistic without the privacy risk.
+
 ✓ Test data needs ongoing maintenance and clear ownership, the same way test cases do.

@@ -103,7 +103,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ AI acceleration and review discipline aren't in tension — apply the specific review standard at every stage of a workflow.
+
 ✓ Verify AI-suggested root causes directly, especially when pace pressure makes skipping verification tempting.
+
 ✓ A plausible-sounding hypothesis is not evidence of correctness — verify it regardless of how reasonable it sounds.
+
 ✓ Log every AI-assisted artifact consistently throughout a workflow, not just when something goes wrong.
+
 ✓ AI accelerates a workflow's speed; review steps are what make its output actually trustworthy.

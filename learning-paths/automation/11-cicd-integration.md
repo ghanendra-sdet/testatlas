@@ -167,7 +167,11 @@ Many candidates answer "CI/CD integration means the tests run automatically" wit
 Remember these five points:
 
 ✓ Automation depending on a human manually remembering to run it provides almost none of automation's real protection.
+
 ✓ A required, merge-blocking check is the specific mechanism that makes a CI-integrated suite a real gate, not just automatic execution.
+
 ✓ Stabilize a suite before promoting it to a hard-blocking gate — an unreliable gate trains people to bypass gates in general.
+
 ✓ Trigger the suite automatically on every relevant code change, not on a schedule or manual button.
+
 ✓ A flaky test blocking a real change under pressure should be fixed, not routed around by disabling the gate.

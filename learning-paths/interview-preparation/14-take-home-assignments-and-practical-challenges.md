@@ -106,7 +106,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Respect an implicit, reasonable time budget even when none is explicitly stated.
+
 ✓ Always include a short cover note: your assumptions, your priorities, and what you'd do next.
+
 ✓ Prioritize your deepest work on the highest-risk area, not even coverage across everything.
+
 ✓ A shorter, well-communicated submission often beats a longer, unprioritized one.
+
 ✓ A take-home assignment evaluates judgment under ambiguity, not just volume of output.

@@ -158,7 +158,11 @@ Many candidates answer "automation is faster so you should automate as much as p
 Remember these five points:
 
 ✓ Automation and manual testing are complementary — each catches real defects the other structurally cannot.
+
 ✓ Automation excels at deterministic, repeated, anticipated checks; manual/exploratory testing excels at unanticipated scenarios and judgment calls.
+
 ✓ Full automated coverage of documented requirements does not mean a feature is fully tested.
+
 ✓ Ask which risk category a check protects against before deciding how to test it.
+
 ✓ Shift the automation/manual balance as a feature matures — more manual early, more automated once stable.

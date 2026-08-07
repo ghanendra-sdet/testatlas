@@ -169,7 +169,11 @@ Many candidates describe test organization as "just keeping things tidy," withou
 Remember these five points:
 
 ✓ Organization is a distinct skill from writing individual test cases — a hundred well-written test cases still become unmaintainable without structure.
+
 ✓ Organize by feature area, mirroring the product itself, so coverage is findable by anyone on the team.
+
 ✓ Consistent naming conventions make duplicates visible and search reliable — inconsistency defeats the purpose even with good intentions.
+
 ✓ The smoke/regression split is what makes fast, confident release decisions possible without running everything or guessing.
+
 ✓ Clear ownership prevents test cases from silently going stale as the features they verify change.

@@ -102,7 +102,11 @@ Before moving to the next track, compare your own answers against each round's e
 Remember these five points:
 
 ✓ Answer each round before reading the model answer — reading ahead defeats the exercise.
+
 ✓ Compare your own answers against the evaluator notes honestly, round by round.
+
 ✓ Identify your weakest round specifically, and revisit that module before continuing.
+
 ✓ This track combines Sections 1–2's own techniques under realistic timing.
+
 ✓ The evaluator notes explain *why* each model answer works, not just what it says.

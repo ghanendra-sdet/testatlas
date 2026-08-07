@@ -153,7 +153,11 @@ Many candidates answer this question by describing exploratory testing as what y
 Remember these five points:
 
 ✓ Four factors drive the structured-vs-exploratory decision: risk, time, product maturity, and compliance.
+
 ✓ The strongest strategies combine both, applied to different parts of the same feature based on actual risk shape.
+
 ✓ Compliance-critical requirements specifically demand structured technique's guaranteed coverage.
+
 ✓ This decision applies per risk area, not once per whole feature.
+
 ✓ Product maturity doesn't make exploratory testing permanently unnecessary — real systems keep evolving.

@@ -146,7 +146,11 @@ Many candidates treat "we have a review process" as sufficient evidence of respo
 Remember these five points:
 
 ✓ A review step only protects against errors if it checks against a specific, defined verification target.
+
 ✓ AI output's confident, fluent tone is not evidence of correctness.
+
 ✓ Review must be a structural checkpoint that can't be bypassed under time pressure.
+
 ✓ Calibrate review depth to the artifact's actual risk, not uniformly.
+
 ✓ Requiring an explicit citation back to the source (requirement, contract, standard) makes review genuinely checkable.

@@ -146,7 +146,11 @@ Many candidates describe PII testing only in terms of obviously sensitive fields
 Remember these five points:
 
 ✓ Test two specific questions: is more personal data exposed than needed, and is deletion actually honored everywhere.
+
 ✓ Inspect the raw data response directly — never judge sensitivity by what the screen displays alone.
+
 ✓ Combinations of ordinary-looking fields can be just as identifying as one obviously sensitive field.
+
 ✓ Verify deletion completeness across every system, not just the primary account record.
+
 ✓ This module is awareness-level — recognize and flag patterns; leave legal interpretation to specialists.

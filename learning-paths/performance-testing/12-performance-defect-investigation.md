@@ -147,7 +147,11 @@ Many candidates answer that they'd "try to reproduce it manually a few more time
 Remember these five points:
 
 ✓ Confirm a vague symptom with real percentile data before investigating further.
+
 ✓ Let the report's specific language guide test-type selection — "sometimes" suggests spike, "after a while" suggests soak, "with more data" suggests volume.
+
 ✓ Reproduce deliberately with the identified test type, then correlate monitoring data to find the actual cause.
+
 ✓ Distinguish a genuine defect from a real capacity limit before reporting — they need different responses.
+
 ✓ "Unable to reproduce" after an informal attempt often means the investigation method was wrong, not that the problem doesn't exist.

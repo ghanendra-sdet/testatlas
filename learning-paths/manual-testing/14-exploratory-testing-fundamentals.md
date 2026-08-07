@@ -158,7 +158,11 @@ Many candidates describe exploratory testing as testing performed "without a pla
 Remember these five points:
 
 ✓ Exploratory testing is simultaneous test design, execution, and learning — not unstructured clicking around.
+
 ✓ It's most valuable for new features, recently changed areas, and complex multi-step flows scripted testing can't fully anticipate.
+
 ✓ Real exploratory testing has a charter, active observation discipline, and real-time documentation.
+
 ✓ It complements scripted testing rather than replacing it — each finds what the other structurally can't.
+
 ✓ Leaving exploratory testing to chance versus scheduling it deliberately is the difference between reliable and accidental discovery.

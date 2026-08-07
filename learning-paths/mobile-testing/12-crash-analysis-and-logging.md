@@ -154,7 +154,11 @@ Many candidates describe closing an unreproducible crash report as low priority 
 Remember these five points:
 
 ✓ Read a crash log's what, where, when, and how-often/for-whom fields systematically before attempting reproduction.
+
 ✓ Group multiple crash reports by shared device/OS/manufacturer attributes to reveal patterns invisible in isolated review.
+
 ✓ "Can't reproduce on this device" is not the same finding as "can't reproduce at all."
+
 ✓ Cross-reference device-specific crash patterns against the existing pairwise device set from Device Fragmentation.
+
 ✓ The preceding user action ("when it crashed") is often necessary, not optional, for successful reproduction.

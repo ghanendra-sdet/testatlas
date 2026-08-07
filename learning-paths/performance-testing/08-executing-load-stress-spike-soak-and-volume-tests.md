@@ -154,7 +154,11 @@ Many candidates can define spike testing correctly but describe configuring it w
 Remember these five points:
 
 ✓ Each test type needs a distinct configuration — ramp-up shape and duration, not just a different report label.
+
 ✓ A stress test increases load in defined increments until an actual breaking point is found.
+
 ✓ A spike test's near-immediate ramp-up is what makes it different from a load test at the same peak.
+
 ✓ A soak test needs real elapsed duration and continuous metric capture to observe a trend over time.
+
 ✓ A volume test is best run as a comparative series across increasing data sizes, not a single arbitrary run.

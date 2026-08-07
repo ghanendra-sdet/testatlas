@@ -114,7 +114,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Attach a concrete example to any status code or auth explanation — never just the definition.
+
 ✓ Keep authentication (who you are) and authorization (what you're allowed to do) explicitly distinct, with an example of each.
+
 ✓ Reason about the specific endpoint's business risk, not a generic checklist.
+
 ✓ Raise real risks (like duplicate-submission safety) unprompted when the endpoint's purpose calls for it.
+
 ✓ "How would you test this endpoint" is a reasoning invitation, not a recall question.

@@ -148,7 +148,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Review AI-generated API/automation code against existing standards — Page Object Model, explicit waits, precise assertions, real endpoint accuracy.
+
 ✓ AI-generated code tends to default toward common, generic patterns, often reproducing well-documented anti-patterns.
+
 ✓ Code that runs successfully today can still violate a known-important standard, becoming fragile later.
+
 ✓ API-accuracy review and automation-quality review are two distinct, both-necessary checks.
+
 ✓ Re-run a corrected script to confirm the fix improved actual coverage, not just style.

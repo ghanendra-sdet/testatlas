@@ -107,7 +107,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ The same Sections 1–4 techniques surface different real defects depending on a feature's structural shape.
+
 ✓ Test state-accumulating features specifically for survival across app upgrades, not just fresh installs.
+
 ✓ Retry-on-reconnect safety needs independent verification per feature — a confirmed pattern doesn't transfer automatically.
+
 ✓ Apply memory-leak testing specifically to features with heavy, repeatedly-loaded content.
+
 ✓ AtlasShop's cart-based feature shape produces risk categories distinct from AtlasBank's single-action transfer flow.

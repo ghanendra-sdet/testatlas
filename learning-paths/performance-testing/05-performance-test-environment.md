@@ -150,7 +150,11 @@ Many candidates focus exclusively on server specs (CPU, memory) when discussing 
 Remember these five points:
 
 ✓ A performance test result only predicts production if the environment genuinely resembles it, or every gap is documented and adjusted for.
+
 ✓ Audit four dimensions: infrastructure specs, network conditions, third-party dependencies, and configuration parity.
+
 ✓ An unrealistically fast third-party mock can hide the real bottleneck a test exists to find.
+
 ✓ "Staging" doesn't automatically mean "performance-test-ready" — staging is often provisioned for functional testing's needs instead.
+
 ✓ Environment parity should be an explicit, repeated audit item, not a one-time assumption — environments drift.

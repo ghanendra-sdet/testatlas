@@ -202,7 +202,11 @@ Five realistic scenarios. For each, decide which technique (or combination of te
 Remember these five points:
 
 ✓ Error Guessing uses experience and recognizable patterns to find defects formal techniques weren't designed to catch.
+
 ✓ It works best applied after the formal techniques, filling real gaps — not as a replacement for systematic testing.
+
 ✓ Common patterns worth watching for: empty input, extremely long input, special characters, rapid repeated actions, copy-pasted content, interrupted operations.
+
 ✓ Domain-specific experience produces far more targeted results than generic "try weird input" intuition.
+
 ✓ The technique's value depends on real accumulated experience — document and share defect patterns so they compound across a team.

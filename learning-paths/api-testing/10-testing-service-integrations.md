@@ -185,7 +185,11 @@ Many candidates answer "I'd test it the same way as any other endpoint." That mi
 Remember these five points:
 
 ✓ Deliberately test a dependency's abnormal behavior (slow, erroring, unavailable) — this is realistic and recurring in production, not a rare edge case.
+
 ✓ Map a feature's dependencies and classify each as blocking or non-blocking before testing failure scenarios.
+
 ✓ A partial failure isn't automatically a defect — check whether it matches the documented, intended design.
+
 ✓ Confirm a timeout exists and behaves predictably for every external dependency call.
+
 ✓ Test a webhook's asynchronous callback path as thoroughly as the initial request, including missing and duplicate delivery.

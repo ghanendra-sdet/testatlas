@@ -148,7 +148,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real security-verification effort moves through threat modeling, requirements, test design, execution, and dual-audience reporting as one connected process.
+
 ✓ This capstone's business-logic finding is a genuine confirmation, not a defect, in an already-certified fix.
+
 ✓ This capstone's audit-integrity finding was structurally invisible to all six prior certified layers — none had reason to test log-deletion permissions specifically.
+
 ✓ Security Testing's distinctive question — does correct behavior resist deliberate bypass, and can its record be trusted — closes TestAtlas's seven-layer AtlasBank narrative without contradicting any of the other six.
+
 ✓ Test business-logic bypass under both split-submission and concurrent-submission conditions, and always test audit-log integrity as its own, separate question.

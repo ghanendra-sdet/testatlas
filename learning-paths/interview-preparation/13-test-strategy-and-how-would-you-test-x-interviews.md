@@ -122,7 +122,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ "How would you test X" questions evaluate risk-based prioritization, not breadth of testing-type knowledge.
+
 ✓ Always clarify scope before answering — the prompt is deliberately underspecified.
+
 ✓ Identify the worst realistic outcome first, and let it drive your prioritization.
+
 ✓ Avoid flat, unprioritized lists — show why one area matters more than another.
+
 ✓ The specific object named in the prompt is irrelevant — the reasoning process is the actual subject.

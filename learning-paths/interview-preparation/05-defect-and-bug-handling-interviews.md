@@ -99,7 +99,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Severity/priority questions evaluate demonstrated judgment — always have a specific, concrete example ready.
+
 ✓ Frame developer-disagreement stories around evidence and outcome, never blame.
+
 ✓ Describe your own actual defect-tracking practice, not an abstract lifecycle recitation.
+
 ✓ Severity is technical impact; priority is business urgency — the strongest answer shows a case where they diverge.
+
 ✓ A ready, specific example is what separates a strong answer from a technically correct but unconvincing one.

@@ -171,7 +171,11 @@ Many candidates describe an RTM as proof that "everything was tested," full stop
 Remember these five points:
 
 ✓ An RTM maps requirement IDs to test case IDs, turning coverage from an impression into a checkable claim.
+
 ✓ Gap identification — requirements with zero mapped test cases — is often the RTM's most valuable use.
+
 ✓ A requirement change should immediately trigger review of its mapped test cases, or they risk silently testing an outdated rule.
+
 ✓ 100% RTM coverage proves a test case exists per requirement — it doesn't prove that test case's depth was actually sufficient.
+
 ✓ Build and maintain the RTM throughout a project, not retroactively — that's what makes gaps visible while they're still cheap to fix.

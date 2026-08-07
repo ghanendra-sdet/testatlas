@@ -154,7 +154,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Evaluate AI-generated test data against the same existing volume/shape/distribution criteria — no new standard is needed.
+
 ✓ AI-generated batches default toward artificial uniformity unless realistic distribution is explicitly requested.
+
 ✓ A generated value can have the right surface format and still fail real validation logic — check against the real logic.
+
 ✓ Treat AI-generated test data with the same ongoing scrutiny as any other test asset, not a one-time trust decision.
+
 ✓ "Looks plausible, record by record" is not the same standard as "realistic, as a whole batch."

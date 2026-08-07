@@ -210,7 +210,11 @@ Many candidates answer "I'd check the status code and make sure the body has the
 Remember these five points:
 
 ✓ A request and response are one connected unit — verify both, not just the response.
+
 ✓ Classify every response as success, empty, or error, and check what's specific to that pattern.
+
 ✓ Read a response for internal consistency — fields agreeing with each other and with domain knowledge — not just structural validity.
+
 ✓ An error response's status code, error code, and message should all agree with the actual cause.
+
 ✓ Verifying the request itself matters most in copied or reused test data, where an unintended field value can silently invalidate what a test is actually exercising.

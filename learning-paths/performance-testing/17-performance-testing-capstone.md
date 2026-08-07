@@ -94,7 +94,11 @@ No new terms are introduced in this capstone — every term used above is define
 Remember these five points:
 
 ✓ A real performance-verification effort moves through strategy, execution, correlation, and reporting as one connected process.
+
 ✓ Correctness and performance cost are independent properties — a correct fix can still have a real, measurable operational cost worth optimizing.
+
 ✓ This capstone's finding (non-linear scaling cost) is a legitimate discovery about an already-correct implementation, not a defect in Database Testing's certified fix.
+
 ✓ A non-linear scaling relationship was found only because this path tested with realistic, varying volume under real concurrent load — no prior layer's small-scale testing could reveal it.
+
 ✓ Performance Testing's distinctive question — what does correctness cost at scale — closes TestAtlas's five-layer AtlasBank narrative without contradicting any of the other four.

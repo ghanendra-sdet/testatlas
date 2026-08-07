@@ -122,7 +122,11 @@ A team reviewing a string of production incidents over one quarter found that ne
 Remember these five points:
 
 ✓ Familiarity with a technique should make it faster to execute correctly, not optional to execute at all.
+
 ✓ More test cases is not the same as more coverage — check for distinct coverage, not just volume.
+
 ✓ Requirements describe the happy path by default — actively hunt for what's unstated.
+
 ✓ Match technique to the feature's actual shape, not to whichever technique feels most comfortable.
+
 ✓ Compliance-critical risk should never be tested with a shortcut under time pressure — decide this in advance, not under deadline.

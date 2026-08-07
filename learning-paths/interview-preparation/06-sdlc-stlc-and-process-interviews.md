@@ -99,7 +99,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ SDLC and shift-left questions reward explained reasoning about value and timing, not accurate phase-recitation.
+
 ✓ Ground your shift-left answer in a real, specific example, not just the term's definition.
+
 ✓ Keep phase-naming brief — spend most of your answer on why the sequence and timing matter.
+
 ✓ A real or realistic example beats a generic, hypothetical one every time.
+
 ✓ Explain process concepts the way you'd explain them to a colleague, not the way a textbook would.

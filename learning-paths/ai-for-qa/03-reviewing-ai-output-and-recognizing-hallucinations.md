@@ -157,7 +157,11 @@ Many candidates describe catching AI hallucinations by "using good judgment" or 
 Remember these five points:
 
 ✓ A hallucination is presented with the same confident tone as accurate content — plausibility is not evidence of correctness.
+
 ✓ Hallucinations show up as fabricated technical details, invented requirements, wrong root causes, and non-existent library references.
+
 ✓ The core habit: identify every specific, checkable claim and verify it directly against its real source.
+
 ✓ Hallucinations often closely approximate real content — watch for subtle, close-but-wrong details, not just obvious fabrications.
+
 ✓ Actually run or execute AI-generated code as part of verification, not just read it.

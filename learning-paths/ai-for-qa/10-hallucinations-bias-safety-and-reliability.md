@@ -156,7 +156,11 @@ Many candidates describe hallucination testing as reviewing responses for anythi
 Remember these five points:
 
 ✓ Hallucination, bias, safety, and reliability are four related but distinct AI quality defect classes, each with its own test category.
+
 ✓ Grounding verification — testing with known-unavailable data — is the core hallucination test for a shipped feature.
+
 ✓ Bias testing checks consistent response quality across different, realistic question framings.
+
 ✓ Safety testing actively verifies scope boundaries are enforced in behavior, not just documented.
+
 ✓ Correctly expressing uncertainty when data is unavailable is a positive, testable requirement, not just an absence of fabrication.

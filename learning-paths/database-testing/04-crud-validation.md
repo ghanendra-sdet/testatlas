@@ -205,7 +205,11 @@ Many candidates describe testing an Update by confirming the field they changed 
 Remember these five points:
 
 ✓ Nearly every feature reduces to Create, Read, Update, or Delete at the data layer.
+
 ✓ Verifying Update/Delete requires two checks: the intended row changed correctly, and no unintended row also changed.
+
 ✓ Know whether a Delete is designed as hard or soft before testing it — they need different verification.
+
 ✓ Test Create operations under retry/duplicate-submission conditions, not just a single clean attempt.
+
 ✓ A Read operation's displayed value should be compared against a direct query whenever staleness or scope is a plausible risk.

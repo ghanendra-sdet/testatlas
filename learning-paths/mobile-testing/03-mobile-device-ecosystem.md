@@ -158,7 +158,11 @@ Many candidates describe device selection purely in terms of testing "the latest
 Remember these five points:
 
 ✓ Screen size/density, OS version, manufacturer customization, and performance tier are the four real fragmentation dimensions.
+
 ✓ Drive device selection with real usage data, not convenient availability.
+
 ✓ "Android" isn't a single uniform target — manufacturer-level customization produces real behavioral variation.
+
 ✓ Include devices representing meaningfully older OS versions and lower performance tiers, since real users are commonly on both.
+
 ✓ Revisit device selection periodically against updated usage data, not as a one-time decision.

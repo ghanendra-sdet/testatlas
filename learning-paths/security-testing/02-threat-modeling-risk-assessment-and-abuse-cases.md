@@ -146,7 +146,11 @@ Many candidates describe threat modeling as something only security specialists 
 Remember these five points:
 
 ✓ Map the attack surface first — every actor who can reach the feature, not just the primary user.
+
 ✓ Threat model each actor at a bounded, practical, tester's level — realistic misuse, not exhaustive adversary modeling.
+
 ✓ Write abuse cases in the same concrete format as any test case: actor, action, expected secure outcome.
+
 ✓ Abuse cases catch deliberate misuse of a feature working exactly as designed — a distinct defect class from a technical vulnerability.
+
 ✓ Run this technique before a feature ships, as part of test design, not after an incident.

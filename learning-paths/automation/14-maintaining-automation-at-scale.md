@@ -160,7 +160,11 @@ Many candidates answer "I'd fix failing tests as they come up" without addressin
 Remember these five points:
 
 ✓ Automation technical debt (dead tests, unowned tests) is invisible day to day and expensive in aggregate.
+
 ✓ Treat a significant feature redesign as a deliberate trigger to review that feature's existing tests.
+
 ✓ Default toward deleting a test whose behavior no longer exists, rather than keeping it "just in case."
+
 ✓ Schedule periodic suite health review as a recurring activity, not just a reaction to an unavoidable problem.
+
 ✓ Raw test count, without active maintenance, tends to overstate real coverage rather than understate it.

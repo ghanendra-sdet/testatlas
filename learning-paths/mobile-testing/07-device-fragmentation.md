@@ -140,7 +140,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Device fragmentation is a combinatorial problem — apply Combinatorial and Pairwise Testing directly, no new technique needed.
+
 ✓ Exhaustive device testing is impractical; arbitrary selection provides no stated coverage guarantee.
+
 ✓ Pairwise-generated sets guarantee every pair of dimension values is tested together at least once.
+
 ✓ Regenerate the pairwise set whenever the underlying device-landscape data changes.
+
 ✓ Most real combination-triggered defects involve at most two interacting factors — pairwise testing is built specifically for this.

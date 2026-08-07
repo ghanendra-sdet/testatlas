@@ -58,6 +58,7 @@ A beginner reports that testing "went well" or "found some issues." A senior tes
 This module teaches the skills behind two real, recurring workplace documents:
 
 ✓ **Daily Execution Report** — a brief, regular status update during an active cycle (worked example above)
+
 ✓ **Test Summary Report** — the comprehensive end-of-cycle report evaluating exit criteria (worked example below)
 
 *(Templates for both are planned — tracked in `NOT_NOW.md`.)*
@@ -193,7 +194,11 @@ Many candidates describe a good test report as one that's "comprehensive" or "de
 Remember these five points:
 
 ✓ Track Pass/Fail/Blocked explicitly per test case — this is the foundation every other reporting artifact depends on.
+
 ✓ A test summary report's most important sentence is its explicit exit-criteria evaluation.
+
 ✓ Surface exit-criteria risk as soon as it's visible, not just in the final report.
+
 ✓ Adapt detail and emphasis to the audience, without changing the underlying facts.
+
 ✓ Vague terms like "mostly passed" or "nothing major" can't be verified or acted on — specific, checkable numbers can.

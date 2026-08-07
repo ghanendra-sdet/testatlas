@@ -145,7 +145,11 @@ Many candidates assume a failing test that doesn't block releases must mean the 
 Remember these five points:
 
 ✓ A security check only provides real protection if its failure actually blocks the pipeline.
+
 ✓ A non-blocking security check is a report, not a gate, regardless of how thorough its coverage is.
+
 ✓ Run baseline dependency and component scanning continuously and automatically.
+
 ✓ Verify blocking configuration at the moment a security test is added, and periodically for existing ones.
+
 ✓ A security regression test's real value lies entirely in what it can actually stop.

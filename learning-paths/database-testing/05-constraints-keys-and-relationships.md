@@ -166,7 +166,11 @@ Many candidates answer that testing the UI is sufficient "because that's how use
 Remember these five points:
 
 ✓ A constraint is enforced by the database itself — testing only the UI never confirms it's actually implemented.
+
 ✓ NOT NULL, UNIQUE, PRIMARY KEY, FOREIGN KEY, and CHECK are the core constraint types a tester verifies.
+
 ✓ Boundary Value Analysis applies directly to numeric/length constraints — test at the exact edge, not just comfortably inside or outside it.
+
 ✓ Equivalence Partitioning applies directly to constraints — one valid-partition test and one invalid-partition test per constraint is usually sufficient.
+
 ✓ Foreign keys need testing in both directions: insert (prevents invalid references) and delete (handles related rows as designed).

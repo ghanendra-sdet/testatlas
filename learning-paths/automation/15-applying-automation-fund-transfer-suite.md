@@ -105,7 +105,11 @@ No new terms are introduced in this module — every concept used above is defin
 Remember these five points:
 
 ✓ Combine multiple sections' concerns against one realistic, integrated feature — don't just re-confirm each concern in isolation.
+
 ✓ Carry forward specific practices (realistic data, explicit waits, precise assertions) into a new suite's actual code, not just as abstract principles.
+
 ✓ A hardcoded pause can accidentally mask a real timing-dependent defect that a correct explicit wait would expose.
+
 ✓ Use uniquely-generated test data proactively for parallel safety, not reactively after failures appear.
+
 ✓ Integrated testing finds defects no single concern, tested alone, would surface.
