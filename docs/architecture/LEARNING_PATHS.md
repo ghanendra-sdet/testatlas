@@ -1500,6 +1500,12 @@ Following the established `VIS-<PATH-PREFIX>-###` convention: propose **`VIS-INT
 - Learner reasons aloud from a symptom to a root cause and from an unfamiliar feature to a test strategy, using structured technique rather than improvisation
 - Learner completes the full mock-interview loop and produces a concrete, prioritized improvement plan from structured feedback
 
+### Decisions (Approved 2026-08-06)
+
+1. **Mock Interview Capstone (Section 6)**: ✅ Approved — a timed interview simulation is the natural equivalent of an application capstone for a path whose objective is demonstrating competence under interview conditions, not testing a fictional product. No AtlasBank narrative extension.
+2. **Retiring the old stub's "Technical Interviews: Security Testing" module**: ✅ Approved — Module 11 (Cross-Domain Interview Scenarios) cross-links the now-complete, certified Security Testing curriculum instead of re-teaching it.
+3. **New recurring element — "What the Interviewer Is Really Evaluating"** (added at approval): every instruction module (1–17) gets this section, explicitly naming the underlying evaluation criteria behind the module's interview scenario — technical accuracy, communication, problem-solving approach, trade-off analysis, risk awareness, depth vs. breadth, ability to justify decisions, as relevant to that module. This is this path's own signature recurring element, replacing the standard "Interview Questions" section every other certified path uses (redundant here, since every module's content already *is* interview material) — the same kind of path-specific adaptation Mobile Testing's five-state framework or Security Testing's CIA Triad represent, not a deviation requiring a `CURRICULUM_EVOLUTION.md` entry, since it applies to one path's own content shape, not a proposed cross-path default.
+
 ---
 
 ## Path 11: Career and Leadership in QA

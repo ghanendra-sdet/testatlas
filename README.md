@@ -73,7 +73,7 @@ The `projects/` area will model realistic domains such as banking, healthcare, e
 
 ## Getting started
 
-Read online at **`[live site URL — to be added once GitHub Pages is published]`**, or run the site locally:
+Read online at **[ghanendra-sdet.github.io/testatlas](https://ghanendra-sdet.github.io/testatlas/)**, or run the site locally:
 
 ```bash
 git clone https://github.com/ghanendra-sdet/testatlas.git
