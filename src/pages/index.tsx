@@ -52,7 +52,8 @@ const learningPaths: LearningPath[] = [
   {
     title: 'Security Testing',
     description: 'The OWASP Top 10 and threat modeling from a tester’s point of view.',
-    status: 'Planned',
+    href: '/learning-paths/security-testing/what-is-security-testing',
+    status: 'Live · 22 modules, certified',
   },
   {
     title: 'AI for QA',
@@ -147,16 +148,17 @@ export default function Home(): ReactNode {
               </Link>
             </div>
             <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>8 Paths Live</li>
-              <li className={styles.heroBadge}>145 Modules</li>
-              <li className={styles.heroBadge}>7 Certified Reference Curricula</li>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>9 Paths Live</li>
+              <li className={styles.heroBadge}>167 Modules</li>
+              <li className={styles.heroBadge}>8 Certified Reference Curricula</li>
               <li className={styles.heroBadge}>Free</li>
               <li className={styles.heroBadge}>Open Source</li>
             </ul>
             <p className={styles.heroStatus}>
-              Foundations plus seven certified curricula — Manual Testing, API Testing, Test Automation,
-              Database Testing, Performance Testing, AI for QA, and Mobile Testing — are live today, 145
-              modules in total. Three more learning paths remain planned — see what&rsquo;s next below.
+              Foundations plus eight certified curricula — Manual Testing, API Testing, Test Automation,
+              Database Testing, Performance Testing, AI for QA, Mobile Testing, and Security Testing — are
+              live today, 167 modules in total. Two more learning paths remain planned — see what&rsquo;s
+              next below.
             </p>
           </div>
         </section>
@@ -184,7 +186,7 @@ export default function Home(): ReactNode {
               <p className={styles.eyebrow}>Where to go next</p>
               <h2 className={styles.sectionTitle}>Learning paths</h2>
               <p>
-                Eleven role-based paths share one foundation. Eight are live today &mdash; everything else is
+                Eleven role-based paths share one foundation. Nine are live today &mdash; everything else is
                 being built against the same architecture, proposed and reviewed before a module is written.
               </p>
             </div>

@@ -1355,38 +1355,150 @@ Shipped as designed: **Applying Mobile Testing: AtlasBank Fund Transfer Across R
 
 ## Path 10: Interview Preparation
 
-**Directory**: `/learning-paths/interview-preparation/`  
-**Position**: 10  
-**Prerequisites**: Foundations (minimum), any technical path (recommended)  
-**Target Audience**: Job seekers, career-changers, QA professionals  
-**Estimated Duration**: 2–8 weeks (depends on preparation depth)  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for Interview Preparation v1.0, produced against all eight certified Reference Curricula (Manual, API, Automation, Database, Performance, Mobile, AI for QA, Security) as reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then. **All eight certified paths remain frozen — this proposal modifies none of them.**
 
-**Learning Objectives**:
-- Understand QA interview patterns (behavioral, technical, system design)
-- Practice scenario-based questioning
-- Articulate testing judgment clearly
-- Communicate under interview pressure
-- Showcase real-world problem-solving
-- Negotiate offers confidently
+**Supersedes the original stub below it in structure and scope, not in position.** The pre-existing Position 10 stub predates every certified convention this document now enforces: it had no Section structure, no Review/Solutions strategy, a "Technical Interviews: Security Testing" module that duplicated an entire path Security Testing now teaches properly, and a salary-negotiation module scoped ambiguously against Path 11's own career content. This proposal replaces that stub's content while keeping its Position 10 slot untouched — **no renumbering required**.
 
-**Modules** (planned for v0.1–v1.0):
-1. The QA Interview: What Companies Ask (panel discussion, take-home, real-time)
-2. Behavioral Interviews for QA (STAR method, discussing failures)
-3. Technical Interviews: Test Design (designing tests for a feature)
-4. Technical Interviews: Automation (designing test automation)
-5. Technical Interviews: API Testing (testing REST APIs)
-6. Technical Interviews: Security Testing (finding vulnerabilities)
-7. Technical Interviews: System Design for QA (scalability, reliability of QA infrastructure)
-8. Whiteboarding Test Cases (drawing test matrices on the board)
-9. Take-Home Challenges (typical assignments, time management)
-10. Salary Negotiation for QA Professionals (knowing your worth)
-11. Mock Interviews (scenario-based practice)
-12. Post-Interview (follow-up, handling rejection)
+### 1. Learning Objectives (path-level)
+
+- Understand how QA interviews are actually structured — behavioral, technical, take-home, panel — and what each round is really evaluating
+- Apply test-design, defect-analysis, API/database, and automation technique already learned elsewhere in TestAtlas, under realistic interview conditions and time pressure
+- Communicate testing judgment clearly and confidently, including admitting uncertainty productively
+- Handle scenario-based and whiteboard-style "how would you test X" questions using structured reasoning, not memorized answers
+- Complete a full, timed, end-to-end mock interview simulation and receive structured feedback against a concrete improvement checklist
+
+### 2. Target Audience
+
+Freshers entering QA for the first time; manual test engineers, automation engineers, API test engineers, and SDETs preparing for their next interview; and experienced QA professionals changing jobs. This path is explicitly **not** a technique-teaching path — every technical concept it touches, it applies from a path that already taught it.
+
+### 3. Prerequisites
+
+**Required**: Foundations (all 17 modules), [Manual Testing and Test Design](/learning-paths/manual-testing/test-design-fundamentals) (the test-design and defect-reporting fluency every section of this path assumes and applies).
+
+**Recommended, not required**: API Testing, Automation Testing, Database Testing, Performance Testing, Mobile Testing, AI for QA, and Security Testing — each has its own dedicated module in Section 3–4 applying that path's own technique to an interview context. A learner preparing only for a manual-testing-focused role can complete this path without ever having taken Automation Testing; Section 3's automation-interview modules are then self-contained refreshers rather than a hard blocker. This mirrors the exact Related-Topics-not-Prerequisite reasoning Security Testing's own Module 16 already established for this project.
+
+### 4. Estimated Duration
+
+**6–9 weeks** (21 modules), scaled to interview-preparation timelines rather than technique-learning timelines — several modules are shorter, practice-oriented sessions rather than full concept modules.
+
+### 5. Difficulty Progression
+
+`beginner` for Sections 1–2 (interview fundamentals and manual/test-design interviews — accessible to a fresher with only Foundations and Manual Testing complete); `intermediate` for Sections 3–5 (technical-domain interviews assuming familiarity with the corresponding certified path, scenario-based reasoning, and interview communication strategy); `intermediate` for Section 6's mock-interview capstone, matching every certified path's Application Module convention.
+
+### 6. Number of Sections
+
+**6** — five instruction sections (Interview Fundamentals; Manual and Test-Design Interviews; API, Database, and Automation Interviews; Specialized and Scenario-Based Interviews; Interview Strategy and Communication) plus one Mock Interview Capstone section — the same 5-instruction-plus-1-application shape as Security Testing, API Testing, and every other wide-scope certified path.
+
+### 7. Number of Modules
+
+**21** — 17 instruction modules + 4 capstone-section modules.
+
+### 8. Module Ordering
+
+#### Section 1 — Interview Fundamentals (Modules 1–3)
+
+1. **How QA Interviews Are Structured** — *Objective*: the real shape of a QA interview loop (behavioral, technical, take-home, panel/system-design rounds) and what each round is actually evaluating, so later sections' practice has real context. *Prerequisite it satisfies*: none (path entry point). *Est. length*: 1,900–2,300 words.
+2. **Presenting Your Testing Work Credibly** — *Objective*: walking through a resume, portfolio, or past project the way an interviewer actually probes it, reusing [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases)'s and [Writing Effective Bug Reports](/learning-paths/manual-testing/writing-effective-bug-reports)'s own artifact-quality standards as the bar for what "credible" looks like. *Est. length*: 1,800–2,200 words.
+3. **Behavioral Interviews: The STAR Method for QA** — *Objective*: structuring real testing stories (a defect found, a disagreement with a developer, a missed deadline) using STAR, with QA-specific pitfalls named directly. *What depends on it*: every later scenario-based module reuses this structuring discipline. *Est. length*: 2,000–2,400 words.
+
+**Section 1 Review + Solutions**: dedicated pages, per the certified default.
+
+#### Section 2 — Manual and Test-Design Interviews (Modules 4–6)
+
+4. **Test Design Interviews** — *Objective*: live, timed test-case-design exercises reusing [Boundary Value Analysis](/learning-paths/manual-testing/boundary-value-analysis), [Equivalence Partitioning](/learning-paths/manual-testing/equivalence-partitioning), and [Decision Table Testing](/learning-paths/manual-testing/decision-table-testing) directly, under the specific constraints an interview setting adds (thinking aloud, no reference material, a skeptical interviewer). *Est. length*: 2,100–2,500 words.
+5. **Defect and Bug-Handling Interviews** — *Objective*: explaining severity/priority judgment and defect-lifecycle reasoning conversationally, reusing [Defect Life Cycle](/learning-paths/foundations/defect-life-cycle) directly, including how to discuss a real disagreement with a developer professionally. *Est. length*: 2,000–2,400 words.
+6. **SDLC, STLC, and Process Interviews** — *Objective*: explaining testing's place in delivery and shift-left reasoning at a conversational, not textbook-recitation, level, reusing [Testing Across the SDLC](/learning-paths/foundations/testing-across-the-sdlc) directly. *Est. length*: 1,900–2,300 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — API, Database, and Automation Interviews (Modules 7–10)
+
+7. **API Testing Interviews** — *Objective*: REST concepts, status codes, and auth-flow questions discussed conversationally, reusing [What is API Testing?](/learning-paths/api-testing/what-is-api-testing) and [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals) directly rather than re-teaching either. *Est. length*: 2,000–2,400 words.
+8. **SQL and Database Interview Scenarios** — *Objective*: live query-writing and data-verification scenarios reusing [SQL for Testers](/learning-paths/database-testing/sql-for-testers) directly. *Est. length*: 2,100–2,500 words.
+9. **Automation Framework Interviews** — *Objective*: framework-design and tool-choice discussion questions (Page Object Model, why this tool over that one) reusing [Automation Framework Fundamentals](/learning-paths/automation/automation-framework-fundamentals) and [Choosing and Comparing Automation Tools](/learning-paths/automation/choosing-and-comparing-automation-tools) directly. *Est. length*: 2,000–2,400 words.
+10. **Live Coding and Debugging Interviews** — *Objective*: reading and debugging someone else's broken automated test under interview conditions, reusing [Diagnosing Flaky Tests](/learning-paths/automation/test-stability-and-flaky-tests)'s own diagnostic discipline. *Est. length*: 2,100–2,500 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Specialized and Scenario-Based Interviews (Modules 11–14)
+
+11. **Cross-Domain Interview Scenarios** — *Objective*: security, performance, mobile, and AI-for-QA topics discussed at interview-appropriate depth, cross-linking [What is Security Testing?](/learning-paths/security-testing/what-is-security-testing), [What is Performance Testing?](/learning-paths/performance-testing/what-is-performance-testing), [What is Mobile Testing?](/learning-paths/mobile-testing/what-is-mobile-testing), and [AI in Software Testing](/learning-paths/ai-for-qa/ai-in-software-testing) directly rather than re-teaching any of them — this path's own explicit consolidation module, mirroring the role Security Testing's Module 16 already plays for that path. *Est. length*: 2,300–2,700 words (this path's widest-scope module).
+12. **Bug Analysis and Root-Cause Interviews** — *Objective*: given only a symptom, reasoning aloud to a root cause, reusing [Database Defect Investigation](/learning-paths/database-testing/database-defect-investigation) and [Performance Defect Investigation](/learning-paths/performance-testing/performance-defect-investigation)'s own investigative discipline. *Est. length*: 2,100–2,500 words.
+13. **Test Strategy and "How Would You Test X" Interviews** — *Objective*: open-ended, whiteboard-style scenario questions, reusing [Performance Testing Strategy](/learning-paths/performance-testing/performance-testing-strategy)'s own risk-based prioritization reasoning applied to an unfamiliar feature under time pressure. *Est. length*: 2,200–2,600 words.
+14. **Take-Home Assignments and Practical Challenges** — *Objective*: how to approach a timed take-home testing assignment — what evaluators actually look for, common structural mistakes, time management. *Est. length*: 1,900–2,300 words.
+
+**Section 4 Review + Solutions**: dedicated pages.
+
+#### Section 5 — Interview Strategy and Communication (Modules 15–17)
+
+15. **Communicating Under Pressure** — *Objective*: pacing, thinking aloud productively, asking clarifying questions, and handling "I don't know" without derailing the interview. *Est. length*: 1,900–2,300 words.
+16. **Evaluating and Negotiating an Offer** — *Objective*: reading a QA-role offer critically and negotiating it — deliberately scoped to the individual-contributor job-offer moment, distinct from [Career and Leadership in QA](#path-11-career-and-leadership-in-qa)'s own longer-horizon people-management and strategy content. *Est. length*: 1,900–2,300 words.
+17. **Common Interview Mistakes for QA Candidates** — *Objective*: cross-cutting mistake patterns across this path's own sections, mirroring every certified path's identical Common-Mistakes-module structure. *Est. length*: 1,800–2,100 words.
+
+**Section 5 Review + Solutions**: dedicated pages.
+
+#### Section 6 — Mock Interview Capstone (Modules 18–21) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, no Section Review/Solutions pages. **This section deliberately departs from every prior path's AtlasBank/AtlasShop product-validation format** — see the explicit note in Section 18 below — since this path has no new testing technique to apply to a fictional product; its "application" is the mock interview itself.
+
+18. **Mock Interview Simulation: Manual and Test-Design Track** — a full, timed, simulated interview covering behavioral, test-design, and defect-handling rounds. *Est. length*: 1,800–2,200 words.
+19. **Mock Interview Simulation: SDET and Automation Track** — the same simulation format, covering automation, API/database, and live-coding rounds — a genuine, evidenced content split, not duplication, since the two tracks' actual interview content differs. *Est. length*: 1,800–2,200 words.
+20. **Interview Feedback and Improvement Checklist** — how to read structured interview feedback (real or self-assessed) and turn it into a concrete, prioritized improvement plan. *Est. length*: 1,700–2,000 words.
+21. **Interview Preparation Capstone: The Full Loop** — see Section 14 below. *Est. length*: 1,900–2,300 words.
+
+### 9. Section Objectives
+
+Section 1 → orientation (interview structure, credible self-presentation, behavioral storytelling); Section 2 → applying Manual Testing's own technique under interview conditions; Section 3 → applying API, Database, and Automation Testing's own technique under interview conditions; Section 4 → the widest-scope section, applying Security/Performance/Mobile/AI-for-QA content plus genuinely new scenario-reasoning and root-cause-interview technique; Section 5 → communication strategy and the interview's non-technical moments; Section 6 → full-loop synthesis. Every path-level objective from Section 1 traces to exactly one section.
+
+### 10. Dependencies
+
+**Hard dependencies**: Foundations, Manual Testing. **Soft, Related-Topics-only dependencies**: API Testing, Database Testing, Automation Testing, Performance Testing, Mobile Testing, AI for QA, and Security Testing — each referenced from its own specific Section 3–4 module, never as a blocking prerequisite for the path as a whole. This is the same asymmetric-dependency pattern Security Testing's own Module 16 established, now applied path-wide rather than to a single module, since this path's entire premise is applying prior content rather than teaching new technique.
+
+### 11. Cross-Links to Existing TestAtlas Curricula
+
+This is, by design, the highest cross-link density of any TestAtlas path — nearly every instruction module's core content is a direct reference into an existing certified path rather than new explanation. Already itemized per-module above; consolidated here: Manual Testing (Modules 2, 4, 5, 6), Foundations (Modules 5, 6), API Testing (Module 7), Database Testing (Modules 8, 12), Automation Testing (Modules 9, 10), Security/Performance/Mobile/AI for QA (Module 11), Performance Testing (Modules 12, 13).
+
+### 12. Recommended Practical Exercises
+
+Per the certified default: each instruction module (1–17) gets one **Mini Challenge** framed as a realistic interview prompt (e.g., Module 4's Mini Challenge: a five-minute timed test-design exercise against an unfamiliar AtlasShop feature, evaluated against the same criteria a real interviewer would use). Each Section (1–5) gets a **Section Review Knowledge Check** of 5 scenario-based questions, following this path's own applied, not recall-only, format. Section 6's own mock-interview modules are themselves the path's largest practical exercise.
+
+### 13. Review Strategy
+
+Dedicated **Section N Review** page after each of Sections 1–5, cross-path title-disambiguated (`"Interview Preparation — Section N Review"`) from day one, per the certified default. Section 6 gets no Review page, matching every certified path's Application-section precedent.
+
+### 14. Capstone Recommendation
+
+**Recommendation**: **Interview Preparation Capstone: The Full Loop** (Module 21) — a complete, timed, end-to-end simulated interview loop combining a behavioral round, a test-design or automation round (learner's choice, reflecting Modules 18/19's own track split), and a scenario-based round, closed with structured, checklist-based feedback per Module 20. This is a genuine, evidence-based departure from every prior certified path's own capstone convention (extending the AtlasBank International Transfer narrative): this path teaches interview application and communication, not a new testing technique to demonstrate on a fictional product, so continuing that narrative here would be forced rather than natural. **This is a recommendation requiring confirmation, per every prior path's own template convention** — specifically flagging the capstone-format departure as the one point most warranting review before implementation begins.
+
+### 15. Mermaid Diagram Recommendations
+
+Following the established `VIS-<PATH-PREFIX>-###` convention: propose **`VIS-INT-001` through approximately `VIS-INT-012`**, one per module with a genuine relationship or flow to visualize, not one per module mechanically. Recommended concepts only, no diagrams produced this phase:
+- Module 1: the QA interview loop as a sequence (behavioral → technical → take-home/panel)
+- Module 3: the STAR structure as a four-part flow
+- Module 11: the cross-domain consolidation module's own "this path applies eight prior curricula" relationship diagram — the most natural candidate for this path's signature visual, mirroring Security Testing's own Module 16 diagram
+- Module 13: a "how would you test X" reasoning flow (clarify scope → identify risk → propose approach)
+- Module 21 (Capstone): the full interview-loop sequence, closing the path
+
+### 16. Consistency Check Against Existing Certified Curricula
+
+- ✅ **Logical progression** — Section 2 (Manual) precedes Section 3 (API/Database/Automation) precedes Section 4 (specialized/scenario), each assuming the previous section's own reasoning discipline.
+- ✅ **No duplicated content** — cross-checked against all eight certified paths; Module 11 exists specifically to prevent re-teaching Security/Performance/Mobile/AI-for-QA content, and the old stub's own duplicative "Technical Interviews: Security Testing" module is explicitly retired.
+- ✅ **Practical interview focus** — every module frames its content as an interview scenario or exercise, not a restated lecture; Section 6 is majority-practical by design.
+- ✅ **Consistency with existing TestAtlas standards** — five recurring elements on Modules 1–17, Application Module convention on Modules 18–21, dedicated Review/Solutions from Section 1, Prerequisites/Leads-to blocks throughout.
+- ✅ **No overlap with certified curricula** — confirmed via Section 11's cross-link audit; this path references rather than duplicates every technical concept it touches.
+- ✅ **Suitable for both freshers and experienced professionals** — Sections 1–2 assume only Foundations + Manual Testing (fresher-accessible); Sections 3–4's Related-Topics-only dependencies let an experienced SDET skip directly to their relevant modules without redundant review.
+
+**Differences from the Reference Curricula (evidence-justified only)**:
+- **No AtlasBank/AtlasShop product-validation Application Modules** — this path has no new testing technique to demonstrate on a fictional product; Section 6's mock-interview simulations are its natural equivalent, an evidenced departure, not an oversight.
+- **Capstone does not extend the seven-layer AtlasBank narrative** — the same reasoning as AI for QA's own approved divergence: forcing a narrative fit where the path's actual subject doesn't call for one would be worse than a clean, honest departure.
+- **Path-wide (not single-module) Related-Topics dependency structure** — Security Testing established this pattern for one module; this path applies it to nearly the entire curriculum, a direct, evidenced consequence of being fundamentally an applied-synthesis path rather than a technique-teaching one.
+- **Everything else** — the five recurring callouts, Prerequisites/Leads-to blocks, the Forward Reference Rule, frontmatter conventions, Application Module structure, dedicated Review/Solutions pages — carries over unchanged.
 
 **Success Criteria**:
-- Learner explains a testing challenge using the STAR method
-- Learner designs tests for a feature in an interview setting
-- Learner negotiates a competitive offer
+- Learner explains a real testing challenge using the STAR method, naming the specific QA-relevant pitfalls Module 3 covers
+- Learner completes a timed test-design or automation-framework exercise under interview conditions, applying Manual Testing's or Automation Testing's own technique directly
+- Learner reasons aloud from a symptom to a root cause and from an unfamiliar feature to a test strategy, using structured technique rather than improvisation
+- Learner completes the full mock-interview loop and produces a concrete, prioritized improvement plan from structured feedback
 
 ---
 
