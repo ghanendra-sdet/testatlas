@@ -108,8 +108,8 @@ This is the exact situation AtlasBank found itself in ([introduced in What Is Te
 ## Related Topics
 
 - [What Is Test Strategy?](/learning-paths/career-leadership/what-is-test-strategy) — The single-product strategy this module extends to multiple teams at once
-- Building Centers of Excellence (coming soon, Section 8) — A more formal structure for driving exactly this kind of cross-team consistency at larger scale
-- Working with DevOps and Stakeholder Management (coming soon, Section 7) — Coordinating shared infrastructure risk with the teams that actually operate it
+- [Building Centers of Excellence](/learning-paths/career-leadership/building-centers-of-excellence) — A more formal structure for driving exactly this kind of cross-team consistency at larger scale
+- [Working with DevOps and Stakeholder Management](/learning-paths/career-leadership/working-with-devops-and-stakeholder-management) — Coordinating shared infrastructure risk with the teams that actually operate it
 
 ## Interview Questions
 
@@ -137,7 +137,7 @@ Some candidates equate "organization-wide strategy" with "identical process acro
 
 **Cross-Cutting Risk**: A risk arising from shared infrastructure, systems, or data that spans multiple product teams, and that no single team's own risk assessment would naturally catch alone.
 
-**Centers of Excellence**: A more formal organizational structure for driving shared standards and practices across teams — covered in depth later in this path (Section 8).
+**Centers of Excellence**: A more formal organizational structure for driving shared standards and practices across teams — covered in depth in [Building Centers of Excellence](/learning-paths/career-leadership/building-centers-of-excellence).
 
 ## Quick Revision
 

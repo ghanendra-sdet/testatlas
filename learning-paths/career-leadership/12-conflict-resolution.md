@@ -91,7 +91,7 @@ At AtlasBank, a recurring conflict between the Loan Portal team's QA engineers a
 
 - [Delegation and Decision Making](/learning-paths/career-leadership/delegation-and-decision-making) — What to do when a genuine tradeoff means no option satisfies every interest
 - [Leading Without Authority](/learning-paths/career-leadership/leading-without-authority) — The same evidence-based, interest-focused reasoning applied to driving change without formal power
-- Working with Product and Developers (coming soon, Section 7) — Applying this same conflict-resolution discipline specifically across team boundaries
+- [Working with Product and Developers](/learning-paths/career-leadership/working-with-product-and-developers) — Applying this same conflict-resolution discipline specifically across team boundaries
 
 ## Interview Questions
 

@@ -102,7 +102,7 @@ A QA engineer at a healthcare software company spent two weeks diagnosing an int
 ## Related Topics
 
 - [Developing Leadership Skills and Technical Credibility](/learning-paths/career-leadership/developing-leadership-skills-and-technical-credibility) — The credibility that genuine personal branding is an extension of, not a substitute for
-- Executive Communication (coming soon, Section 7) — The same substance-first, specific-detail discipline applied to a different audience
+- [Executive Communication](/learning-paths/career-leadership/executive-communication) — The same substance-first, specific-detail discipline applied to a different audience
 - [Presenting Your Testing Work Credibly](/learning-paths/interview-preparation/presenting-your-testing-work-credibly) — The same underlying skill, applied specifically to interview settings
 
 ## Interview Questions

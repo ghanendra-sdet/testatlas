@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Coaching
 
 **Prerequisites**: [Giving Feedback](/learning-paths/career-leadership/giving-feedback)
-**Leads to**: After this, you'll be ready for Working with Product and Developers, opening Section 7 (coming soon).
+**Leads to**: After this, you'll be ready for [Working with Product and Developers](/learning-paths/career-leadership/working-with-product-and-developers).
 
 ## Why This Matters
 
