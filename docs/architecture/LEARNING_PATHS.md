@@ -1534,40 +1534,56 @@ Shipped as designed, in the approved experiential format rather than standard re
 
 ---
 
-## Path 11: Career and Leadership in QA
+## Path 11: Career & Leadership
 
-**Directory**: `/learning-paths/career/`  
+**Status**: Architecture proposed 2026-08-08, on `feature/career-leadership`. Not yet approved for implementation — no module content written.
+
+**Directory**: `/learning-paths/career-leadership/`  
 **Position**: 11  
-**Prerequisites**: Foundations + 1+ years QA experience  
-**Target Audience**: QA professionals, team leads, QA managers, QA directors  
-**Estimated Duration**: Ongoing (career development)  
+**Prerequisites**: Foundations + 1+ years QA experience (Related Topics only, not hard prerequisites, on any specialized-domain path — same non-blocking dependency shape Security Testing and Interview Preparation established)  
+**Target Audience**: Senior QA engineers and SDETs transitioning into Lead, Manager, or Architect roles  
+**Estimated Duration**: Ongoing (career development, not a linear course)
 
-**Learning Objectives**:
-- Build and communicate testing strategies
-- Lead QA teams and processes
-- Measure and report testing impact
-- Grow your QA career (IC or management track)
-- Handle technical debt and process improvement
-- Navigate organizational politics
+**Learning Objectives**: transition from Senior QA to Lead/Manager responsibilities; build test strategies for products and organizations; design quality processes instead of only executing them; lead automation initiatives; measure and improve engineering quality; communicate with stakeholders and executives; mentor testers; plan hiring and team growth; drive quality culture across engineering organizations.
 
-**Modules** (planned for v0.1–v1.0):
-1. From QA Engineer to QA Lead (first leadership role)
-2. Building a Test Strategy (risk-based approach, scoping)
-3. QA Process Design and Governance (how QA works in your organization)
-4. Metrics That Matter (reporting test effectiveness, not vanity metrics)
-5. Communicating Test Results (to engineers, to PMs, to executives)
-6. Managing Technical Debt in Testing (when to refactor, when to rebuild)
-7. Tool Selection and Vendor Evaluation (choosing frameworks, platforms)
-8. Onboarding and Growing QA Teams (hiring, training, retaining)
-9. Career Growth Paths in QA (IC vs. management, specialization)
-10. QA in Agile, Waterfall, and Hybrid (adapting strategy to process)
-11. Executive Communication (dashboards, ROI, business impact)
-12. Common Leadership Mistakes in QA (moving too fast, ignoring culture)
+**Scope boundary**: this path teaches strategy, leadership, process, communication, and organizational scaling — explicitly not execution-level testing technique, which is already taught across the other 9 certified curricula. Every section is written to reference those paths' techniques (e.g., BVA, API contract testing, automation frameworks) rather than re-teach them, the same reuse discipline every certified path already follows.
 
-**Success Criteria**:
-- QA leader builds a testing strategy that's understood and followed
-- QA leader measures testing impact on business outcomes
-- QA leader grows team members into their next roles
+### Proposed Module Structure (52 modules, 10 sections)
+
+**Section 1 — Career Growth** (Modules 1–5): QA Career Roadmap; IC vs. Technical Lead vs. Manager; Developing Leadership Skills; Building Technical Credibility; Personal Branding for Test Engineers.
+
+**Section 2 — Test Strategy** (Modules 6–10): What Is Test Strategy?; Strategy vs. Test Plan; Risk-Based Strategy; Release Strategy; Organization-Wide Quality Strategy.
+
+**Section 3 — Leadership** (Modules 11–16): Leading Without Authority; Running QA Teams; Mentoring Engineers; Delegation; Conflict Resolution; Decision Making.
+
+**Section 4 — Engineering Excellence** (Modules 17–21): Shift Left at Scale; Shift Right; Quality Engineering as a Discipline; Continuous Testing; Test Governance.
+
+**Section 5 — Metrics & Reporting** (Modules 22–27): Quality KPIs; Defect Metrics; Automation Metrics; Release Health; Executive Dashboards; Engineering Reporting.
+
+**Section 6 — Team Management** (Modules 28–33): Hiring Test Engineers; Interviewing Candidates; Career Development for Reports; Performance Reviews; Giving Feedback; Coaching.
+
+**Section 7 — Cross-Functional Leadership** (Modules 34–38): Working with Product; Working with Developers; Working with DevOps; Stakeholder Management; Executive Communication.
+
+**Section 8 — Scaling Quality** (Modules 39–43): QA in Startups; QA in Enterprises; Distributed Teams; Scaling Automation; Building Centers of Excellence.
+
+**Section 9 — Modern Leadership** (Modules 44–47): AI-Assisted QA Leadership; Leading Automation Transformation; Engineering Culture; Innovation in Testing.
+
+**Section 10 — Real-World Leadership / Application** (Modules 48–52, Application Module convention — no Section 10 Review/Solutions): Case Studies; Failure Analysis; Quality Transformation Stories; Leadership Playbooks; **Capstone — Building an Organization-Wide Test Strategy** (extends AtlasBank, per your decision: an incoming QA Architect inherits AtlasBank's existing, fragmented per-team testing practices — the same product every other certified path has already exercised at its own layer — and designs and pitches a unified, org-wide quality strategy across them).
+
+Sections 1–9 get dedicated Section Review + Solutions pages from Section 1 onward, matching every certified path's own convention.
+
+### Deviations from the Reference Curriculum default (evidence-based, flagged not silently applied)
+
+- **Size**: 52 modules is roughly 2.5x every other certified path (16–23 modules each). This is a deliberate, evidenced departure — the topic genuinely spans ten distinct leadership sub-disciplines (strategy, people management, metrics, cross-functional influence, scaling) that don't compress into a single-path-sized curriculum without losing real content, the same reasoning Mobile Testing and Security Testing used for their own smaller departures from precedent. Flagging this explicitly rather than defaulting to it, since it's the largest single deviation any TestAtlas path has taken.
+- **Diagram count**: raising the original 12–18 estimate to **20–24** to stay closer to the established ~1-diagram-per-1.5-modules density (career roadmap, test strategy lifecycle, risk-based decision flow, delegation/decision framework, team structure and scaling model, KPI relationships, executive communication flow, org-wide quality ownership model are the strongest candidates — concentrated in Sections 2, 3, 5, and 8 where the content is genuinely structural/relational rather than narrative).
+- **Capstone domain**: continues AtlasBank (your explicit decision), the same choice Security Testing and Mobile Testing made and Interview Preparation deliberately departed from.
+
+### Open questions to resolve before implementation begins
+
+1. Confirm directory name: `career-leadership` (matches the curriculum's actual title) vs. the original stub's `career` — recommend `career-leadership` for clarity against the "Career Growth" *section* name inside it.
+2. Confirm section-by-section implementation order and batch size, given this path is over twice the size of any prior implementation phase — recommend 2 sections per batch (5 batches total) rather than the 2–4 section batches used for smaller paths, so review checkpoints stay a manageable size.
+
+**Success Criteria**: a QA leader builds a testing strategy that's understood and followed across a product or organization; measures and communicates testing impact in terms executives act on; grows team members into their next roles; leads without relying on authority alone.
 
 ---
 
