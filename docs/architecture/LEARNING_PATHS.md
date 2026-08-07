@@ -1500,6 +1500,38 @@ Following the established `VIS-<PATH-PREFIX>-###` convention: propose **`VIS-INT
 - Learner reasons aloud from a symptom to a root cause and from an unfamiliar feature to a test strategy, using structured technique rather than improvisation
 - Learner completes the full mock-interview loop and produces a concrete, prioritized improvement plan from structured feedback
 
+### Decisions (Approved 2026-08-06)
+
+1. **Mock Interview Capstone (Section 6)**: ✅ Approved — a timed interview simulation is the natural equivalent of an application capstone for a path whose objective is demonstrating competence under interview conditions, not testing a fictional product. No AtlasBank narrative extension.
+2. **Retiring the old stub's "Technical Interviews: Security Testing" module**: ✅ Approved — Module 11 (Cross-Domain Interview Scenarios) cross-links the now-complete, certified Security Testing curriculum instead of re-teaching it.
+3. **New recurring element — "What the Interviewer Is Really Evaluating"** (added at approval): every instruction module (1–17) gets this section, explicitly naming the underlying evaluation criteria behind the module's interview scenario — technical accuracy, communication, problem-solving approach, trade-off analysis, risk awareness, depth vs. breadth, ability to justify decisions, as relevant to that module. This is this path's own signature recurring element, replacing the standard "Interview Questions" section every other certified path uses (redundant here, since every module's content already *is* interview material) — the same kind of path-specific adaptation Mobile Testing's five-state framework or Security Testing's CIA Triad represent, not a deviation requiring a `CURRICULUM_EVOLUTION.md` entry, since it applies to one path's own content shape, not a proposed cross-path default.
+
+### Section 1 — As Shipped
+
+Shipped as designed: **How QA Interviews Are Structured** (Module 1 — the four common round types and what each actually evaluates), **Presenting Your Testing Work Credibly** (Module 2 — applying Writing Clear Test Cases' and Writing Effective Bug Reports' own precision standards to discussing your own resume claims), **Behavioral Interviews: The STAR Method for QA** (Module 3 — STAR's uneven weighting, with Action as the majority of the answer). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 2 — As Shipped
+
+Shipped as designed: **Test Design Interviews** (Module 4 — applying BVA/Equivalence Partitioning live, stating method before generating cases), **Defect and Bug-Handling Interviews** (Module 5 — demonstrated severity/priority judgment and evidence-not-blame framing for developer disagreements), **SDLC, STLC, and Process Interviews** (Module 6 — explaining shift-left value and timing, not reciting phase names). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as designed: **API Testing Interviews** (Module 7 — status codes and auth reasoning grounded in concrete examples, separating authentication from authorization explicitly), **SQL and Database Interview Scenarios** (Module 8 — stating the query plan before writing SQL, protecting correct logic from a small syntax slip), **Automation Framework Interviews** (Module 9 — explaining framework decisions as solved problems, not a features list), **Live Coding and Debugging Interviews** (Module 10 — diagnosing before fixing, using the consistent-vs-intermittent question as the first diagnostic step). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as designed: **Cross-Domain Interview Scenarios** (Module 11 — calibrating answer depth to your actual role across Security, Performance, Mobile, and AI for QA Testing, without duplicating any of them), **Bug Analysis and Root-Cause Interviews** (Module 12 — narrowing questions before proposing a cause, reusing Database and Performance Defect Investigation's own discipline), **Test Strategy and "How Would You Test X" Interviews** (Module 13 — clarify scope, identify the worst outcome, prioritize by risk, reusing Performance Testing Strategy's own reasoning), **Take-Home Assignments and Practical Challenges** (Module 14 — respecting an implicit time budget and communicating judgment through a cover note, not raw volume). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated. One real defect caught and fixed during this section's own validation: Module 11 was missing the "What the Interviewer Is Really Evaluating" section entirely, found via the recurring-element count, not assumed clean.
+
+### Section 5 — As Shipped
+
+Shipped as designed: **Communicating Under Pressure** (Module 15 — a deliberate, named pause reading as confidence, and "I don't know, but here's how I'd find out" as a legitimate answer), **Evaluating and Negotiating an Offer** (Module 16 — reading total compensation and confirming role scope before accepting, negotiating with factual grounding), **Common Interview Mistakes for QA Candidates** (Module 17 — six patterns recurring across every earlier section, synthesized rather than restated). Dedicated **Section 5 Review** and **Section 5 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 6 — As Shipped
+
+Shipped as designed, in the approved experiential format rather than standard reference-page prose: **Mock Interview Simulation: Manual and Test-Design Track** (Module 18 — four timed rounds: behavioral, live test-design, defect-handling, process, each with a model answer and evaluator notes), **Mock Interview Simulation: SDET and Automation Track** (Module 19 — API, SQL, automation-framework, and live-debugging rounds, plus a rapid cross-domain round covering Performance, Security, Mobile, and AI for QA Testing to complete this path's full domain-coverage requirement), **Interview Feedback and Improvement Checklist** (Module 20 — converting vague post-interview impressions into a specific, module-linked improvement plan), **Interview Preparation Capstone: The Full Loop** (Module 21 — one continuous, timed, five-round simulation closing with self-assessment against every technique this path taught). No Section 6 Review/Solutions pages, matching every certified path's Application-section precedent. No AtlasBank narrative extension, per the approved capstone-format departure — the mock interview itself is this path's application capstone.
+
+**Progress**: 21 / 21 modules shipped. **Interview Preparation v1.0 complete.**
+
 ---
 
 ## Path 11: Career and Leadership in QA
