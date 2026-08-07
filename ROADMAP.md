@@ -22,10 +22,14 @@ Each release is a meaningful checkpoint, not just a version bump. This is the or
 | v0.6.0 | API Testing | ✅ Complete (21/21), certified |
 | v0.7.0 | Test Automation | ✅ Complete (18/18), certified — shipped ahead of Database Testing's original slot, once its own architecture proposal was ready; sequence isn't strictly first-proposed-first-shipped |
 | v0.8.0 | Authoring Platform + Release Preparation | ✅ Complete — contributor documentation, templates, repository standards, community-health files |
-| **v1.0.0** | **Public Launch** | **In progress** — see `RELEASE_READINESS.md` |
-| v1.1.0+ | Database Testing, Performance Testing, Security Testing, AI for QA, Interview Preparation, Project Simulations + Labs, Career Growth | Planned, post-v1.0.0 |
+| v1.0.0 | Public Launch | ✅ Complete — Manual Testing, API Testing, Automation Testing certified, plus Foundations (79 modules) |
+| v1.1.0 | Database Testing | ✅ Complete (16/16), certified |
+| v1.2.0 | Performance Testing | ✅ Complete (17/17), certified |
+| v1.3.0 | AI for QA | ✅ Complete (17/17), certified |
+| v1.4.0 | Mobile Testing | ✅ Complete (16/16), certified — added as an evidenced 11th path (Position 9), not part of the original 10-path plan; see `docs/architecture/LEARNING_PATHS.md` |
+| **v1.5.0+** | **Security Testing, Interview Preparation, Project Simulations + Labs, Career Growth** | **Planned** — paused for real learner/contributor feedback before starting; see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note |
 
-**Revised from the original plan**: v1.0.0 was originally sequenced after Database Testing, Project Simulations, Interview Academy, and AI Testing (see the now-superseded v0.9–v0.11 entries below, kept for historical record). That sequencing is revised — v1.0.0 now ships with the three complete, certified curricula (Manual Testing, API Testing, Automation Testing) plus Foundations, rather than holding the first stable public release back for four more learning paths. Everything below v1.1.0 becomes an extension of a stable, released platform, not a precondition for reaching v1.0.0 at all — matching how the project's own actual pace (three certified paths shipped within days of each other) outstripped the original month-by-month plan.
+**Revised from the original plan**: v1.0.0 was originally sequenced after Database Testing, Project Simulations, Interview Academy, and AI Testing (see the now-superseded v0.9–v0.11 entries below, kept for historical record). That sequencing was revised — v1.0.0 shipped with the three complete, certified curricula (Manual Testing, API Testing, Automation Testing) plus Foundations, rather than holding the first stable public release back for four more learning paths. v1.1.0 through v1.4.0 then shipped as extensions of that stable, released platform — Database Testing, Performance Testing, AI for QA, and Mobile Testing, each independently certified — matching the project's own actual pace (seven certified paths shipped within days of each other) rather than the original month-by-month plan. With seven certified curricula and 128 modules now live (145 including Foundations), active curriculum work is deliberately paused before v1.5.0: the next path starts from real feedback, not automatically.
 
 Ideas that aren't on this list — mascot/branding, gamification, accounts, and similar — are intentionally parked in `NOT_NOW.md` at the repository root, not forgotten, just not competing with the roadmap above.
 
@@ -90,22 +94,51 @@ Ideas that aren't on this list — mascot/branding, gamification, accounts, and 
 - `AUTHOR_GUIDE.md`, per-concern checklists, nine contributor templates, `docs/architecture/REPOSITORY_STANDARDS.md`, `docs/architecture/AUTOMATION_SPECIFICATIONS.md`
 - `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, GitHub issue/PR templates, `RELEASE_READINESS.md`
 
-### v1.1.0+ — Planned, Post-Launch (originally sequenced before v1.0.0, now revised)
-
-The following were originally planned as v0.9–v0.11, blocking the first public release. They're now v1.1+ work, built on a stable, already-released platform instead of gating the release:
-
-- **Database Testing** (SQL Fundamentals) — SQL basics for QA, writing assertions, data integrity testing
-- **Performance Testing**, **Security Testing**, **AI for QA** — each proposed against `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s defaults, following `AUTHOR_GUIDE.md`'s workflow, same as every path so far
-- **Project Simulations + Labs** — first 2–3 end-to-end project simulations, first wave of runnable labs
-- **Interview Academy** — question bank, mock interview structures, scenario-based practice
-- **Career Growth in Quality Engineering**
-
-### v1.0.0 — Public Launch
+### v1.0.0 — Public Launch ✅
 
 **Goal:** a stable, complete resource ready for a public audience.
 
 - All quality gates from `docs/architecture/VERSIONING_STRATEGY.md` met
 - Structure frozen for learners — starting a path after v1.0.0 means finishing it without disruption
+
+### v1.1.0 — Database Testing ✅
+
+**Goal:** the data-layer verification skills every path from here on can reference — SQL fundamentals, schema and constraint testing, transactional integrity, migration and backup validation.
+
+- All five sections shipped: Database Testing Foundations, Core SQL and Data Verification, Data Integrity and Transactions, Advanced Database Testing, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 5
+- Certified as a Reference Curriculum (`docs/architecture/DATABASE_TESTING_CERTIFICATION.md`); introduced **AtlasShop** as TestAtlas's second recurring fictional domain
+
+### v1.2.0 — Performance Testing ✅
+
+**Goal:** load, stress, and spike testing designed around realistic traffic and stated SLOs, not arbitrary numbers — reusing Database Testing's own QA-level slow-query recognition rather than re-teaching it.
+
+- All five sections shipped: Performance Testing Foundations, Designing a Performance Test, Executing and Tooling, Analysis and Operations, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 6
+- Certified as a Reference Curriculum with **zero findings** (`docs/architecture/PERFORMANCE_TESTING_CERTIFICATION.md`) — the first TestAtlas certification sprint to close with nothing to fix
+
+### v1.3.0 — AI for QA ✅
+
+**Goal:** TestAtlas's first AI-native path — using AI to accelerate testing, and testing AI-driven features themselves, kept deliberately distinct throughout.
+
+- All five sections shipped: Foundations, AI-Assisted Testing Techniques, Testing AI-Driven Features, AI Governance and Security, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 8
+- Certified as a Reference Curriculum with zero findings (`docs/architecture/AI_FOR_QA_CERTIFICATION.md`); introduced the **AtlasBank AI Support Assistant**, TestAtlas's first AI-native fictional feature, permanently scoped to six question categories
+
+### v1.4.0 — Mobile Testing ✅
+
+**Goal:** testing beyond web and API — device fragmentation, offline behavior, hardware and permissions, and mobile-specific performance and security, added as an evidenced 11th path once six certified curricula already existed to build on.
+
+- All five sections shipped: Mobile Testing Foundations, Functional Mobile Testing, Device and Platform Testing, Mobile Performance/Security/Diagnostics, and Application/Capstone — see `docs/architecture/LEARNING_PATHS.md`, Path 9
+- Certified as a Reference Curriculum (`docs/architecture/MOBILE_TESTING_CERTIFICATION.md`); capstone extends the same International Money Transfer feature five other certified paths already verified, confirming it also survives real mobile-device conditions
+
+### v1.5.0+ — Planned, Feedback-Gated
+
+With seven certified curricula and 145 modules live, further curriculum work is deliberately paused for real learner and contributor feedback before it resumes — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note. When it does resume, candidates are:
+
+- **Security Testing** — QA-focused security testing as its own discipline, distinct from the domain-specific security already taught inside API, Database, Mobile, and AI for QA testing
+- **Project Simulations + Labs** — first 2–3 end-to-end project simulations, first wave of runnable labs
+- **Interview Academy** — question bank, mock interview structures, scenario-based practice
+- **Career Growth in Quality Engineering**
+
+Each still gets a written architecture proposal, reviewed and approved before any module content is written, following the six most recent paths' own example — but the trigger for starting is feedback and deliberate decision, not this roadmap alone.
 
 ### Beyond v1.0.0 — Community Ecosystem
 

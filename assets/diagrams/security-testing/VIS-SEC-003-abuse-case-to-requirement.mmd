@@ -1,0 +1,7 @@
+%% VIS-SEC-003 — From Abuse Case to Testable Requirement to Planned Test
+flowchart LR
+    accTitle: From Abuse Case to Testable Requirement to Planned Test
+    accDescr: A security requirement written as a vague goal cannot be tested directly. Writing it as a specific, verifiable constraint, derived from a concrete abuse case, produces a testable requirement that can be planned into a specific test case before the feature is built.
+    A[Abuse Case:<br/>specific actor, action, outcome] --> B[Security Requirement:<br/>specific, verifiable constraint]
+    B --> C[Security Test Plan:<br/>a specific test case, before code exists]
+    D[Vague goal: 'should be secure'] -.->|Cannot be tested directly| X[Dead end]

@@ -1,0 +1,9 @@
+%% VIS-SEC-011 — From Raw Finding to Lasting Protection
+flowchart LR
+    accTitle: From Raw Finding to Lasting Protection
+    accDescr: A raw scanner or bug-bounty finding is first validated by attempting to reproduce it using legitimate access. A finding that reproduces is escalated with evidence and fixed. A finding that does not reproduce is documented as a false positive and closed. Once a real finding is fixed, a security regression test is added to confirm the fix stays in place on every future release.
+    A[Raw Finding] --> B{Reproduces with<br/>legitimate access?}
+    B -->|Yes| C[Validated: escalate with evidence]
+    B -->|No| D[False Positive: document and close]
+    C --> E[Fixed]
+    E --> F[Security Regression Test Added:<br/>verifies the fix on every future release]

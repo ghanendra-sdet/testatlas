@@ -1,0 +1,7 @@
+%% VIS-SEC-012 — Three Testable Environment Surfaces
+flowchart TD
+    accTitle: Three Testable Environment Surfaces
+    accDescr: Environment-level security testing covers three surfaces distinct from feature-level testing. Security headers confirm the browser is instructed to enforce specific protections. Infrastructure-wide rate limiting confirms every abusable endpoint has some limit, not just the login form. Secrets in configuration confirm environment and template files never contain real credentials.
+    A[Environment-Level Testing] --> B[Security Headers:<br/>actually present in responses?]
+    A --> C[Rate Limiting:<br/>every abusable endpoint, not just login]
+    A --> D[Secrets in Configuration:<br/>never real credentials in template/env files]

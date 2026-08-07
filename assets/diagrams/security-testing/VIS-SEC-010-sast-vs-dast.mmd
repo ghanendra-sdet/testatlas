@@ -1,0 +1,8 @@
+%% VIS-SEC-010 — SAST and DAST Catch Different Defect Classes
+flowchart TD
+    accTitle: SAST and DAST Catch Different Defect Classes
+    accDescr: Static testing analyzes source code without running the application, catching patterns like hardcoded credentials but missing runtime-only behavior. Dynamic testing exercises the running application with real requests, catching runtime behavior defects like access control gaps but missing anything not actually triggered during the scan. A mature practice uses both, since each covers what the other structurally cannot see.
+    A[Static Testing - SAST:<br/>analyzes source code directly] --> B[Catches: hardcoded secrets,<br/>known-risky code patterns]
+    A -.->|Cannot see| C[Actual runtime behavior]
+    D[Dynamic Testing - DAST:<br/>exercises the running application] --> E[Catches: real access-control gaps,<br/>actual response behavior]
+    D -.->|Cannot see| F[Code paths never triggered,<br/>non-behavioral issues like unused secrets]

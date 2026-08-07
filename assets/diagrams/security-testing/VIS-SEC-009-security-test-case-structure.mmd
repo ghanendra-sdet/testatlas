@@ -1,0 +1,7 @@
+%% VIS-SEC-009 — A Security Test Case Adds One Field to the Standard Structure
+flowchart LR
+    accTitle: A Security Test Case Adds One Field to the Standard Structure
+    accDescr: A security test case uses the same standard structure as any test case, with steps, data, and an expected result, plus one addition specific to security, an explicit traceability link back to the security requirement or abuse case the test verifies.
+    A[Standard Test Case Structure:<br/>steps, data, expected result] --> C[Security Test Case]
+    B[Traceability Link:<br/>which requirement/abuse case this verifies] --> C
+    C --> D[Provable, transferable coverage]

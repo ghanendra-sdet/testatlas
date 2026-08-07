@@ -51,7 +51,7 @@ These are the answers to the [Section 2 Review](/learning-paths/ai-for-qa/sectio
 
 **Alternative approaches considered**: Escalating this explanation directly to a development team without verification risks repeating the module's own two-day-misdirected-investigation example.
 
-**Real-world reasoning**: Tests whether "confidence is not evidence" was understood as applying specifically to root-cause suggestions, not just to test-case or code-review contexts.
+**Real-world reasoning**: Tests whether "confidence is not evidence" was understood as applying specifically to root-cause suggestions, not just to test case or code-review contexts.
 
 ## Scenario 5: Exploratory Session "Complete" After the AI-Generated Charter List
 

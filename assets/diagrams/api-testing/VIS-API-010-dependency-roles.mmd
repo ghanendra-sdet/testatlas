@@ -1,5 +1,4 @@
 %% VIS-API-010 — Dependency Roles and Testable Failure Impact
-%% Used in: 10-testing-service-integrations.md
 flowchart TB
     accTitle: Dependency Roles and Testable Failure Impact
     accDescr: AtlasBank's account-opening flow depends on a KYC Provider and AML Service, both blocking dependencies whose failure should halt the flow, and an SMS Provider and Email Provider, both non-blocking dependencies whose failure should degrade gracefully rather than halting the flow.

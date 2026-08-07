@@ -47,20 +47,23 @@ The project combines structured learning with hands-on work:
 
 ## Learning paths
 
-TestAtlas covers the core areas of modern software testing. Four paths are live, all certified against the same architecture; the rest are planned:
+TestAtlas covers the core areas of modern software testing. Eight paths are live — Foundations plus seven certified Reference Curricula, all built against the same architecture; three more are planned:
 
 1. ✅ Foundations of Software Testing — shipped, v1.0, 17 modules
 2. ✅ Manual Testing — shipped, v1.0, 23 modules, certified
 3. ✅ API Testing — shipped, v1.0, 21 modules, certified
 4. ✅ Test Automation — shipped, v1.0, 18 modules, certified
-5. Database Testing — planned
-6. Performance Testing — planned
+5. ✅ Database Testing — shipped, v1.0, 16 modules, certified
+6. ✅ Performance Testing — shipped, v1.0, 17 modules, certified
 7. Security Testing — planned
-8. AI for QA — planned
-9. Interview Preparation — planned
-10. Career Growth in Quality Engineering — planned
+8. ✅ AI for QA — shipped, v1.0, 17 modules, certified
+9. ✅ Mobile Testing — shipped, v1.0, 16 modules, certified
+10. Interview Preparation — planned
+11. Career Growth in Quality Engineering — planned
 
-79 modules live today. Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped and planned path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
+145 modules live today (128 across the seven certified Reference Curricula, plus Foundations). Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped and planned path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
+
+With seven certified curricula now shipped, active development is paused in favor of gathering real learner and contributor feedback before adding an eighth path — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note for the reasoning.
 
 ## What will be available
 
@@ -70,7 +73,7 @@ The `projects/` area will model realistic domains such as banking, healthcare, e
 
 ## Getting started
 
-Read online, or run the site locally:
+Read online at **`[live site URL — to be added once GitHub Pages is published]`**, or run the site locally:
 
 ```bash
 git clone https://github.com/ghanendra-sdet/testatlas.git

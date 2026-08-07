@@ -40,12 +40,14 @@ const learningPaths: LearningPath[] = [
   {
     title: 'Database Testing',
     description: 'Enough SQL to verify what actually happened to the data, not just what the UI shows.',
-    status: 'Planned',
+    href: '/learning-paths/database-testing/what-is-database-testing',
+    status: 'Live · 16 modules, certified',
   },
   {
     title: 'Performance Testing',
     description: 'Load, stress, and spike testing designed around realistic traffic, not arbitrary numbers.',
-    status: 'Planned',
+    href: '/learning-paths/performance-testing/what-is-performance-testing',
+    status: 'Live · 17 modules, certified',
   },
   {
     title: 'Security Testing',
@@ -53,9 +55,16 @@ const learningPaths: LearningPath[] = [
     status: 'Planned',
   },
   {
-    title: 'AI and Testing',
-    description: 'Testing LLM-driven features, prompt evaluation, and where traditional QA falls short.',
-    status: 'Planned',
+    title: 'AI for QA',
+    description: 'Using AI to accelerate testing, and testing AI-driven features themselves — where each fits.',
+    href: '/learning-paths/ai-for-qa/ai-in-software-testing',
+    status: 'Live · 17 modules, certified',
+  },
+  {
+    title: 'Mobile Testing',
+    description: 'Device fragmentation, offline behavior, hardware and permissions — testing beyond web and API.',
+    href: '/learning-paths/mobile-testing/what-is-mobile-testing',
+    status: 'Live · 16 modules, certified',
   },
   {
     title: 'Interview Preparation',
@@ -138,15 +147,16 @@ export default function Home(): ReactNode {
               </Link>
             </div>
             <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>4 Paths Live</li>
-              <li className={styles.heroBadge}>79 Modules</li>
-              <li className={styles.heroBadge}>3 Certified Curricula</li>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>8 Paths Live</li>
+              <li className={styles.heroBadge}>145 Modules</li>
+              <li className={styles.heroBadge}>7 Certified Reference Curricula</li>
               <li className={styles.heroBadge}>Free</li>
               <li className={styles.heroBadge}>Open Source</li>
             </ul>
             <p className={styles.heroStatus}>
-              Foundations, Manual Testing, API Testing, and Test Automation are live today — 79 modules in
-              total. Six more learning paths are being built in the open — see what&rsquo;s next below.
+              Foundations plus seven certified curricula — Manual Testing, API Testing, Test Automation,
+              Database Testing, Performance Testing, AI for QA, and Mobile Testing — are live today, 145
+              modules in total. Three more learning paths remain planned — see what&rsquo;s next below.
             </p>
           </div>
         </section>
@@ -174,7 +184,7 @@ export default function Home(): ReactNode {
               <p className={styles.eyebrow}>Where to go next</p>
               <h2 className={styles.sectionTitle}>Learning paths</h2>
               <p>
-                Ten role-based paths share one foundation. Four are live today &mdash; everything else is
+                Eleven role-based paths share one foundation. Eight are live today &mdash; everything else is
                 being built against the same architecture, proposed and reviewed before a module is written.
               </p>
             </div>

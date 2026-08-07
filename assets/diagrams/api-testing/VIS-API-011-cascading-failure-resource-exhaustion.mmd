@@ -1,5 +1,4 @@
 %% VIS-API-011 — Cascading Failure Through Shared Resource Exhaustion
-%% Used in: 11-cascading-failures-error-handling-and-fault-tolerance.md
 flowchart TB
     accTitle: Cascading Failure Through Shared Resource Exhaustion
     accDescr: A slow payment gateway causes many concurrent transfer requests to hold connections open while waiting. This exhausts the shared connection pool, which then causes unrelated account balance requests to also fail, even though balance lookups have no direct dependency on the payment gateway at all.

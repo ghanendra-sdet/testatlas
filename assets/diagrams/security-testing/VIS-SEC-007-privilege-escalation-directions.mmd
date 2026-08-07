@@ -1,0 +1,8 @@
+%% VIS-SEC-007 — Two Distinct Access-Control Failure Directions
+flowchart TD
+    accTitle: Two Distinct Access-Control Failure Directions
+    accDescr: Access control failures split into two distinct directions. Horizontal privilege escalation is one user reaching another user's data at the same privilege level. Vertical privilege escalation is a user reaching functionality intended for a higher privilege level entirely. Both require their own deliberate test, since a feature can correctly prevent one while still failing the other.
+    A[Access Control Testing] --> B[Horizontal:<br/>same level, wrong owner]
+    A --> C[Vertical:<br/>reaching a higher privilege level]
+    B --> D[Both need their own<br/>deliberate test]
+    C --> D

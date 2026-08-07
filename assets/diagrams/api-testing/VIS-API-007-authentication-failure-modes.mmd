@@ -1,5 +1,4 @@
 %% VIS-API-007 — Authentication Failure Modes and Expected Responses
-%% Used in: 07-api-authentication.md
 flowchart TB
     accTitle: Authentication Failure Modes and Expected Responses
     accDescr: Five distinct authentication failure scenarios — missing, malformed, expired, tampered, and wrong-audience tokens — should all be rejected with 401 Unauthorized, each testing a different real defect class if the API instead accepts the request or fails with the wrong status code.

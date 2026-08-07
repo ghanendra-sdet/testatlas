@@ -1,0 +1,7 @@
+%% VIS-SEC-017 — A Security Check Only Protects What It Can Actually Block
+flowchart TD
+    accTitle: A Security Check Only Protects What It Can Actually Block
+    accDescr: A security regression test or baseline scan that runs but is configured as non-blocking produces a report that may or may not be reviewed, while the deployment proceeds regardless of the result. The same check configured as a real, blocking gate stops the pipeline on failure, requiring the actual defect to be fixed before anything can proceed.
+    A[Security Check Runs] --> B{Configured as a<br/>real, blocking gate?}
+    B -->|No| C[Produces a report;<br/>deployment proceeds regardless]
+    B -->|Yes| D[Failure blocks the pipeline;<br/>defect must be fixed to proceed]

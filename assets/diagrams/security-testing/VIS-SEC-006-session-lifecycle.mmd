@@ -1,0 +1,10 @@
+%% VIS-SEC-006 — The Session Lifecycle and Where Testing Concentrates
+flowchart LR
+    accTitle: The Session Lifecycle and Where Testing Concentrates
+    accDescr: A session lifecycle moves from pre-login through the login moment to an active session and eventual logout or expiry. Testing concentrates specifically on the login moment, checking whether the session identifier changes, and on the active session, checking cookie security flags and JWT validation.
+    A[Pre-Login Session] --> B{Login Succeeds}
+    B -->|Secure: new session ID issued| C[Active Session]
+    B -.->|Insecure: same session ID reused| D[Fixation Risk]
+    C --> E[Cookie flags checked:<br/>Secure, HttpOnly, SameSite]
+    C --> F[JWT checked:<br/>expiry, signature validity]
+    C --> G[Logout / Expiry]

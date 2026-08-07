@@ -1,0 +1,8 @@
+%% VIS-SEC-005 — Authentication Testing's Four Testable Surfaces
+flowchart TD
+    accTitle: Authentication Testing's Four Testable Surfaces
+    accDescr: Authentication testing covers four distinct surfaces. Password policy verification confirms requirements are actually enforced. Account lockout and rate limiting confirms repeated failed attempts are handled. Multi-factor authentication confirms a second factor is actually enforced and cannot be bypassed. Credential handling confirms credentials are never exposed in logs, URLs, or error messages.
+    A[Authentication Testing] --> B[Password Policy:<br/>actually enforced?]
+    A --> C[Lockout/Rate Limiting:<br/>repeated attempts handled?]
+    A --> D[MFA:<br/>enforced every time, unbypassable?]
+    A --> E[Credential Handling:<br/>never exposed in logs/URLs]

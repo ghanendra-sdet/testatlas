@@ -839,41 +839,210 @@ Shipped per the approved decisions: the capstone frames Performance Testing as a
 
 ## Path 7: Security Testing
 
-**Directory**: `/learning-paths/security-testing/`  
-**Position**: 7  
-**Prerequisites**: Foundations, Manual Testing and Test Design  
-**Target Audience**: Security-focused QA, SDETs, developers responsible for security  
-**Estimated Duration**: 6–12 weeks  
+**Status**: 📋 Architecture proposal — planning only, no module content written. This section is the blueprint for Security Testing v1.0, produced against all seven certified Reference Curricula (Manual, API, Automation, Database, Performance, Mobile, AI for QA) as reference implementations. Nothing below is final until reviewed and approved; no module writing begins until then. **All seven certified paths remain frozen — this proposal modifies none of them.**
 
-**Learning Objectives**:
-- Understand OWASP Top 10 from a testing perspective
-- Threat model and design security tests
-- Test authentication, authorization, and data protection
-- Use security testing tools (Burp Suite, OWASP ZAP)
-- Shift-left: find security issues early, not after release
-- Understand compliance testing (GDPR, HIPAA, PCI-DSS)
+**Supersedes the original stub below it in structure and framing, not in position.** The pre-existing Position 7 stub (module list retained in git history) predates every certified convention this document now enforces: it named specific tools as module titles (violating the concept-first, tool-neutral discipline established with Performance Testing's JMeter treatment), and several objectives read as attack-construction skills ("test for SQL injection and explain how it works") rather than the QA-level identification-and-reporting scope every existing TestAtlas security module (API Testing Modules 13–15, Database Testing Module 11, Mobile Testing Module 11, AI for QA Module 13) already holds. This proposal replaces that stub's content while keeping its Position 7 slot untouched — **no renumbering required**, since Positions 8 (AI for QA) and 9 (Mobile Testing) are unaffected either way.
 
-**Modules** (planned for v0.1–v1.0):
-1. Security Testing Fundamentals (threat model, attack surface)
-2. OWASP Top 10 Explained (each vulnerability, real examples)
-3. Threat Modeling for Testers (identifying risks)
-4. Authentication Testing (login, session management, password policies)
-5. Authorization and Access Control (role-based access, data isolation)
-6. Injection Testing (SQL, command, XML injection)
-7. Cross-Site Scripting (XSS) Testing
-8. Cross-Site Request Forgery (CSRF) Testing
-9. Encryption and Data Protection (in transit, at rest, TLS)
-10. API Security Testing (authentication, rate limiting, data leakage)
-11. Security in CI/CD (scanning, secret management)
-12. Compliance Testing (GDPR, HIPAA, PCI-DSS, SOC 2)
-13. Security Tools: Burp Suite vs. OWASP ZAP vs. Code Scanning
-14. Common Security Testing Mistakes (testing obvious attacks, missing business logic flaws)
-15. Interview Preparation for Security Questions
+### 1. Learning Path Overview
+
+**Directory**: `/learning-paths/security-testing/`
+**Position**: 7 (unchanged from the original 10-path plan — no renumbering needed)
+**Target Audience**: freshers, manual testers, API testers, automation engineers, QA leads, SDETs, and test architects — explicitly *not* penetration testers, red teamers, or security engineers. The stated frame throughout: **security testing from a software tester's perspective.**
+**Industry alignment**: security is one of the few QA skill areas hiring managers explicitly screen for beyond functional competence, and most testers' actual exposure to it is fragmented — a module here, a compliance checklist there. This path exists to make "a tester who can reason about security risk" a complete, teachable competency, the same way Manual Testing made "a tester who can design a minimal, effective test suite" one.
+
+### 2. Learning Objectives (path-level)
+
+- Understand security testing as a distinct discipline within QA — identifying and validating risk, not attacking systems
+- Threat model a feature and translate risk into concrete, testable security test cases
+- Test authentication, session management, and authorization as their own testable surfaces
+- Recognize input-validation, configuration, and business-logic security defects at a QA-verification level (identify and report, never exploit)
+- Understand where security fits in the SDLC and CI/CD pipeline, and how to keep it from regressing
+- Apply this path's general discipline to the security testing TestAtlas already teaches inside API Testing, Database Testing, Mobile Testing, and AI for QA — understanding each as an *application* of this path's foundations, not a duplicate of them
+- Report a security finding the way a QA engineer should: evidence-based, reproducible, and framed for both an engineering and a business audience
+
+### 3. Prerequisites
+
+**Required**: Foundations (all 17 modules), [Manual Testing and Test Design](/learning-paths/manual-testing/test-design-fundamentals) (the test-design toolkit this path applies to a security context throughout — BVA/Equivalence Partitioning for input testing, RTM-style traceability for security requirements, bug-report discipline for Module 18).
+
+**Recommended, not required**: [API Testing](/learning-paths/api-testing/what-is-api-testing), [Database Testing](/learning-paths/database-testing/what-is-database-testing), [Mobile Testing](/learning-paths/mobile-testing/what-is-mobile-testing), and [AI for QA](/learning-paths/ai-for-qa/ai-in-software-testing) each have their own security module this path's Module 16 references directly. None is a hard blocker — Module 16 is written so a learner without that path's background still gets the general principle, with the specific application as a pointer for later. This is a deliberate, evidence-based decision explained fully in Section 11 below.
+
+### 4. Estimated Duration
+
+**9–13 weeks** (22 modules) — the widest topic breadth of any TestAtlas path proposed to date, comparable in scale to API Testing (21 modules), reflecting the genuinely broad, evidence-backed scope list in the originating brief rather than padding (see Section 18's filler check).
+
+### 5. Difficulty Progression
+
+`beginner` throughout Sections 1–5 (Modules 1–18), consistent with every certified path's instruction-module default — this path teaches identification and verification skill, not specialist depth, so no module requires prior security expertise beyond what the previous module in sequence provides. `intermediate` for Section 6 (Modules 19–22), matching the certified Application Module convention exactly. No module is gated at `advanced` — matching every existing TestAtlas path; the discipline-vs-difficulty distinction (broad topic count ≠ higher difficulty per module) is deliberate.
+
+### 6. Number of Sections
+
+**6** — five instruction sections (Foundations; Core Application Security Testing; Security Test Design and Verification; Data, Configuration, and Business Logic Security; Security Across the Organization and Delivery Pipeline) plus one Application/Capstone section. This is one more instruction section than Database/Performance/Mobile/AI-for-QA's 4, matching API Testing's own wider 6-instruction-section structure — justified by the same kind of evidence: a topic list too broad for 4 sections without either cramming or padding modules artificially.
+
+### 7. Number of Modules
+
+**22** — 18 instruction modules + 4 Application Modules (AtlasBank validation, AtlasShop validation, Common Mistakes, Capstone), matching the certified 4-module Application-section default exactly (no repeat of Performance Testing's approved 5-module exception; no evidence here justifies a fifth).
+
+### 8. Module Ordering
+
+#### Section 1 — Security Testing Foundations (Modules 1–3)
+
+1. **What is Security Testing?** — *Objective*: the CIA Triad (Confidentiality, Integrity, Availability) as the frame for everything that follows; the tester's role versus a penetration tester's or red teamer's (identify-and-report vs. exploit-and-report); explicitly setting the scope boundary this entire path holds to. *Why it exists*: every certified path opens with a scope-setting fundamentals module — no evidence to deviate, and this path needs it more than most given how often "security testing" gets conflated with "hacking" in learners' minds. *Prerequisite it satisfies*: none (path entry point). *What depends on it*: every later module's scope discipline traces back to this module's framing. *Est. length*: 2,000–2,400 words.
+2. **Threat Modeling, Risk Assessment, and Abuse Cases** — *Objective*: mapping a feature's attack surface, threat modeling at a tester's level (not an architect's), and abuse/misuse cases as a concrete test-design technique — reusing [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals)'s existing risk-prioritization node directly rather than re-deriving it. *Prerequisite it satisfies*: Module 3's security-requirements writing needs a threat model to write requirements against. *Est. length*: 2,200–2,600 words.
+3. **Secure SDLC and Security Requirements** — *Objective*: shift-left security (testing for security risk before code exists, not just before release), writing testable security requirements, and security test planning as a concrete deliverable. *What depends on it*: Module 9's test-case design assumes a security requirement already exists to design against. *Est. length*: 2,000–2,400 words.
+
+**Section 1 Review + Solutions**: dedicated pages, per the certified default.
+
+#### Section 2 — Core Application Security Testing (Modules 4–7)
+
+4. **OWASP Top 10 for Testers** — *Objective*: the general OWASP Top 10 as a orientation map for the rest of this section and Section 3 — explicitly distinguished from [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals)'s own OWASP **API** Security Top 10, which is a different, API-specific list this module cross-links rather than duplicates. *Why it exists*: without this orientation module, Modules 5–8 would each need to independently establish why their specific topic matters — one shared map is more efficient and matches how Foundations itself orients before Manual Testing's techniques begin. *Est. length*: 2,200–2,600 words.
+5. **Authentication Testing** — *Objective*: password policy verification, multi-factor authentication testing, account lockout behavior, and credential-handling checks — the first of three testable-surface modules this section builds. *Est. length*: 2,100–2,500 words.
+6. **Session Management, Cookies, and JWT** — *Objective*: session fixation and hijacking as testable conditions, cookie security flags (`Secure`, `HttpOnly`, `SameSite`), and JWT validation from a tester's vantage (expiry, signature presence, claims tampering symptoms — not forging one). *Prerequisite it satisfies*: Module 7 assumes session state is already understood before layering access-control testing on top of it. *Est. length*: 2,200–2,600 words.
+7. **Authorization and Access Control Testing** — *Objective*: role-based access verification, privilege-boundary testing, and data-isolation checks — the general, application-layer version of the access-control discipline [Database Security Testing](/learning-paths/database-testing/database-security-testing) already applies at the data layer specifically. *Est. length*: 2,100–2,500 words.
+
+**Section 2 Review + Solutions**: dedicated pages.
+
+#### Section 3 — Security Test Design and Verification (Modules 8–11)
+
+8. **Input Validation and Output Encoding** — *Objective*: QA-level recognition of injection- and XSS-class symptoms using legitimate-looking, non-malicious input — the same identification-not-exploitation scope discipline [Injection and Input-Based Attacks](/learning-paths/api-testing/injection-and-input-based-attacks) already established for API Testing, applied here at the general application layer. *Est. length*: 2,200–2,600 words.
+9. **Security Test Planning and Test Case Design** — *Objective*: extends [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases)'s existing discipline into a security-specific test case — precise steps, security-relevant expected results, and traceability back to the security requirement Module 3 taught how to write. *Est. length*: 2,000–2,400 words.
+10. **Static vs. Dynamic Security Testing** — *Objective*: SAST and DAST as concepts (what each catches, what each misses, and why teams need both) taught concept-first and tool-neutral, matching the exact discipline Performance Testing applied to JMeter — no scanning tool is canonical. *Est. length*: 2,100–2,500 words.
+11. **Vulnerability Validation and Security Regression Testing** — *Objective*: triaging a scanner or bug-bounty report as a real, reproducible finding versus noise (a QA-level verification skill, not a scanner-building one), then verifying a fix doesn't regress — this section's own closing-the-loop module. *Est. length*: 2,200–2,600 words.
+
+**Section 3 Review + Solutions**: dedicated pages.
+
+#### Section 4 — Data, Configuration, and Business Logic Security (Modules 12–15)
+
+12. **Configuration, Secrets, and Transport Security** — *Objective*: security headers, HTTPS/TLS verification, rate limiting, and secrets-in-code/config detection — grouped together as the "is the environment itself hardened" question, distinct from the earlier sections' feature-level testing. *Est. length*: 2,200–2,600 words.
+13. **Business Logic Security Testing** — *Objective*: the defect class no existing TestAtlas module covers at all — price manipulation, workflow-step bypass, race conditions in a multi-step process — security flaws with no technical vulnerability underneath them, found through test design (Combinatorial/Pairwise, State Transition Testing) rather than a scanner. *Why it exists*: this is arguably the single highest-value new module in the path — the class of defect a QA engineer's product knowledge catches that no automated security tool structurally can. *Est. length*: 2,300–2,700 words (this path's densest module, matching how each certified path has one deliberately weightier "core payoff" module).
+14. **Data Protection, PII, and Compliance Awareness** — *Objective*: data-at-rest and in-transit testing from a QA seat, PII-handling verification, and GDPR awareness — explicitly awareness-level, not legal expertise, mirroring [AI Security and Privacy Awareness](/learning-paths/ai-for-qa/ai-security-and-privacy-awareness)'s own scope discipline for a different data-handling context. *Est. length*: 2,100–2,500 words.
+15. **Logging, Audit Trails, and Security Observability** — *Objective*: verifying security-relevant events are actually logged and traceable — extends [Backup, Recovery, and Audit Validation](/learning-paths/database-testing/backup-recovery-and-audit-validation)'s existing audit-trail testing discipline into a security-specific angle (failed logins, permission changes, data access) rather than re-teaching audit testing generally. *Est. length*: 2,000–2,400 words.
+
+**Section 4 Review + Solutions**: dedicated pages.
+
+#### Section 5 — Security Across the Organization and Delivery Pipeline (Modules 16–18)
+
+16. **Security Testing Across API, Database, Mobile, AI, and Cloud** — *Objective*: the explicit consolidation module. Does not re-teach — directly cross-links [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals) and [Injection and Input-Based Attacks](/learning-paths/api-testing/injection-and-input-based-attacks), [Database Security Testing](/learning-paths/database-testing/database-security-testing), [Mobile Security Testing](/learning-paths/mobile-testing/mobile-security-testing), and [AI Security and Privacy Awareness](/learning-paths/ai-for-qa/ai-security-and-privacy-awareness) as worked applications of this path's own Sections 1–4 principles, framing this path as the general discipline underneath all four rather than a fifth, overlapping treatment. Also introduces **Cloud Security Testing (tester viewpoint)** — shared-responsibility-model awareness, storage/bucket misconfiguration checks, IAM-permission testing from a QA seat — the one genuinely new surface in this module, since no existing TestAtlas path covers cloud at all. *Est. length*: 2,300–2,700 words (wide-scope module, similar reasoning to Module 13).
+17. **Security Automation and Security in CI/CD** — *Objective*: where security testing fits in a pipeline — baseline dependency/scanning gates, automating security regression checks (Module 11's discipline, made continuous) — building on [CI/CD Integration](/learning-paths/automation/cicd-integration)'s existing "a real gate, not an optional step" principle rather than re-deriving it. *Est. length*: 2,100–2,500 words.
+18. **Security Reporting, Bug Reporting, and Risk Communication** — *Objective*: extends [Writing Effective Bug Reports](/learning-paths/manual-testing/writing-effective-bug-reports)'s existing discipline into security-specific severity framing and risk communication for a non-security stakeholder audience — this section's, and the instruction portion of the path's, closing module. *Est. length*: 2,200–2,600 words.
+
+**Section 5 Review + Solutions**: dedicated pages.
+
+#### Section 6 — Application Modules & Capstone (Modules 19–22) — Application Modules
+
+Per `CURRICULUM_EVOLUTION.md` Entry 2 (corrected version), identified as Application Modules **at design time**: `difficulty: "intermediate"`, Quick Revision retained, Mini Challenge and the three narrative callouts omitted, no Section Review/Solutions pages.
+
+19. **Applying Security Testing: AtlasBank Security Validation** — full technique combination (threat modeling, auth/session/access-control testing, business logic security, reporting) against a realistic AtlasBank feature. *Est. length*: 1,700–2,100 words.
+20. **Applying Security Testing: AtlasShop Security Validation** — same pattern, second domain, continuing every prior path's precedent of reusing AtlasShop rather than introducing a third fictional entity. *Est. length*: 1,700–2,100 words.
+21. **Common Mistakes in Security Testing** — cross-cutting mistake patterns, mirroring every certified path's identical Common-Mistakes-module structure. *Est. length*: 1,700–2,000 words.
+22. **Security Testing Capstone** — see Section 12 below. *Est. length*: 1,900–2,300 words.
+
+### 9. Section Objectives
+
+Section 1 → scope and mindset (what security testing is and isn't, threat modeling, secure SDLC); Section 2 → the four classic testable application-security surfaces (OWASP orientation, auth, session, authorization); Section 3 → how testers design for and verify security specifically (test design, SAST/DAST, validation/regression); Section 4 → the surfaces beyond the obvious "login page" — configuration, business logic, data, logging; Section 5 → zooming out to where this discipline already lives elsewhere in TestAtlas, and where it meets automation and communication; Section 6 → synthesis across two domains plus one capstone. Every path-level objective from Section 2 traces to exactly one section, matching every certified path's own one-to-one mapping.
+
+### 10. Learning Progression
+
+Foundations → Manual Testing (test-design toolkit, bug-report discipline, RTM-style traceability) → Security Testing Section 1 (scope and threat modeling) → Section 2 (the four core testable surfaces, building in fixed order: orientation, then auth, then session — session assumes auth exists — then authorization — which assumes session state exists) → Section 3 (test-design and verification technique, assuming Section 2's surfaces as worked examples) → Section 4 (widening from feature-level to environment-, business-logic-, and data-level security) → Section 5 (consolidating against API/Database/Mobile/AI for QA's own security modules, then automation and reporting) → Section 6 (synthesis). Each section is a strict prerequisite for the next; within Section 2, Modules 5→6→7 are ordered by genuine conceptual dependency (auth before session before authorization), not arbitrary sequencing.
+
+### 11. Dependencies
+
+**Hard dependencies**: Foundations, Manual Testing (see Section 3). **Soft, Related-Topics-only dependencies**: API Testing, Database Testing, Mobile Testing, AI for QA — referenced exclusively from Module 16 as parallel applications, never as blocking prerequisites. This is a deliberate architectural decision worth stating explicitly: **Security Testing sits at Position 7, before AI for QA (8) and Mobile Testing (9) in the site's reading order**, yet Module 16 references both. Per `STYLE_GUIDE.md`'s own convention, a **Related Topics** pointer to already-published content is not a blocking prerequisite and is not subject to the Forward Reference Rule (which governs references to content that doesn't exist yet — Mobile Testing and AI for QA already exist and are fully linkable). A learner who reaches Module 16 having only completed Sections 1–5 of this path gets the complete, self-contained general principle; the cross-links are for learners who've *also* explored those paths, exactly parallel to how any certified path's own "Related Topics" section works. No renumbering is needed or proposed to resolve this — it's a genuine, evidence-based design decision, not an oversight.
+
+### 12. Capstone Recommendation
+
+**Recommendation**: **AtlasBank International Transfer, Under Security Scrutiny** (Module 22) — a seventh layer on TestAtlas's recurring AtlasBank compliance-transfer narrative, continuing Manual → business rule; API → service behavior; Database → stored procedure; Automation → regression prevention; Performance → operational cost; Mobile → real-world connectivity behavior; **Security → does the same, already-six-times-verified feature also resist business-logic security bypass and maintain a complete, tamper-evident audit trail?** Proposed angle: testing whether the $3,000 compliance-verification threshold (the exact business rule Manual Testing's own capstone originally found broken) can be circumvented through parameter manipulation, request reordering, or a race condition between two near-simultaneous transfers — a business-logic security question, not a technical-vulnerability one, deliberately exercising Module 13's own core technique on the path's most narratively significant feature. Paired with a Module 15-style audit-trail completeness check: does every step of the transfer generate a correctly attributable log entry. This keeps the capstone within this path's own identify-and-report scope throughout — no exploit is constructed, only tested for and reported. **This is a recommendation requiring confirmation, per every prior path's own template convention — not an assumed default.**
+
+### 13. Diagram Recommendations
+
+Following the established `VIS-<PATH-PREFIX>-###` convention (`VIS-API-###`, `VIS-AUTO-###`): propose **`VIS-SEC-001` through approximately `VIS-SEC-016`**, one per module with a genuine relationship, comparison, or flow to visualize (not one per module mechanically — several modules, like Module 21's mistake list, don't need one, matching every certified path's own diagram-density pattern). Recommended diagram concepts only, no diagrams produced this phase:
+- Module 1: CIA Triad as a three-way relationship; tester-vs-pentester scope boundary
+- Module 2: threat-modeling-to-test-case flow
+- Module 4: OWASP Top 10 as an orientation map feeding into Sections 2–3
+- Module 6: session lifecycle with the fixation/hijacking failure points marked
+- Module 8: input-validation layers (client, transport, server) and where each check belongs
+- Module 10: SAST vs. DAST — what each catches, positioned on the SDLC timeline
+- Module 13: a business-logic-bypass sequence diagram (request reordering / race condition shape)
+- Module 16: the consolidation module's own "this path's principles applied across four surfaces" relationship diagram — the most natural candidate for this path's signature visual
+- Module 22 (Capstone): the seven-layer AtlasBank narrative, extended by one row from Performance Testing's and Mobile Testing's own capstone diagrams
+
+### 14. Cross-links to Existing TestAtlas Curricula
+
+Already itemized per-module above; consolidated here: [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals) (Module 2), [Writing Clear Test Cases](/learning-paths/manual-testing/writing-clear-test-cases) (Modules 8, 9, 18 — via [Writing Effective Bug Reports](/learning-paths/manual-testing/writing-effective-bug-reports)), [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals) and [Injection and Input-Based Attacks](/learning-paths/api-testing/injection-and-input-based-attacks) (Modules 4, 8, 16), [Database Security Testing](/learning-paths/database-testing/database-security-testing) and [Backup, Recovery, and Audit Validation](/learning-paths/database-testing/backup-recovery-and-audit-validation) (Modules 7, 15, 16), [Mobile Security Testing](/learning-paths/mobile-testing/mobile-security-testing) (Module 16), [AI Security and Privacy Awareness](/learning-paths/ai-for-qa/ai-security-and-privacy-awareness) (Modules 14, 16), [CI/CD Integration](/learning-paths/automation/cicd-integration) (Module 17). This path has the second-widest cross-link set of any TestAtlas path (after Mobile Testing's), a direct, expected consequence of being proposed after seven, not six, certified curricula already exist.
+
+### 15. Recommended Exercises
+
+Per the certified default: each instruction module (1–18) gets one **Mini Challenge** — a realistic AtlasBank/AtlasShop scenario asking the learner to apply that module's specific technique (e.g., Module 13's Mini Challenge: given a multi-step discount-code redemption flow, identify the business-logic security test cases, not just the functional ones). Each Section (1–5) gets a **Section Review Knowledge Check** of 5 scenario-based questions plus a matching **Solutions** page, following the exact format every certified path uses — never a recall-only quiz, always "here's a situation, what would you test/do."
+
+### 16. Review Structure
+
+Dedicated **Section N Review** page after each of Sections 1–5, cross-path title-disambiguated (`"Security Testing — Section N Review"`) from day one, per the certified default every path since Manual Testing's Section 4 has followed. Section 6 gets no Review page, matching every certified path's Application-section precedent exactly.
+
+### 17. Solution Page Structure
+
+Dedicated **Section N Solutions** page paired with each Review page, following the established format: correct answer, explanation, alternative approaches considered, and real-world reasoning for each of the 5 scenarios — identical structure to all seven certified paths' own Solutions pages, no deviation proposed.
+
+### 18. Consistency Check Against Existing Certified Curricula
+
+- ✅ **Logical progression** — verified in Section 10 above; every section is a strict prerequisite for the next, and Section 2's internal module order follows genuine conceptual dependency.
+- ✅ **No duplicate modules** — cross-checked against all seven certified paths' own module lists (Section 14); no module in this proposal re-teaches content another path already owns.
+- ✅ **No overlap with existing curricula** — the explicit design constraint driving Section 5's structure: Module 16 exists specifically to prevent this path from silently duplicating API/Database/Mobile/AI-for-QA's own security modules, consolidating instead of repeating.
+- ✅ **Appropriate difficulty** — `beginner` for all instruction modules, `intermediate` for Application Modules, matching every certified path; no module assumes specialist security background beyond what this path itself teaches in sequence.
+- ✅ **Suitable for beginners** — Module 1 explicitly sets scope before any technique begins, the same onboarding pattern every certified path's own Module 1 uses.
+- ✅ **Valuable for experienced testers** — Module 13 (Business Logic Security) and Module 16 (cross-domain consolidation) are the two modules with the least beginner-level equivalent elsewhere in QA education; an experienced SDET or Test Architect gets genuine new material there, not a repeat of fundamentals.
+- ✅ **Consistent naming** — module titles follow the existing "[Topic] Testing" / "[Topic], [Topic], and [Topic]" naming patterns already used throughout Manual, API, Database, Performance, Mobile, and AI for QA.
+- ✅ **Consistent section sizing** — 3, 4, 4, 4, 3, 4 modules per section; no section is a lone outlier in size (the narrowest, Sections 1 and 5, still carry 3 modules each, matching Manual Testing's and Mobile Testing's own smallest sections).
+- ✅ **Real-world applicability** — every module's *Why it exists* / *What depends on it* justification (Section 8) ties to either a genuinely distinct security-testing surface or an explicit, evidenced reuse of an existing TestAtlas technique, matching the same justification bar Mobile Testing's own proposal was held to.
+- ✅ **No filler modules** — every module in Section 8 states a specific prerequisite it satisfies and/or a specific later module that depends on it; none exists solely to hit a target module count.
+
+**Differences from the Reference Curricula (evidence-justified only)**:
+- **Second-widest instruction-section count of any TestAtlas path** (6 sections, after API Testing's 7) — a direct, evidenced consequence of the brief's genuinely broad topic scope, not a new architectural pattern.
+- **A consolidation module (16) that cross-links forward to two later-positioned paths (Mobile Testing, AI for QA)** — resolved via the Related-Topics-not-Prerequisite distinction explained fully in Section 11, not a new rule, just a careful application of an existing one.
+- **Everything else** — the five recurring callouts, the Prerequisites/Leads-to block, the Forward Reference Rule, frontmatter conventions, the Application Module structure, dedicated Review/Solutions pages from Section 1 — carries over unchanged.
 
 **Success Criteria**:
-- Learner threat models a feature and designs security tests
-- Learner tests for SQL injection and explains how it works
-- Learner explains the difference between authentication and authorization
+- Learner threat models a feature and translates the threat model into concrete, testable security test cases
+- Learner tests authentication, session management, and authorization as three distinct, correctly-ordered surfaces
+- Learner identifies a business-logic security flaw a technical vulnerability scanner structurally cannot find
+- Learner applies this path's general discipline to explain how API Testing's, Database Testing's, Mobile Testing's, and AI for QA's own security modules each specialize it, without needing any of them re-taught
+- Learner writes a security finding report that's evidence-based, reproducible, and framed for both an engineering and a business audience
+
+### Decisions (Approved 2026-08-06)
+
+1. **Capstone**: ✅ Confirmed — continues the AtlasBank compliance-transfer narrative as its seventh layer (Manual → business rule; API → service behavior; Database → stored procedure; Automation → regression prevention; Performance → operational cost; Mobile → real-world connectivity behavior; Security → business-logic bypass resistance and audit-trail integrity), rather than introducing a new, separately-named fictional entity. This was flagged as a genuine open decision during proposal review — the user's own alternative suggestion (a distinct, TestAtlas-owned generic entity, e.g. "Atlas Commerce") was explicitly considered and not adopted, since it would have introduced a third naming convention alongside AtlasBank/AtlasShop, broken the single-recurring-domain discipline every other certified path holds to, and fragmented rather than extended the six-layer narrative this path's own architecture was built to complete as a seventh layer. Documented here rather than silently decided.
+2. **Section 6 Review/Solutions**: ✅ Confirmed — no path-level Review or Solutions page created, matching every certified path's Application-section precedent exactly (Section 6 gets none, same as Section 5 in every 4-Application-Module path). No prior TestAtlas path has a path-level review page; this path introduces none either.
+
+**Success Criteria — Verified Against Shipped Content**:
+- ✅ Learner threat models a feature and translates the threat model into concrete, testable security test cases — demonstrated in Module 2 and the capstone's own sample test cases
+- ✅ Learner tests authentication, session management, and authorization as three distinct, correctly-ordered surfaces — Modules 5–7
+- ✅ Learner identifies a business-logic security flaw a technical vulnerability scanner structurally cannot find — Module 13, and confirmed again at capstone scale
+- ✅ Learner applies this path's general discipline to explain how API Testing's, Database Testing's, Mobile Testing's, and AI for QA's own security modules each specialize it — Module 16
+- ✅ Learner writes a security finding report that's evidence-based, reproducible, and framed for both an engineering and a business audience — Module 18, applied in the capstone's own Reporting Guidance section
+
+### Section 1 — As Shipped
+
+Shipped as designed: **What is Security Testing?** (Module 1 — the CIA Triad as a testing frame, and the identification-not-exploitation scope boundary separating this path from penetration testing), **Threat Modeling, Risk Assessment, and Abuse Cases** (Module 2 — attack-surface mapping, per-actor threat modeling, and abuse cases as a concrete, testable-test-case-format technique), **Secure SDLC and Security Requirements** (Module 3 — shift-left security, writing testable security requirements instead of vague goals, and security test planning as a concrete deliverable). Dedicated **Section 1 Review** and **Section 1 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 2 — As Shipped
+
+Shipped as designed: **OWASP Top 10 for Testers** (Module 4 — the general OWASP Top 10 as an orientation map, explicitly distinguished from API Testing's own OWASP API Security Top 10), **Authentication Testing** (Module 5 — password policy, lockout/rate limiting, MFA enforcement, and credential handling as four testable surfaces), **Session Management, Cookies, and JWT** (Module 6 — session fixation, cookie security flags, and JWT validation from a tester's vantage), **Authorization and Access Control Testing** (Module 7 — horizontal versus vertical privilege escalation as two distinct, both-necessary tests, extending Database Security Testing's data-layer discipline to the application layer). Dedicated **Section 2 Review** and **Section 2 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 3 — As Shipped
+
+Shipped as designed: **Input Validation and Output Encoding** (Module 8 — the two-defense distinction, tested using a standard, harmless proof string, never a genuinely malicious payload), **Security Test Planning and Test Case Design** (Module 9 — extending Writing Clear Test Cases with the one addition — explicit traceability to a security requirement or abuse case — that makes a test case a security test case), **Static vs. Dynamic Security Testing** (Module 10 — SAST and DAST taught concept-first and tool-neutral, matching Performance Testing's own JMeter precedent), **Vulnerability Validation and Security Regression Testing** (Module 11 — validating a raw finding through legitimate reproduction before escalation, then protecting every fix with a standing regression test). Dedicated **Section 3 Review** and **Section 3 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 4 — As Shipped
+
+Shipped as designed: **Configuration, Secrets, and Transport Security** (Module 12 — security headers, infrastructure-wide rate limiting, and secrets in configuration/environment files as three environment-level, not feature-level, surfaces), **Business Logic Security Testing** (Module 13 — workflow-step bypass, race conditions, and price/value manipulation as a defect class with no technical vulnerability signature, invisible to any scanner), **Data Protection, PII, and Compliance Awareness** (Module 14 — over-exposure and deletion-completeness as two testable questions, explicitly awareness-level rather than legal expertise), **Logging, Audit Trails, and Security Observability** (Module 15 — coverage and integrity as two distinct, both-necessary logging concerns, extending Database Testing's own audit-trail discipline). Dedicated **Section 4 Review** and **Section 4 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 5 — As Shipped
+
+Shipped as designed: **Security Testing Across API, Database, Mobile, AI, and Cloud** (Module 16 — the explicit consolidation module, cross-linking rather than duplicating four existing security modules, plus new tester-level cloud security content: the shared responsibility model, storage misconfiguration testing, and IAM least-privilege testing), **Security Automation and Security in CI/CD** (Module 17 — extending Automation Testing's own real-gate-versus-optional-step principle specifically to security regression tests and baseline dependency scanning), **Security Reporting, Bug Reporting, and Risk Communication** (Module 18 — the dual-audience technical-report-plus-risk-summary format, extending Writing Effective Bug Reports and reusing Performance Testing's own established dual-report precedent). Dedicated **Section 5 Review** and **Section 5 Solutions** pages shipped, cross-path disambiguated.
+
+### Section 6 — As Shipped
+
+Shipped as designed: **Applying Security Testing: AtlasBank Security Validation** (Module 19 — combining Sections 1–5's techniques against AtlasBank's Add a New Payee feature, finding a horizontal access-control failure, an independent data over-exposure issue, and a missing audit-log coverage gap), **Applying Security Testing: AtlasShop Security Validation** (Module 20 — the same techniques applied to AtlasShop's structurally different, multi-tenant seller-dashboard feature, finding a vertical privilege escalation and an independent missing-security-header gap), **Common Mistakes in Security Testing** (Module 21 — six cross-cutting mistake patterns, each traced to a real defect earlier in the path), **Security Testing Capstone: AtlasBank International Transfer, Under Security Scrutiny** (Module 22 — the same International Money Transfer feature six other certified paths already verified from their own layer, now confirmed to resist split-transfer and concurrent-submission bypass of its compliance threshold, plus one genuinely new finding no prior layer could have produced: a support agent can delete the audit-log entry for their own handling of a flagged transfer). No Section 6 Review/Solutions pages, matching every certified path's Application-section precedent.
+
+**Progress**: 22 / 22 modules shipped. **Security Testing v1.0 complete.**
 
 ---
 
@@ -1265,22 +1434,29 @@ Start Here
     ↓
 Foundations (gateway)
     ↓
-    ├─→ Manual Testing → API Testing → Interview Prep
-    │       ↓
-    │    Automation ──→ Performance → Career
-    │       ↓            ↓
-    │    Database    Mobile Testing
-    │    Testing         ↓
-    │                 AI for QA
-    │
-    └─→ Security Testing ────→ Interview Prep
-           ↓
-        Career
+    └─→ Manual Testing → API Testing → Interview Prep
+            ↓                ↓
+         Automation ──→ Performance → Career
+            ↓                ↓
+         Database        Mobile Testing
+         Testing              ↓
+            ↓               AI for QA
+         Security Testing
+         (requires only Foundations + Manual Testing;
+          cross-links API, Database, Mobile, and AI for QA's
+          own security modules as Related Topics, not prerequisites)
+            ↓
+         Interview Prep / Career
 
 Specialized Paths:
     Performance Testing → Career
     AI for QA → (connects to all six technical paths ahead of it)
     Mobile Testing → (connects to Manual, API, Database, Automation, Performance)
+    Security Testing → (requires only Foundations + Manual Testing;
+                         connects to API, Database, Mobile, and AI for QA's
+                         own security modules without requiring any of them —
+                         see LEARNING_PATHS.md's Path 7 Section 11 for the
+                         full reasoning behind this asymmetric dependency)
 ```
 
 ---
@@ -1294,12 +1470,12 @@ Learners can switch paths at any time, but some transitions are smoother:
 - Manual Testing → Automation (design first, then automate)
 - Automation → Performance Testing (load testing uses the same tools)
 - Automation → Mobile Testing (device/platform automation extends the same framework concepts)
+- Manual Testing → Security Testing (shares the same test-design and bug-reporting foundations directly — Security Testing's only hard prerequisites beyond Foundations)
 - Any path → Interview Prep (prerequisites satisfied)
 - Any path → Career (after 1+ years experience)
 
 **Rougher Transitions** (more catch-up needed):
 - Automation → Database Testing (requires SQL knowledge)
-- Performance Testing → Security Testing (different mindset, different tools)
 
 ---
 

@@ -1,0 +1,13 @@
+%% VIS-SEC-013 — Testing the Workflow, Not Just Its Steps
+flowchart TD
+    accTitle: Testing the Workflow, Not Just Its Steps
+    accDescr: A multi-step workflow like checkout has four steps in sequence: add to cart, apply discount, enter payment, confirm order. Testing each step individually confirms each one works correctly in isolation. Business logic security testing asks a different question about the workflow as a whole, whether a later step can be reached directly without completing an earlier required step, and whether an action meant to happen once can be triggered twice through near-simultaneous requests.
+    A[Add to Cart] --> B[Apply Discount]
+    B --> C[Enter Payment]
+    C --> D[Confirm Order]
+    E[Per-Step Testing:<br/>does each step work alone?] -.-> A
+    E -.-> B
+    E -.-> C
+    E -.-> D
+    F[Business Logic Testing:<br/>can Confirm be reached without Payment?<br/>can Apply Discount run twice at once?] -.-> D
+    F -.-> B

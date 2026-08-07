@@ -31,6 +31,17 @@
   --ifm-background-surface-color: #0c2531;
 }
 
+/* Infima's default .button--outline:hover swaps to --ifm-color-emphasis-0
+   (white in light mode, near-black in dark mode) without adjusting text
+   color, producing white-on-white / near-black-on-black text on hover.
+   Use the theme's own primary color instead, which is already tuned for
+   contrast in both themes. */
+.button--outline:hover {
+  color: #fff;
+  background-color: var(--ifm-color-primary-darkest);
+  border-color: var(--ifm-color-primary-darkest);
+}
+
 .navbar {
   border-bottom: 1px solid var(--ifm-color-emphasis-200);
 }

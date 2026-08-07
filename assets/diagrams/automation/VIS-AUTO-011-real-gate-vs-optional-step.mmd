@@ -1,5 +1,4 @@
 %% VIS-AUTO-011 — A Real Gate vs. an Optional Step
-%% Used in: 11-cicd-integration.md
 flowchart TB
     accTitle: A Real Gate vs. an Optional Step
     accDescr: A manually-triggered test suite is an optional step that can be skipped under deadline pressure, allowing a real defect to ship. A CI-integrated suite configured as a required check automatically blocks a merge on failure, regardless of pressure or who forgot to run it.

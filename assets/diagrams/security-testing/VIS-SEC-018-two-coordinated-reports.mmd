@@ -1,0 +1,8 @@
+%% VIS-SEC-018 — One Finding, Two Coordinated Reports
+flowchart LR
+    accTitle: One Finding, Two Coordinated Reports
+    accDescr: A single security finding produces two coordinated artifacts. The technical report contains exact reproduction steps, evidence, and the affected component, written for the engineer who will fix it. The risk summary states in plain language who is affected, what could happen, and how urgent the finding is, written for the stakeholder deciding what gets prioritized.
+    A[Security Finding] --> B[Technical Report:<br/>steps, evidence, affected component]
+    A --> C[Risk Summary:<br/>who's affected, what could happen, how urgent]
+    B --> D[For the engineer<br/>who fixes it]
+    C --> E[For the stakeholder<br/>who prioritizes it]

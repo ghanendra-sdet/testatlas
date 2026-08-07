@@ -1,0 +1,8 @@
+%% VIS-SEC-014 — Two Testable Data-Protection Questions
+flowchart TD
+    accTitle: Two Testable Data-Protection Questions
+    accDescr: Data protection testing at a QA awareness level centers on two testable questions. Is more personal data being sent in a response than the feature actually needs, tested by inspecting the raw response rather than what the screen displays. Is a customer's data actually removed when they request deletion, tested by verifying it is gone or irreversibly anonymized across every system, not just that the account shows as deactivated.
+    A[Data Protection Testing] --> B[Over-Exposure:<br/>more data sent than the feature needs?]
+    A --> C[Deletion:<br/>actually removed everywhere, or just deactivated?]
+    B --> D[Inspect the raw response,<br/>not just what the screen shows]
+    C --> E[Verify across every system,<br/>not just the primary account record]

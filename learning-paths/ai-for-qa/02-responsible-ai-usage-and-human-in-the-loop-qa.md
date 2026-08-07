@@ -19,7 +19,7 @@ last_reviewed: "2026-08-05"
 
 **A team with human-in-the-loop as a formality.** AtlasBank's QA team adopts a policy requiring every AI-generated test case to be "reviewed" before merging into the suite — a real, documented process. In practice, the reviewer's actual habit is a quick read-through checking that the test case looks coherent and well-formatted, not a genuine check against the actual requirement it's supposed to test. A batch of AI-drafted test cases for a new KYC verification flow all pass this fast review — they read fluently, use correct terminology, and look like real test cases — but three of them test a validation rule the requirement never actually specified, confidently invented by the AI to fill a gap in an ambiguous prompt. The review step existed; it simply never had a real chance of catching this.
 
-**A team with genuine human-in-the-loop verification.** A different QA process treats review as a specific, defined activity: comparing each AI-drafted test case directly against the written requirement, line by line, not just checking that the test case reads well. The same KYC test-case batch, reviewed this way, immediately surfaces the three invented-rule test cases — because the reviewer is actively checking "does the requirement actually say this," not just "does this look like a real test case."
+**A team with genuine human-in-the-loop verification.** A different QA process treats review as a specific, defined activity: comparing each AI-drafted test case directly against the written requirement, line by line, not just checking that the test case reads well. The same KYC test case batch, reviewed this way, immediately surfaces the three invented-rule test cases — because the reviewer is actively checking "does the requirement actually say this," not just "does this look like a real test case."
 
 Both teams had a "review AI output" policy. Only one of them had a review that actually verified something, rather than confirming the output was well-formatted and confident-sounding.
 
@@ -116,7 +116,7 @@ A newer tester considers AI output "reviewed" once someone has read through it a
 ## Related Topics
 
 - [AI in Software Testing](/learning-paths/ai-for-qa/ai-in-software-testing) — This path's central theme, which this module turns into a concrete review discipline
-- [Reviewing Test Cases](/learning-paths/manual-testing/reviewing-test-cases) — The general test-case review discipline this module applies specifically to AI-generated content
+- [Reviewing Test Cases](/learning-paths/manual-testing/reviewing-test-cases) — The general test case review discipline this module applies specifically to AI-generated content
 - [Reviewing AI Output and Recognizing Hallucinations](/learning-paths/ai-for-qa/reviewing-ai-output-and-recognizing-hallucinations) — The specific, practiced skill this module's verification principle requires
 
 ## Interview Questions

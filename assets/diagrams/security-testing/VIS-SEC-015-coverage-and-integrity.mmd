@@ -1,0 +1,8 @@
+%% VIS-SEC-015 — Two Testable Concerns: Coverage and Integrity
+flowchart TD
+    accTitle: Two Testable Concerns: Coverage and Integrity
+    accDescr: Security-relevant logging testing covers two concerns. Coverage asks whether specific event categories, such as failed logins, permission changes, and sensitive record access, are actually captured. Integrity asks whether the resulting log entries can be modified or deleted by the same users whose actions they record, since a log that can be tampered with is not a reliable record regardless of how complete its coverage is.
+    A[Security Logging Testing] --> B[Coverage:<br/>are specific event categories captured?]
+    A --> C[Integrity:<br/>can a user tamper with their own log entries?]
+    B --> D[Failed logins,<br/>permission changes,<br/>sensitive record access]
+    C --> E[A tamperable log is not<br/>a reliable record, regardless of coverage]

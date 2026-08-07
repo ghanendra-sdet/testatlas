@@ -60,9 +60,12 @@ Manual Testing v1.0 — curriculum already designed and frozen at 23 modules (`d
 
 ---
 
-## Unreleased — v1.0.0 (TestAtlas Public Launch, in preparation)
+## v1.0 — TestAtlas Public Launch
 
-Three certified learning paths, the TestAtlas Authoring Platform, and full GitHub/community-health readiness — the release this file's "Unreleased" entries below are consolidating into. Not yet tagged.
+**Date**: 2026-08-04
+**Status**: ✅ Shipped
+
+Three certified learning paths, the TestAtlas Authoring Platform, and full GitHub/community-health readiness.
 
 ### Manual Testing v1.0 — Certified
 
@@ -91,3 +94,39 @@ Contributor documentation (`AUTHOR_GUIDE.md`, `CURRICULUM_CHECKLIST.md`, `REVIEW
 ### Release Preparation
 
 `CODE_OF_CONDUCT.md`, `SECURITY.md`, `SUPPORT.md`, `CHANGELOG.md`, GitHub issue and pull request templates, and `RELEASE_READINESS.md` added ahead of the public `v1.0.0` tag.
+
+---
+
+## v1.1 — Database Testing
+
+**Status**: ✅ Shipped, certified
+
+16/16 modules across five sections: Database Testing Foundations, Core SQL and Data Verification, Data Integrity and Transactions, Advanced Database Testing, and Application/Capstone. Introduced **AtlasShop**, TestAtlas's second recurring fictional domain, for its second Application Module — the same pattern Manual Testing and API Testing each used a contrasting second scenario for, now formalized as a named, reusable entity. Certified as a Reference Curriculum (`docs/architecture/DATABASE_TESTING_CERTIFICATION.md`), after fixing one genuine cross-path defect: a frontmatter `description` duplicated verbatim from a prior path's Common-Mistakes module template — a defect class this certification's own audit added to the standing checklist for every path after it.
+
+---
+
+## v1.2 — Performance Testing
+
+**Status**: ✅ Shipped, certified
+
+17/17 modules across five sections: Performance Testing Foundations, Designing a Performance Test, Executing and Tooling, Analysis and Operations, and Application/Capstone. Reuses Database Testing's own QA-level slow-query recognition and API Testing's performance-recognition module rather than re-teaching either. Kept concept-first and tool-neutral throughout, with JMeter introduced as a primary, not canonical, worked example. Certified with **zero findings** — the first TestAtlas certification sprint to close with nothing to fix (`docs/architecture/PERFORMANCE_TESTING_CERTIFICATION.md`).
+
+---
+
+## v1.3 — AI for QA
+
+**Status**: ✅ Shipped, certified
+
+17/17 modules across five sections: Foundations, AI-Assisted Testing Techniques, Testing AI-Driven Features, AI Governance and Security, and Application/Capstone. TestAtlas's first path to expand beyond traditional testing disciplines, kept deliberately distinct throughout: using AI to accelerate testing versus testing AI-driven features themselves, threaded through every module as "AI accelerates testing, it does not replace engineering judgment." Introduced the **AtlasBank AI Support Assistant**, TestAtlas's first AI-native fictional feature, permanently scoped to six question categories and never expanded into a general-purpose chatbot. Certified with zero findings, a second consecutive clean sprint (`docs/architecture/AI_FOR_QA_CERTIFICATION.md`).
+
+---
+
+## v1.4 — Mobile Testing
+
+**Status**: ✅ Shipped, certified
+
+16/16 modules across five sections: Mobile Testing Foundations, Functional Mobile Testing, Device and Platform Testing, Mobile Performance/Security/Diagnostics, and Application/Capstone. Added as an evidenced 11th path at Position 9 — not part of the original 10-path plan — once six certified curricula already existed to build on, renumbering Interview Preparation and Career and Leadership to Positions 10/11 (safe, since neither had shipped content). Reuses Combinatorial/Pairwise Testing, Boundary Value Analysis/Equivalence Partitioning, and API Testing's idempotency/retry concepts directly rather than re-deriving them. The capstone extends the same International Money Transfer feature five other certified paths already verified at their own layer, confirming it also survives real mobile-device conditions — connectivity interrupted mid-transaction combined with the app being backgrounded — as a sixth, distinct layer in that shared narrative. Certified as a Reference Curriculum (`docs/architecture/MOBILE_TESTING_CERTIFICATION.md`), after fixing one documentation gap this sprint's own audit found: a missing `STYLE_GUIDE.md` domain-extension entry.
+
+### What's Next
+
+With seven certified Reference Curricula and 145 modules live (Foundations plus seven certified curricula), further curriculum work is deliberately paused for real learner and contributor feedback — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note. The next path (Security Testing is the current front-runner) starts from a written architecture proposal once that feedback justifies resuming, not automatically.

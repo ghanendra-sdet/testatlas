@@ -1,0 +1,7 @@
+%% VIS-SEC-002 — From Attack Surface to a Testable Abuse Case
+flowchart LR
+    accTitle: From Attack Surface to a Testable Abuse Case
+    accDescr: Threat modeling for testers moves through three steps. Map the attack surface, meaning every actor who can reach the feature. For each actor, ask how they might misuse the feature using only legitimate access. Write the answer as a concrete abuse case with a specific actor, action, and expected secure outcome, ready to use as a test case.
+    A[Map the Attack Surface:<br/>every actor who can reach this feature] --> B[Ask, per actor:<br/>how might they misuse legitimate access?]
+    B --> C[Write as an Abuse Case:<br/>actor + misuse action + expected secure outcome]
+    C --> D[Use directly as a test case]

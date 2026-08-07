@@ -4,7 +4,7 @@
 
 ## The one-sentence version
 
-Manual Testing v1.0 and API Testing v1.0 are TestAtlas's **Reference Curricula** — the certified default for how every future path is structured. See [`docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`](docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md). Read it before anything else in this guide; everything below assumes it.
+Manual Testing v1.0, API Testing v1.0, Automation Testing v1.0, Database Testing v1.0, Performance Testing v1.0, AI for QA v1.0, and Mobile Testing v1.0 are TestAtlas's seven certified **Reference Curricula** — the certified default for how every future path is structured. See [`docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`](docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md). Read it before anything else in this guide; everything below assumes it.
 
 ## Which document answers which question
 

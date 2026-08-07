@@ -1,5 +1,4 @@
 %% VIS-API-005 — Three Independent Request Validation Surfaces
-%% Used in: 05-headers-parameters-and-payload-validation.md
 flowchart LR
     accTitle: Three Independent Request Validation Surfaces
     accDescr: A request can fail validation at three independent surfaces — headers, parameters, and payload — each requiring its own dedicated test coverage since a defect in one surface is invisible to tests targeting only another.

@@ -1,0 +1,10 @@
+%% VIS-SEC-008 — Input Validation and Output Encoding as Two Separate Defenses
+flowchart LR
+    accTitle: Input Validation and Output Encoding as Two Separate Defenses
+    accDescr: Data submitted by a user first passes through input validation, which checks format, length, and type at the point of receipt. The same data is later rendered back through output encoding, which converts special characters into a safe, inert form at the point of display. A feature can have one defense without the other, since they protect different things at different points.
+    A[Data Submitted] --> B[Input Validation:<br/>checked at point of receipt]
+    B --> C[Data Stored]
+    C --> D[Output Encoding:<br/>checked at point of display]
+    D --> E{Displayed to Another User}
+    E -->|Encoded correctly| F[Rendered as inert text]
+    E -->|Not encoded| G[Rendered as active content]

@@ -1,8 +1,7 @@
 %% VIS-AUTO-003 — Prioritizing Automation Candidates by Frequency and Risk
-%% Used in: 03-selecting-the-right-test-cases-for-automation.md
 flowchart TB
     accTitle: Prioritizing Automation Candidates by Frequency and Risk
-    accDescr: Test cases that are both high-frequency and high-business-risk are the strongest automation candidates and should be automated first. High-risk but lower-frequency cases come next. Low-frequency, low-risk cases come last, if ever.
+    accDescr: Test cases that are both high-frequency and high-business-risk are the strongest automation candidates and should be automated first. High-risk but lower-frequency cases come next. Low-frequency, low-risk cases come last, if ever automated at all.
     A[High Frequency +<br/>High Business Risk] -->|Automate First| B[Strongest Candidates]
     C[High Risk, Lower Frequency] -->|Automate Next| D[Second Priority]
     E[Low Frequency + Low Risk] -->|Automate Last, if Ever| F[Weakest Candidates]

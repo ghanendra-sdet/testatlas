@@ -1,0 +1,10 @@
+%% VIS-SEC-001 — The CIA Triad as Three Independent Testing Questions
+flowchart TD
+    accTitle: The CIA Triad as Three Independent Testing Questions
+    accDescr: A feature under test is checked against three independent questions. Confidentiality asks whether data can be seen by someone who should not see it. Integrity asks whether data can be changed by someone who should not change it. Availability asks whether a legitimate user can be denied access. A feature can pass two of these and fail the third.
+    A[Feature Under Test] --> B[Confidentiality:<br/>can it be seen wrongly?]
+    A --> C[Integrity:<br/>can it be changed wrongly?]
+    A --> D[Availability:<br/>can access be denied wrongly?]
+    B --> E[Each is independently<br/>testable and failable]
+    C --> E
+    D --> E

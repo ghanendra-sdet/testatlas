@@ -2,6 +2,8 @@
 
 **Prepared 2026-08-05**, at the close of the TestAtlas v1.0 Release Preparation Sprint. This document is the single record of whether TestAtlas is actually ready for a public `v1.0.0` release, and what "ready" does and doesn't mean here.
 
+> **Historical record, frozen at v1.0.0.** The Curricula table, module counts, and Recommendation below describe the repository exactly as it stood for the `v1.0.0` tag (three certified curricula, 79 modules) — not current state. Four more curricula (Database Testing, Performance Testing, AI for QA, Mobile Testing) have since shipped and been certified; current, living totals are seven certified Reference Curricula and 145 modules. See the **Current State** section below, `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`, and `ROADMAP.md` for what's actually true today. This file is not updated retroactively to match later releases — each release gets its own readiness snapshot instead.
+
 ## Architecture
 
 Three architectural layers, each independently documented and each holding up under repeated audit:
@@ -56,7 +58,11 @@ None of these block a `v1.0.0` release; all are honestly tracked rather than sil
 
 ## Future Roadmap
 
-Per `ROADMAP.md`'s revised plan: `v1.0.0` ships now, with four paths and the full contributor platform, rather than waiting for Database Testing, Performance Testing, Security Testing, AI for QA, Interview Academy, and Project Simulations — all of which move to `v1.1.0+`, built as extensions of a stable, already-released platform instead of preconditions for reaching v1.0 at all.
+Per `ROADMAP.md`'s revised plan (as it stood at this sprint): `v1.0.0` ships now, with four paths and the full contributor platform, rather than waiting for Database Testing, Performance Testing, Security Testing, AI for QA, Interview Academy, and Project Simulations — all of which move to `v1.1.0+`, built as extensions of a stable, already-released platform instead of preconditions for reaching v1.0 at all.
+
+## Current State (post-v1.0.0, informational — not part of this sprint's audit)
+
+For readers landing on this file after later releases: as of the Mobile Testing Certification Sprint, TestAtlas has shipped and certified four more curricula on top of the three listed above — Database Testing (v1.1.0), Performance Testing (v1.2.0), AI for QA (v1.3.0), and Mobile Testing (v1.4.0) — bringing the live total to **seven certified Reference Curricula and 145 modules** (including Foundations). Each has its own certification record (`docs/architecture/DATABASE_TESTING_CERTIFICATION.md`, `PERFORMANCE_TESTING_CERTIFICATION.md`, `AI_FOR_QA_CERTIFICATION.md`, `MOBILE_TESTING_CERTIFICATION.md`) and is reflected in `RELEASES.md`'s own v1.1–v1.4 entries. Curriculum work is now deliberately paused for real learner/contributor feedback before an eighth path begins — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note.
 
 ## Release Checklist
 
@@ -79,4 +85,4 @@ Per `ROADMAP.md`'s revised plan: `v1.0.0` ships now, with four paths and the ful
 
 **TestAtlas v1.0.0 is certified release-ready.** Architecture is documented and evidence-based, all shipped curricula are independently certified, quality validation is clean and repeatable, governance is stable, the contributor platform is complete and self-tested, and standard open-source community-health infrastructure is in place. Known limitations are real but non-blocking and honestly tracked. No release-blocking issue was found during this sprint.
 
-**Recommendation**: tag `v1.0.0`, merge, and publish — per the plan already agreed. Treat Manual Testing, API Testing, and Automation Testing as the three certified reference curricula every future path is built against.
+**Recommendation**: tag `v1.0.0`, merge, and publish — per the plan already agreed. Treat Manual Testing, API Testing, and Automation Testing as the three certified reference curricula every future path is built against *(historical, at the time of this sprint — see the Current State section above for the seven certified today)*.

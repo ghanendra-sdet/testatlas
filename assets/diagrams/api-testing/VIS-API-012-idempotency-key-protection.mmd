@@ -1,5 +1,4 @@
 %% VIS-API-012 — Idempotency Key Protecting Against a Retried Request
-%% Used in: 12-idempotency-retry-logic-and-duplicate-request-prevention.md
 flowchart TB
     accTitle: Idempotency Key Protecting Against a Retried Request
     accDescr: A client sends a transfer request with an idempotency key. The connection drops before the response arrives, so the client retries with the same key. A correctly implemented server recognizes the key was already processed and returns the original result without creating a second transfer. A server without this check would create a duplicate transfer.

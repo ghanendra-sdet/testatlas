@@ -1,0 +1,9 @@
+%% VIS-SEC-004 — OWASP Top 10 as an Orientation Map for This Path
+flowchart TD
+    accTitle: OWASP Top 10 as an Orientation Map for This Path
+    accDescr: The OWASP Top 10 categories map directly onto this path's own later modules. Broken access control maps to authorization testing. Identification and authentication failures map to authentication and session testing. Injection maps to input validation testing. Security misconfiguration and cryptographic failures map to configuration and transport security testing. Vulnerable and outdated components maps to security automation and CI/CD.
+    A[OWASP Top 10 Categories] --> B[Broken Access Control<br/>→ Module 7]
+    A --> C[Auth/Session Failures<br/>→ Modules 5–6]
+    A --> D[Injection<br/>→ Module 8]
+    A --> E[Misconfiguration/Crypto<br/>→ Module 12]
+    A --> F[Vulnerable Components<br/>→ Module 17]

@@ -1,5 +1,4 @@
 %% VIS-AUTO-005 — Test, Page Object, and Application Under Test
-%% Used in: 05-page-object-model.md
 flowchart LR
     accTitle: Test, Page Object, and Application Under Test
     accDescr: A test calls methods on a page object, expressing intent like login. The page object contains the actual locators and interaction logic, and is the only thing that touches the application under test directly. When the application changes, only the page object needs updating, not every test that uses it.
