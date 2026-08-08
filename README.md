@@ -83,11 +83,12 @@ The `projects/` area will model realistic domains such as banking, healthcare, e
 
 Choose how you'd like to use TestAtlas.
 
-### 🌐 Read Online
+> 🌐 **Live Documentation**
+> **https://ghanendra-sdet.github.io/testatlas/**
 
-**[Open TestAtlas Documentation](https://ghanendra-sdet.github.io/testatlas/)**
+or
 
-### 💻 Run Locally
+> 💻 **Run locally**
 
 ```bash
 git clone https://github.com/ghanendra-sdet/testatlas.git
