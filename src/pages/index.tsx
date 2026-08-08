@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import type {ReactNode} from 'react';
+import HeroWorkflowDiagram from '@site/src/components/HeroWorkflowDiagram';
 import styles from './index.module.css';
 
 type LearningPath = {
@@ -133,34 +134,41 @@ export default function Home(): ReactNode {
       <main>
         <section className={styles.hero}>
           <div className="container">
-            <p className={styles.eyebrow}>The Open Software Testing Knowledge Base</p>
-            <h1 className={styles.heroTitle}>Learn testing the way it&rsquo;s actually practiced.</h1>
-            <p className={styles.heroCopy}>
-              TestAtlas connects testing principles to the work that matters: understanding risk,
-              investigating failures, building useful coverage, and helping teams ship with confidence.
-            </p>
-            <div className={styles.actions}>
-              <Link
-                className="button button--primary button--lg"
-                to="/learning-paths/foundations/what-is-software-testing">
-                Start Learning
-              </Link>
-              <Link className="button button--secondary button--lg" to="/project/roadmap">
-                See the Roadmap
-              </Link>
+            <div className={styles.heroGrid}>
+              <div className={styles.heroContent}>
+                <p className={styles.eyebrow}>The Open Software Testing Knowledge Base</p>
+                <h1 className={styles.heroTitle}>Learn testing the way it&rsquo;s actually practiced.</h1>
+                <p className={styles.heroCopy}>
+                  TestAtlas connects testing principles to the work that matters: understanding risk,
+                  investigating failures, building useful coverage, and helping teams ship with confidence.
+                </p>
+                <div className={styles.actions}>
+                  <Link
+                    className="button button--primary button--lg"
+                    to="/learning-paths/foundations/what-is-software-testing">
+                    Start Learning
+                  </Link>
+                  <Link className="button button--secondary button--lg" to="/project/roadmap">
+                    See the Roadmap
+                  </Link>
+                </div>
+                <ul className={styles.heroBadgeRow}>
+                  <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>11 Paths Live</li>
+                  <li className={styles.heroBadge}>223 Modules</li>
+                  <li className={styles.heroBadge}>10 Certified Reference Curricula</li>
+                  <li className={styles.heroBadge}>Free</li>
+                  <li className={styles.heroBadge}>Open Source</li>
+                </ul>
+                <p className={styles.heroStatus}>
+                  Foundations plus ten certified curricula — Manual Testing, API Testing, Test Automation,
+                  Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing,
+                  Interview Preparation, and Career &amp; Leadership — are live today, 223 modules in total.
+                </p>
+              </div>
+              <div className={styles.heroVisual}>
+                <HeroWorkflowDiagram />
+              </div>
             </div>
-            <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>11 Paths Live</li>
-              <li className={styles.heroBadge}>223 Modules</li>
-              <li className={styles.heroBadge}>10 Certified Reference Curricula</li>
-              <li className={styles.heroBadge}>Free</li>
-              <li className={styles.heroBadge}>Open Source</li>
-            </ul>
-            <p className={styles.heroStatus}>
-              Foundations plus ten certified curricula — Manual Testing, API Testing, Test Automation,
-              Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing,
-              Interview Preparation, and Career &amp; Leadership — are live today, 223 modules in total.
-            </p>
           </div>
         </section>
 
