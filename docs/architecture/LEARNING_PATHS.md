@@ -1536,7 +1536,7 @@ Shipped as designed, in the approved experiential format rather than standard re
 
 ## Path 11: Career & Leadership
 
-**Status**: Architecture approved 2026-08-08, on `feature/career-leadership`. Implementation proceeding in 5 batches (see below). Directory, batching, and scope all explicitly confirmed — scope revised down from an initial 52-module proposal (see Decisions).
+**Status**: Implementation complete on `feature/career-leadership` (35/35 modules, all 5 batches shipped) as of 2026-08-08. Not yet certified and not yet merged to `main` — a full certification sprint is the next step, followed by explicit release approval, per this project's branch-based release governance. Directory, batching, and scope all explicitly confirmed — scope revised down from an initial 52-module proposal (see Decisions).
 
 **Directory**: `/learning-paths/career-leadership/`  
 **Position**: 11  
@@ -1589,6 +1589,10 @@ Sections 1–9 get dedicated Section Review + Solutions pages, matching every ce
 | 5 | 9–10 + doc sync | 31–35 |
 
 **Success Criteria**: a QA leader builds a testing strategy that's understood and followed across a product or organization; measures and communicates testing impact in terms executives act on; grows team members into their next roles; leads without relying on authority alone.
+
+### As Shipped
+
+All 5 batches shipped matching the planned Module Structure exactly — no section-level deviations. 35/35 modules, 18 Section Review + Solutions pages (Sections 1–9), 14 Mermaid diagrams (VIS-CL-001 through VIS-CL-014, at the top of the approved 10–14 range, concentrated in Sections 1–6 and none added in Batches 4–5 once the target was reached — a genuine, evidence-based allocation rather than the pre-assigned distribution the original proposal sketched). Section 10's capstone (Module 35) extends AtlasBank as planned, synthesizing all nine prior sections into a single applied exercise — an incoming QA Lead assessing a four-team, 150-engineer AtlasBank's quality maturity, risk, strategy, governance, KPIs, team structure, and release-quality plan, then presenting it to leadership. Two real defects were caught by `npm run build`'s link checker across the five batches (bare learning-path-root links, and several Forward Reference Rule violations where a same-path forward link used live markdown instead of plain "(coming soon)" text) — both defect classes fixed before each batch's commit, not deferred.
 
 ---
 
