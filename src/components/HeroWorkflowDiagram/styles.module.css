@@ -1,0 +1,123 @@
+.diagram {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+/* ---- Sequential node fade-in ---- */
+
+.node {
+  opacity: 0;
+  animation: nodeIn 0.5s ease-out forwards;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes nodeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---- Connector "flow" travelling along the line ---- */
+
+.connector {
+  stroke-dasharray: 3 7;
+  animation: flow 5s linear infinite;
+  animation-delay: var(--delay, 0ms);
+}
+
+@keyframes flow {
+  to {
+    stroke-dashoffset: -100;
+  }
+}
+
+/* ---- Pulse ring around the current stage (Execution) ---- */
+
+.pulseRing {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: pulse 2.6s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.55;
+    transform: scale(0.92);
+  }
+  70% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(1.28);
+  }
+}
+
+/* ---- Defects: soft breathing highlight ---- */
+
+.defectGlow {
+  animation: glow 3.2s ease-in-out infinite;
+}
+
+@keyframes glow {
+  0%,
+  100% {
+    stroke-opacity: 0.35;
+  }
+  50% {
+    stroke-opacity: 0.85;
+  }
+}
+
+/* ---- CI/CD: gentle rotating loop ---- */
+
+.cicdLoop {
+  transform-origin: center;
+  transform-box: fill-box;
+  animation: spin 8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---- Mobile: keep flow + fade-in, drop the busier loops ---- */
+
+@media screen and (max-width: 640px) {
+  .pulseRing,
+  .cicdLoop {
+    animation: none;
+  }
+
+  .cicdLoop {
+    transform: none;
+  }
+}
+
+/* ---- Respect reduced motion: render fully static ---- */
+
+@media (prefers-reduced-motion: reduce) {
+  .node,
+  .connector,
+  .pulseRing,
+  .defectGlow,
+  .cicdLoop {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .pulseRing {
+    display: none;
+  }
+}

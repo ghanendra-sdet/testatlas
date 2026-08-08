@@ -6,6 +6,29 @@
   color: #f7fbfc;
 }
 
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+  align-items: center;
+  gap: 3rem;
+}
+
+.heroContent {
+  min-width: 0;
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+}
+
+.heroVisual svg {
+  width: 100%;
+  max-width: 30rem;
+}
+
 .heroTitle,
 .sectionTitle {
   letter-spacing: -0.03em;
@@ -309,6 +332,15 @@
 @media screen and (max-width: 996px) {
   .hero {
     padding: 5.5rem 0;
+  }
+
+  .heroGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .heroVisual svg {
+    max-width: 24rem;
   }
 
   .pathGrid,

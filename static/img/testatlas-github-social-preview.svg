@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+  <rect width="1280" height="640" fill="#071b2a"/>
+  <circle cx="1120" cy="80" r="320" fill="#087f8c" opacity=".28"/>
+  <rect x="110" y="150" width="116" height="116" rx="26" fill="#087f8c"/>
+  <path d="M140 180h56v13h-21v44h-14v-44h-21z" fill="#fff"/>
+  <text x="110" y="370" fill="#f7fbfc" font-family="Arial, sans-serif" font-size="92" font-weight="700">TestAtlas</text>
+  <text x="110" y="428" fill="#a8e6e2" font-family="Arial, sans-serif" font-size="34">Open-source Software Testing curriculum</text>
+  <text x="110" y="495" fill="#f7fbfc" font-family="Arial, sans-serif" font-size="30" font-weight="600">223 Modules &#183; 11 Learning Paths &#183; 10 Certified Curricula</text>
+  <text x="110" y="545" fill="#6fb8b3" font-family="Arial, sans-serif" font-size="24" letter-spacing="2">LEARN. PRACTICE. GROW.</text>
+</svg>

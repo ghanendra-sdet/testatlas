@@ -52,7 +52,7 @@ const config: Config = {
         docs: false,
         blog: {
           showReadingTime: true,
-          blogTitle: 'TestAtlas Notes',
+          blogTitle: 'TestAtlas Blog',
           blogDescription: 'Project updates and practical quality-engineering notes.',
           feedOptions: {
             type: ['rss', 'atom'],
@@ -115,6 +115,16 @@ const config: Config = {
 
   themeConfig: {
     image: 'img/testatlas-social-card.svg',
+    docs: {
+      sidebar: {
+        // Accordion behavior: expanding a learning path collapses any other
+        // expanded one at the same level. The active path still
+        // auto-expands and stays open while browsing its own modules —
+        // that's Docusaurus's own built-in useAutoExpandActiveCategory
+        // logic, unaffected by this flag.
+        autoCollapseCategories: true,
+      },
+    },
     mermaid: {
       theme: {light: 'base', dark: 'base'},
       options: {
@@ -184,7 +194,7 @@ const config: Config = {
           position: 'left',
           label: 'Project',
         },
-        {to: '/blog', label: 'Notes', position: 'left'},
+        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: `https://github.com/${organizationName}/${projectName}`,
           label: 'GitHub',
