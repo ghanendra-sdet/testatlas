@@ -1,0 +1,7 @@
+%% VIS-CL-006 — Release Model to Testing Emphasis
+flowchart LR
+    A[Scheduled Release] --> A1[Thorough pre-release<br/>regression, clear go/no-go]
+    B[Continuous Deployment] --> B1[Strong automated coverage,<br/>feature flags, fast rollback]
+    C[Phased Rollout] --> C1[Pre-release verification<br/>plus active monitoring<br/>during expansion]
+    accTitle: Release Model to Testing Emphasis
+    accDescr: Each release model shifts where testing emphasis falls. Scheduled releases emphasize thorough pre-release regression testing with a clear go or no-go decision point. Continuous deployment emphasizes strong automated regression coverage, feature flags, and fast rollback capability, since there is little dedicated pre-release testing window. Phased rollout emphasizes both pre-release verification and active monitoring during the gradual expansion to a full user base.

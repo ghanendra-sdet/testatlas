@@ -1,0 +1,8 @@
+%% VIS-CL-012 — QA vs. Quality Engineering Ownership Model
+flowchart LR
+    A[Traditional QA] --> A1[Developers write code]
+    A1 --> A2[QA tests it after,<br/>owns most defect-catching]
+    B[Quality Engineering] --> B1[Developers own unit/integration<br/>testing for their own code]
+    B --> B2[QE builds infrastructure,<br/>standards, handles hardest<br/>specialized problems]
+    accTitle: QA vs. Quality Engineering Ownership Model
+    accDescr: Traditional QA has developers write code, with the QA team testing it afterward and owning most defect-catching. Quality Engineering distributes ownership differently — developers own unit and integration testing for their own code as a baseline, while the QE team focuses on building shared testing infrastructure, defining standards, and handling the hardest, most specialized testing problems.

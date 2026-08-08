@@ -1534,40 +1534,65 @@ Shipped as designed, in the approved experiential format rather than standard re
 
 ---
 
-## Path 11: Career and Leadership in QA
+## Path 11: Career & Leadership
 
-**Directory**: `/learning-paths/career/`  
+**Status**: Implementation complete on `feature/career-leadership` (35/35 modules, all 5 batches shipped) as of 2026-08-08. Not yet certified and not yet merged to `main` — a full certification sprint is the next step, followed by explicit release approval, per this project's branch-based release governance. Directory, batching, and scope all explicitly confirmed — scope revised down from an initial 52-module proposal (see Decisions).
+
+**Directory**: `/learning-paths/career-leadership/`  
 **Position**: 11  
-**Prerequisites**: Foundations + 1+ years QA experience  
-**Target Audience**: QA professionals, team leads, QA managers, QA directors  
-**Estimated Duration**: Ongoing (career development)  
+**Prerequisites**: Foundations + 1+ years QA experience (Related Topics only, not hard prerequisites, on any specialized-domain path — same non-blocking dependency shape Security Testing and Interview Preparation established)  
+**Target Audience**: Senior QA engineers and SDETs transitioning into Lead, Manager, or Architect roles  
+**Estimated Duration**: Ongoing (career development, not a linear course)
 
-**Learning Objectives**:
-- Build and communicate testing strategies
-- Lead QA teams and processes
-- Measure and report testing impact
-- Grow your QA career (IC or management track)
-- Handle technical debt and process improvement
-- Navigate organizational politics
+**Learning Objectives**: transition from Senior QA to Lead/Manager responsibilities; build test strategies for products and organizations; design quality processes instead of only executing them; lead automation initiatives; measure and improve engineering quality; communicate with stakeholders and executives; mentor testers; plan hiring and team growth; drive quality culture across engineering organizations.
 
-**Modules** (planned for v0.1–v1.0):
-1. From QA Engineer to QA Lead (first leadership role)
-2. Building a Test Strategy (risk-based approach, scoping)
-3. QA Process Design and Governance (how QA works in your organization)
-4. Metrics That Matter (reporting test effectiveness, not vanity metrics)
-5. Communicating Test Results (to engineers, to PMs, to executives)
-6. Managing Technical Debt in Testing (when to refactor, when to rebuild)
-7. Tool Selection and Vendor Evaluation (choosing frameworks, platforms)
-8. Onboarding and Growing QA Teams (hiring, training, retaining)
-9. Career Growth Paths in QA (IC vs. management, specialization)
-10. QA in Agile, Waterfall, and Hybrid (adapting strategy to process)
-11. Executive Communication (dashboards, ROI, business impact)
-12. Common Leadership Mistakes in QA (moving too fast, ignoring culture)
+**Scope boundary**: this path teaches strategy, leadership, process, communication, and organizational scaling — explicitly not execution-level testing technique, which is already taught across the other 9 certified curricula. Every section is written to reference those paths' techniques (e.g., BVA, API contract testing, automation frameworks) rather than re-teach them, the same reuse discipline every certified path already follows.
 
-**Success Criteria**:
-- QA leader builds a testing strategy that's understood and followed
-- QA leader measures testing impact on business outcomes
-- QA leader grows team members into their next roles
+### Decisions (Approved 2026-08-08)
+
+1. **Directory**: `career-leadership`, not the original stub's `career` — approved as proposed.
+2. **Implementation strategy**: 5 batches of 2 sections each, full validation (Mermaid, navigation, internal links, build) after every batch, documentation sync only in the final batch — approved as proposed.
+3. **Scope, revised down from the initial proposal**: the first architecture draft proposed 52 modules / 20–24 diagrams, roughly 2.5x every other certified path. Not approved — no demonstrated learner need for that scale yet. Revised target: **~35 modules, 10–14 diagrams, 1 capstone, 6–8 case studies folded into 2 application modules** (rather than one module per case study), keeping this path substantial but consistent with the 16–23-module norm every other certified curriculum set. Deeper coverage (organizational transformation, budgeting, executive leadership) stays a candidate for a future evidence-driven minor release, not the initial certification.
+
+### Module Structure (35 modules, 10 sections)
+
+**Section 1 — Career Growth** (Modules 1–3): QA Career Roadmap: IC vs. Technical Lead vs. Manager; Developing Leadership Skills and Technical Credibility; Personal Branding for Test Engineers.
+
+**Section 2 — Test Strategy** (Modules 4–7): What Is Test Strategy? (and how it differs from a test plan); Risk-Based Strategy; Release Strategy; Organization-Wide Quality Strategy.
+
+**Section 3 — Leadership** (Modules 8–12): Leading Without Authority; Running QA Teams; Mentoring Engineers; Delegation and Decision Making; Conflict Resolution.
+
+**Section 4 — Engineering Excellence** (Modules 13–16): Shift Left at Scale; Shift Right and Continuous Testing; Quality Engineering as a Discipline; Test Governance.
+
+**Section 5 — Metrics & Reporting** (Modules 17–20): Quality KPIs and Defect Metrics; Automation Metrics and Release Health; Executive Dashboards; Engineering Reporting.
+
+**Section 6 — Team Management** (Modules 21–24): Hiring and Interviewing Test Engineers; Career Development and Performance Reviews; Giving Feedback; Coaching.
+
+**Section 7 — Cross-Functional Leadership** (Modules 25–27): Working with Product and Developers; Working with DevOps and Stakeholder Management; Executive Communication.
+
+**Section 8 — Scaling Quality** (Modules 28–30): QA in Startups vs. Enterprises; Distributed Teams and Scaling Automation; Building Centers of Excellence.
+
+**Section 9 — Modern Leadership** (Modules 31–32): AI-Assisted QA Leadership and Automation Transformation; Engineering Culture and Innovation in Testing.
+
+**Section 10 — Real-World Leadership / Application** (Modules 33–35, Application Module convention — no Section 10 Review/Solutions): Case Studies and Failure Analysis (Module 33, 3–4 worked case studies); Quality Transformation Stories and Leadership Playbooks (Module 34, 3–4 worked stories, 6–8 case studies total across both modules); **Capstone — Building an Organization-Wide Test Strategy** (Module 35, extends AtlasBank: an incoming QA Architect inherits AtlasBank's existing, fragmented per-team testing practices — the same product every other certified path has already exercised at its own layer — and designs and pitches a unified, org-wide quality strategy across them).
+
+Sections 1–9 get dedicated Section Review + Solutions pages, matching every certified path's own convention. Diagrams (10–14 total) are added where a section's content is genuinely structural/relational rather than narrative — strongest candidates are Section 2 (strategy lifecycle, risk-based decision flow), Section 3 (delegation/decision framework), Section 5 (KPI relationships), Section 8 (scaling/centers-of-excellence model), and the Section 10 capstone (org-wide quality ownership model) — allocated per-section during implementation rather than rigidly pre-assigned per module, the same way every other certified path built its diagrams.
+
+### Implementation Batches
+
+| Batch | Sections | Modules |
+|---|---|---|
+| 1 | 1–2 | 1–7 |
+| 2 | 3–4 | 8–16 |
+| 3 | 5–6 | 17–24 |
+| 4 | 7–8 | 25–30 |
+| 5 | 9–10 + doc sync | 31–35 |
+
+**Success Criteria**: a QA leader builds a testing strategy that's understood and followed across a product or organization; measures and communicates testing impact in terms executives act on; grows team members into their next roles; leads without relying on authority alone.
+
+### As Shipped
+
+All 5 batches shipped matching the planned Module Structure exactly — no section-level deviations. 35/35 modules, 18 Section Review + Solutions pages (Sections 1–9), 14 Mermaid diagrams (VIS-CL-001 through VIS-CL-014, at the top of the approved 10–14 range, concentrated in Sections 1–6 and none added in Batches 4–5 once the target was reached — a genuine, evidence-based allocation rather than the pre-assigned distribution the original proposal sketched). Section 10's capstone (Module 35) extends AtlasBank as planned, synthesizing all nine prior sections into a single applied exercise — an incoming QA Lead assessing a four-team, 150-engineer AtlasBank's quality maturity, risk, strategy, governance, KPIs, team structure, and release-quality plan, then presenting it to leadership. Two real defects were caught by `npm run build`'s link checker across the five batches (bare learning-path-root links, and several Forward Reference Rule violations where a same-path forward link used live markdown instead of plain "(coming soon)" text) — both defect classes fixed before each batch's commit, not deferred.
 
 ---
 
