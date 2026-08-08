@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Building Centers of Excellence
 
 **Prerequisites**: [Distributed Teams and Scaling Automation](/learning-paths/career-leadership/distributed-teams-and-scaling-automation)
-**Leads to**: After this, you'll be ready for AI-Assisted QA Leadership and Automation Transformation, opening Section 9 (coming soon).
+**Leads to**: After this, you'll be ready for [AI-Assisted QA Leadership and Automation Transformation](/learning-paths/career-leadership/ai-assisted-qa-leadership-and-automation-transformation).
 
 ## Why This Matters
 
