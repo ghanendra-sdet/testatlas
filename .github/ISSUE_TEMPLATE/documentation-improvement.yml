@@ -1,0 +1,40 @@
+name: Documentation Improvement
+description: Propose a concrete improvement to a governance, contributor, or architecture document (not curriculum content).
+title: "[Docs]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Affected documentation page
+      description: e.g. CONTRIBUTING.md, AUTHOR_GUIDE.md, a docs/architecture/*.md file.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What's missing, unclear, outdated, or contradicts the shipped repository state.
+    validations:
+      required: true
+  - type: textarea
+    id: why-matters
+    attributes:
+      label: Why it matters
+      description: What did this cause — a confused contributor, a stale claim, a broken workflow step? Style-only rewrites without a functional problem belong in a PR discussion, not this template.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+      description: Your suggested fix or replacement text.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or context
+      description: A link, a contradicting file, or the situation that surfaced this.
+    validations:
+      required: false

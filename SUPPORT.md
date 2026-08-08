@@ -16,7 +16,7 @@ Read [AUTHOR_GUIDE.md](AUTHOR_GUIDE.md) first. For a single module addition to a
 
 ## I have a general question about using TestAtlas
 
-Open a GitHub Discussion (if enabled on this repository) or a GitHub issue using the **Question** template. This includes "how do I navigate to X" or "is Y covered anywhere" — not everything needs to be a bug report.
+Open a GitHub Discussion in **Q&A** (repository questions) or **Learning Help** (testing-concept questions). This includes "how do I navigate to X" or "is Y covered anywhere" — not everything needs to be a bug report, and Discussions gives threaded answers an Issue can't.
 
 ## I want to report a security vulnerability in the site's code
 

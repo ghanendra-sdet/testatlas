@@ -1,0 +1,57 @@
+name: Learner Confusion
+description: A specific module or explanation genuinely didn't land — not a general feature request.
+title: "[Confusion]: "
+labels: ["question"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This template is for a genuine "I read this and couldn't follow it" report on a specific module — not a broad "TestAtlas should also cover X" suggestion. For the latter, use [GitHub Discussions → Ideas](https://github.com/ghanendra-sdet/testatlas/discussions/categories/ideas) instead.
+  - type: input
+    id: module
+    attributes:
+      label: Affected module
+      description: Full URL or file path of the module.
+    validations:
+      required: true
+  - type: textarea
+    id: goal
+    attributes:
+      label: What you were trying to understand
+      description: What question were you trying to answer when you hit this?
+    validations:
+      required: true
+  - type: textarea
+    id: confusing
+    attributes:
+      label: What was confusing
+      description: The specific paragraph, example, or explanation that didn't land.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+      description: What you thought the module would explain or how you expected the explanation to work.
+    validations:
+      required: true
+  - type: textarea
+    id: understood
+    attributes:
+      label: What you understood instead
+      description: Your actual takeaway after reading it — this is often the most useful field for a reviewer to see exactly where the gap is.
+    validations:
+      required: true
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Suggested clarification
+      description: If you have an idea of what would have made it click, share it. Optional.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+    validations:
+      required: false

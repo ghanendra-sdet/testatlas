@@ -1,0 +1,48 @@
+name: Content Correction
+description: Report an error, inaccuracy, or outdated claim in a learning module or other content page.
+title: "[Content]: "
+labels: ["documentation"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Module or page
+      description: Full URL or file path.
+      placeholder: "learning-paths/manual-testing/04-boundary-value-analysis.md"
+    validations:
+      required: true
+  - type: textarea
+    id: statement
+    attributes:
+      label: Problematic statement
+      description: Quote the exact incorrect or outdated content.
+    validations:
+      required: true
+  - type: textarea
+    id: why-wrong
+    attributes:
+      label: Why it is incorrect
+      description: Explain the factual or technical problem with the statement above.
+    validations:
+      required: true
+  - type: textarea
+    id: correct-info
+    attributes:
+      label: Correct information
+      description: What it should say instead, if you know it. If you're not certain, say so — flagging the issue is still useful.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or source
+      description: Documentation, spec, real-world example, or experience that supports the correction. Factual corrections need evidence, not just an assertion.
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: How you noticed this (studying, interviewing, using it at work) — helps reviewers judge real-world impact.
+    validations:
+      required: false

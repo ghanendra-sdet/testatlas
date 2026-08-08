@@ -1,0 +1,79 @@
+name: Bug Report
+description: Report a problem with the site itself — broken link, build failure, rendering issue, search not working.
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not report a security vulnerability here.** If this is a security issue, follow the private reporting process in [SECURITY.md](https://github.com/ghanendra-sdet/testatlas/blob/main/SECURITY.md) instead — do not open a public issue for it.
+  - type: input
+    id: summary
+    attributes:
+      label: Summary
+      description: A short, clear description of the bug.
+      placeholder: "e.g. Sidebar collapses unexpectedly on the Career & Leadership path"
+    validations:
+      required: true
+  - type: input
+    id: affected-url
+    attributes:
+      label: Affected URL or module
+      description: The page URL or file path where this happens. Use "site-wide" if it isn't page-specific.
+      placeholder: "https://ghanendra-sdet.github.io/testatlas/learning-paths/..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: What should have happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+      description: What actually happened.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Numbered steps that reliably reproduce the issue.
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Console errors, network errors, build output, or anything else that shows the bug is real — not just what you expected. This is the most important field for triage.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / device
+      description: Only if relevant to the bug (e.g. a rendering issue).
+      placeholder: "e.g. Chrome 128 / macOS, or Safari / iOS 17"
+    validations:
+      required: false
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots or recordings
+      description: Drag and drop an image or video here, if applicable.
+    validations:
+      required: false
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Anything else a maintainer should know.
+    validations:
+      required: false

@@ -65,6 +65,14 @@ TestAtlas covers the core areas of modern software testing. Eleven paths are liv
 
 With ten certified curricula now shipped, active development is paused in favor of gathering real learner and contributor feedback before adding an eleventh path — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note for the reasoning.
 
+## Community
+
+Join the TestAtlas community to ask questions, share your learning, and discuss ideas.
+
+- 💬 [GitHub Discussions](https://github.com/ghanendra-sdet/testatlas/discussions)
+- 🐞 [GitHub Issues](https://github.com/ghanendra-sdet/testatlas/issues)
+- 🤝 [CONTRIBUTING.md](CONTRIBUTING.md)
+
 ## What will be available
 
 As the project grows, TestAtlas will provide test plans, strategies, cases, checklists, RTMs, bug reports, release templates, runnable labs, project simulations, cheat sheets, diagrams, decision trees, and interview exercises.
@@ -73,7 +81,11 @@ The `projects/` area will model realistic domains such as banking, healthcare, e
 
 ## Getting started
 
-Read online at **`[live site URL — to be added once GitHub Pages is published]`**, or run the site locally:
+Read online at:
+
+https://ghanendra-sdet.github.io/testatlas/
+
+Or run the site locally:
 
 ```bash
 git clone https://github.com/ghanendra-sdet/testatlas.git

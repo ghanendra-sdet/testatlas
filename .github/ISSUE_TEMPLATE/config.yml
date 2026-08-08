@@ -1,5 +1,11 @@
 blank_issues_enabled: false
 contact_links:
+  - name: Ask a Question (Q&A Discussion)
+    url: https://github.com/ghanendra-sdet/testatlas/discussions/categories/q-a
+    about: General questions about using or navigating TestAtlas belong in Discussions, not an Issue — you'll get threaded answers and can mark one accepted.
+  - name: Learning Help (Discussion)
+    url: https://github.com/ghanendra-sdet/testatlas/discussions/categories/learning-help
+    about: Stuck on a testing concept itself, not the repository? Ask in Learning Help.
   - name: Support and General Questions
     url: https://github.com/ghanendra-sdet/testatlas/blob/main/SUPPORT.md
-    about: Read SUPPORT.md to find the right place for your specific need before opening an issue.
+    about: Not sure where your question or report belongs? Read SUPPORT.md to find the right place before opening an issue.

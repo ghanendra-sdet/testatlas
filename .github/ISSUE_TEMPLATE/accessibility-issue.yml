@@ -1,0 +1,65 @@
+name: Accessibility Issue
+description: Report an accessibility problem — screen reader, keyboard navigation, contrast, or other assistive-technology barrier.
+title: "[Accessibility]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Affected page
+      description: Full URL or file path. Use "site-wide" if it isn't page-specific.
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Accessibility problem
+      description: What's the barrier — screen reader misreads content, keyboard focus is trapped/lost, insufficient contrast, missing alt text, etc.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected accessible behavior
+      description: What should happen for this to be accessible.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Observed behavior
+      description: What actually happens.
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Reproduction steps
+      placeholder: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Screenshot, screen recording, or a specific WCAG success criterion this fails, if known.
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: Browser / device
+      placeholder: "e.g. Firefox 129 / Windows 11"
+    validations:
+      required: false
+  - type: input
+    id: assistive-tech
+    attributes:
+      label: Assistive technology (if applicable)
+      description: Only fill this in if you were using one — not required to report an issue.
+      placeholder: "e.g. VoiceOver, NVDA, JAWS, screen magnifier, switch control"
+    validations:
+      required: false
