@@ -15,6 +15,18 @@ last_reviewed: "2026-08-04"
 
 Every module in this path taught one piece of the QA lifecycle. This capstone introduces nothing new — it walks one realistic feature through every phase, in order, the way a real QA engineer actually works a real assignment: from an ambiguous requirement to a shipped, verified fix. If any step below feels unfamiliar, that's a signal to revisit the linked module — everything here should already be familiar territory.
 
+```mermaid
+%% VIS-007 — The Manual Testing Lifecycle, End to End
+flowchart LR
+    accTitle: The Manual Testing Lifecycle, End to End
+    accDescr: A real QA assignment moves through six connected phases - requirement analysis, test design combining multiple techniques, test case writing and data design, organization and traceability, execution and reporting, and review - not as isolated exercises but as one continuous process.
+    A[Phase 1<br/>Requirement Analysis] --> B[Phase 2<br/>Test Design]
+    B --> C[Phase 3<br/>Test Case Writing]
+    C --> D[Phase 4<br/>Organization]
+    D --> E[Phase 5<br/>Execution & Reporting]
+    E --> F[Phase 6<br/>Review]
+```
+
 ## The Feature: AtlasBank International Money Transfer
 
 AtlasBank is launching international money transfers: a customer sends money from their AtlasBank account to a recipient's account at a foreign bank, in a foreign currency, subject to a daily transfer limit, currency conversion, and anti-money-laundering (AML) compliance checks above a certain transaction size. The requirement document states:

@@ -27,6 +27,27 @@ Both testers were rigorous. The difference is that Error Guessing deliberately r
 
 Error Guessing means using experience — your own, or documented patterns from the wider testing discipline — to anticipate specific defects a feature is likely to contain, based on recognizable patterns rather than a formula applied to the feature's inputs.
 
+```mermaid
+%% VIS-004 — From Formal Technique to Error Guessing
+flowchart TD
+    accTitle: From Formal Technique to Error Guessing
+    accDescr: Boundary Value Analysis, Equivalence Partitioning, Decision Tables, State Transition Testing, and Pairwise Testing each systematically reduce a feature's test ideas, but risk still remains after all five are applied. Error Guessing, built from experience and pattern recognition, is what specifically targets that remaining risk.
+    A[Formal Test Design] --> B[Boundary Value<br/>Analysis]
+    A --> C[Equivalence<br/>Partitioning]
+    A --> D[Decision<br/>Tables]
+    A --> E[State Transition<br/>Testing]
+    A --> F[Pairwise<br/>Testing]
+    B --> G[Remaining Risk]
+    C --> G
+    D --> G
+    E --> G
+    F --> G
+    G --> H[Error Guessing]
+    H --> I[Experience +<br/>Pattern Recognition]
+```
+
+This is exactly why Error Guessing closes this section rather than opening it: it only makes sense once you can see what the five systematic techniques still leave uncovered.
+
 Common, well-documented defect patterns worth specifically watching for:
 
 | Pattern | What to Try | Why It's a Common Defect Source |

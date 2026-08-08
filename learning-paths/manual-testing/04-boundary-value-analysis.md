@@ -29,6 +29,18 @@ Boundary Value Analysis (BVA) is a test design technique based on a simple, well
 
 For any range with a minimum and a maximum, BVA identifies six values worth testing:
 
+```mermaid
+%% VIS-005 — The Six Boundary Value Analysis Points
+flowchart LR
+    accTitle: The Six Boundary Value Analysis Points
+    accDescr: For the banking transfer example's $1 to $10,000 range, six values are tested in sequence along the range - $0 (just below minimum, rejected), $1 (minimum, accepted), $2 (just above minimum, accepted), $9,999 (just below maximum, accepted), $10,000 (maximum, accepted), and $10,001 (just above maximum, rejected). The two rejected values sit immediately outside the accepted range at each edge.
+    A["$0<br/>Min − 1<br/>Rejected"] --> B["$1<br/>Min<br/>Accepted"]
+    B --> C["$2<br/>Min + 1<br/>Accepted"]
+    C -.-> D["$9,999<br/>Max − 1<br/>Accepted"]
+    D --> E["$10,000<br/>Max<br/>Accepted"]
+    E --> F["$10,001<br/>Max + 1<br/>Rejected"]
+```
+
 | Value | Relative to Boundary | Expected Result |
 |---|---|---|
 | Minimum − 1 | Just below the minimum | Rejected (invalid) |

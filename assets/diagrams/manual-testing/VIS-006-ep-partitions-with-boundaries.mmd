@@ -1,0 +1,8 @@
+%% VIS-006 — Equivalence Partitioning and Boundary Value Analysis, Together
+flowchart LR
+    accTitle: Equivalence Partitioning and Boundary Value Analysis, Together
+    accDescr: For the healthcare age field valid from 0 to 120, the input space divides into three partitions - invalid below the range represented by negative five, the valid range represented by the single value 45, and invalid above the range represented by 150. The boundaries themselves, 0 and 120, are tested directly rather than only the partition's representative value.
+    A["−5<br/>Invalid Partition<br/>(Below Range)"] --> B["0<br/>Boundary<br/>(Minimum)"]
+    B --> C["45<br/>Valid Partition<br/>(Representative Value)"]
+    C --> D["120<br/>Boundary<br/>(Maximum)"]
+    D --> E["150<br/>Invalid Partition<br/>(Above Range)"]

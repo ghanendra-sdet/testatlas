@@ -64,6 +64,17 @@ In both examples, the number of partitions was determined by actual differences 
 
 ## Equivalence Partitioning and Boundary Value Analysis, Together
 
+```mermaid
+%% VIS-006 — Equivalence Partitioning and Boundary Value Analysis, Together
+flowchart LR
+    accTitle: Equivalence Partitioning and Boundary Value Analysis, Together
+    accDescr: For the healthcare age field valid from 0 to 120, the input space divides into three partitions - invalid below the range represented by negative five, the valid range represented by the single value 45, and invalid above the range represented by 150. The boundaries themselves, 0 and 120, are tested directly rather than only the partition's representative value.
+    A["−5<br/>Invalid Partition<br/>(Below Range)"] --> B["0<br/>Boundary<br/>(Minimum)"]
+    B --> C["45<br/>Valid Partition<br/>(Representative Value)"]
+    C --> D["120<br/>Boundary<br/>(Maximum)"]
+    D --> E["150<br/>Invalid Partition<br/>(Above Range)"]
+```
+
 The two techniques are complementary by design: Equivalence Partitioning identifies *how many groups* exist and confirms one value per group is sufficient; Boundary Value Analysis identifies *which values within and around each group's edges* are actually worth that one test. In practice, a complete test design for a bounded input applies both: partition the input space first, then apply BVA at every partition boundary. Neither technique alone is a complete answer — Equivalence Partitioning without BVA would test the middle of each partition and miss the off-by-one defects that concentrate at the edges; BVA without Equivalence Partitioning would properly cover every boundary but might over-test or under-partition everything in between.
 
 ## Common Mistakes
