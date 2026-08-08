@@ -100,3 +100,53 @@ If most of your own answers connect back to a specific module rather than genera
 ## Career & Leadership v1.0 Complete
 
 You've completed all 35 modules across 10 sections: career growth and technical credibility, test strategy, people leadership, engineering excellence at scale, metrics and reporting, team management, cross-functional leadership, scaling quality, modern leadership challenges, and this applied capstone. The throughline connecting all of it, restated one final time: identify the specific, real problem; make a small, evidence-generating first move; measure the actual result; and use that evidence, not authority or intuition alone, to expand. That discipline transfers to whichever QA leadership track — Individual Contributor, Technical Lead, or Manager — you're actually building toward.
+
+## Key Takeaways
+
+- QA careers branch into three distinct, equally legitimate tracks past Senior — Individual Contributor, Technical Lead, and Manager — and technical credibility is the foundation all three depend on.
+- A genuine test strategy states risk priorities and reasoning; a plan states specific tests and schedules — conflating the two produces a document that goes stale the moment specifics change.
+- Influence, whether leading without formal authority or negotiating a governance standard, is built through small, piloted, evidence-generating moves — not persistence, title, or intuition alone.
+- Scaling any practice — shift-left, automation, governance, a Center of Excellence — requires structural change and genuine evidence, matched proportionally to actual risk, not applied uniformly regardless of context or stage.
+- The single discipline connecting every section of this path: identify a specific problem, prove a small fix works, measure the result, then expand based on that evidence.
+
+## What You Just Learned
+
+Across ten sections, this path built a complete QA leadership toolkit: recognizing which career track is actually on offer and building the credibility every track depends on; writing a genuine test strategy and allocating effort by risk; leading people through influence, delegation, mentoring, and conflict resolution; scaling engineering excellence — shift-left, shift-right, Quality Engineering, governance — from a single team to an entire organization; choosing metrics and reporting that drive real decisions instead of looking reassuring; hiring, developing, and coaching a team deliberately rather than incidentally; working effectively across product, engineering, DevOps, and executive audiences; adapting practice to organizational stage, distribution, and formal cross-team structure; leading AI adoption and engineering culture honestly; and finally, in this capstone, synthesizing all of it into one applied, organization-wide test strategy.
+
+## Related Topics
+
+- [Test Automation](/learning-paths/automation/introduction-to-automation-testing) — The execution-level automation practice this path's leadership guidance (shift-left, scaling automation, CI/CD-adjacent governance) is built to direct, not replace
+- [Performance Testing](/learning-paths/performance-testing/performance-testing-strategy) — A specialized testing discipline this path's organization-wide strategy and risk-based reasoning apply directly to when prioritizing across domains
+- [Security Testing](/learning-paths/security-testing/what-is-security-testing) — The domain most directly relevant to this capstone's own shared-authentication risk scenario, at the technique level this path deliberately doesn't re-teach
+- [AI for QA](/learning-paths/ai-for-qa/ai-in-software-testing) — The foundational AI-accelerates-not-replaces-judgment distinction Module 31 built its own leadership guidance on
+- [Interview Preparation](/learning-paths/interview-preparation/how-qa-interviews-are-structured) — Where to go next if your own immediate goal is landing the Lead, Manager, or Architect role this path prepares you to perform in
+
+## Glossary
+
+**Test Strategy**: The high-level, reasoned approach an organization takes to testing — stable across releases, distinct from a test plan's specific, tactical detail.
+
+**Quality Engineering**: A discipline in which quality ownership is genuinely distributed across an engineering organization, distinct from a QA team that owns most testing execution itself.
+
+**KPI (Key Performance Indicator)**: A metric tied to a real outcome someone would act on if it changed — as distinct from a vanity metric that looks favorable but reflects activity, not result.
+
+**Governance**: The minimum, centrally maintained testing standards for organization-wide consistency, scoped narrowly to genuinely cross-cutting or high-risk concerns rather than every process decision.
+
+**Coaching**: An ongoing, growth-focused relationship centered on helping someone define and work toward their own goals over time, distinct from the narrower, more instance-specific practices of mentoring and feedback.
+
+**Stakeholder**: Anyone with a genuine interest in quality outcomes whose specific information needs should shape what, and how often, they're actually told.
+
+**Technical Leadership**: Influence and direction-setting built on technical credibility and judgment, achievable with or without formal management authority.
+
+## Quick Revision
+
+Remember these five points:
+
+✓ QA careers branch into three distinct, equally legitimate tracks past Senior, all resting on the same technical-credibility foundation.
+
+✓ A test strategy states risk and reasoning; a test plan states specifics — keeping the two distinct is what keeps a strategy useful as things change.
+
+✓ Real influence, at any scale, is built through small, piloted, evidence-generating moves — not authority, persistence, or intuition alone.
+
+✓ Scaling any practice requires structural change and proportional governance, matched to actual risk and organizational stage, not applied uniformly.
+
+✓ Every section of this path shares one discipline: identify the real problem, prove a small fix, measure the result, then expand on evidence.
