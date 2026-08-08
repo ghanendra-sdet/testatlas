@@ -1,0 +1,33 @@
+.main {
+  padding: 4rem 0 6rem;
+}
+
+.header {
+  max-width: 46rem;
+  margin-bottom: 3rem;
+}
+
+.heading {
+  margin: 0;
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+}
+
+.intro {
+  margin: 1.25rem 0 0;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+@media screen and (max-width: 996px) {
+  .main {
+    padding: 3rem 0 4rem;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+}
