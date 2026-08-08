@@ -47,7 +47,7 @@ The project combines structured learning with hands-on work:
 
 ## Learning paths
 
-TestAtlas covers the core areas of modern software testing. Ten paths are live — Foundations plus nine certified Reference Curricula, all built against the same architecture; one more is planned:
+TestAtlas covers the core areas of modern software testing. Eleven paths are live — Foundations plus ten certified Reference Curricula, all built against the same architecture:
 
 1. ✅ Foundations of Software Testing — shipped, v1.0, 17 modules
 2. ✅ Manual Testing — shipped, v1.0, 23 modules, certified
@@ -59,11 +59,11 @@ TestAtlas covers the core areas of modern software testing. Ten paths are live �
 8. ✅ AI for QA — shipped, v1.0, 17 modules, certified
 9. ✅ Mobile Testing — shipped, v1.0, 16 modules, certified
 10. ✅ Interview Preparation — shipped, v1.0, 21 modules, certified
-11. Career Growth in Quality Engineering — planned
+11. ✅ Career & Leadership — shipped, v1.0, 35 modules, certified
 
-188 modules live today (171 across the nine certified Reference Curricula, plus Foundations). Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped and planned path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
+223 modules live today (206 across the ten certified Reference Curricula, plus Foundations). Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
 
-With nine certified curricula now shipped, active development is paused in favor of gathering real learner and contributor feedback before adding a tenth path — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note for the reasoning.
+With ten certified curricula now shipped, active development is paused in favor of gathering real learner and contributor feedback before adding an eleventh path — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note for the reasoning.
 
 ## What will be available
 

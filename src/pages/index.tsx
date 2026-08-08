@@ -76,7 +76,8 @@ const learningPaths: LearningPath[] = [
   {
     title: 'Career & Leadership',
     description: 'Building a test strategy, leading a QA team, and growing beyond individual execution.',
-    status: 'Planned',
+    href: '/learning-paths/career-leadership/qa-career-roadmap-ic-vs-technical-lead-vs-manager',
+    status: 'Live · 35 modules, certified',
   },
 ];
 
@@ -149,17 +150,16 @@ export default function Home(): ReactNode {
               </Link>
             </div>
             <ul className={styles.heroBadgeRow}>
-              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>10 Paths Live</li>
-              <li className={styles.heroBadge}>188 Modules</li>
-              <li className={styles.heroBadge}>9 Certified Reference Curricula</li>
+              <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>11 Paths Live</li>
+              <li className={styles.heroBadge}>223 Modules</li>
+              <li className={styles.heroBadge}>10 Certified Reference Curricula</li>
               <li className={styles.heroBadge}>Free</li>
               <li className={styles.heroBadge}>Open Source</li>
             </ul>
             <p className={styles.heroStatus}>
-              Foundations plus nine certified curricula — Manual Testing, API Testing, Test Automation,
-              Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing, and
-              Interview Preparation — are live today, 188 modules in total. One more learning path remains
-              planned — see what&rsquo;s next below.
+              Foundations plus ten certified curricula — Manual Testing, API Testing, Test Automation,
+              Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing,
+              Interview Preparation, and Career &amp; Leadership — are live today, 223 modules in total.
             </p>
           </div>
         </section>
