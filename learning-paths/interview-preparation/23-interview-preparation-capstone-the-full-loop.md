@@ -1,6 +1,6 @@
 ---
 title: "Interview Preparation Capstone: The Full Loop"
-sidebar_label: "21 Capstone: The Full Loop"
+sidebar_label: "23 Capstone: The Full Loop"
 description: "A complete, timed, end-to-end simulated interview loop — behavioral, technical, open-ended scenario, and cross-domain rounds — closed with structured self-assessment against every technique this path taught."
 keywords: ["full QA interview simulation", "complete mock interview", "QA interview capstone", "end to end interview practice"]
 difficulty: "intermediate"

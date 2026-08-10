@@ -1,6 +1,6 @@
 ---
 title: "Interview Feedback and Improvement Checklist"
-sidebar_label: "20 Interview Feedback and Improvement Checklist"
+sidebar_label: "22 Interview Feedback and Improvement Checklist"
 description: "How to read structured interview feedback, real or self-assessed, and turn it into a concrete, prioritized improvement plan rather than a vague sense of how it went."
 keywords: ["QA interview feedback", "interview improvement checklist", "self-assessment interview QA", "post-interview reflection"]
 difficulty: "intermediate"

@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Automation Framework Interviews
 
 **Prerequisites**: You should already have completed [SQL and Database Interview Scenarios](/learning-paths/interview-preparation/sql-and-database-interview-scenarios). Familiarity with [Automation Framework Fundamentals](/learning-paths/automation/automation-framework-fundamentals) is recommended.
-**Leads to**: After this, you'll be ready for [Live Coding and Debugging Interviews](/learning-paths/interview-preparation/live-coding-and-debugging-interviews).
+**Leads to**: After this, you'll be ready for [Tooling and Environment Interview Questions](/learning-paths/interview-preparation/tooling-and-environment-interview-questions).
 
 "Why did you structure your framework this way" is a question that rewards a very specific kind of answer: not what the framework does, but what problem each design decision actually solved. This module applies [Automation Framework Fundamentals](/learning-paths/automation/automation-framework-fundamentals) and [Choosing and Comparing Automation Tools](/learning-paths/automation/choosing-and-comparing-automation-tools) directly to that conversation.
 

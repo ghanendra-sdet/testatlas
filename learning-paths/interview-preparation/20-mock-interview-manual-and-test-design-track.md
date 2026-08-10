@@ -1,6 +1,6 @@
 ---
 title: "Mock Interview Simulation: Manual and Test-Design Track"
-sidebar_label: "18 Mock Interview: Manual and Test-Design Track"
+sidebar_label: "20 Mock Interview: Manual and Test-Design Track"
 description: "A full, timed, simulated interview covering behavioral, test-design, and defect-handling rounds — an experience to work through, not a reference to read."
 keywords: ["mock QA interview", "manual testing interview simulation", "practice QA interview questions", "test design mock interview"]
 difficulty: "intermediate"

@@ -1,6 +1,6 @@
 ---
 title: "Test Strategy and \"How Would You Test X\" Interviews"
-sidebar_label: "13 Test Strategy and How Would You Test X Interviews"
+sidebar_label: "14 Test Strategy and How Would You Test X Interviews"
 description: "Open-ended, whiteboard-style scenario questions, reusing Performance Testing Strategy's own risk-based prioritization reasoning applied to an unfamiliar feature under time pressure."
 keywords: ["how would you test interview question", "whiteboard testing interview", "test strategy interview QA", "risk-based testing interview"]
 difficulty: "intermediate"
@@ -11,7 +11,7 @@ last_reviewed: "2026-08-08"
 # Test Strategy and "How Would You Test X" Interviews
 
 **Prerequisites**: You should already have completed [Bug Analysis and Root-Cause Interviews](/learning-paths/interview-preparation/bug-analysis-and-root-cause-interviews).
-**Leads to**: After this, you'll be ready for [Take-Home Assignments and Practical Challenges](/learning-paths/interview-preparation/take-home-assignments-and-practical-challenges).
+**Leads to**: After this, you'll be ready for [Estimating Test Effort Under Interview Pressure](/learning-paths/interview-preparation/estimating-test-effort-under-interview-pressure).
 
 "How would you test a vending machine?" is the archetypal open-ended QA interview question — deliberately unfamiliar, deliberately underspecified, and deliberately not about vending machines at all. This module applies [Performance Testing Strategy](/learning-paths/performance-testing/performance-testing-strategy)'s own risk-based prioritization reasoning directly to that exact question shape.
 

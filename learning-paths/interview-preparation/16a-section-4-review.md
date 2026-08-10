@@ -2,20 +2,20 @@
 title: "Interview Preparation — Section 4 Review"
 slug: section-4-review
 sidebar_label: "Section 4 — Review"
-description: "Knowledge Check for Section 4 — Cross-Domain Interview Scenarios, Bug Analysis and Root-Cause Interviews, Test Strategy and How Would You Test X Interviews, and Take-Home Assignments and Practical Challenges."
+description: "Knowledge Check for Section 4 — Cross-Domain Interview Scenarios, Bug Analysis and Root-Cause Interviews, Test Strategy and How Would You Test X Interviews, Estimating Test Effort Under Interview Pressure, and Take-Home Assignments and Practical Challenges."
 keywords: ["interview preparation review", "root cause interview knowledge check", "take-home assignment review"]
 difficulty: "beginner"
 time_to_read: "5 min"
-last_reviewed: "2026-08-08"
+last_reviewed: "2026-08-11"
 ---
 
 # Section 4 Review
 
-Section 4 covered the widest-scope, most scenario-driven interview material in this path: calibrating depth across unfamiliar domains, reasoning from symptom to cause, prioritizing an open-ended test-strategy question by risk, and communicating judgment in a take-home submission.
+Section 4 covered the widest-scope, most scenario-driven interview material in this path: calibrating depth across unfamiliar domains, reasoning from symptom to cause, prioritizing an open-ended test-strategy question by risk, estimating effort live under time pressure, and communicating judgment in a take-home submission.
 
 ## Knowledge Check
 
-Work through these five scenarios before checking the [Section 4 Solutions](/learning-paths/interview-preparation/section-4-solutions).
+Work through these six scenarios before checking the [Section 4 Solutions](/learning-paths/interview-preparation/section-4-solutions).
 
 **Scenario 1: Reaching Too Far**
 
@@ -36,5 +36,9 @@ Given a take-home assignment with no stated time limit, a candidate spends an en
 **Scenario 5: Refusing to Engage**
 
 Asked a question about AI-driven feature testing, a candidate says "I don't know anything about that" and stops there. What's the better alternative, per this section's own guidance?
+
+**Scenario 6: The Confident Guess**
+
+Asked "roughly how long would it take to test this," a candidate answers instantly with a single number and no further detail. What's missing, and what should the answer have included instead?
 
 **Next:** Check your answers against the [Section 4 Solutions](/learning-paths/interview-preparation/section-4-solutions). This completes the modules published so far in Interview Preparation v1.0 — Sections 5 and 6 continue in a future implementation phase.

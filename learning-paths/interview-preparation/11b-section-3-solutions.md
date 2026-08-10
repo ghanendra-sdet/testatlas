@@ -2,16 +2,16 @@
 title: "Interview Preparation — Section 3 Solutions"
 slug: section-3-solutions
 sidebar_label: "Section 3 — Solutions"
-description: "Answers and reasoning for Section 3's Knowledge Check — applying API, database, automation framework, and live debugging interview technique to five realistic scenarios."
+description: "Answers and reasoning for Section 3's Knowledge Check — applying API, database, automation framework, tooling, and live debugging interview technique to six realistic scenarios."
 keywords: ["interview preparation solutions", "API interview answers", "live debugging interview knowledge check answers"]
 difficulty: "beginner"
 time_to_read: "6 min"
-last_reviewed: "2026-08-08"
+last_reviewed: "2026-08-11"
 ---
 
 # Section 3 Solutions
 
-These are the answers to the [Section 3 Review](/learning-paths/interview-preparation/section-3-review)'s Knowledge Check. If you haven't attempted the five scenarios yet, do that first.
+These are the answers to the [Section 3 Review](/learning-paths/interview-preparation/section-3-review)'s Knowledge Check. If you haven't attempted the six scenarios yet, do that first.
 
 ## Scenario 1: Codes Without Context
 
@@ -63,6 +63,16 @@ These are the answers to the [Section 3 Review](/learning-paths/interview-prepar
 
 **Real-world reasoning**: Tests whether "context-dependent tradeoff, not universal answer" was understood as this section's own recurring theme.
 
+## Scenario 6: The Keyword List
+
+**Correct answer**: Lead with the problem or situation the tool was used to solve, letting the tool name arrive as a supporting detail, per [Tooling and Environment Interview Questions](/learning-paths/interview-preparation/tooling-and-environment-interview-questions).
+
+**Explanation**: This is that module's own opening scenario restated — a list of tool names carries no checkable detail, and a follow-up question exposes exactly how little is actually behind it.
+
+**Alternative approaches considered**: Naming additional tools doesn't fix the gap — the problem is the missing story behind any one of them, not an insufficient quantity of names.
+
+**Real-world reasoning**: Tests whether "problem-first framing, tool named in passing" was understood as the fix, not "list more tools" or "sound more confident."
+
 ## Section 3 Complete
 
-Across four modules, this section applied API Testing, Database Testing, and Automation Testing's own technique directly to live interview conditions: reasoning through status codes and auth, narrating a live SQL query plan, explaining framework decisions rather than features, and diagnosing before fixing in a live debugging exercise. From here, continue to Section 4 — Specialized and Scenario-Based Interviews, starting with Cross-Domain Interview Scenarios.
+Across five modules, this section applied API Testing, Database Testing, and Automation Testing's own technique directly to live interview conditions: reasoning through status codes and auth, narrating a live SQL query plan, explaining framework decisions rather than features, grounding tooling questions in a real problem rather than a list of names, and diagnosing before fixing in a live debugging exercise. From here, continue to Section 4 — Specialized and Scenario-Based Interviews, starting with Cross-Domain Interview Scenarios.

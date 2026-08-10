@@ -1,6 +1,6 @@
 ---
 title: "Take-Home Assignments and Practical Challenges"
-sidebar_label: "14 Take-Home Assignments and Practical Challenges"
+sidebar_label: "16 Take-Home Assignments and Practical Challenges"
 description: "How to approach a timed take-home testing assignment — what evaluators actually look for, common structural mistakes, and time management, closing Section 4's arc."
 keywords: ["QA take-home assignment", "take-home testing challenge tips", "QA practical interview challenge", "time management take-home test"]
 difficulty: "intermediate"
@@ -10,7 +10,7 @@ last_reviewed: "2026-08-08"
 
 # Take-Home Assignments and Practical Challenges
 
-**Prerequisites**: You should already have completed [Test Strategy and "How Would You Test X" Interviews](/learning-paths/interview-preparation/test-strategy-and-how-would-you-test-x-interviews).
+**Prerequisites**: You should already have completed [Estimating Test Effort Under Interview Pressure](/learning-paths/interview-preparation/estimating-test-effort-under-interview-pressure).
 **Leads to**: After this, you'll be ready for [Section 4 Review](/learning-paths/interview-preparation/section-4-review).
 
 A take-home assignment removes the live-interview time pressure, and candidates consistently misread that as removing all constraints — producing an exhaustive, unfocused submission instead of a scoped, well-communicated one. This module, closing Section 4, is about the specific judgment a take-home assignment actually evaluates.
