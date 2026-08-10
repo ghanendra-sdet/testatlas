@@ -1,6 +1,6 @@
 ---
 title: "Live Coding and Debugging Interviews"
-sidebar_label: "10 Live Coding and Debugging Interviews"
+sidebar_label: "11 Live Coding and Debugging Interviews"
 description: "Reading and debugging someone else's broken automated test under interview conditions, reusing Diagnosing Flaky Tests' own diagnostic discipline, closing Section 3's applied-technique arc."
 keywords: ["live debugging interview", "flaky test interview question", "read broken code interview", "automation debugging interview"]
 difficulty: "intermediate"
@@ -10,7 +10,7 @@ last_reviewed: "2026-08-08"
 
 # Live Coding and Debugging Interviews
 
-**Prerequisites**: You should already have completed [Automation Framework Interviews](/learning-paths/interview-preparation/automation-framework-interviews).
+**Prerequisites**: You should already have completed [Tooling and Environment Interview Questions](/learning-paths/interview-preparation/tooling-and-environment-interview-questions).
 **Leads to**: After this, you'll be ready for [Section 3 Review](/learning-paths/interview-preparation/section-3-review).
 
 Being handed someone else's broken test and asked "why is this failing" is a genuinely different skill from writing your own test from scratch — it's reading, not authoring. This module closes Section 3 by applying [Diagnosing Flaky Tests](/learning-paths/automation/test-stability-and-flaky-tests)'s own diagnostic discipline to that specific interview moment.

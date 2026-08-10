@@ -1,6 +1,6 @@
 ---
 title: "Evaluating and Negotiating an Offer"
-sidebar_label: "16 Evaluating and Negotiating an Offer"
+sidebar_label: "18 Evaluating and Negotiating an Offer"
 description: "Reading a QA-role offer critically and negotiating it professionally, scoped specifically to the individual-contributor job-offer moment."
 keywords: ["QA job offer negotiation", "evaluating job offer testing role", "salary negotiation QA", "software testing offer evaluation"]
 difficulty: "intermediate"

@@ -2,16 +2,16 @@
 title: "Interview Preparation — Section 4 Solutions"
 slug: section-4-solutions
 sidebar_label: "Section 4 — Solutions"
-description: "Answers and reasoning for Section 4's Knowledge Check — applying depth calibration, root-cause reasoning, risk-based test strategy, and take-home judgment to five realistic scenarios."
+description: "Answers and reasoning for Section 4's Knowledge Check — applying depth calibration, root-cause reasoning, risk-based test strategy, live estimation, and take-home judgment to six realistic scenarios."
 keywords: ["interview preparation solutions", "root cause interview answers", "test strategy interview knowledge check answers"]
 difficulty: "beginner"
 time_to_read: "6 min"
-last_reviewed: "2026-08-08"
+last_reviewed: "2026-08-11"
 ---
 
 # Section 4 Solutions
 
-These are the answers to the [Section 4 Review](/learning-paths/interview-preparation/section-4-review)'s Knowledge Check. If you haven't attempted the five scenarios yet, do that first.
+These are the answers to the [Section 4 Review](/learning-paths/interview-preparation/section-4-review)'s Knowledge Check. If you haven't attempted the six scenarios yet, do that first.
 
 ## Scenario 1: Reaching Too Far
 
@@ -63,6 +63,16 @@ These are the answers to the [Section 4 Review](/learning-paths/interview-prepar
 
 **Real-world reasoning**: Tests whether "engage at the right scope, don't refuse" was understood as distinct from both overreaching and disengaging entirely.
 
+## Scenario 6: The Confident Guess
+
+**Correct answer**: Break the estimate into named, individually-justified parts and give a range with the specific factor that would move it, per [Estimating Test Effort Under Interview Pressure](/learning-paths/interview-preparation/estimating-test-effort-under-interview-pressure) — not a single unexplained figure.
+
+**Explanation**: This is that module's own opening scenario restated — an instant, unexplained number is unfalsifiable in exactly the same way a tool-name-only answer or a flat testing-type list is: the interviewer has nothing to actually evaluate.
+
+**Alternative approaches considered**: Answering with more apparent confidence, or a more "precise"-sounding number, doesn't fix the actual gap — the missing piece is visible reasoning and a stated range, not a better-sounding guess.
+
+**Real-world reasoning**: Tests whether "visible method, named parts, a range with its driver" was understood as the fix, not "guess with more conviction."
+
 ## Section 4 Complete
 
-Across four modules, this section covered the widest-scope material in this path so far: calibrating depth across unfamiliar TestAtlas domains, reasoning systematically from a symptom to a root cause, prioritizing an open-ended test-strategy question by risk, and communicating judgment clearly in a take-home submission. This completes the currently-published modules in Interview Preparation v1.0 — Section 5 (Interview Strategy and Communication) and Section 6 (Mock Interview Capstone) continue in a future implementation phase, per the approved architecture in `docs/architecture/LEARNING_PATHS.md`.
+Across five modules, this section covered the widest-scope material in this path so far: calibrating depth across unfamiliar TestAtlas domains, reasoning systematically from a symptom to a root cause, prioritizing an open-ended test-strategy question by risk, estimating effort live under time pressure, and communicating judgment clearly in a take-home submission.

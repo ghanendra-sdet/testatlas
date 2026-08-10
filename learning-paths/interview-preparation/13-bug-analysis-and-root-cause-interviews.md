@@ -1,6 +1,6 @@
 ---
 title: "Bug Analysis and Root-Cause Interviews"
-sidebar_label: "12 Bug Analysis and Root-Cause Interviews"
+sidebar_label: "13 Bug Analysis and Root-Cause Interviews"
 description: "Given only a symptom, reasoning aloud to a root cause, reusing Database Defect Investigation and Performance Defect Investigation's own systematic investigative discipline."
 keywords: ["root cause analysis interview", "bug investigation interview question", "debugging interview QA", "symptom to cause reasoning"]
 difficulty: "intermediate"

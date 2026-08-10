@@ -1,6 +1,6 @@
 ---
 title: "Mock Interview Simulation: SDET and Automation Track"
-sidebar_label: "19 Mock Interview: SDET and Automation Track"
+sidebar_label: "21 Mock Interview: SDET and Automation Track"
 description: "A full, timed, simulated interview covering API, database, automation, live-debugging, and rapid cross-domain rounds spanning performance, security, mobile, and AI for QA."
 keywords: ["SDET mock interview", "automation interview simulation", "API testing mock interview", "QA technical interview practice"]
 difficulty: "intermediate"

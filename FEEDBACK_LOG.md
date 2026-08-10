@@ -16,4 +16,8 @@ Category: 🐛 Bug / ✨ Feature Request / 📚 Content Gap / ❓ Confusing / �
 
 ## Entries
 
-*(Nothing logged yet — this file starts empty at release. First entry goes here.)*
+### 2026-08-10 — [source: content audit]
+
+> Authentication Testing (Security Testing, module 05) covers login, sessions, and JWTs in general, but doesn't address one-time-code (OTP) flows specifically — expiry timing, resend behavior, and lockout after repeated wrong codes are a distinct enough failure surface to warrant their own coverage, either as a dedicated section within module 05 or a short standalone module near it.
+
+Category: 📚 Content Gap

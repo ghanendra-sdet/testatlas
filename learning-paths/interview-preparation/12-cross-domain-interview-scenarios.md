@@ -1,6 +1,6 @@
 ---
 title: "Cross-Domain Interview Scenarios"
-sidebar_label: "11 Cross-Domain Interview Scenarios"
+sidebar_label: "12 Cross-Domain Interview Scenarios"
 description: "Security, performance, mobile, and AI-for-QA topics discussed at interview-appropriate depth, cross-linking existing TestAtlas curricula directly rather than re-teaching any of them."
 keywords: ["cross-domain QA interview", "security testing interview questions", "performance testing interview questions", "mobile testing interview questions"]
 difficulty: "intermediate"
@@ -29,7 +29,11 @@ Both candidates lack deep security specialization. Only one of them answered at 
 
 **Name the right framework, even briefly**: for performance, reusing [What is Performance Testing?](/learning-paths/performance-testing/what-is-performance-testing)'s own correctness-versus-performance distinction; for mobile, reusing [What is Mobile Testing?](/learning-paths/mobile-testing/what-is-mobile-testing)'s device-fragmentation framing; for AI-driven features, reusing [AI in Software Testing](/learning-paths/ai-for-qa/ai-in-software-testing)'s own deterministic-versus-AI-quality distinction — naming the right concept briefly demonstrates real awareness without requiring specialist depth.
 
+**For AI-assisted automation tooling specifically, name the category, not a vendor claim**: if asked what you know about AI in automation tooling, naming the *category* — for example, "self-healing" locators, where a tool adjusts a broken selector to a UI change automatically instead of failing the test outright — demonstrates the same kind of current awareness this module rewards elsewhere. Claiming deep, hands-on production experience with a specific commercial tool you've only read about is the same overreach this module warns against for security or mobile; naming the concept honestly is the stronger answer.
+
 **It's fine to say what you'd need to learn or verify**: "I'd want to check the specific compliance requirements for this app" or "I'd loop in someone with deeper mobile-security experience for the certificate-pinning specifics" is a legitimate, honest answer — stronger than bluffing confidence you don't have.
+
+**Some prompts deliberately combine two domains at once — name both frameworks, don't collapse them into one**: "how would you test two customers buying the last unit of stock at the same moment" isn't purely a database question or purely a security question — it touches [Transactions, Locks, and Concurrency](/learning-paths/database-testing/transactions-locks-and-concurrency)'s own locking concerns *and* [Business Logic Security Testing](/learning-paths/security-testing/business-logic-security-testing)'s own abuse-case framing at the same time. The same calibration habit still applies: name each relevant framework briefly rather than picking only one and ignoring the other.
 
 ```mermaid
 %% VIS-INT-011 — Calibrating Depth Across Domains

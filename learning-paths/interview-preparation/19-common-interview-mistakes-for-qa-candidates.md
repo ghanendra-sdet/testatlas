@@ -1,6 +1,6 @@
 ---
 title: "Common Interview Mistakes for QA Candidates"
-sidebar_label: "17 Common Interview Mistakes for QA Candidates"
+sidebar_label: "19 Common Interview Mistakes for QA Candidates"
 description: "Cross-cutting mistake patterns across this path's own sections — round misreading, unstructured stories, silent problem-solving, and unprioritized answers — each traced back to a real gap earlier in this path."
 keywords: ["QA interview mistakes", "common software testing interview mistakes", "interview red flags QA", "what not to do QA interview"]
 difficulty: "intermediate"

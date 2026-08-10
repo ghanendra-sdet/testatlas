@@ -1,6 +1,6 @@
 ---
 title: "Communicating Under Pressure"
-sidebar_label: "15 Communicating Under Pressure"
+sidebar_label: "17 Communicating Under Pressure"
 description: "Pacing, thinking aloud productively, asking clarifying questions, and handling 'I don't know' without derailing the interview."
 keywords: ["interview communication skills QA", "thinking aloud interview", "handling I dont know interview", "interview pacing"]
 difficulty: "intermediate"
