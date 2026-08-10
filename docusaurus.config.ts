@@ -117,6 +117,12 @@ const config: Config = {
     image: 'img/testatlas-social-card.svg',
     docs: {
       sidebar: {
+        // Adds Docusaurus's built-in collapse toggle to the sidebar so
+        // readers on small/narrow screens can hide the menu and reclaim
+        // that width for the doc content. State persists per-browser via
+        // localStorage; a matching expand control appears in its place
+        // once collapsed.
+        hideable: true,
         // Accordion behavior: expanding a learning path collapses any other
         // expanded one at the same level. The active path still
         // auto-expands and stays open while browsing its own modules —
