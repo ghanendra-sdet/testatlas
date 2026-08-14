@@ -274,3 +274,307 @@
   font-size: 0.88rem;
   line-height: 1.55;
 }
+
+/* ---------------------------------------------------------------------
+   Premium Details & Summary Q&A Accordion Style
+   --------------------------------------------------------------------- */
+
+.theme-doc-markdown details {
+  margin-bottom: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background-color: var(--ifm-background-surface-color);
+  overflow: hidden;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.theme-doc-markdown details[open] {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 6px 16px rgba(9, 146, 161, 0.06);
+}
+
+.theme-doc-markdown details summary {
+  position: relative !important;
+  display: block !important;
+  padding: 1.25rem 1.25rem 1.25rem 3rem !important;
+  font-size: 1.05rem;
+  font-weight: 650;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.12s ease, color 0.12s ease;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.theme-doc-markdown details summary::-webkit-details-marker {
+  display: none;
+}
+
+.theme-doc-markdown details summary::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 1.25rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) rotate(45deg) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-top: 2.5px solid var(--ifm-color-primary) !important;
+  border-right: 2.5px solid var(--ifm-color-primary) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  background: none !important;
+  margin: 0 !important;
+  transition: transform 0.1s ease, border-color 0.1s ease !important;
+  flex-shrink: 0;
+}
+
+.theme-doc-markdown details summary::after {
+  display: none !important;
+  content: none !important;
+}
+
+.theme-doc-markdown details[open] summary::before {
+  transform: translateY(-50%) rotate(135deg) !important;
+}
+
+.theme-doc-markdown details summary:hover {
+  background-color: rgba(9, 146, 161, 0.05);
+  color: var(--ifm-color-primary-dark);
+}
+
+.theme-doc-markdown details summary:hover::before {
+  border-color: var(--ifm-color-primary-dark) !important;
+}
+
+/* Indent details inner markdown elements to align perfectly with summary text */
+.theme-doc-markdown details > p,
+.theme-doc-markdown details > ul,
+.theme-doc-markdown details > ol,
+.theme-doc-markdown details > div,
+.theme-doc-markdown details > pre {
+  padding: 0 1.25rem 1.25rem 2.25rem;
+  margin: 0;
+  color: var(--ifm-color-emphasis-800);
+  line-height: 1.65;
+}
+
+.theme-doc-markdown details > pre {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------
+   Premium Blog List & Post Styling
+   --------------------------------------------------------------------- */
+
+/* Page container padding adjustments */
+.blog-list-page {
+  padding-top: 1.5rem;
+}
+
+/* Transform each blog post item into a premium card container */
+.blog-list-page article {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 1rem;
+  padding: 2.25rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+  margin-bottom: 2.5rem !important;
+}
+
+[data-theme='dark'] .blog-list-page article {
+  background: rgba(30, 41, 59, 0.5);
+  border-color: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.15);
+}
+
+.blog-list-page article:hover {
+  transform: translateY(-2px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 10px 30px rgba(9, 146, 161, 0.08);
+}
+
+/* Make titles stand out */
+.blog-list-page article header h2,
+.blog-post-page article header h1 {
+  font-size: 1.85rem;
+  font-weight: 800;
+  line-height: 1.35;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.blog-list-page article header h2 a {
+  color: var(--ifm-color-emphasis-900);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.blog-list-page article header h2 a:hover {
+  color: var(--ifm-color-primary);
+}
+
+/* Post Metadata Row (Date, Read Time, Tags) */
+.blog-list-page article header > div,
+.blog-post-page article header > div {
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-600);
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Read More Button styling */
+.blog-list-page article footer a[href*="/blog/"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.6rem 1.25rem;
+  font-weight: 700;
+  font-size: 0.88rem;
+  color: white !important;
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  border-radius: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(9, 146, 161, 0.2);
+  transition: all 0.2s ease;
+  margin-top: 1rem;
+}
+
+.blog-list-page article footer a[href*="/blog/"]:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(9, 146, 161, 0.3);
+  filter: brightness(1.05);
+}
+
+/* Blog Author Profile Row */
+.blog-list-page .avatar,
+.blog-post-page .avatar {
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  background: var(--ifm-color-emphasis-100);
+  transition: background-color 0.15s ease;
+}
+
+[data-theme='dark'] .blog-list-page .avatar,
+[data-theme='dark'] .blog-post-page .avatar {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.blog-list-page .avatar__name,
+.blog-post-page .avatar__name {
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.blog-list-page .avatar__subtitle,
+.blog-post-page .avatar__subtitle {
+  color: var(--ifm-color-emphasis-600);
+  font-size: 0.82rem;
+}
+
+/* Tag chips inside blog */
+.blog-list-page article .margin-top--md a {
+  display: inline-block;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border-radius: 20px;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  text-decoration: none;
+  transition: all 0.15s ease;
+}
+
+.blog-list-page article .margin-top--md a:hover {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+[data-theme='dark'] .blog-list-page article .margin-top--md a {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------------------------------------------------------------------
+   Premium Blog Sidebar Overrides
+   --------------------------------------------------------------------- */
+
+/* Sidebar title ("Recent posts") */
+[class*="sidebarItemTitle_"] {
+  font-size: 0.82rem !important;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 800;
+  color: var(--ifm-color-emphasis-700);
+  border-bottom: 2px dashed var(--ifm-color-emphasis-200);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem !important;
+}
+
+[data-theme='dark'] [class*="sidebarItemTitle_"] {
+  color: rgba(255, 255, 255, 0.6);
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* Year group headings (e.g., "2026") */
+[class*="yearGroupHeading_"] {
+  font-size: 0.95rem !important;
+  font-weight: 800;
+  color: var(--ifm-color-primary);
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem !important;
+  padding-left: 0.25rem;
+}
+
+/* Sidebar List Item */
+[class*="sidebarItem__"] {
+  margin-bottom: 0.5rem !important;
+}
+
+/* Sidebar Link Item */
+[class*="sidebarItemLink_"] {
+  display: block !important;
+  padding: 0.6rem 0.88rem !important;
+  font-size: 0.85rem !important;
+  line-height: 1.45 !important;
+  font-weight: 500 !important;
+  border-radius: 0.5rem;
+  border-left: 3px solid transparent !important;
+  color: var(--ifm-color-emphasis-700) !important;
+  text-decoration: none !important;
+  background: transparent;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Sidebar Link Hover */
+[class*="sidebarItemLink_"]:hover {
+  background: var(--ifm-color-emphasis-100) !important;
+  color: var(--ifm-color-primary) !important;
+  border-left-color: var(--ifm-color-primary) !important;
+  padding-left: 1.15rem !important;
+  text-decoration: none !important;
+}
+
+[data-theme='dark'] [class*="sidebarItemLink_"]:hover {
+  background: rgba(255, 255, 255, 0.03) !important;
+}
+
+/* Sidebar Active Link */
+[class*="sidebarItemLinkActive_"] {
+  background: rgba(9, 146, 161, 0.06) !important;
+  color: var(--ifm-color-primary) !important;
+  font-weight: 700 !important;
+  border-left-color: var(--ifm-color-primary) !important;
+  padding-left: 1.15rem !important;
+  text-decoration: none !important;
+}
+
+[data-theme='dark'] [class*="sidebarItemLinkActive_"] {
+  background: rgba(9, 146, 161, 0.12) !important;
+}
+

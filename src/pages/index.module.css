@@ -367,3 +367,71 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Continue Learning Banner */
+.continueBanner {
+  background-color: var(--ifm-color-primary-lightest);
+  border-bottom: 1px solid var(--ifm-color-primary-light);
+  padding: 1rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+[data-theme='dark'] .continueBanner {
+  background-color: #0d2930;
+  border-bottom: 1px solid #143e49;
+}
+
+.continueContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.continueLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.continueLabel {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .continueLabel {
+  color: var(--ifm-color-primary-light);
+}
+
+.continueTitle {
+  font-size: 1rem;
+  color: var(--ifm-font-color-base);
+}
+
+.continueRight {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.completedBadge {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+}
+
+@media screen and (max-width: 640px) {
+  .continueContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .continueRight {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+

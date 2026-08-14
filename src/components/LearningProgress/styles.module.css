@@ -1,0 +1,70 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem 0;
+  padding: 1.5rem;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary-darker);
+  background-color: transparent;
+  border: 2px solid var(--ifm-color-primary);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .button {
+  color: var(--ifm-color-primary-light);
+}
+
+.button:hover {
+  background-color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darkest);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(8, 127, 140, 0.15);
+}
+
+.completed {
+  background-color: var(--ifm-color-primary);
+  border-color: var(--ifm-color-primary);
+  color: #fff !important;
+}
+
+.completed:hover {
+  background-color: var(--ifm-color-primary-dark);
+  border-color: var(--ifm-color-primary-dark);
+  box-shadow: 0 4px 12px rgba(8, 127, 140, 0.3);
+}
+
+.checkboxIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 2px solid currentColor;
+  border-radius: 0.25rem;
+  transition: all 0.2s ease;
+}
+
+.completed .checkboxIcon {
+  border-color: #fff;
+  background-color: transparent;
+}
+
+.checkboxIcon svg {
+  width: 0.85rem;
+  height: 0.85rem;
+  color: #fff;
+}

@@ -3,8 +3,7 @@
 }
 
 .header {
-  max-width: 46rem;
-  margin-bottom: 3rem;
+  margin-bottom: 3.5rem;
 }
 
 .heading {
@@ -18,8 +17,80 @@
 .intro {
   margin: 1.25rem 0 0;
   color: var(--ifm-color-emphasis-700);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   line-height: 1.7;
+  max-width: 50rem;
+}
+
+.progressDashboard {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.dashboardMetric {
+  display: flex;
+  flex-direction: column;
+}
+
+.metricValue {
+  font-size: 2rem;
+  font-weight: 850;
+  line-height: 1;
+  color: var(--ifm-color-primary);
+}
+
+.metricLabel {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-700);
+  margin-top: 0.35rem;
+}
+
+.dashboardDivider {
+  width: 1px;
+  height: 2.5rem;
+  background-color: var(--ifm-color-emphasis-300);
+}
+
+.dashboardProgressTrack {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 0.5rem;
+  min-width: 15rem;
+}
+
+.dashboardBarBg {
+  height: 8px;
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.dashboardBarFill {
+  height: 100%;
+  background-color: var(--ifm-color-primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.trackHelper {
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.pathGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
 @media screen and (max-width: 996px) {
@@ -29,5 +100,14 @@
 
   .header {
     margin-bottom: 2rem;
+  }
+
+  .progressDashboard {
+    gap: 1.5rem;
+    padding: 1.25rem;
+  }
+
+  .dashboardDivider {
+    display: none;
   }
 }

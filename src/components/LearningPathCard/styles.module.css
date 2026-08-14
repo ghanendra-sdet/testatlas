@@ -1,0 +1,148 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+  background-color: var(--ifm-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+  transition: all 0.2s ease;
+  height: 100%;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 12px 28px rgba(8, 127, 140, 0.12);
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+}
+
+.diffBeginner {
+  background-color: rgba(56, 210, 165, 0.15);
+  color: #2bb38c;
+}
+
+.diffIntermediate {
+  background-color: rgba(8, 127, 140, 0.12);
+  color: var(--ifm-color-primary);
+}
+
+.diffAdvanced {
+  background-color: rgba(224, 102, 102, 0.15);
+  color: #c95c5c;
+}
+
+.modulesCount {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.progressContainer {
+  margin-bottom: 1.25rem;
+}
+
+.progressText {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--ifm-color-primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+[data-theme='dark'] .progressText {
+  color: var(--ifm-color-primary-light);
+}
+
+.progressBarBg {
+  height: 6px;
+  background-color: var(--ifm-color-emphasis-200);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBarFill {
+  height: 100%;
+  background-color: var(--ifm-color-primary);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+.relevanceBox,
+.prereqBox {
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.boxLabel {
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-800);
+  margin-right: 0.4rem;
+}
+
+.relevanceText,
+.prereqText {
+  display: inline;
+  color: var(--ifm-color-emphasis-700);
+  margin: 0;
+}
+
+.prereqText {
+  font-style: italic;
+}
+
+.skillsWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 1.25rem 0 1.5rem;
+}
+
+.skillTag {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background-color: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.25rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.actionRow {
+  margin-top: auto;
+}
+
+.actionRow :global(.button) {
+  border-radius: 0.5rem;
+}

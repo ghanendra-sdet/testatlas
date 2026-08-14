@@ -1,0 +1,125 @@
+.museumBox {
+  margin: 2.5rem 0;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background-color: var(--ifm-background-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 1.5rem;
+  background-color: var(--ifm-background-surface-color);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.museumLabel {
+  font-family: var(--ifm-font-family-monospace);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  color: var(--ifm-color-primary);
+  text-transform: uppercase;
+}
+
+.categoryBadge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #fff;
+  background-color: var(--ifm-color-primary-dark);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 1.5rem 1.5rem 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ifm-font-color-base);
+}
+
+.tabsRow {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0 1.5rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.tabBtn {
+  padding: 0.75rem 1.25rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--ifm-color-emphasis-600);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.tabBtn:hover {
+  color: var(--ifm-color-primary);
+}
+
+.activeTab {
+  color: var(--ifm-color-primary);
+  border-bottom-color: var(--ifm-color-primary);
+}
+
+.tabContent {
+  padding: 1.5rem;
+  min-height: 12rem;
+}
+
+.section {
+  margin-bottom: 1.25rem;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+.sectionHeader {
+  margin: 0 0 0.5rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ifm-color-emphasis-800);
+}
+
+.text {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.warningText {
+  border-left: 3px solid #e08a8a;
+  padding-left: 0.75rem;
+}
+
+.successText {
+  border-left: 3px solid #38d2a5;
+  padding-left: 0.75rem;
+}
+
+.fadeContent {
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(2px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

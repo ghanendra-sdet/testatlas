@@ -1,0 +1,352 @@
+.container {
+  margin: 2rem 0;
+  font-family: inherit;
+}
+
+/* Header Progress Card */
+.headerCard {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  transition: box-shadow 0.2s ease;
+}
+
+[data-theme='dark'] .headerCard {
+  background: rgba(30, 41, 59, 0.7);
+  backdrop-filter: blur(12px);
+  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+}
+
+.progressInfo {
+  flex: 1;
+  min-width: 250px;
+}
+
+.progressTitle {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--ifm-color-emphasis-900);
+}
+
+.progressSubtitle {
+  margin: 0 0 1rem 0;
+  font-size: 0.9rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+/* Horizontal Progress Bar */
+.progressBarBg {
+  background: var(--ifm-color-emphasis-200);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+[data-theme='dark'] .progressBarBg {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.progressBarFill {
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.progressMetrics {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.resetButton {
+  background: transparent;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  color: var(--ifm-color-emphasis-700);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.15s ease;
+}
+
+.resetButton:hover {
+  background: var(--ifm-color-emphasis-100);
+  border-color: var(--ifm-color-emphasis-400);
+  color: var(--ifm-color-emphasis-900);
+}
+
+[data-theme='dark'] .resetButton {
+  border-color: rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+[data-theme='dark'] .resetButton:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Sections Accordion Details */
+.section {
+  margin-bottom: 1rem;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  background: var(--ifm-background-surface-color);
+  overflow: hidden;
+  transition: border-color 0.12s ease, box-shadow 0.12s ease;
+}
+
+.section[open] {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(9, 146, 161, 0.05);
+}
+
+[data-theme='dark'] .section {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+[data-theme='dark'] .section[open] {
+  border-color: var(--ifm-color-primary);
+}
+
+.sectionSummary {
+  position: relative !important;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.25rem 1.25rem 3rem !important;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  color: var(--ifm-color-emphasis-900);
+  transition: background-color 0.12s ease;
+}
+
+.sectionSummary::-webkit-details-marker {
+  display: none;
+}
+
+.sectionSummary:hover {
+  background-color: rgba(9, 146, 161, 0.03);
+}
+
+.sectionSummary::before {
+  content: '' !important;
+  position: absolute !important;
+  left: 1.25rem !important;
+  top: 50% !important;
+  transform: translateY(-50%) rotate(45deg) !important;
+  width: 8px !important;
+  height: 8px !important;
+  border-top: 2.5px solid var(--ifm-color-primary) !important;
+  border-right: 2.5px solid var(--ifm-color-primary) !important;
+  border-bottom: none !important;
+  border-left: none !important;
+  background: none !important;
+  margin: 0 !important;
+  transition: transform 0.1s ease, border-color 0.1s ease !important;
+  flex-shrink: 0;
+}
+
+.section[open] .sectionSummary::before {
+  transform: translateY(-50%) rotate(135deg) !important;
+}
+
+.summaryTitleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.summaryIcon {
+  font-size: 1.25rem;
+}
+
+.sectionProgressBadge {
+  font-size: 0.8rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 20px;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-700);
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.sectionProgressBadgeCompleted {
+  background: rgba(16, 185, 129, 0.1);
+  color: rgb(16, 185, 129);
+}
+
+/* Section Content & Items */
+.sectionContent {
+  padding: 0 1.25rem 1.25rem 1.25rem;
+  border-top: 1px dashed var(--ifm-color-emphasis-200);
+  background: rgba(9, 146, 161, 0.005);
+}
+
+[data-theme='dark'] .sectionContent {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.itemCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+  transition: all 0.2s ease;
+}
+
+[data-theme='dark'] .itemCard {
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+.itemCard:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 4px 12px rgba(9, 146, 161, 0.03);
+  transform: translateY(-1px);
+}
+
+.itemCardCompleted {
+  border-color: rgba(16, 185, 129, 0.3) !important;
+  background: rgba(16, 185, 129, 0.01) !important;
+}
+
+[data-theme='dark'] .itemCardCompleted {
+  background: rgba(16, 185, 129, 0.03) !important;
+}
+
+/* Custom Checkbox */
+.checkboxContainer {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  border: 2px solid var(--ifm-color-emphasis-400);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: all 0.2s ease;
+  margin-top: 0.1rem;
+}
+
+[data-theme='dark'] .checkboxContainer {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+.itemCard:hover .checkboxContainer {
+  border-color: var(--ifm-color-primary);
+}
+
+.checkboxChecked {
+  border-color: rgb(16, 185, 129) !important;
+  background: rgb(16, 185, 129) !important;
+}
+
+.checkIcon {
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+
+/* Item details and formatting */
+.itemDetails {
+  flex: 1;
+}
+
+.itemText {
+  font-size: 0.98rem;
+  font-weight: 500;
+  color: var(--ifm-color-emphasis-900);
+  line-height: 1.45;
+  transition: color 0.2s ease;
+}
+
+.itemTextCompleted {
+  color: var(--ifm-color-emphasis-500);
+  text-decoration: line-through;
+  text-decoration-color: var(--ifm-color-emphasis-400);
+}
+
+/* Example Breakouts */
+.exampleBlock {
+  margin-top: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-left: 3px solid var(--ifm-color-emphasis-300);
+  border-radius: 0 0.5rem 0.5rem 0;
+  font-size: 0.88rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.5;
+}
+
+[data-theme='dark'] .exampleBlock {
+  background: rgba(255, 255, 255, 0.03);
+  border-color: var(--ifm-color-emphasis-600);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.exampleBlock strong {
+  color: var(--ifm-color-emphasis-800);
+}
+
+[data-theme='dark'] .exampleBlock strong {
+  color: white;
+}
+
+/* Reference links */
+.refWrapper {
+  margin-top: 0.5rem;
+}
+
+.refLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+
+.refLink:hover {
+  color: var(--ifm-color-primary-dark);
+  text-decoration: underline;
+}
+
+.refLinkIcon {
+  width: 14px;
+  height: 14px;
+}

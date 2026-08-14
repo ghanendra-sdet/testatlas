@@ -1,10 +1,14 @@
+import React, { useState, useEffect } from 'react';
 import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import HeroWorkflowDiagram from '@site/src/components/HeroWorkflowDiagram';
-import {learningPaths} from '@site/src/data/learningPaths';
+import GoalSelector from '@site/src/components/GoalSelector';
+import LearningPathCard from '@site/src/components/LearningPathCard';
+import { learningPaths } from '@site/src/data/learningPaths';
+import { getLastActiveModule, getCompletedModules } from '@site/src/components/LearningProgress';
 import styles from './index.module.css';
 
 const differentiators = [
@@ -37,35 +41,86 @@ const comingNext = [
     status: 'v1.1+',
   },
   {
-    label: 'Interview Academy',
-    description: 'A question bank and mock-interview structures built from real QA hiring loops.',
+    label: 'Bug Museum Console',
+    description: 'An interactive database of real-world concurrency, security, and transaction bugs with code verification.',
     status: 'v1.1+',
   },
   {
-    label: 'Resources',
-    description: 'Templates and checklists — test plans, bug reports, requirement traceability matrices.',
+    label: 'Resources & Templates',
+    description: 'Ready-to-use checklist libraries for release, API, mobile, performance, and security testing.',
     status: 'v1.1+',
   },
 ];
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   const githubUrl = `https://github.com/${siteConfig.organizationName}/${siteConfig.projectName}`;
+
+  // Client-side progress tracking states (safe from SSR build errors)
+  const [lastActive, setLastActive] = useState<string | null>(null);
+  const [completedCount, setCompletedCount] = useState<number>(0);
+
+  useEffect(() => {
+    setLastActive(getLastActiveModule());
+    setCompletedCount(getCompletedModules().length);
+
+    const handleUpdate = () => {
+      setLastActive(getLastActiveModule());
+      setCompletedCount(getCompletedModules().length);
+    };
+    window.addEventListener('testatlas_progress_update', handleUpdate);
+    return () => window.removeEventListener('testatlas_progress_update', handleUpdate);
+  }, []);
+
+  // Helper to format module pathname to a friendly label
+  const getFriendlyModuleName = (path: string) => {
+    const parts = path.split('/');
+    const lastPart = parts[parts.length - 1];
+    return lastPart
+      .replace(/^\d+-/, '')
+      .split('-')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+      .join(' ');
+  };
 
   return (
     <Layout
-      title="The Open Software Testing Knowledge Base"
-      description="Practical software testing knowledge, real-world projects, and open-source resources.">
+      title="Practical, Visual Software Testing Learning Platform"
+      description="Practical software testing knowledge, interactive paths, real-world bug database, and open-source QA resources.">
       <main>
+        
+        {/* Continue Learning Banner */}
+        {lastActive && (
+          <div className={styles.continueBanner}>
+            <div className="container">
+              <div className={styles.continueContent}>
+                <div className={styles.continueLeft}>
+                  <span className={styles.continueLabel}>WELCOME BACK</span>
+                  <span className={styles.continueTitle}>
+                    Resume learning: <strong>{getFriendlyModuleName(lastActive)}</strong>
+                  </span>
+                </div>
+                <div className={styles.continueRight}>
+                  <span className={styles.completedBadge}>{completedCount} modules completed</span>
+                  <Link className="button button--primary button--sm" to={lastActive}>
+                    Continue Learning &rarr;
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Hero Section */}
         <section className={styles.hero}>
           <div className="container">
             <div className={styles.heroGrid}>
               <div className={styles.heroContent}>
-                <p className={styles.eyebrow}>The Open Software Testing Knowledge Base</p>
-                <h1 className={styles.heroTitle}>Learn testing the way it&rsquo;s actually practiced.</h1>
+                <p className={styles.eyebrow}>Learn software testing by doing the work</p>
+                <h1 className={styles.heroTitle}>The serious platform for learning software testing.</h1>
                 <p className={styles.heroCopy}>
-                  TestAtlas connects testing principles to the work that matters: understanding risk,
-                  investigating failures, building useful coverage, and helping teams ship with confidence.
+                  Practical learning paths for testers, SDETs, automation engineers, and QA leaders — 
+                  from fundamentals to API, automation, performance, security, AI, and leadership.
                 </p>
                 <div className={styles.actions}>
                   <Link
@@ -73,9 +128,9 @@ export default function Home(): ReactNode {
                     to="/learning-paths/foundations/what-is-software-testing">
                     Start Learning
                   </Link>
-                  <Link className="button button--secondary button--lg" to="/project/roadmap">
-                    See the Roadmap
-                  </Link>
+                  <a className="button button--secondary button--lg" href="#paths">
+                    Explore Learning Paths
+                  </a>
                 </div>
                 <ul className={styles.heroBadgeRow}>
                   <li className={clsx(styles.heroBadge, styles.heroBadgeComplete)}>11 Paths Live</li>
@@ -83,12 +138,8 @@ export default function Home(): ReactNode {
                   <li className={styles.heroBadge}>10 Certified Reference Curricula</li>
                   <li className={styles.heroBadge}>Free</li>
                   <li className={styles.heroBadge}>Open Source</li>
+                  <li className={styles.heroBadge}>No Login Required</li>
                 </ul>
-                <p className={styles.heroStatus}>
-                  Foundations plus ten certified curricula — Manual Testing, API Testing, Test Automation,
-                  Database Testing, Performance Testing, AI for QA, Mobile Testing, Security Testing,
-                  Interview Preparation, and Career &amp; Leadership — are live today, 223 modules in total.
-                </p>
               </div>
               <div className={styles.heroVisual}>
                 <HeroWorkflowDiagram />
@@ -97,6 +148,14 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
+        {/* Goal Selector Section */}
+        <section className={styles.section}>
+          <div className="container">
+            <GoalSelector />
+          </div>
+        </section>
+
+        {/* Mission Statement */}
         <section className={styles.section}>
           <div className="container">
             <div className={styles.missionBlock}>
@@ -114,36 +173,37 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
-        <section className={clsx(styles.section, styles.surface)}>
+        {/* Learning Paths Grid */}
+        <section id="paths" className={clsx(styles.section, styles.surface)}>
           <div className="container">
             <div className={styles.sectionHeading}>
-              <p className={styles.eyebrow}>Where to go next</p>
-              <h2 className={styles.sectionTitle}>Learning paths</h2>
+              <p className={styles.eyebrow}>Core Curriculum</p>
+              <h2 className={styles.sectionTitle}>Explore learning paths</h2>
               <p>
-                Eleven role-based paths share one foundation. Nine are live today &mdash; everything else is
-                being built against the same architecture, proposed and reviewed before a module is written.
+                Eleven role-based paths share one foundation. All eleven are live today &mdash; everything 
+                is built against the same certified curriculum architecture.
               </p>
             </div>
             <div className={styles.pathGrid}>
-              {learningPaths.map((path) =>
-                path.href ? (
-                  <Link className={clsx(styles.pathCard, styles.pathCardLive)} to={path.href} key={path.title}>
-                    <span className={clsx(styles.pathStatus, styles.pathStatusLive)}>{path.status}</span>
-                    <h3>{path.title}</h3>
-                    <p>{path.description}</p>
-                  </Link>
-                ) : (
-                  <div className={styles.pathCard} key={path.title}>
-                    <span className={styles.pathStatus}>{path.status}</span>
-                    <h3>{path.title}</h3>
-                    <p>{path.description}</p>
-                  </div>
-                ),
-              )}
+              {learningPaths.map((path) => (
+                <LearningPathCard
+                  key={path.title}
+                  title={path.title}
+                  description={path.description}
+                  href={path.href}
+                  difficulty={path.difficulty}
+                  modulesCount={path.modulesCount}
+                  duration={path.duration}
+                  skills={path.skills}
+                  prerequisites={path.prerequisites}
+                  careerRelevance={path.careerRelevance}
+                />
+              ))}
             </div>
           </div>
         </section>
 
+        {/* Why TestAtlas */}
         <section className={styles.section}>
           <div className="container">
             <div className={styles.sectionHeading}>
@@ -161,14 +221,14 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
+        {/* Coming Next */}
         <section className={clsx(styles.section, styles.surface)}>
           <div className="container">
             <div className={styles.sectionHeading}>
               <p className={styles.eyebrow}>Coming next</p>
               <h2 className={styles.sectionTitle}>Beyond the learning paths</h2>
               <p>
-                Projects, labs, interview practice, and templates are architected and scheduled &mdash; not
-                yet written. Here&rsquo;s what&rsquo;s planned and when.
+                Projects, labs, and interactive consoles are scheduled. Here&rsquo;s what&rsquo;s planned and when.
               </p>
             </div>
             <div className={styles.comingGrid}>
@@ -183,6 +243,7 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
+        {/* Community */}
         <section className={styles.section}>
           <div className="container">
             <div className={styles.sectionHeading}>
@@ -210,6 +271,7 @@ export default function Home(): ReactNode {
           </div>
         </section>
 
+        {/* Start CTA */}
         <section className={styles.callout}>
           <div className="container">
             <p className={styles.eyebrow}>Ready when you are</p>
@@ -220,7 +282,7 @@ export default function Home(): ReactNode {
                 className="button button--primary button--lg"
                 to="/learning-paths/foundations/what-is-software-testing">
                 Start Learning
-              </Link>
+                  </Link>
               <Link className="button button--outline button--lg" to="/project/contributing">
                 Or help build what&rsquo;s next
               </Link>

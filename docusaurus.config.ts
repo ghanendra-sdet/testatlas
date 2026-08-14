@@ -98,6 +98,16 @@ const config: Config = {
       },
     ],
     [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'interview-academy',
+        path: 'interview-academy',
+        routeBasePath: 'interview-academy',
+        sidebarPath: './sidebarsInterviewAcademy.ts',
+        editUrl: `https://github.com/${organizationName}/${projectName}/edit/main/`,
+      },
+    ],
+    [
       '@easyops-cn/docusaurus-search-local',
       {
         hashed: true,
@@ -105,7 +115,7 @@ const config: Config = {
         indexDocs: true,
         indexBlog: true,
         indexPages: true,
-        docsRouteBasePath: ['project', 'learning-paths', 'resources'],
+        docsRouteBasePath: ['project', 'learning-paths', 'resources', 'interview-academy'],
         searchResultLimits: 8,
       },
     ],
@@ -186,6 +196,11 @@ const config: Config = {
           sidebarId: 'learningPathsSidebar',
           position: 'left',
           label: 'Learning Paths',
+        },
+        {
+          to: '/interview-academy',
+          position: 'left',
+          label: 'Interview Academy',
         },
         {
           type: 'docSidebar',
