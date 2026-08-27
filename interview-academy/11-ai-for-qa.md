@@ -280,3 +280,67 @@ Using NLP classifiers, it reads logged bugs, assigns category components, routes
 - **Data Engineering Basics**: Cleaning and feeding testing data to ML engines.
 - **AI Tool Proficiencies**: Gaining certifications in platforms like Applitools, Mabl, or Testim.
 </details>
+
+<details>
+<summary><b>Q26: What is a production-ready AI Prompt Template for generating BDD Gherkin Feature files from User Stories?</b></summary>
+
+**Core Answer**: Use a role-based prompt with strict output constraints, concrete acceptance criteria, and edge-case requirements.
+
+**Prompt Template**:
+```text
+Act as a Senior QA Automation Architect. 
+Analyze the following User Story and Acceptance Criteria, and output a production-ready BDD Gherkin Feature file following standard Cucumber conventions.
+
+[User Story]: As a registered banking customer, I want to transfer funds internationally so that I can send money to overseas recipients.
+[Acceptance Criteria]:
+1. User must select recipient currency and input amount.
+2. If transfer amount exceeds daily limit ($5,000), block with error ERR_LIMIT_EXCEEDED.
+3. If balance is insufficient, return ERR_INSUFFICIENT_FUNDS.
+4. Calculate exchange fee (1.5%) dynamically before confirmation.
+
+Requirements:
+- Include 1 Positive Scenario, 2 Negative Scenarios, and 1 Scenario Outline with an Examples table covering edge amounts ($0.01, $4999.99, $5000.00, $5000.01).
+- Format using proper Feature, Background, Scenario, Given, When, Then, And syntax.
+```
+</details>
+
+<details>
+<summary><b>Q27: What is an AI Prompt Template for synthesizing edge-case mock JSON test datasets?</b></summary>
+
+**Core Answer**: Provide the target JSON schema and explicitly instruct the LLM to generate boundary, unicode, null, and SQL-injection edge records.
+
+**Prompt Template**:
+```text
+Act as an SDET specializing in API security and boundary testing.
+Generate a JSON array of 5 distinct test payloads for an API endpoint that accepts user profiles.
+
+Schema:
+- username (string, 3-20 chars, alphanumeric)
+- email (valid RFC-5322 email string)
+- age (integer, 18-99)
+- address (object with street, zipCode, country)
+
+Provide exactly 5 test cases:
+1. Valid Standard Case (typical user)
+2. Boundary Edge Case (username exactly 3 chars, age exactly 18)
+3. Internationalization & Unicode Edge Case (Accents and non-Latin names e.g. "Renée Müller")
+4. Security XSS Payload Case (embedded <script> alert inside street address)
+5. Type Mismatch / Malformed Case (null values and empty strings)
+```
+</details>
+
+<details>
+<summary><b>Q28: What is an AI Prompt Template for generating a Boundary Value Analysis (BVA) test matrix?</b></summary>
+
+**Core Answer**: Feed the numerical or string field rules into the LLM and request a structured markdown matrix showing 2-point and 3-point boundary values with expected results.
+
+**Prompt Template**:
+```text
+Act as a Lead QA Analyst. 
+Given the input validation rule: "Order quantity must be an integer between 1 and 99 items per checkout":
+
+Construct a complete Boundary Value Analysis (BVA) test matrix.
+Output a Markdown table with the following columns:
+| Test ID | Test Scenario | Input Value | Boundary Type (Just Below Min / Min / Max / Just Above Max) | Expected Result |
+```
+</details>
