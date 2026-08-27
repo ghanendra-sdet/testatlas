@@ -855,3 +855,71 @@ This maps local files to remote grids.
 - Mock the dependent system state.
 - Discuss boundaries with the development team.
 </details>
+
+## Section 11 — Modern Automation: Selenium vs Playwright
+
+<details>
+<summary><b>Q101: How does the architecture of Playwright differ from Selenium WebDriver?</b></summary>
+
+**Core Answer**: Selenium uses HTTP JSON Wire / W3C WebDriver protocol over multiple HTTP request-response cycles, while Playwright uses a single bi-directional WebSocket connection via the Chrome DevTools Protocol (CDP).
+
+**Architectural Comparison**:
+- **Selenium**: Test Script → Language Bindings → HTTP Request → Browser Driver (chromedriver.exe) → Browser.
+- **Playwright**: Test Script → Single Persistent WebSocket → Browser. This eliminates HTTP handshake latency, resulting in faster and more reliable execution.
+</details>
+
+<details>
+<summary><b>Q102: How does Playwright handle element waiting compared to Selenium?</b></summary>
+
+**Core Answer**: Playwright features built-in **Auto-Waiting** on every action, performing multiple actionable checks before clicking or typing, eliminating explicit wait boilerplate.
+
+**Actionability Checks in Playwright**:
+Before clicking an element, Playwright automatically ensures:
+1. Element is attached to the DOM
+2. Element is visible on the screen
+3. Element is stable (not animating or transitioning)
+4. Element receives pointer events (not obscured by overlays)
+5. Element is enabled (not disabled)
+
+In Selenium, you must write `wait.until(ExpectedConditions.elementToBeClickable(...))` explicitly for dynamic elements.
+</details>
+
+<details>
+<summary><b>Q103: What are Browser Contexts in Playwright, and how do they improve parallel test isolation?</b></summary>
+
+**Core Answer**: A Browser Context is an isolated, incognito-like session within a single browser instance that boots in milliseconds, allowing isolated parallel tests without launching new browser processes.
+
+**Key Benefits**:
+- **Lightning Fast Setup**: Launching a new browser in Selenium takes 2-4 seconds. Creating a Browser Context in Playwright takes ~10-20ms.
+- **Complete Storage Isolation**: Cookies, localStorage, and sessionStorage are completely separate between contexts.
+- **Multi-Role Testing**: Easily test Admin and Customer workflows simultaneously in the same test script using two independent contexts.
+</details>
+
+<details>
+<summary><b>Q104: How do you mock network API responses in Playwright vs Selenium?</b></summary>
+
+**Core Answer**: Playwright provides native, built-in network interception via `page.route()`, allowing you to mock API responses and test error states without external proxy servers.
+
+**Playwright Mocking Example**:
+```typescript
+await page.route('**/api/v1/user/profile', async (route) => {
+  await route.fulfill({
+    status: 500,
+    contentType: 'application/json',
+    body: JSON.stringify({ error: 'Internal Server Error' }),
+  });
+});
+```
+In Selenium, network interception requires Chrome DevTools Protocol (CDP) listener setup via `DevTools` sessions, which is more verbose and browser-dependent.
+</details>
+
+<details>
+<summary><b>Q105: What is the Playwright Trace Viewer and how does it revolutionize test failure debugging?</b></summary>
+
+**Core Answer**: Playwright Trace Viewer is a GUI tool that records DOM snapshots, console logs, network requests, and action screencasts for every step of test execution.
+
+**Why SDETs love it**:
+- **Time-Travel Debugging**: Hover over any executed step to inspect the exact DOM state and visual rendering at that millisecond.
+- **Zero Flakiness Guesswork**: Inspect exact network calls, request bodies, and console errors that happened before the test failed.
+- **CI Artifacts**: Save `trace.zip` on Jenkins/GitHub Actions failure and open locally using `npx playwright show-trace trace.zip`.
+</details>
