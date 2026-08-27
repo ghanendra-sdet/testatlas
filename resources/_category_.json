@@ -3,6 +3,7 @@
   "position": 1,
   "link": {
     "type": "generated-index",
-    "title": "Resources"
+    "title": "Resources & Checklists",
+    "description": "Production-grade interactive checklists, templates, and reference cheat sheets for release sign-offs, load testing, and API security auditing."
   }
 }

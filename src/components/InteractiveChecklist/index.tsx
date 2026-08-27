@@ -1,16 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import { jmeterChecklistData, ChecklistSection, ChecklistItem } from './jmeterData';
+import { releaseChecklistData } from './releaseData';
+import { apiSecurityChecklistData } from './apiSecurityData';
 import Link from '@docusaurus/Link';
 
 const isBrowser = typeof window !== 'undefined';
 
 interface InteractiveChecklistProps {
   id?: string;
+  preset?: 'jmeter' | 'release' | 'api-security';
   data?: ChecklistSection[];
 }
 
-export default function InteractiveChecklist({ id = 'jmeter_load_test', data = jmeterChecklistData }: InteractiveChecklistProps) {
+export default function InteractiveChecklist({ 
+  id, 
+  preset = 'jmeter', 
+  data 
+}: InteractiveChecklistProps) {
+  // Resolve dataset based on preset or custom data
+  const resolvedData = data || (preset === 'release' ? releaseChecklistData : preset === 'api-security' ? apiSecurityChecklistData : jmeterChecklistData);
+  const checklistId = id || `checklist_${preset}`;
+
   const [checkedIds, setCheckedIds] = useState<string[]>([]);
   const [mounted, setMounted] = useState(false);
 
@@ -19,7 +30,7 @@ export default function InteractiveChecklist({ id = 'jmeter_load_test', data = j
     setMounted(true);
     if (isBrowser) {
       try {
-        const saved = localStorage.getItem(`testatlas_checklist_${id}`);
+        const saved = localStorage.getItem(`testatlas_checklist_${checklistId}`);
         if (saved) {
           setCheckedIds(JSON.parse(saved));
         }
@@ -27,14 +38,14 @@ export default function InteractiveChecklist({ id = 'jmeter_load_test', data = j
         console.error('Failed to load checklist state', e);
       }
     }
-  }, [id]);
+  }, [checklistId]);
 
   // Helper to save checked state
   const saveState = (updated: string[]) => {
     setCheckedIds(updated);
     if (isBrowser) {
       try {
-        localStorage.setItem(`testatlas_checklist_${id}`, JSON.stringify(updated));
+        localStorage.setItem(`testatlas_checklist_${checklistId}`, JSON.stringify(updated));
       } catch (e) {
         console.error('Failed to save checklist state', e);
       }
@@ -66,7 +77,7 @@ export default function InteractiveChecklist({ id = 'jmeter_load_test', data = j
   };
 
   // Compute overall counts
-  const allItems = data.flatMap(section => section.items);
+  const allItems = resolvedData.flatMap(section => section.items);
   const totalCount = allItems.length;
   const completedCount = allItems.filter(item => checkedIds.includes(item.id)).length;
   const overallPercentage = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0;
@@ -127,7 +138,7 @@ export default function InteractiveChecklist({ id = 'jmeter_load_test', data = j
       </div>
 
       {/* Accordion List Sections */}
-      {data.map((section, sIndex) => {
+      {resolvedData.map((section, sIndex) => {
         const sectionItems = section.items;
         const sectionCompletedCount = sectionItems.filter(item => checkedIds.includes(item.id)).length;
         const sectionTotalCount = sectionItems.length;
