@@ -135,6 +135,16 @@ const academyModules: AcademyModule[] = [
     difficulty: "Advanced",
     timeToRead: "22 min",
     skills: ["QA Conflict", "API vs UI Mismatch", "Cart Concurrency", "Critical Release"],
+  },
+  {
+    chapter: "13",
+    title: "Playwright with TypeScript",
+    description: "25 questions on CDP architecture, custom test fixtures, locator actionability, API context, and Trace Viewer debugging.",
+    href: "/interview-academy/playwright-typescript",
+    questionsCount: 25,
+    difficulty: "Advanced",
+    timeToRead: "20 min",
+    skills: ["Playwright", "TypeScript", "Auto-Waiting", "Trace Viewer", "Visual Regression"],
   }
 ];
 
@@ -252,6 +262,14 @@ const getModuleIcon = (chapter: string): React.ReactNode => {
           <line x1="12" y1="17" x2="12.01" y2="17" />
         </svg>
       );
+    case "13": // Playwright with TypeScript - Code browser
+      return (
+        <svg {...props}>
+          <rect width="18" height="18" x="3" y="3" rx="2" />
+          <path d="m9 8 4 4-4 4" />
+          <path d="M15 16h1" />
+        </svg>
+      );
     default:
       return null;
   }
@@ -261,14 +279,14 @@ export default function InterviewAcademyIndex(): ReactNode {
   return (
     <Layout
       title="Interview Academy Q&A Bank"
-      description="Practice 550+ real-world QA engineering, SDET, and software testing interview questions with detailed explanations and code.">
+      description="Practice 580+ real-world QA engineering, SDET, and software testing interview questions with detailed explanations and code.">
       <main className={styles.main}>
         <div className="container">
           <header className={styles.header}>
             <h1 className={styles.heading}>Interview Academy</h1>
             <p className={styles.intro}>
               Bridge the gap between theoretical testing and production-grade software engineering. 
-              Study 550+ structured questions, concrete coding challenges, and dynamic architectural systems designed to build SDET competence.
+              Study 580+ structured questions, concrete coding challenges, and dynamic architectural systems designed to build SDET competence.
             </p>
           </header>
 

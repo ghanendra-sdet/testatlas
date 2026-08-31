@@ -749,3 +749,21 @@ Use shared workspaces in Postman, or version control environment JSON templates 
 
 Check Newman execution logs, verify environment variable exports, check endpoints, and rerun manually in Postman.
 </details>
+
+---
+
+## Knowledge Check: API Status Codes
+
+<TesterChallenge
+  id="quiz_api_401_403"
+  title="API STATUS RECALL CHALLENGE"
+  question="An authenticated standard user attempts to call 'DELETE /api/v1/admin/users/42' and is rejected because they lack Admin role privileges. Which HTTP status code MUST the API return?"
+  options={[
+    "401 Unauthorized",
+    "403 Forbidden",
+    "400 Bad Request",
+    "405 Method Not Allowed"
+  ]}
+  correctIndex={1}
+  explanation="HTTP 401 indicates missing or invalid authentication credentials (who are you?). HTTP 403 indicates the user is successfully authenticated, but lacks permission/authorization to access the requested resource."
+/>

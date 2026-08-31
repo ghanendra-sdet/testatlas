@@ -934,3 +934,21 @@ Verifying the system works with different configurations (hardware, OS, browsers
 - **Static Testing**: Reviews, walkthroughs, inspections (no code execution).
 - **Dynamic Testing**: Executing code to find defects under runtime conditions.
 </details>
+
+---
+
+## Knowledge Check: Boundary Value Analysis
+
+<TesterChallenge
+  id="quiz_manual_bva"
+  title="TEST DESIGN RECALL CHALLENGE"
+  question="For an input field accepting ages between 18 and 60 (inclusive), which set represents the 2-point Boundary Value Analysis (BVA) test values?"
+  options={[
+    "17, 18, 60, 61",
+    "1, 18, 30, 60, 99",
+    "0, 18, 60, 100",
+    "19, 20, 58, 59"
+  ]}
+  correctIndex={0}
+  explanation="In 2-point Boundary Value Analysis, tests are chosen at the exact boundary edges (18, 60) and just outside the valid boundary limits (17, 61)."
+/>
