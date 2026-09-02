@@ -3,23 +3,37 @@ import styles from './styles.module.css';
 import { jmeterChecklistData, ChecklistSection, ChecklistItem } from './jmeterData';
 import { releaseChecklistData } from './releaseData';
 import { apiSecurityChecklistData } from './apiSecurityData';
+import { contractTestingChecklistData } from './contractTestingData';
+import { accessibilityChecklistData } from './accessibilityData';
 import Link from '@docusaurus/Link';
 
 const isBrowser = typeof window !== 'undefined';
 
+// Registry of every available preset. Adding a new checklist is a one-line
+// addition here — no other part of this component needs to change.
+const CHECKLIST_PRESETS: Record<string, ChecklistSection[]> = {
+  jmeter: jmeterChecklistData,
+  release: releaseChecklistData,
+  'api-security': apiSecurityChecklistData,
+  'contract-testing': contractTestingChecklistData,
+  accessibility: accessibilityChecklistData,
+};
+
+type ChecklistPreset = keyof typeof CHECKLIST_PRESETS;
+
 interface InteractiveChecklistProps {
   id?: string;
-  preset?: 'jmeter' | 'release' | 'api-security';
+  preset?: ChecklistPreset;
   data?: ChecklistSection[];
 }
 
-export default function InteractiveChecklist({ 
-  id, 
-  preset = 'jmeter', 
-  data 
+export default function InteractiveChecklist({
+  id,
+  preset = 'jmeter',
+  data
 }: InteractiveChecklistProps) {
   // Resolve dataset based on preset or custom data
-  const resolvedData = data || (preset === 'release' ? releaseChecklistData : preset === 'api-security' ? apiSecurityChecklistData : jmeterChecklistData);
+  const resolvedData = data || CHECKLIST_PRESETS[preset] || jmeterChecklistData;
   const checklistId = id || `checklist_${preset}`;
 
   const [checkedIds, setCheckedIds] = useState<string[]>([]);
