@@ -14,14 +14,15 @@ An open, free, practical curriculum that teaches testing the way an experienced 
 
 ## What's included today
 
-Four complete learning paths, 79 modules, each independently reviewed:
+Eleven complete learning paths, 225 modules, each independently reviewed:
 
 - **Foundations of Software Testing** — the mindset and vocabulary every other path builds on
 - **Manual Testing** — test design technique, from boundary values to exploratory testing to writing a defect report someone can act on
 - **API Testing** — reading a response with precision, testing authentication and authorization, catching what only shows up when a dependency fails
 - **Test Automation** — not just "how to use Playwright," but how to decide what deserves automating, how to keep a suite reliable, and how to keep it healthy a year later
+- **Database Testing**, **Performance Testing**, **AI for QA**, **Mobile Testing**, **Security Testing**, **Interview Preparation**, and **Career & Leadership** — each independently certified as a Reference Curriculum since v1.0.0, extending the same standard rather than lowering it
 
-All four use the same recurring, realistic scenario — AtlasBank, a fictional banking platform — so what you learn in one module compounds into the next, instead of every example starting from zero.
+Every path uses the same recurring, realistic scenario — AtlasBank, a fictional banking platform — so what you learn in one module compounds into the next, instead of every example starting from zero.
 
 ## Where we're going
 

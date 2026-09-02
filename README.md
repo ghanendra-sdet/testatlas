@@ -58,10 +58,10 @@ TestAtlas covers the core areas of modern software testing. Eleven paths are liv
 7. ✅ Security Testing — shipped, v1.0, 22 modules, certified
 8. ✅ AI for QA — shipped, v1.0, 17 modules, certified
 9. ✅ Mobile Testing — shipped, v1.0, 16 modules, certified
-10. ✅ Interview Preparation — shipped, v1.0, 21 modules, certified
+10. ✅ Interview Preparation — shipped, v1.0, 23 modules (21 at certification), certified
 11. ✅ Career & Leadership — shipped, v1.0, 35 modules, certified
 
-223 modules live today (206 across the ten certified Reference Curricula, plus Foundations). Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
+225 modules live today (208 across the ten certified Reference Curricula, plus Foundations). Each path connects concepts with practical scenarios, examples, common failure modes, and related skills. See `docs/architecture/LEARNING_PATHS.md` for the detailed curriculum architecture of every shipped path, and `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md` for what "certified" means and why it matters for anyone extending TestAtlas.
 
 With ten certified curricula now shipped, active development is paused in favor of gathering real learner and contributor feedback before adding an eleventh path — see `docs/architecture/REFERENCE_CURRICULUM_CERTIFICATION.md`'s closing note for the reasoning.
 
