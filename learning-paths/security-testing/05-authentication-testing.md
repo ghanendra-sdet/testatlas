@@ -119,7 +119,7 @@ A newer tester considers authentication tested once login succeeds with valid cr
 
 ## Related Topics
 
-- [OWASP Top 10 for Testers](/learning-paths/security-testing/owasp-top-10-for-testers) — Where Identification and Authentication Failures is named as its own OWASP category
+- [OWASP Top 10 for Testers](/learning-paths/security-testing/owasp-top-10-for-testers) — Where Authentication Failures (A07:2025, "Identification and Authentication Failures" in the 2021 edition) is named as its own OWASP category
 - [Session Management, Cookies, and JWT](/learning-paths/security-testing/session-management-cookies-and-jwt) — What happens immediately after this module's authentication succeeds
 - [What is Security Testing?](/learning-paths/security-testing/what-is-security-testing) — The CIA Triad's Confidentiality property this module's credential-handling checks directly serve
 

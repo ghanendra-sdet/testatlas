@@ -5,7 +5,7 @@ description: "Security testing from a QA engineer's vantage point — the OWASP 
 keywords: ["api security testing", "owasp api security top 10", "bola testing", "excessive data exposure"]
 difficulty: "beginner"
 time_to_read: "10 min"
-last_reviewed: "2026-08-04"
+last_reviewed: "2026-11-10"
 ---
 
 # API Security Fundamentals
@@ -29,7 +29,7 @@ Most of what this section teaches isn't a new skill — it's the same precise-re
 
 **The API attack surface**: everything reachable by a caller — every endpoint, every parameter, every header — is a potential attack surface. A tester's job isn't to think like an attacker in the adversarial, exploit-building sense; it's to recognize that anything reachable needs validation, exactly the mindset [What Is API Testing?](/learning-paths/api-testing/what-is-api-testing) established from the start of this path.
 
-**OWASP API Security Top 10 (overview)**: a widely referenced, regularly updated list of the most common API security risk categories, maintained by the Open Web Application Security Project. As a tester, you don't need to memorize the list — you need to recognize the handful of categories a functional tester is best positioned to catch, covered directly in this module: broken object-level authorization, excessive data exposure, and security misconfiguration.
+**OWASP API Security Top 10 (overview)**: a widely referenced, regularly updated list of the most common API security risk categories, maintained by OWASP (the Open Worldwide Application Security Project, known as the Open Web Application Security Project until 2023). The current edition is the 2023 list, which replaced the original 2019 one. As a tester, you don't need to memorize the list — you need to recognize the handful of categories a functional tester is best positioned to catch, covered directly in this module: broken object-level authorization (API1:2023), excessive data exposure (part of API3:2023), and security misconfiguration (API8:2023).
 
 **Authentication vs. Authorization (review)**: [API Authentication](/learning-paths/api-testing/api-authentication) and [Authorization and Access Control](/learning-paths/api-testing/authorization-and-access-control) already covered these in depth — worth restating here because a large share of real API security incidents trace back to exactly these two categories, not to anything exotic.
 
@@ -37,7 +37,7 @@ Most of what this section teaches isn't a new skill — it's the same precise-re
 
 **Broken Object Level Authorization (BOLA)**: the formal OWASP name for the IDOR pattern [Authorization and Access Control](/learning-paths/api-testing/authorization-and-access-control) already covered — a caller supplying a resource ID they don't own, and the API failing to verify ownership before returning data. It's listed here specifically because it's consistently the single most common real API security finding, worth restating as the top of this module's priority list, not a one-off item.
 
-**Excessive data exposure**: distinct from BOLA — this is about a response containing more *fields* than needed, even for a resource the caller genuinely owns. This module's opening example is excessive data exposure, not BOLA: the customer legitimately owns their own profile, but the response still over-shares fields the UI never uses.
+**Excessive data exposure**: distinct from BOLA — this is about a response containing more *fields* than needed, even for a resource the caller genuinely owns. This module's opening example is excessive data exposure, not BOLA: the customer legitimately owns their own profile, but the response still over-shares fields the UI never uses. In the 2019 edition this was its own category (API3:2019 Excessive Data Exposure). The 2023 edition merged it with mass assignment, covered in the [next module](/learning-paths/api-testing/injection-and-input-based-attacks), into **API3:2023 Broken Object Property Level Authorization** — they're the read and write sides of the same gap: the API never checks which *properties* of an object this caller may see or change. "Excessive data exposure" is still the common name for the read side, and this path keeps using it.
 
 **Security misconfiguration**: a broad category covering things like verbose error messages leaking stack traces or internal paths, default credentials left active, or an API documentation/debug endpoint accidentally left reachable in production. A tester's job: check error responses specifically for leaked internal detail, and confirm no debug or admin tooling is reachable without authentication.
 
@@ -47,11 +47,11 @@ Most of what this section teaches isn't a new skill — it's the same precise-re
 
 **Logging sensitive data**: a related, easily-missed risk — an API might correctly protect a sensitive field in its *response* while still writing that same field, unmasked, into application logs. This is worth asking about even when it isn't directly observable through the API response itself.
 
-| OWASP Category (Selected) | What a Functional Tester Checks |
+| OWASP Category (Selected, 2023) | What a Functional Tester Checks |
 |---|---|
-| Broken Object Level Authorization | Substitute a resource ID belonging to a different, real identity — covered fully in Module 8 |
-| Excessive Data Exposure | Compare a response's actual fields against what the calling screen genuinely uses |
-| Security Misconfiguration | Read error responses for leaked stack traces/internal paths; confirm no unauthenticated debug endpoints |
+| API1 Broken Object Level Authorization | Substitute a resource ID belonging to a different, real identity — covered fully in Module 8 |
+| API3 Broken Object Property Level Authorization (excessive data exposure, read side) | Compare a response's actual fields against what the calling screen genuinely uses |
+| API8 Security Misconfiguration | Read error responses for leaked stack traces/internal paths; confirm no unauthenticated debug endpoints |
 
 ```mermaid
 %% VIS-API-013 — Where Functional Testing Already Overlaps Security Testing
@@ -173,7 +173,7 @@ Many candidates treat "security testing" as entirely someone else's job and can'
 
 **BOLA (Broken Object Level Authorization)**: A resource-ownership authorization failure where an API returns data for a resource the caller doesn't actually own, given a valid-looking but incorrect resource ID — also known as IDOR.
 
-**Excessive Data Exposure**: A response returning more fields than the caller needs or is entitled to, even for a resource they legitimately own.
+**Excessive Data Exposure**: A response returning more fields than the caller needs or is entitled to, even for a resource they legitimately own. Part of API3:2023 Broken Object Property Level Authorization in the current OWASP API Security Top 10 (its own category, API3:2019, in the 2019 edition).
 
 **Security Misconfiguration**: A broad category of security weaknesses arising from incorrect or overly permissive configuration — verbose error messages, exposed debug endpoints, default credentials — rather than a logic flaw.
 

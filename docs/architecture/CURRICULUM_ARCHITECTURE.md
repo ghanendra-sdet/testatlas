@@ -163,7 +163,7 @@ See `LEARNING_PATHS.md` for full module-by-module scope, learning outcomes, and 
 **Learning Objectives**:
 - Understand OWASP Top 10 from a testing perspective
 - Threat model and design security tests
-- Use security testing tools (Burp Suite, OWASP ZAP)
+- Use security testing tools (Burp Suite, ZAP, formerly "OWASP ZAP")
 - Test authentication, authorization, injection, and data protection
 - Shift-left security practices
 
@@ -177,7 +177,7 @@ See `LEARNING_PATHS.md` for full module-by-module scope, learning outcomes, and 
 7. XSS and CSRF
 8. Encryption and Data Protection
 9. API Security Testing (links to API Testing path)
-10. Security Tools: Burp Suite vs. OWASP ZAP
+10. Security Tools: Burp Suite vs. ZAP
 11. Security in CI/CD
 12. Compliance Testing (GDPR, HIPAA, PCI-DSS)
 
@@ -301,7 +301,7 @@ These concepts are taught once and referenced across multiple learning paths.
 ### Tools (Reusable References)
 - Automation: Playwright, Selenium, Cypress, Robot Framework
 - Performance: k6, JMeter, Gatling, Locust
-- Security: Burp Suite, OWASP ZAP, Fortify
+- Security: Burp Suite, ZAP, Fortify
 - API: Postman, REST Client, Bruno
 - Database: SQL Developer, DBeaver, DataGrip
 

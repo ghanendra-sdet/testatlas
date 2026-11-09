@@ -5,7 +5,7 @@ description: "The general OWASP Top 10 as an orientation map for application sec
 keywords: ["OWASP Top 10", "OWASP for testers", "web application security testing", "OWASP Top 10 explained"]
 difficulty: "beginner"
 time_to_read: "10 min"
-last_reviewed: "2026-08-06"
+last_reviewed: "2026-11-10"
 ---
 
 # OWASP Top 10 for Testers
@@ -27,7 +27,9 @@ Both teams found the same real defect. Only one of them could communicate it in 
 
 The OWASP Top 10 is a regularly updated, industry-consensus list of the most common and impactful web-application security risk categories. For a tester, its value isn't memorizing every category in technical depth — it's having a shared map for where the rest of this path's modules fit, and a shared vocabulary for reporting findings clearly.
 
-The categories this section and Section 3 map directly onto: **Broken Access Control** (Module 7, Authorization and Access Control Testing), **Cryptographic Failures** (Module 12, Configuration and Transport Security), **Injection** (Module 8, Input Validation and Output Encoding), **Identification and Authentication Failures** (Module 5, Authentication Testing, and Module 6, Session Management), **Security Misconfiguration** (Module 12), and **Vulnerable and Outdated Components** (Module 17, Security Automation and CI/CD, where dependency-scanning awareness lives).
+The current edition is the **OWASP Top 10:2025**, which replaced the 2021 list. Categories get renamed, merged, and renumbered between editions — Security Misconfiguration was A05 in 2021 and is A02 in 2025 — so when you cite a category code in a defect report, include the edition: "A01:2025," not just "A01."
+
+The categories this section and Section 3 map directly onto: **Broken Access Control** (A01:2025 — Module 7, Authorization and Access Control Testing), **Security Misconfiguration** (A02:2025 — Module 12, Configuration and Transport Security), **Software Supply Chain Failures** (A03:2025 — Module 17, Security Automation and CI/CD, where dependency-scanning awareness lives; it absorbs 2021's "Vulnerable and Outdated Components"), **Cryptographic Failures** (A04:2025 — Module 12), **Injection** (A05:2025 — Module 8, Input Validation and Output Encoding), and **Authentication Failures** (A07:2025, called "Identification and Authentication Failures" in 2021 — Module 5, Authentication Testing, and Module 6, Session Management).
 
 **Explicitly not this module's job**: the **OWASP API Security Top 10** is a separate, API-specific list already taught in [API Security Fundamentals](/learning-paths/api-testing/api-security-fundamentals) — this module covers the general, application-wide list, and Module 16 cross-links the API-specific one rather than repeating it here.
 
@@ -35,21 +37,21 @@ The categories this section and Section 3 map directly onto: **Broken Access Con
 %% VIS-SEC-004 — OWASP Top 10 as an Orientation Map for This Path
 flowchart TD
     accTitle: OWASP Top 10 as an Orientation Map for This Path
-    accDescr: The OWASP Top 10 categories map directly onto this path's own later modules. Broken access control maps to authorization testing. Identification and authentication failures map to authentication and session testing. Injection maps to input validation testing. Security misconfiguration and cryptographic failures map to configuration and transport security testing. Vulnerable and outdated components maps to security automation and CI/CD.
-    A[OWASP Top 10 Categories] --> B[Broken Access Control<br/>→ Module 7]
-    A --> C[Auth/Session Failures<br/>→ Modules 5–6]
-    A --> D[Injection<br/>→ Module 8]
-    A --> E[Misconfiguration/Crypto<br/>→ Module 12]
-    A --> F[Vulnerable Components<br/>→ Module 17]
+    accDescr: The OWASP Top 10 2025 categories map directly onto this path's own later modules. Broken access control maps to authorization testing. Authentication failures map to authentication and session testing. Injection maps to input validation testing. Security misconfiguration and cryptographic failures map to configuration and transport security testing. Software supply chain failures maps to security automation and CI/CD.
+    A[OWASP Top 10:2025 Categories] --> B[A01 Broken Access Control<br/>→ Module 7]
+    A --> C[A07 Authentication Failures<br/>→ Modules 5–6]
+    A --> D[A05 Injection<br/>→ Module 8]
+    A --> E[A02 Misconfiguration / A04 Crypto<br/>→ Module 12]
+    A --> F[A03 Supply Chain Failures<br/>→ Module 17]
 ```
 
-| OWASP Category | This Path's Module | Note |
+| OWASP Category (2025) | This Path's Module | Note |
 |---|---|---|
-| Broken Access Control | Module 7 | Authorization and Access Control Testing |
-| Identification and Authentication Failures | Modules 5–6 | Authentication Testing; Session Management, Cookies, and JWT |
-| Injection | Module 8 | Input Validation and Output Encoding |
-| Security Misconfiguration / Cryptographic Failures | Module 12 | Configuration, Secrets, and Transport Security |
-| Vulnerable and Outdated Components | Module 17 | Security Automation and Security in CI/CD |
+| A01 Broken Access Control | Module 7 | Authorization and Access Control Testing |
+| A07 Authentication Failures | Modules 5–6 | Authentication Testing; Session Management, Cookies, and JWT |
+| A05 Injection | Module 8 | Input Validation and Output Encoding |
+| A02 Security Misconfiguration / A04 Cryptographic Failures | Module 12 | Configuration, Secrets, and Transport Security |
+| A03 Software Supply Chain Failures | Module 17 | Security Automation and Security in CI/CD |
 
 ## How This Works on a Real Project
 
@@ -136,7 +138,7 @@ Many candidates recite OWASP Top 10 category names without connecting them to an
 
 ## Glossary
 
-**OWASP Top 10**: An industry-consensus, regularly updated list of the most common and impactful web-application security risk categories, used as shared vocabulary and an orientation map for security testing.
+**OWASP Top 10**: An industry-consensus, regularly updated list of the most common and impactful web-application security risk categories, used as shared vocabulary and an orientation map for security testing. The current edition is the 2025 list; cite category codes with their edition (e.g. A01:2025).
 
 ## Quick Revision
 

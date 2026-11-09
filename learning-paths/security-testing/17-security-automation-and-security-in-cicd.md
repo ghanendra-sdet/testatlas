@@ -116,7 +116,7 @@ A newer tester considers a security check "done" once it's added to the pipeline
 
 - [CI/CD Integration](/learning-paths/automation/cicd-integration) — The general real-gate-versus-optional-step principle this module applies specifically to security checks
 - [Vulnerability Validation and Security Regression Testing](/learning-paths/security-testing/vulnerability-validation-and-security-regression-testing) — Where the regression tests this module verifies as real gates are originally written
-- [OWASP Top 10 for Testers](/learning-paths/security-testing/owasp-top-10-for-testers) — Where Vulnerable and Outdated Components is named as its own OWASP category, the basis for this module's baseline scanning discipline
+- [OWASP Top 10 for Testers](/learning-paths/security-testing/owasp-top-10-for-testers) — Where Software Supply Chain Failures (A03:2025, which absorbed 2021's "Vulnerable and Outdated Components") is named as its own OWASP category, the basis for this module's baseline scanning discipline
 
 ## Interview Questions
 
