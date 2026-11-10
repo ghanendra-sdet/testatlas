@@ -2,10 +2,10 @@
 title: "Common QA Terminology"
 sidebar_label: "15 Common QA Terminology"
 description: "A consolidated glossary of every term introduced across the Foundations path — organized by category, meant to be bookmarked and searched, not read start to finish."
-keywords: ["QA glossary", "testing terminology", "QA vocabulary", "software testing terms"]
+keywords: ["QA glossary", "testing terminology", "QA vocabulary", "software testing terms", "tests wear out", "absence of defects fallacy"]
 difficulty: "beginner"
 time_to_read: "6 min"
-last_reviewed: "2026-08-03"
+last_reviewed: "2026-11-10"
 ---
 
 # Common QA Terminology
@@ -29,9 +29,9 @@ Each term below has a one-sentence definition and a link to the module where it'
 
 **Defect Clustering**: The tendency for a disproportionate share of defects to concentrate in a small number of modules. See [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
 
-**Pesticide Paradox**: The phenomenon where repeatedly running the same tests eventually stops finding new defects, because those specific tests have exhausted what they can catch. See [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
+**Tests Wear Out (Pesticide Paradox)**: The phenomenon where repeatedly running the same tests eventually stops finding new defects, because those specific tests have exhausted what they can catch — "tests wear out" is the ISTQB CTFL v4.0 name, "pesticide paradox" the older one. See [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
 
-**Absence-of-Errors Fallacy**: The mistaken belief that a product with few known defects is necessarily ready to ship, even if it solves the wrong problem. See [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
+**Absence-of-Defects Fallacy**: The mistaken belief that a product with few known defects is necessarily ready to ship, even if it solves the wrong problem — also seen as the absence-of-errors fallacy. See [Software Testing Principles](/learning-paths/foundations/software-testing-principles).
 
 ## Process and Lifecycle
 

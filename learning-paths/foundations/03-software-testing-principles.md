@@ -2,10 +2,10 @@
 title: "Software Testing Principles"
 sidebar_label: "03 Software Testing Principles"
 description: "Seven foundational principles that shape how experienced testers think — not rules to memorize, but the mental model everything later in this path builds on."
-keywords: ["testing principles", "exhaustive testing", "pesticide paradox", "defect clustering", "absence of errors fallacy"]
+keywords: ["testing principles", "exhaustive testing", "tests wear out", "pesticide paradox", "defect clustering", "absence of defects fallacy"]
 difficulty: "beginner"
 time_to_read: "8 min"
-last_reviewed: "2026-08-03"
+last_reviewed: "2026-11-10"
 ---
 
 # Software Testing Principles
@@ -27,7 +27,7 @@ Neither tester lacked effort. The difference was a set of principles that turn t
 
 <svg viewBox="0 0 900 400" role="img" aria-labelledby="vis005-title vis005-desc" xmlns="http://www.w3.org/2000/svg">
   <title id="vis005-title">The Seven Testing Principles</title>
-  <desc id="vis005-desc">Seven independent, parallel principles of software testing, shown as equal cards with no hierarchy between them: presence of defects, exhaustive testing impossible, early testing saves cost, defects cluster, pesticide paradox, context-dependent testing, and absence-of-errors fallacy.</desc>
+  <desc id="vis005-desc">Seven independent, parallel principles of software testing, shown as equal cards with no hierarchy between them: presence of defects, exhaustive testing impossible, early testing saves cost, defects cluster, tests wear out (the pesticide paradox), context-dependent testing, and the absence-of-defects fallacy.</desc>
   <g font-family="Inter, ui-sans-serif, system-ui, sans-serif">
     <g>
       <rect x="20" y="20" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
@@ -68,8 +68,8 @@ Neither tester lacked effort. The difference was a set of principles that turn t
       <rect x="130" y="200" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
       <circle cx="160" cy="230" r="18" fill="#087f8c"/>
       <text x="160" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">5</text>
-      <text x="145" y="270" fill="#05565f" font-size="14" font-weight="700">The pesticide</text>
-      <text x="145" y="288" fill="#05565f" font-size="14" font-weight="700">paradox</text>
+      <text x="145" y="270" fill="#05565f" font-size="14" font-weight="700">Tests wear out</text>
+      <text x="145" y="288" fill="#05565f" font-size="14" font-weight="700">(pesticide paradox)</text>
       <text x="145" y="312" fill="#3a4a4d" font-size="12">Same tests, run again,</text>
       <text x="145" y="328" fill="#3a4a4d" font-size="12">stop finding new bugs</text>
     </g>
@@ -86,8 +86,8 @@ Neither tester lacked effort. The difference was a set of principles that turn t
       <rect x="570" y="200" width="200" height="150" rx="10" fill="#f3f8f8" stroke="#087f8c" stroke-width="1.5"/>
       <circle cx="600" cy="230" r="18" fill="#087f8c"/>
       <text x="600" y="236" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="700">7</text>
-      <text x="585" y="270" fill="#05565f" font-size="14" font-weight="700">Absence-of-errors</text>
-      <text x="585" y="288" fill="#05565f" font-size="14" font-weight="700">is a fallacy</text>
+      <text x="585" y="270" fill="#05565f" font-size="14" font-weight="700">Absence-of-defects</text>
+      <text x="585" y="288" fill="#05565f" font-size="14" font-weight="700">fallacy</text>
       <text x="585" y="312" fill="#3a4a4d" font-size="12">Zero known defects</text>
       <text x="585" y="328" fill="#3a4a4d" font-size="12">≠ the right product</text>
     </g>
@@ -100,9 +100,9 @@ Neither tester lacked effort. The difference was a set of principles that turn t
 2. **Exhaustive testing is impossible** — testing is always a deliberate sample, never a complete one.
 3. **Early testing saves time and money** — a defect caught in review costs a conversation; caught in production, a hotfix.
 4. **Defects cluster** — a small share of modules usually contain a disproportionate share of defects.
-5. **The pesticide paradox** — the same tests, run repeatedly, eventually stop finding anything new.
+5. **Tests wear out (the pesticide paradox)** — the same tests, run repeatedly, eventually stop finding anything new.
 6. **Testing is context-dependent** — how much testing a feature needs depends on what it is and who depends on it.
-7. **Absence-of-errors is a fallacy** — zero known defects doesn't mean the product solves the right problem.
+7. **The absence-of-defects fallacy** — zero known defects doesn't mean the product solves the right problem.
 
 ## What the Seven Principles Are
 
@@ -120,23 +120,23 @@ A defect caught while reviewing a requirement costs a conversation. The same def
 **4. Defects cluster.**
 In most systems, a small number of modules contain a disproportionate share of the defects — often the newest code, the most complex logic, or the parts under the most schedule pressure. This is the same underlying idea behind [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals): probability of failure isn't evenly distributed, so testing effort shouldn't be either.
 
-**5. The pesticide paradox.**
-Running the exact same tests repeatedly eventually stops finding new defects — not because the software became defect-free, but because those particular tests have already caught everything they're capable of catching, the way pests eventually develop resistance to the same pesticide. Test suites need to be reviewed and revised over time, not just re-run.
+**5. Tests wear out (the pesticide paradox).**
+Running the exact same tests repeatedly eventually stops finding new defects — not because the software became defect-free, but because those particular tests have already caught everything they're capable of catching, the way pests eventually develop resistance to the same pesticide. ISTQB's CTFL v4.0 syllabus names this "tests wear out"; the older "pesticide paradox" label describes the same mechanism and is still in wide use. Test suites need to be reviewed and revised over time, not just re-run.
 
 **6. Testing is context-dependent.**
 How a feature should be tested depends on what it is and who depends on it. A children's education app and a payment settlement engine both need testing, but not the same testing — the depth, tools, and priorities differ because the consequences of failure differ. This is the same reasoning [Quality Attributes](/learning-paths/foundations/quality-attributes) applies to *which* dimension of quality matters most for a given product.
 
-**7. Absence-of-errors is a fallacy.**
-A product that's 99% bug-free by defect count can still fail completely if it doesn't do what the user actually needs. Finding zero defects in testing doesn't mean the product is ready — it might mean the product was built against the wrong requirements and nobody's tests were positioned to notice. This is the same gap [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation) is designed to catch.
+**7. The absence-of-defects fallacy.**
+A product that's 99% bug-free by defect count can still fail completely if it doesn't do what the user actually needs. Finding zero defects in testing doesn't mean the product is ready — it might mean the product was built against the wrong requirements and nobody's tests were positioned to notice. ISTQB's CTFL v4.0 syllabus uses "absence-of-defects fallacy"; you'll also see it called the "absence-of-errors fallacy," the same idea under an older name. This is the same gap [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation) is designed to catch.
 
 ## When These Principles Matter Most
 
 These aren't principles to recite in an interview and then forget — they should actively change decisions in a few recurring situations:
 
 - **When someone asks for "full test coverage" or "complete testing"**: principle 2 (exhaustive testing is impossible) is the honest answer to push back with — the real question is what coverage is *sufficient* for the risk involved, not what coverage is *total*.
-- **When a test suite has been green for months with no new defects found**: principle 5 (pesticide paradox) is a prompt to ask whether the suite has gone stale, not a reason to celebrate.
+- **When a test suite has been green for months with no new defects found**: principle 5 (tests wear out / the pesticide paradox) is a prompt to ask whether the suite has gone stale, not a reason to celebrate.
 - **When deciding where to spend limited testing time**: principle 4 (defect clustering) says look at what changed recently and what's historically been fragile, not just what feels important.
-- **When a release has zero known defects and someone wants to ship immediately**: principle 7 (absence-of-errors fallacy) is the reminder that zero bugs found is not the same claim as "this solves the user's problem."
+- **When a release has zero known defects and someone wants to ship immediately**: principle 7 (the absence-of-defects fallacy) is the reminder that zero bugs found is not the same claim as "this solves the user's problem."
 
 ## How This Works on a Real Project
 
@@ -159,7 +159,7 @@ Coverage metrics measure what code was executed during testing, not whether the 
 This directly contradicts principle 1. It's a claim about what testing revealed, not a guarantee about what testing didn't look for.
 
 **Mistake 3: Letting a stable-looking regression suite go unquestioned indefinitely.**
-A suite that stops finding anything isn't necessarily proof of quality — the pesticide paradox says it may just mean those specific tests have nothing left to catch.
+A suite that stops finding anything isn't necessarily proof of quality — tests wear out (the pesticide paradox) says it may just mean those specific tests have nothing left to catch.
 
 **Mistake 4: Applying the same testing depth to every feature regardless of context.**
 Ignoring principle 6 and testing a low-stakes internal tool with the same rigor as a payments feature (or vice versa) wastes effort in one direction and creates real risk in the other.
@@ -170,7 +170,7 @@ Ignoring principle 6 and testing a low-stakes internal tool with the same rigor 
 Report what testing actually showed — coverage achieved, scenarios verified — rather than implying a guarantee testing can't make.
 
 **Practice 2: Revisit and refresh regression suites on a schedule, not just when something breaks.**
-Treat suite staleness as an expected outcome to plan for, per the pesticide paradox, rather than a surprise to react to.
+Treat suite staleness as an expected outcome to plan for, per tests wear out (the pesticide paradox), rather than a surprise to react to.
 
 **Practice 3: Use defect clustering data to guide, not replace, judgment.**
 Historical defect density is a strong signal for where to look first — but a module with a clean history can still contain the next real risk if it just changed significantly.
@@ -183,8 +183,8 @@ Context-dependence means the right answer changes with the product, the audience
 - Testing proves defects exist; it never proves they don't (Principle 1) — "tested" and "defect-free" are different claims.
 - Exhaustive testing is impossible (Principle 2), so testing is always a deliberate, judgment-driven sample, not an attempt at completeness.
 - Defects cluster in predictable places (Principle 4), which is the same logic behind risk-based testing.
-- A test suite that stops finding defects may have exhausted what it can catch (Principle 5, the pesticide paradox), not proven the software correct.
-- Zero known defects doesn't mean the product is right for its users (Principle 7) — that gap is exactly what validation exists to catch.
+- A test suite that stops finding defects may have exhausted what it can catch (Principle 5, tests wear out / the pesticide paradox), not proven the software correct.
+- Zero known defects doesn't mean the product is right for its users (Principle 7, the absence-of-defects fallacy) — that gap is exactly what validation exists to catch.
 
 ---
 
@@ -201,7 +201,7 @@ Context-dependence means the right answer changes with the product, the audience
 
 - [What Is Software Testing?](/learning-paths/foundations/what-is-software-testing) — The foundational definitions these principles build on
 - [Risk-Based Testing Fundamentals](/learning-paths/foundations/risk-based-testing-fundamentals) — Defect clustering applied directly to prioritization decisions
-- [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation) — Where the absence-of-errors fallacy becomes a concrete, named distinction
+- [Verification vs. Validation](/learning-paths/foundations/verification-vs-validation) — Where the absence-of-defects fallacy becomes a concrete, named distinction
 - [Quality Attributes](/learning-paths/foundations/quality-attributes) — Context-dependence applied to which quality dimension matters most
 
 ## Interview Questions
@@ -214,7 +214,7 @@ Context-dependence means the right answer changes with the product, the audience
 
 *What to look for*: Recognition that the input/state space is too large for real software, paired with a concrete answer about deliberate, risk-based sampling rather than "test everything you can think of."
 
-**Q3: What is the pesticide paradox, and how would you notice it happening on a real project?**
+**Q3: What does ISTQB mean by "tests wear out" (the pesticide paradox), and how would you notice it happening on a real project?**
 
 *What to look for*: A correct definition, plus a practical sign the candidate would watch for — like a regression suite that's been green for a long time with no new defects, prompting a review rather than confidence.
 
@@ -226,6 +226,6 @@ Context-dependence means the right answer changes with the product, the audience
 
 **Defect Clustering**: The tendency for a disproportionate share of defects to concentrate in a small number of modules, often the newest, most complex, or most schedule-pressured code.
 
-**Pesticide Paradox**: The phenomenon where repeatedly running the same tests eventually stops finding new defects, because those tests have already caught everything they're capable of catching — not because the software became defect-free.
+**Tests Wear Out (Pesticide Paradox)**: ISTQB CTFL v4.0 term for the phenomenon where repeatedly running the same tests eventually stops finding new defects, because those tests have already caught everything they're capable of catching — not because the software became defect-free. Older material calls this the pesticide paradox; both names describe the same principle.
 
-**Absence-of-Errors Fallacy**: The mistaken belief that a product with few or no known defects is necessarily ready to ship, when it may simply be solving the wrong problem correctly.
+**Absence-of-Defects Fallacy**: ISTQB CTFL v4.0 term for the mistaken belief that a product with few or no known defects is necessarily ready to ship, when it may simply be solving the wrong problem correctly. Also seen as the absence-of-errors fallacy.
